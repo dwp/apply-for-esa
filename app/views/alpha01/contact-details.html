@@ -9,7 +9,7 @@
 <main id="content" role="main">
   {% include "../includes/phase_banner_alpha.html" %}
 
-	<form action="benefit" method="#" class="form">
+	<form action="work" method="#" class="form">
 		<div class="grid-row">
 			<div class="column-two-thirds">
 				<header>
@@ -18,6 +18,43 @@
 			      Contact details
 			    </h1>
 			  </header>
+
+      
+        <div class="form-group">
+          <fieldset>
+
+            <h2 class="form-title heading-medium">Your address</h2>
+
+            <p>If you have no fixed address, put a contact address where we can write to you.</p>
+            
+            
+            <div class="form-group">
+              <label class="form-label"><input type="text" class="form-control" id="address-line1"></label>
+              <label class="form-label"><input type="text" class="form-control" id="address-line2"></label>
+              <label class="form-label"><input type="text" class="form-control" id="address-line3"></label>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label" for="postcode">Postcode</label>
+              <input type="text" class="form-control form-control-1-4" id="postcode">
+            </div>
+            
+          </fieldset>
+        </div>
+       
+        <div class="form-group">
+          <label class="form-label-bold" for="phone">Mobile</label>
+          <p>Enter your number to get text message updates on your application.</p>
+          
+          <input type="text" class="form-control" id="phone">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label-bold" for="phone">Email</label>
+          
+          <input type="text" class="form-control" id="phone">
+        </div>
+
 
         <!-- Primary buttons, secondary links -->
         <div class="form-group">
