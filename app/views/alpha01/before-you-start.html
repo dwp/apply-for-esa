@@ -8,30 +8,39 @@
 
 <main id="content" role="main">
   {% include "../includes/phase_banner_alpha.html" %}
-  
-	<h1 class="heading-large">
-    Before you start
-  </h1>
 
-  <div class="form-group">
+  <form action="third-party" method="#" class="form">
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <header>
+          <h1 class="form-title heading-large">
+            Before you start
+          </h1>
+        </header>
 
-    <p>
-      To apply for Employment and Support Allowance:
-    </p>
+        <div class="form-group">
 
-    <ul class="list-bullet">
-      <li>you must have a health condition of injury</li>
-      <li>you must not be getting Jobseeker's Allowance or Universal Credit</li>
-      <li>you must not be involved in industrial action (eg a strike, walk-out or lock-out)</li>
-      <li>you must not be working over 16 hours per week (paid and voluntary work)
-    </ul>
-   </div>
-    <!-- Primary buttons, secondary links -->
-    <div class="form-group">
-      <input type="submit" class="button" value="I agree - start my application"> <!--a href="overview">I do not agree - leave now</a-->
+          <p>
+            To apply for Employment and Support Allowance:
+          </p>
+
+          <ul class="list-bullet">
+            <li>you must have a health condition of injury</li>
+            <li>you must not be getting Jobseeker's Allowance or Universal Credit</li>
+            <li>you must not be involved in industrial action (eg a strike, walk-out or lock-out)</li>
+            <li>you must not be working over 16 hours per week (paid and voluntary work)
+          </ul>
+        </div>
+        <!-- Primary buttons, secondary links -->
+        <div class="form-group">
+          <input type="submit" class="button" value="I agree - start my application"> <!--a href="overview">I do not agree - leave now</a-->
+        </div>
+      </div>
+      <div class="column-one-third">
+        <p>&nbsp;</p>
+      </div>
     </div>
-
-  </div>
+  </form>
 </main>
 
 {% endblock %}
