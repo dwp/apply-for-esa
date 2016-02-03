@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Personal details
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% include "../includes/phase_banner_alpha.html" %}
+  
+	<form action="contact-details" method="post" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<header>
+			    <h1 class="form-title heading-large">
+			    	<span class="heading-secondary">Section 2 of 23</span>
+			      Personal details
+			    </h1>
+			  </header>
+	  
+        </div>
+
+    <!-- Primary buttons, secondary links -->
+    <div class="form-group">
+      <input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
+    </div>
+
+  </div>
+  <div class="column-one-third">
+  	<p>&nbsp;</p>
+  </div>
+</div>
+
+  </div>
+</main>
+
+{% endblock %}
