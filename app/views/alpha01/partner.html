@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Savings
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "../includes/phase_banner_alpha.html" %}
+
+	<form action="partner" method="#" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<header>
+			    <h1 class="form-title heading-large">
+			    	<span class="heading-secondary">Section 7 of 23</span>
+			      Your partner
+			    </h1>
+			  </header>
+
+			  <div class="form-group">
+          <fieldset class="inline">
+
+            <legend class="form-label-bold">
+              Do you have a partner?
+            </legend>
+
+            <label for="radio-part-2" class="block-label">
+              <input id="radio-part-2" type="radio" name="housing-act" value="Yes">
+              Yes
+            </label>
+
+            <label for="radio-part-3" class="block-label">
+              <input id="radio-part-3" type="radio" name="housing-act" value="No">
+              No
+            </label>
+
+          </fieldset>
+        </div>
+
+		    <!-- Primary buttons, secondary links -->
+		    <div class="form-group">
+		      <input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
+		    </div>
+
+		  </div>
+		  <div class="column-one-third">
+		  	<p>&nbsp;</p>
+		  </div>
+		</div>
+
+  </form>
+</main>
+
+{% endblock %}
