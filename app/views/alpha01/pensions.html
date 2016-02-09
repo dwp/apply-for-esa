@@ -34,7 +34,7 @@
       </div>
 
 
-      <div class="panel-indent js-hidden" id="no-pension">
+      <div class="panel panel-border-narrow js-hidden" id="no-pension">
         <fieldset class="inline">
           <legend class="form-label-bold" for="part">Will you be getting a pension in the next 6 months?</legend>
           <label class="block-label" data-target="pension" for="radio-inline-3">
@@ -48,7 +48,7 @@
         </fieldset>
       </div>
 
-      <div class="panel-indent js-hidden" id="pension" style="margin-top: 15px;">
+      <div class="panel panel-border-narrow js-hidden" id="pension" style="margin-top: 15px;">
         <div class="form-group" style="margin-top: 15px;">
           <label class="form-label-bold" for="surgery-name">Who is your pension provider?</label>
           <input type="text" class="form-control" id="surgery-name">
@@ -61,10 +61,98 @@
           <label class="form-label" style="margin: 4px 0;"><input type="text" class="form-control" id="address-line3"></label>
         </div>
 
-        <div class="form-group form-group-year">
-          <label class="form-label-bold" for="how-much">How much do you get from your pension after any deductions?</label>
-          &pound; <input type="text" class="form-control" id="how-much" name="dob-year">
+        <div class="form-group" style="margin-top: 15px;">
+          <label class="form-label-bold" for="phone-no">Your pension provider's phone number</label>
+          <input type="text" class="form-control" id="phone-no">
         </div>
+
+        <div class="form-group" style="margin-top: 15px;">
+          <label class="form-label-bold" for="ref-no">Policy reference number</label>
+          <input type="text" class="form-control" id="ref-no">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label-bold" for="how-much">How much is the pension before deductions?</label>
+          &pound; <input type="text" class="form-control form-control-1-4" id="how-much" name="how-much">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label-bold" for="how-much-after">How much is the pension after any deductions?</label>
+          &pound; <input type="text" class="form-control form-control-1-4" id="how-much-after" name="how-much">
+        </div>
+
+        <div class="form-group">
+          <fieldset>
+            <legend><span class="heading-small">Start date of pension</span></legend>
+            
+            <div class="form-date">
+              
+              <div class="form-group form-group-day">
+                <label for="start-day">Day</label>
+                <input type="text" class="form-control" id="start-day" maxlength="2" name="start-day">
+              </div>
+              <div class="form-group form-group-month">
+                <label for="start-month">Month</label>
+                <input type="text" class="form-control" id="start-month" maxlength="2" name="start-month">
+              </div>
+              <div class="form-group form-group-year">
+                <label for="start-year">Year</label>
+                <input type="text" class="form-control" id="start-year" maxlength="4" name="start-year">
+              </div>
+            </div>
+          </fieldset>
+        </div> 
+
+        <div class="form-group">
+          <fieldset class="inline">
+            <legend class="form-label-bold heading-large" for="increase">Will your pension increase?</legend>
+            <label class="block-label" data-target="pension-inc" for="radio-inline-5">
+              <input id="radio-inline-5" type="radio" name="increase" value="Yes">
+              Yes
+            </label>
+            <label class="block-label" for="radio-inline-6">
+              <input id="radio-inline-6" type="radio" name="increase" value="No">
+              No
+            </label>
+          </fieldset>
+        </div>
+
+        <div class="form-group js-hidden" id="pension-inc">
+          <fieldset>
+            <legend><span class="heading-small">When will your pension increase?</span></legend>
+            
+            <div class="form-date">
+              
+              <div class="form-group form-group-day">
+                <label for="inc-day">Day</label>
+                <input type="text" class="form-control" id="inc-day" maxlength="2" name="inc-day">
+              </div>
+              <div class="form-group form-group-month">
+                <label for="inc-month">Month</label>
+                <input type="text" class="form-control" id="inc-month" maxlength="2" name="inc-month">
+              </div>
+              <div class="form-group form-group-year">
+                <label for="inc-year">Year</label>
+                <input type="text" class="form-control" id="inc-year" maxlength="4" name="inc-year">
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <fieldset class="inline">
+            <legend class="form-label-bold heading-large" for="inherit">Did you inherit your pension?</legend>
+            <label class="block-label" data-target="pension-inc" for="radio-inline-7">
+              <input id="radio-inline-7" type="radio" name="inherit" value="Yes">
+              Yes
+            </label>
+            <label class="block-label" for="radio-inline-8">
+              <input id="radio-inline-8" type="radio" name="inherit" value="No">
+              No
+            </label>
+          </fieldset>
+        </div>
+
       </div>
 
 
