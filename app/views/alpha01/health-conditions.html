@@ -20,7 +20,7 @@
 			  </header>
 
 			  <p>What disabilities, illnesses or ongoing health condiitons do you have?</p>
-          
+
         <h2 class="heading-medium">Name of condition</h2>
 
         <div class="" id="partner-yes">
@@ -66,20 +66,24 @@
 
   </form>
 </main>
-<script>
-  $(document).ready(function() {
-  
-    $("#show-payment2").click(function() {
-      $("#payment2").show();
-      $("#show-payment2").hide();
-       return false;
-    });
-    $("#show-payment3").click(function() {
-      $("#payment3").show();
-      $("#show-payment3").hide();
-       return false;
-    });
-  });
-</script>
+{% endblock %}
 
+{% block body_end %}
+  {% include "includes/scripts.html" %}
+  <script>
+    $(document).ready(function() {
+
+      $("#show-payment2").click(function() {
+        $("#payment2").show();
+        $("#show-payment2").hide();
+         return false;
+      });
+      $("#show-payment3").click(function() {
+        $("#payment3").show();
+        $("#show-payment3").hide();
+         return false;
+      });
+
+    });
+  </script>
 {% endblock %}
