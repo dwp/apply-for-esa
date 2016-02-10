@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Health conditions
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "../includes/phase_banner_alpha.html" %}
+
+	<form action="special-rules" method="#" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<header>
+			    <h1 class="form-title heading-large">
+			    	<!-- <span class="heading-secondary">Section 11 of 23</span> -->
+			      Health conditions
+			    </h1>
+			  </header>
+
+			  <p>What disabilities, illnesses or ongoing health condiitons do you have?</p>
+
+        <h2 class="heading-medium">Name of condition</h2>
+
+        <div class="" id="partner-yes">
+
+          <div class="form-group">
+            <input class="form-control" id="who01" type="text"> &nbsp; <a href="#">Remove</a>
+          </div>
+
+          <p><a href="#" id="show-payment2">Add another condition</a></p>
+
+        </div>
+
+        <div class="js-hidden" id="payment2">
+
+          <div class="form-group">
+            <input class="form-control" id="who02" type="text"> &nbsp; <a href="#">Remove</a>
+          </div>
+
+          <p><a href="#" id="show-payment3">Add another condition</a></p>
+
+        </div>
+
+        <div class="js-hidden" id="payment3">
+
+          <div class="form-group">
+            <input class="form-control" id="who03" type="text"> &nbsp; <a href="#">Remove</a>
+          </div>
+
+          <p><a href="#" id="show-payment4">Add another condition</a></p>
+
+        </div>
+
+		    <!-- Primary buttons, secondary links -->
+		    <div class="form-group">
+		      <input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
+		    </div>
+
+		  </div>
+		  <div class="column-one-third">
+		  	<p>&nbsp;</p>
+		  </div>
+		</div>
+
+  </form>
+</main>
+{% endblock %}
+
+{% block body_end %}
+  {% include "includes/scripts.html" %}
+  <script>
+    $(document).ready(function() {
+
+      $("#show-payment2").click(function() {
+        $("#payment2").show();
+        $("#show-payment2").hide();
+         return false;
+      });
+      $("#show-payment3").click(function() {
+        $("#payment3").show();
+        $("#show-payment3").hide();
+         return false;
+      });
+
+    });
+  </script>
+{% endblock %}

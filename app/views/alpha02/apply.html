@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Start page example
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="breadcrumbs">
+    <ol role="breadcrumbs">
+      <li><a href="http://www.gov.uk">Home</a></li>
+      <li><a href="https://www.gov.uk/browse/benefits">Benefits</a></li>
+      <li><a href="https://www.gov.uk/browse/benefits/disability">Carers and disability benefits</a></li>
+    </ol>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        {% if serviceName %} {{ serviceName }} {% endif %}
+      </h1>
+
+      <aside>
+        <div class="inner">
+          <nav role="navigation" class="page-navigation" aria-label="parts to this guide">
+            <ol class="list-bullet list-none grid-row">
+              <div class="column-half">
+                <li class="font-xsmall">
+                  1. <a href="overview" title="Part 1:  Overview">Overview</a>
+                </li>
+                <li class="font-xsmall">
+                  2. <a href="what-youll-get" title="Part 2:  What you'll get">What you'll get</a>
+                </li>
+              </div>
+              <div class="column-half">
+                <li class="font-xsmall">
+                  3. <a href="eligibility" title="Part 3: Eligibility">Eligibility</a>
+                </li>
+                <li class="font-xsmall">
+                  4. <a href="apply" title="Part 4: Apply">Apply</a>
+                </li>
+              </div>
+            </ol>
+          </nav>
+        </div>
+      </aside>
+
+      <h2 class="heading-medium">4. Apply</h2>
+
+      <p>Before you apply make sure you have:</p>
+      <ul class="list list-bullet">
+        <li>your National Insurance number</li>
+        <li>your partner National Insurance number</li-->
+        <li>details of any pensions, insurance, savings and income</li>
+        <li>details of any doctors, nurses, counsellors or other people who help you</li>
+        <li>your bank or building society details</li>
+      </ul>
+
+      <p>
+        <a class="button button-start" href="before-you-start" role="button">Start now</a>
+      </p>
+  
+      <p>The online service is also available in <a href="#">Welsh (Cymraeg).</a></p>
+
+      <p>You can’t register for this service if you’re in the UK illegally.</p>
+
+    </div>
+    <div class="column-third">
+
+      <!--div class="related-links">
+        <h2 class="heading-medium">Subsection</h2>
+
+        <ul class="font-xsmall">
+          <li><a href="#">Related link</a></li>
+          <li><a href="#">Related link</a></li>
+          <li><a href="#" class="bold-xsmall">More</a></li>
+        </ul>
+      </div-->
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

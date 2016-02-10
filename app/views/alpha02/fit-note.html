@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Fit note
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "../includes/phase_banner_alpha.html" %}
+
+	<form action="pensions" method="#" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<header>
+			    <h1 class="form-title heading-large">
+			    	<!-- <span class="heading-secondary">Section 13 of 23</span> -->
+			      Fit note
+			    </h1>
+			  </header>
+
+			  <div class="form-group">
+	        <fieldset class="inline">
+	          <legend class="heading-medium" for="partner">Do you have a fit note? </legend>
+	          <label class="block-label" data-target="fitnote" for="radio-inline-1">
+	            <input id="radio-inline-1" type="radio" name="partner" value="Yes">
+	            Yes
+	          </label>
+	          <label class="block-label" data-target="no-fitnote" for="radio-inline-2">
+	            <input id="radio-inline-2" type="radio" name="partner" value="No">
+	            No
+	          </label>
+	        </fieldset>
+	      </div>
+
+	      <div class="panel-indent js-hidden" id="fitnote">
+        <div class="form-group">
+          <fieldset>
+            <legend class="form-label-bold">Fit note start date</legend>
+            
+            <div class="form-date">
+              <p class="form-hint">DD MM YYYY</p>
+              
+              <div class="form-group form-group-day">
+                <label for="dob-day">Day</label>
+                <input type="text" class="form-control" id="dob-day" maxlength="2" name="dob-day">
+              </div>
+              <div class="form-group form-group-month">
+                <label for="dob-month">Month</label>
+                <input type="text" class="form-control" id="dob-month" maxlength="2" name="dob-month">
+              </div>
+              <div class="form-group form-group-year">
+                <label for="dob-year">Year</label>
+                <input type="text" class="form-control" id="dob-year" maxlength="4" name="dob-year">
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <fieldset>
+            <legend class="form-label-bold">Fit note end date</legend>
+            
+            <div class="form-date">
+              <p class="form-hint">DD MM YYYY</p>
+              
+              <div class="form-group form-group-day">
+                <label for="end-day">Day</label>
+                <input type="text" class="form-control" id="end-day" maxlength="2" name="end-day">
+              </div>
+              <div class="form-group form-group-month">
+                <label for="end-month">Month</label>
+                <input type="text" class="form-control" id="end-month" maxlength="2" name="end-month">
+              </div>
+              <div class="form-group form-group-year">
+                <label for="end-year">Year</label>
+                <input type="text" class="form-control" id="end-year" maxlength="4" name="end-year">
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+
+      <div class="panel panel-border-narrow js-hidden" id="no-fitnote">
+        <p>You must have a fit note in order to claim Employment and Support Allowance. You have 7 days to get one.</p>
+      </div>
+
+		    <!-- Primary buttons, secondary links -->
+		    <div class="form-group">
+		      <input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
+		    </div>
+
+		  </div>
+		  <div class="column-one-third">
+		  	<p>&nbsp;</p>
+		  </div>
+		</div>
+
+  </form>
+</main>
+
+{% endblock %}

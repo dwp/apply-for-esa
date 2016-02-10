@@ -1,0 +1,143 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Work
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "../includes/phase_banner_alpha.html" %}
+
+	<form action="claim-date" method="#" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<header>
+			    <h1 class="form-title heading-large">
+			    	<!-- <span class="heading-secondary">Section 5 of 23</span> -->
+			      Work
+			    </h1>
+			  </header>
+
+			  <div class="form-group">
+	        <fieldset class="">
+	          <legend class="form-label-bold heading-medium" for="partner">What is you employment status?</legend>
+	          <p class="hint-text">If you are part-time employed select 'Employed or self-employed'.</p>
+	          <label class="block-label" data-target="working" for="radio-inline-1">
+	            <input id="radio-inline-1" type="radio" name="partner" value="Yes">
+	            Employed or self-employed
+	          </label>
+	          <label class="block-label" for="radio-inline-2">
+	            <input id="radio-inline-2" type="radio" name="partner" value="No">
+	            Unemployed
+	          </label>
+	        </fieldset>
+	      </div>
+
+	      <div class="panel panel-border-narrow js-hidden" id="working">
+	        <fieldset class="inline">
+	          <legend class="heading-medium" for="part">Are you still working?</legend>
+	          <label class="block-label" data-target="yes-working" for="radio-inline-3">
+	            <input id="radio-inline-3" type="radio" name="part" value="Yes">
+	            Yes
+	          </label>
+	          <label class="block-label" data-target="no-working" for="radio-inline-4">
+	            <input id="radio-inline-4" type="radio" name="part" value="No">
+	            No
+	          </label>
+	        </fieldset>
+
+	        <div class="js-hidden" id="yes-working" style="margin-top: 15px;">
+	          <div class="form-group">
+	            <label class="heading-medium" for="hours">
+	              How many hours a week are you working at present?
+	            </label>
+	            <input type="text" class="form-control form-control-1-4" id="hours" name="hours">
+	          </div>
+
+	          <div class="form-group">
+	            <label class="heading-medium" for="how-much">
+	              How much do you earn a week at present?
+	            </label>
+	            <input type="text" class="form-control form-control-1-4" id="how-much" name="how-much">
+	          </div>
+
+	          <div class="form-group" style="margin-top: 15px;">
+	            <label class="form-label-bold" for="surgery-name">Company name</label>
+	            <input type="text" class="form-control" id="surgery-name">
+	          </div>
+
+	          <div class="form-group" style="margin-top: 15px;">
+	            <p class="form-label-bold">Company Address</p>
+	            <label class="form-label" style="margin: 4px 0;"><input type="text" class="form-control" id="address-line1"></label>
+	            <label class="form-label" style="margin: 4px 0;"><input type="text" class="form-control" id="address-line2"></label>
+	            <label class="form-label" style="margin: 4px 0;"><input type="text" class="form-control" id="address-line3"></label>
+	          </div>
+
+	          <div class="form-group">
+	            <label class="form-label" for="postcode">Postcode</label>
+	            <input type="text" class="form-control" id="postcode">
+	          </div>
+
+	        </div>
+
+	        <div class="js-hidden" id="no-working" style="margin-top: 15px;">
+	          <fieldset class="inline">
+	            <legend class="heading-medium" for="ssp">Have you received Statuory Sick Pay?</legend>
+	            <label class="block-label" data-target="yes-ssp" for="radio-inline-5">
+	              <input id="radio-inline-5" type="radio" name="ssp" value="Yes">
+	              Yes
+	            </label>
+	            <label class="block-label" data-target="no-ssp" for="radio-inline-6">
+	              <input id="radio-inline-6" type="radio" name="ssp" value="No">
+	              No
+	            </label>
+	          </fieldset>
+
+	          <div class="form-group js-hidden" id="yes-ssp" style="margin-top: 15px;">
+	            <fieldset>
+	              <legend class="heading-medium">What date will or did your Statutory Sick Pay finish?</legend>
+	              
+	              <div class="form-date">
+	                <p class="form-hint">DD MM YYYY</p>
+	                
+	                <div class="form-group form-group-day">
+	                  <label for="dob-day">Day</label>
+	                  <input type="text" class="form-control" id="dob-day" maxlength="2" name="dob-day">
+	                </div>
+	                <div class="form-group form-group-month">
+	                  <label for="dob-month">Month</label>
+	                  <input type="text" class="form-control" id="dob-month" maxlength="2" name="dob-month">
+	                </div>
+	                <div class="form-group form-group-year">
+	                  <label for="dob-year">Year</label>
+	                  <input type="text" class="form-control" id="dob-year" maxlength="4" name="dob-year">
+	                </div>
+	              </div>
+	            </fieldset>
+	          </div>
+
+	          <div class="js-hidden" id="no-ssp" style="margin-top: 15px;">
+	            <p>You may be eligible for Statutory Sick Pay. Contact your employer immediately to see if you are entitled to it.</p>
+	            </p>
+	          </div>
+
+	        </div>
+
+	      </div>
+
+		    <!-- Primary buttons, secondary links -->
+		    <div class="form-group">
+		      <input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
+		    </div>
+
+		  </div>
+		  <div class="column-one-third">
+		  	<p>&nbsp;</p>
+		  </div>
+		</div>
+
+  </form>
+</main>
+
+{% endblock %}
