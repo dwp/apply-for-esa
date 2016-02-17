@@ -1,0 +1,313 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Education
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% include "../includes/phase_banner_alpha.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+  
+      <form action="work" method="#" class="form">
+
+      <a href="household" class="example-back-link">Back</a>
+
+      <h1 class="form-title heading-large">
+        Education
+      </h1>
+
+      <div class="form-group">
+        <fieldset>
+          <legend class="form-label-bold heading-large" for="partner">Are you currently in ...</legend>
+          <label class="block-label" data-target="education" for="radio-inline-1">
+            <input id="radio-inline-1" type="checkbox" name="partner" value="Yes">
+            Education
+          </label>
+          <label class="block-label" data-target="training" for="radio-inline-2">
+            <input id="radio-inline-2" type="checkbox" name="partner" value="No">
+            Training
+          </label>
+          <label class="block-label" data-target="app" for="radio-inline-3">
+            <input id="radio-inline-3" type="checkbox" name="partner" value="No">
+            An apprenticeship
+          </label>
+          
+          <label class="block-label" for="radio-inline-4">
+            <input id="radio-inline-4" type="checkbox" name="partner" value="No">
+            I am not in education, training or an apprenticeship
+          </label>
+        </fieldset>
+      </div>
+
+<!-- Education box -->
+      <div class="panel panel-border-narrow js-hidden" id="education">
+        <fieldset class="inline">
+          <legend class="form-label-bold heading-large" for="hours">How many hours a week are you in education?</legend>
+          <label class="block-label" data-target="course-details" for="radio-inline-5">
+            <input id="radio-inline-5" type="radio" name="hours" value="Yes">
+            Less than 16 hours a week
+          </label>
+          <label class="block-label" data-target="more16" for="radio-inline-6">
+            <input id="radio-inline-6" type="radio" name="hours" value="No">
+            16 hours or more a week
+          </label>
+        </fieldset>
+      </div>
+
+      <div class="panel panel-border-narrow js-hidden" id="more16">
+        <fieldset class="inline">
+          <legend class="form-label-bold" for="dla">Are you currently getting Disability Living Allowance (DLA) or Personal Independence Payment (PIP)?</legend>
+          <label class="block-label" data-target="course-details" for="radio-inline-7">
+            <input id="radio-inline-7" type="radio" name="dla" value="Yes">
+            Yes
+          </label>
+          <label class="block-label" for="radio-inline-8">
+            <input id="radio-inline-8" type="radio" name="dla" value="No">
+            No
+          </label>
+        </fieldset>
+      </div>
+
+      <div class="panel panel-border-narrow js-hidden" id="course-details">
+        <div class="form-group" style="margin-top: 15px;">
+          <label class="form-label-bold" for="surgery-name">Course name</label>
+          <input type="text" class="form-control" id="surgery-name">
+        </div>
+        <div class="form-group" style="margin-top: 15px;">
+          <p class="form-label-bold">Address of School or University</p>
+          <label class="form-label" style="margin: 4px 0;"><input type="text" class="form-control" id="address-line1"></label>
+          <label class="form-label" style="margin: 4px 0;"><input type="text" class="form-control" id="address-line2"></label>
+          <label class="form-label" style="margin: 4px 0;"><input type="text" class="form-control" id="address-line3"></label>
+        </div>
+
+        <fieldset class="form-group">
+          <legend class="form-label-bold">When did your course start?</legend>
+          
+          <div class="form-date">
+            <p class="form-hint">DD MM YYYY</p>
+            
+            <div class="form-group form-group-day">
+              <label for="start-day">Day</label>
+              <input type="text" class="form-control" id="start-day" maxlength="2" name="start-day">
+            </div>
+            <div class="form-group form-group-month">
+              <label for="start-month">Month</label>
+              <input type="text" class="form-control" id="start-month" maxlength="2" name="start-month">
+            </div>
+            <div class="form-group form-group-year">
+              <label for="start-year">Year</label>
+              <input type="text" class="form-control" id="start-year" maxlength="4" name="start-year">
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-group">
+          <legend class="form-label-bold">When does the course end?</legend>
+          
+          <div class="form-date">
+            <p class="form-hint">DD MM YYYY</p>
+            
+            <div class="form-group form-group-day">
+              <label for="end-day">Day</label>
+              <input type="text" class="form-control" id="end-day" maxlength="2" name="end-day">
+            </div>
+            <div class="form-group form-group-month">
+              <label for="end-month">Month</label>
+              <input type="text" class="form-control" id="end-month" maxlength="2" name="end-month">
+            </div>
+            <div class="form-group form-group-year">
+              <label for="end-year">Year</label>
+              <input type="text" class="form-control" id="end-year" maxlength="4" name="end-year">
+            </div>
+          </div>
+        </fieldset>
+      </div>
+<!-- Education end -->
+
+<!-- Training box -->
+      <div class="panel panel-border-narrow js-hidden" id="training">
+        <fieldset class="inline">
+          <legend class="form-label-bold heading-large" for="hours-train">How many hours a week are you in training?</legend>
+          <label class="block-label" data-target="training-details" for="radio-inline-15">
+            <input id="radio-inline-15" type="radio" name="hours-train" value="Yes">
+            Less than 16 hours a week
+          </label>
+          <label class="block-label" data-target="train16" for="radio-inline-16">
+            <input id="radio-inline-16" type="radio" name="hours-train" value="No">
+            16 hours or more a week
+          </label>
+        </fieldset>
+      </div>
+
+      <div class="panel panel-border-narrow js-hidden" id="train16">
+        <fieldset class="inline">
+          <legend class="form-label-bold" for="dla2">Are you currently getting Disability Living Allowance (DLA) or Personal Independence Payment (PIP)?</legend>
+          <label class="block-label" data-target="training-details" for="radio-inline-17">
+            <input id="radio-inline-17" type="radio" name="dla2" value="Yes">
+            Yes
+          </label>
+          <label class="block-label" for="radio-inline-18">
+            <input id="radio-inline-18" type="radio" name="dla2" value="No">
+            No
+          </label>
+        </fieldset>
+      </div>
+
+      <div class="panel panel-border-narrow js-hidden" id="training-details">
+        <div class="form-group" style="margin-top: 15px;">
+          <label class="form-label-bold" for="training-name">Who is training you?</label>
+          <input type="text" class="form-control" id="training-name">
+        </div>
+        <div class="form-group" style="margin-top: 15px;">
+          <p class="form-label-bold">Address of School or place of training</p>
+          <label class="form-label" style="margin: 4px 0;"><input type="text" class="form-control" id="training-line1"></label>
+          <label class="form-label" style="margin: 4px 0;"><input type="text" class="form-control" id="training-line2"></label>
+          <label class="form-label" style="margin: 4px 0;"><input type="text" class="form-control" id="training-line3"></label>
+        </div>
+
+        <fieldset class="form-group">
+          <legend class="form-label-bold">When did your course start?</legend>
+          
+          <div class="form-date">
+            <p class="form-hint">DD MM YYYY</p>
+            
+            <div class="form-group form-group-day">
+              <label for="train-day">Day</label>
+              <input type="text" class="form-control" id="train-day" maxlength="2" name="train-day">
+            </div>
+            <div class="form-group form-group-month">
+              <label for="train-month">Month</label>
+              <input type="text" class="form-control" id="train-month" maxlength="2" name="train-month">
+            </div>
+            <div class="form-group form-group-year">
+              <label for="train-year">Year</label>
+              <input type="text" class="form-control" id="train-year" maxlength="4" name="train-year">
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-group">
+          <legend class="form-label-bold">When does the course end?</legend>
+          
+          <div class="form-date">
+            <p class="form-hint">DD MM YYYY</p>
+            
+            <div class="form-group form-group-day">
+              <label for="train-end-day">Day</label>
+              <input type="text" class="form-control" id="train-end-day" maxlength="2" name="train-end-day">
+            </div>
+            <div class="form-group form-group-month">
+              <label for="train-end-month">Month</label>
+              <input type="text" class="form-control" id="train-end-month" maxlength="2" name="train-end-month">
+            </div>
+            <div class="form-group form-group-year">
+              <label for="train-end-year">Year</label>
+              <input type="text" class="form-control" id="train-end-year" maxlength="4" name="train-end-year">
+            </div>
+          </div>
+        </fieldset>
+      </div>
+<!-- Training end -->
+
+<!-- Apprenticeship box -->
+      <div class="panel panel-border-narrow js-hidden" id="app">
+        <fieldset class="inline">
+          <legend class="form-label-bold heading-large" for="hours-app">How many hours a week are you on your apprenticeship?</legend>
+          <label class="block-label" data-target="app-details" for="radio-inline-25">
+            <input id="radio-inline-25" type="radio" name="hours-app" value="Yes">
+            Less than 16 hours a week
+          </label>
+          <label class="block-label" data-target="app16" for="radio-inline-26">
+            <input id="radio-inline-26" type="radio" name="hours-app" value="No">
+            16 hours or more a week
+          </label>
+        </fieldset>
+      </div>
+
+      <div class="panel panel-border-narrow js-hidden" id="app16">
+        <fieldset class="inline">
+          <legend class="form-label-bold" for="dla3">Are you currently getting Disability Living Allowance (DLA) or Personal Independence Payment (PIP)?</legend>
+          <label class="block-label" data-target="app-details" for="radio-inline-37">
+            <input id="radio-inline-37" type="radio" name="dla3" value="Yes">
+            Yes
+          </label>
+          <label class="block-label" for="radio-inline-38">
+            <input id="radio-inline-38" type="radio" name="dla3" value="No">
+            No
+          </label>
+        </fieldset>
+      </div>
+
+      <div class="panel panel-border-narrow js-hidden" id="app-details">
+        <div class="form-group" style="margin-top: 15px;">
+          <label class="form-label-bold" for="app-name">Apprenticeship name</label>
+          <input type="text" class="form-control" id="app-name">
+        </div>
+        <div class="form-group" style="margin-top: 15px;">
+          <p class="form-label-bold">Address of apprenticeship</p>
+          <label class="form-label" style="margin: 4px 0;"><input type="text" class="form-control" id="app-line1"></label>
+          <label class="form-label" style="margin: 4px 0;"><input type="text" class="form-control" id="app-line2"></label>
+          <label class="form-label" style="margin: 4px 0;"><input type="text" class="form-control" id="app-line3"></label>
+        </div>
+
+        <fieldset class="form-group">
+          <legend class="form-label-bold">When did your apprenticeship start?</legend>
+          
+          <div class="form-date">
+            <p class="form-hint">DD MM YYYY</p>
+            
+            <div class="form-group form-group-day">
+              <label for="app-day">Day</label>
+              <input type="text" class="form-control" id="app-day" maxlength="2" name="app-day">
+            </div>
+            <div class="form-group form-group-month">
+              <label for="app-month">Month</label>
+              <input type="text" class="form-control" id="app-month" maxlength="2" name="app-month">
+            </div>
+            <div class="form-group form-group-year">
+              <label for="app-year">Year</label>
+              <input type="text" class="form-control" id="app-year" maxlength="4" name="app-year">
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-group">
+          <legend class="form-label-bold">When does your apprenticeship end?</legend>
+          
+          <div class="form-date">
+            <p class="form-hint">DD MM YYYY</p>
+            
+            <div class="form-group form-group-day">
+              <label for="app-end-day">Day</label>
+              <input type="text" class="form-control" id="app-end-day" maxlength="2" name="app-end-day">
+            </div>
+            <div class="form-group form-group-month">
+              <label for="app-end-month">Month</label>
+              <input type="text" class="form-control" id="app-end-month" maxlength="2" name="app-end-month">
+            </div>
+            <div class="form-group form-group-year">
+              <label for="app-end-year">Year</label>
+              <input type="text" class="form-control" id="app-end-year" maxlength="4" name="app-end-year">
+            </div>
+          </div>
+        </fieldset>
+      </div>
+<!-- Apprenticeship end -->
+
+      <div class="form-group">
+        <input type="submit" class="button" value="Continue">
+      </div>
+
+    </div>
+    <div class="column-third">
+    </div>
+  </div>
+
+
+</main><!-- / #page-container -->
+
+{% endblock %}
