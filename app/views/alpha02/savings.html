@@ -59,3 +59,18 @@
 </main>
 
 {% endblock %}
+
+{% block body_end %}
+  {% include "includes/scripts.html" %}
+  <script>
+    $('form').on('submit', function(e) {
+      if($('#radio-part-4').is(':checked')) {
+        window.location = '/alpha02/gp-details';
+      } else {
+        window.location = '/alpha02/partner';
+      }
+
+      e.preventDefault();
+    });
+  </script>
+{% endblock %}
