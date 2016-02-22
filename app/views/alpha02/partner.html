@@ -31,7 +31,7 @@
               Yes
             </label>
 
-            <label for="radio-part-3" class="block-label">
+            <label for="radio-part-3" data-target="no-partner" class="block-label">
               <input id="radio-part-3" type="radio" name="housing-act" value="No">
               No
             </label>
@@ -39,7 +39,7 @@
             <div class="js-hidden panel panel-border-narrow" id="partners-hours">
         			<fieldset class="inline">
 
-		            <legend class="form-label-bold heading-large" for="third">Does your partner work 24 hours or more a week?</legend>
+		            <legend class="form-label-bold" for="third">Does your partner work 24 hours or more a week?</legend>
 
 		            <label for="third-party-yes" class="block-label">
 		              <input type="radio" id="third-party-yes" name="third" value="Yes">
@@ -50,6 +50,35 @@
 		              <input type="radio" id="third-party-no" name="third" value="No">
 		              No
 		            </label>
+		          </fieldset>
+		        </div>
+
+		        <div class="form-group js-hidden panel panel-border-narrow" id="no-partner">
+					  	<fieldset class="inline">
+
+		            <legend class="form-label-bold">
+		              Have you had a partner in the last 6 months?
+		            </legend>
+
+		            <p>A partner is a person you are married to or a person you live with as if you are married to them.</p>
+
+		            <label for="radio-part-4" data-target="partners-name" class="block-label">
+		              <input id="radio-part-4" type="radio" name="partner-6" value="Yes">
+		              Yes
+		            </label>
+
+		            <label for="radio-part-5" class="block-label">
+		              <input id="radio-part-5" type="radio" name="partner-6" value="No">
+		              No
+		            </label>
+
+		            <div class="js-hidden" id="partners-name">
+		        			<div class="form-group">
+					          <label class="form-label" for="partners-name">Previous partner's full name</label>
+					          <input type="text" class="form-control" id="partners-name">
+					        </div>
+				        </div>
+
 		          </fieldset>
 		        </div>
 
@@ -81,7 +110,7 @@
       if($('#third-party-yes').is(':checked')) {
         window.location = '/alpha02/gp-details';
       } else {
-        window.location = '/alpha02/education';
+        window.location = '/alpha02/savings';
       }
 
       e.preventDefault();
