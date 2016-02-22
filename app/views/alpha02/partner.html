@@ -9,7 +9,7 @@
 <main id="content" role="main">
 	{% include "../includes/phase_banner_alpha.html" %}
 
-	<form action="gp-details" method="#" class="form">
+	<form action="education" method="#" class="form">
 		<div class="grid-row">
 			<div class="column-two-thirds">
 				<header>
@@ -72,4 +72,19 @@
   </form>
 </main>
 
+{% endblock %}
+
+{% block body_end %}
+  {% include "includes/scripts.html" %}
+  <script>
+    $('form').on('submit', function(e) {
+      if($('#third-party-yes').is(':checked')) {
+        window.location = '/alpha02/gp-details';
+      } else {
+        window.location = '/alpha02/education';
+      }
+
+      e.preventDefault();
+    });
+  </script>
 {% endblock %}
