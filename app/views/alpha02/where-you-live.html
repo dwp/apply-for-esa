@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Previous partner
+  Where you live
 {% endblock %}
 
 {% block content %}
@@ -30,13 +30,13 @@
 	            <input id="radio-inline-2" type="radio" name="partner" value="No">
 	            Rented accomodation
 	          </label>
+	          <label class="block-label" data-target="parents" for="radio-inline-7">
+	            <input id="radio-inline-7" type="radio" name="partner" value="No">
+	            A place that belongs to your parents or a relative
+	          </label>
 	          <label class="block-label" data-target="care-home" for="radio-inline-3">
 	            <input id="radio-inline-3" type="radio" name="partner" value="No">
 	            A care home
-	          </label>
-	          <label class="block-label" data-target="hospice" for="radio-inline-4">
-	            <input id="radio-inline-4" type="radio" name="partner" value="No">
-	            A hospice
 	          </label>
 	          <label class="block-label" data-target="homeless" for="radio-inline-6">
 	            <input id="radio-inline-6" type="radio" name="partner" value="No">
@@ -47,22 +47,100 @@
 	            Something else
 	          </label>
 	          
-	          <div class="panel-indent js-hidden" id="other">
+	          <div class="panel panel-border-narrow js-hidden" id="other">
 	            <label class="form-label"><input type="text" class="form-control" id="address-line1"></label>
 	          </div>
 	        </fieldset>
 	      </div>
 
+
+	      <div class="panel panel-border-narrow js-hidden" id="mortgage">
+		      <div class="form-group">
+		      	<fieldset class="inline">
+		          <legend class="form-label-bold" for="pay-mortgage">Does anyone else pay towards the mortgage?</legend>
+		          <label class="block-label" data-target="who-pay-mortgage" for="radio-inline-10">
+		            <input id="radio-inline-10" type="radio" name="pay-mortgage" value="Yes">
+		            Yes
+		          </label>
+		          <label class="block-label" for="radio-inline-11">
+		            <input id="radio-inline-11" type="radio" name="pay-mortgage" value="No">
+		            No
+		          </label>
+		        </fieldset>
+		        <div class="form-group js-hidden" id="who-pay-mortgage">
+		      		<label class="form-label" for="mort-name">Full name of person who pays towards the mortgage</label>
+		      		<input type="text" class="form-control" id="mort-name">
+		      	</div>
+		      </div>
+
+		      <div class="form-group">
+		      	<fieldset class="inline">
+		          <legend class="form-label-bold" for="service-charges">Do you pay service charges for where you live?</legend>
+		          <label class="block-label" data-target="how-much" for="radio-inline-12">
+		            <input id="radio-inline-12" type="radio" name="service-charges" value="Yes">
+		            Yes
+		          </label>
+		          <label class="block-label" for="radio-inline-13">
+		            <input id="radio-inline-13" type="radio" name="service-charges" value="No">
+		            No
+		          </label>
+		        </fieldset>
+		        <div class="js-hidden" id="how-much">
+		        	<div class="form-group">
+			      		<label class="form-label-bold" for="service-cost">How much service charge do you pay?</label>
+			      		£ <input type="text" class="form-control form-control-1-4" id="service-cost">
+							</div>
+							<div class="form-group">
+			      		<fieldset>
+				          <!-- <legend class="form-label-bold visibly-hidden" for="service-charge2">How often do you pay service charges?</legend> -->
+				          <label class="block-label" for="radio-inline-14">
+				            <input id="radio-inline-14" type="radio" name="service-charge2" value="Every week">
+				            Every week
+				          </label>
+				          <label class="block-label" for="radio-inline-15">
+				            <input id="radio-inline-15" type="radio" name="service-charge2" value="Every month">
+				            Every month
+				          </label>
+				          <label class="block-label" for="radio-inline-16">
+				            <input id="radio-inline-16" type="radio" name="service-charge2" value="Every year">
+				            Every year
+				          </label>
+				        </fieldset>
+				      </div>
+		      	</div>
+		      </div>
+	      </div>
+
+
+	      <div class="panel panel-border-narrow js-hidden" id="rented">
+	      	<div class="form-group">
+
+	      	</div>
+	      </div>
+
+
+	      <div class="panel panel-border-narrow js-hidden" id="parents">
+	      	<div class="form-group">
+	      		<label class="form-label" for="house-head">Full name of the head of the house</label>
+	      		<input type="text" class="form-control" id="house-head">
+	      	</div>
+	      	<div class="form-group">
+	      		<label class="form-label" for="house-rel">Your relationship to them</label>
+	      		<input type="text" class="form-control" id="house-rel">
+	      	</div>
+	      </div>
+
+
 	      <div class="panel panel-border-narrow js-hidden" id="care-home">
 	      	<div class="form-group">
 	      		<fieldset class="inline">
-		          <legend class="form-label-bold" for="partner">Are you in the care home temporarily?</legend>
-		          <label class="block-label" data-target="mortgage" for="radio-inline-7">
-		            <input id="radio-inline-7" type="radio" name="partner" value="Yes">
+		          <legend class="form-label-bold" for="temp">Are you in the care home temporarily?</legend>
+		          <label class="block-label" for="radio-inline-9">
+		            <input id="radio-inline-9" type="radio" name="temp" value="Yes">
 		            Yes
 		          </label>
-		          <label class="block-label" data-target="rented" for="radio-inline-8">
-		            <input id="radio-inline-8" type="radio" name="partner" value="No">
+		          <label class="block-label" for="radio-inline-8">
+		            <input id="radio-inline-8" type="radio" name="temp" value="No">
 		            No
 		          </label>
 		        </fieldset>
