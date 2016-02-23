@@ -55,9 +55,22 @@
 
 
 	      <div class="panel panel-border-narrow js-hidden" id="mortgage">
-		      <div class="form-group">
+	      	<div class="form-group">
 		      	<fieldset class="inline">
-		          <legend class="form-label-bold" for="pay-mortgage">Does anyone else pay towards the mortgage?</legend>
+		          <legend class="form-label-bold" for="have-mortgage">Do you or your partner have a mortgage?</legend>
+		          <label class="block-label" data-target="have-mortgage" for="radio-inline-20">
+		            <input id="radio-inline-20" type="radio" name="have-mortgage" value="Yes">
+		            Yes
+		          </label>
+		          <label class="block-label" for="radio-inline-21">
+		            <input id="radio-inline-21" type="radio" name="have-mortgage" value="No">
+		            No
+		          </label>
+		        </fieldset>
+		      </div>
+		      <div class="form-group js-hidden" id="have-mortgage">
+		      	<fieldset class="inline">
+		          <legend class="form-label-bold" for="pay-mortgage">Does anyone else apart from your partner pay towards the mortgage?</legend>
 		          <label class="block-label" data-target="who-pay-mortgage" for="radio-inline-10">
 		            <input id="radio-inline-10" type="radio" name="pay-mortgage" value="Yes">
 		            Yes
@@ -85,37 +98,107 @@
 		            No
 		          </label>
 		        </fieldset>
-		        <div class="js-hidden" id="how-much">
-		        	<div class="form-group">
-			      		<label class="form-label-bold" for="service-cost">How much service charge do you pay?</label>
-			      		£ <input type="text" class="form-control form-control-1-4" id="service-cost">
-							</div>
-							<div class="form-group">
-			      		<fieldset>
-				          <!-- <legend class="form-label-bold visibly-hidden" for="service-charge2">How often do you pay service charges?</legend> -->
-				          <label class="block-label" for="radio-inline-14">
-				            <input id="radio-inline-14" type="radio" name="service-charge2" value="Every week">
-				            Every week
-				          </label>
-				          <label class="block-label" for="radio-inline-15">
-				            <input id="radio-inline-15" type="radio" name="service-charge2" value="Every month">
-				            Every month
-				          </label>
-				          <label class="block-label" for="radio-inline-16">
-				            <input id="radio-inline-16" type="radio" name="service-charge2" value="Every year">
-				            Every year
-				          </label>
-				        </fieldset>
-				      </div>
-		      	</div>
+		      </div>
+	        <div class="js-hidden" id="how-much">
+	        	<div class="form-group">
+		      		<label class="form-label-bold" for="service-cost">How much service charge do you pay?</label>
+		      		£ <input type="text" class="form-control form-control-1-4" id="service-cost">
+						</div>
+						<div class="form-group">
+		      		<fieldset>
+			          <!-- <legend class="form-label-bold visibly-hidden" for="service-charge2">How often do you pay service charges?</legend> -->
+			          <label class="block-label" for="radio-inline-14">
+			            <input id="radio-inline-14" type="radio" name="service-charge2" value="Every week">
+			            Every week
+			          </label>
+			          <label class="block-label" for="radio-inline-15">
+			            <input id="radio-inline-15" type="radio" name="service-charge2" value="Every month">
+			            Every month
+			          </label>
+			          <label class="block-label" for="radio-inline-16">
+			            <input id="radio-inline-16" type="radio" name="service-charge2" value="Every year">
+			            Every year
+			          </label>
+			        </fieldset>
+			      </div>
+			      <div class="form-group">&nbsp;</div>
+	      	</div>
+	      	
+	      	<div class="form-group">
+		      	<fieldset class="inline">
+		          <legend class="form-label-bold" for="have-loan">Do you or your partner have a loan against your house?</legend>
+		          <label class="block-label" data-target="have-loan" for="radio-inline-30">
+		            <input id="radio-inline-30" type="radio" name="have-loan" value="Yes">
+		            Yes
+		          </label>
+		          <label class="block-label" for="radio-inline-31">
+		            <input id="radio-inline-31" type="radio" name="have-loan" value="No">
+		            No
+		          </label>
+		        </fieldset>
+		      </div>
+
 		      </div>
 	      </div>
 
 
 	      <div class="panel panel-border-narrow js-hidden" id="rented">
-	      	<div class="form-group">
+	      	<div class="form-group" id="have-rent">
+		      	<fieldset class="inline">
+		          <legend class="form-label-bold" for="pay-rent">Does anyone else apart from your partner pay towards the rent?</legend>
+		          <label class="block-label" data-target="who-pay-rent" for="radio-inline-40">
+		            <input id="radio-inline-40" type="radio" name="pay-rent" value="Yes">
+		            Yes
+		          </label>
+		          <label class="block-label" for="radio-inline-41">
+		            <input id="radio-inline-41" type="radio" name="pay-rent" value="No">
+		            No
+		          </label>
+		        </fieldset>
+		        <div class="form-group js-hidden" id="who-pay-rent">
+		      		<label class="form-label" for="rent-name">Full name of person who pays towards your rent</label>
+		      		<input type="text" class="form-control" id="rent-name">
+		      	</div>
+		      </div>
 
+		      <div class="form-group">
+		      	<fieldset class="inline">
+		          <legend class="form-label-bold" for="service-charges8">Do you pay service charges for where you live?</legend>
+		          <label class="block-label" data-target="how-much8" for="radio-inline-128">
+		            <input id="radio-inline-128" type="radio" name="service-charges8" value="Yes">
+		            Yes
+		          </label>
+		          <label class="block-label" for="radio-inline-138">
+		            <input id="radio-inline-138" type="radio" name="service-charges8" value="No">
+		            No
+		          </label>
+		        </fieldset>
+		      </div>
+	        <div class="js-hidden" id="how-much8">
+	        	<div class="form-group">
+		      		<label class="form-label-bold" for="service-cost8">How much service charge do you pay?</label>
+		      		£ <input type="text" class="form-control form-control-1-4" id="service-cost8">
+						</div>
+						<div class="form-group">
+		      		<fieldset>
+			          <!-- <legend class="form-label-bold visibly-hidden" for="service-charge2">How often do you pay service charges?</legend> -->
+			          <label class="block-label" for="radio-inline-148">
+			            <input id="radio-inline-148" type="radio" name="service-charge28" value="Every week">
+			            Every week
+			          </label>
+			          <label class="block-label" for="radio-inline-158">
+			            <input id="radio-inline-158" type="radio" name="service-charge28" value="Every month">
+			            Every month
+			          </label>
+			          <label class="block-label" for="radio-inline-168">
+			            <input id="radio-inline-168" type="radio" name="service-charge28" value="Every year">
+			            Every year
+			          </label>
+			        </fieldset>
+			      </div>
 	      	</div>
+
+
 	      </div>
 
 
