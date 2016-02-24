@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Housing benefit
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+{% include "../includes/phase_banner_alpha.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+  
+      <form action="pensions" method="#" class="form">
+
+      <h1 class="form-title heading-large">
+        <!-- <span class="heading-secondary">Section 14 of 23</span> -->
+        Housing benefit &amp; council tax reduction
+      </h1>
+
+      <div class="form-group">
+        <fieldset class="inline">
+          <legend class="form-label-bold heading-large" for="partner">Are you already waiting to hear or intending to claim Housing Benefit or apply for a Council Tax reduction, or both?</legend>
+          <label class="block-label" data-target="pension" for="radio-inline-1">
+            <input id="radio-inline-1" type="radio" name="partner" value="Yes">
+            Yes
+          </label>
+          <label class="block-label" data-target="no-pension" for="radio-inline-2">
+            <input id="radio-inline-2" type="radio" name="partner" value="No">
+            No
+          </label>
+        </fieldset>
+      </div>
+
+      
+      <div class="form-group">
+        <input type="submit" class="button" value="Continue">
+      </div>
+
+    </div>
+    <div class="column-third">
+    </div>
+  </div>
+
+
+</main><!-- / #page-container -->
+{% endblock %}
