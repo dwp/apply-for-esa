@@ -20,8 +20,23 @@
 			  </header>
 
         <div class="form-group">
-          <label class="form-label-bold" for="full-name">Full name</label>
+          <label class="form-label-bold" for="title">Title</label>
+          <input type="text" class="form-control form-control-1-4" id="title" name="title">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label-bold" for="full-name">First name</label>
           <input type="text" class="form-control" id="full-name" name="full-name">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label-bold" for="other-name">Other names</label>
+          <input type="text" class="form-control" id="other-name" name="other-name">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label-bold" for="surname">Surname</label>
+          <input type="text" class="form-control" id="surname" name="surname">
         </div>
 
         <div class="form-group">
@@ -46,12 +61,35 @@
           </fieldset>
         </div>
 
+        <div class="panel panel-border-narrow js-hidden" id="state-age">
+          <fieldset class="inline form-group">
+            <legend class="form-label-bold">
+              What sex are you?
+            </legend>
+
+            <label for="radio-part-4" data-target="yesHeal" class="block-label">
+              <input id="radio-part-4" type="radio" name="esaHeal" value="Male">
+              Male
+            </label>
+
+            <label for="radio-part-5" data-target="noHeal" class="block-label">
+              <input id="radio-part-5" type="radio" name="esaHeal" value="Female">
+              Female
+            </label>
+
+            <label for="radio-part-5" data-target="noHeal" class="block-label">
+              <input id="radio-part-5" type="radio" name="esaHeal" value="Other">
+              Other
+            </label>
+          </fieldset>
+        </div>
+
         <div class="form-group">
           <label class="form-label-bold" for="nino">
           National Insurance number
           </label>
           <input type="text" class="form-control" id="nino" name="nino">
-            </div>
+        </div>
 
 
         <!-- Primary buttons, secondary links -->
