@@ -39,6 +39,8 @@
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
+b {font-weight: bold;}
+
 .secondary-button {
   @include button ($panel-colour);
   box-shadow:0 2px 0 $secondary-text-colour;
