@@ -11,16 +11,16 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <h1 class="heading-large">Injuries</h1>
+      <h1 class="heading-large">Short-term conditions</h1>
 
       <form action="special-rules" method="#" class="form">
         <div class="form-group">
           <fieldset class="inline">
             <legend class="form-label-bold">
-              Are you applying for Employment and Support Allowance because you have recently received an injury meaning that you cannot work?
+              Are you applying for Employment and Support Allowance because of a short-term (less that 3 months) injury, illness or because of an operation meaning that you cannot work?
             </legend>
 
-            <label for="radio-part-2" data-target="injuryHeal" class="block-label">
+            <label for="radio-part-2" data-target="offWork" class="block-label">
               <input id="radio-part-2" type="radio" name="esaApply" value="Yes">
               Yes
             </label>
@@ -32,39 +32,11 @@
           </fieldset>
         </div>
 
-        <div class="panel panel-border-narrow js-hidden" id="injuryHeal">
-          <fieldset class="inline form-group">
-            <legend class="form-label-bold">
-              Do you expect the injury to heal over time?
-            </legend>
+        <div class="panel panel-border-narrow js-hidden" id="offWork">
 
-            <label for="radio-part-4" data-target="yesHeal" class="block-label">
-              <input id="radio-part-4" type="radio" name="esaHeal" value="Yes">
-              Yes
-            </label>
-
-            <label for="radio-part-5" data-target="noHeal" class="block-label">
-              <input id="radio-part-5" type="radio" name="esaHeal" value="No">
-              No
-            </label>
-          </fieldset>
-
-          <div class="js-hidden form-group" id="noHeal">
-            <label for="noHeal" class="form-label-bold">Why wont your injury heal?</label>
-            <textarea class="form-control" name="noHeal" rows="8" cols="40"></textarea>
-          </div>
-
-          <div class="js-hidden" id="yesHeal">
-            <div class="form-group">
-              <label for="healTime" class="form-label-bold">How long does your doctor expect your injury take to heal?</label>
-              <input type="text" name="healTime" class="form-control form-control-1-4"> <span>weeks</span>
-            </div>
-
-            <div class="form-group">
-              <label for="returnToWork" class="form-label-bold">When do you expect to return to work?</label>
-              <input type="text" class="form-control form-control-1-4" name="returnToWork"> <span>weeks</span>
-            </div>
-
+          <div class="form-group">
+            <label for="healTime" class="form-label-bold">How long does your doctor expect you to be off work?</label>
+            <input type="text" name="healTime" class="form-control form-control-1-4"> <span>weeks</span>
           </div>
 
         </div>
