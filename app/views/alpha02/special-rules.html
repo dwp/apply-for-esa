@@ -40,8 +40,38 @@
         </div>
 
         <div class="js-hidden panel panel-border-narrow" id="partners-hours">
-    			<p>Ask the medical professional who diagnosed you to send your DS1500 to: [who and how?].</p>
+        	<div class="form-group">
+				  	<fieldset class="inline">
+
+	            <legend class="heading-medium">
+	              Do you have a DS1500?
+	            </legend>
+
+	            <p>DS1500 is a form completed by a medical professional.</p>
+
+	            <label for="radio-part-4" data-target="yes-ds" class="block-label">
+	              <input id="radio-part-4" type="radio" name="ds" value="Yes">
+	              Yes
+	            </label>
+
+	            <label for="radio-part-5" data-target="no-ds" class="block-label">
+	              <input id="radio-part-5" type="radio" name="ds" value="No">
+	              No
+	            </label>
+
+	          </fieldset>
+	        </div>
         </div>
+
+        <div class="js-hidden panel panel-border-narrow" id="yes-ds">
+    			<p>You will need to send your DS1500 to DWP. The address will be at the end.</p>
+        </div>
+
+        <div class="js-hidden panel panel-border-narrow" id="no-ds">
+    			<p>Ask the medical professional who diagnosed you for a DS1500.</p>
+        </div>
+
+        
 
 		    <!-- Primary buttons, secondary links -->
 		    <div class="form-group">
