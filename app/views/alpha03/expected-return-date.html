@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block title %}
-  Identifying Short Term Conditions
+  Identifying Condition Recovery date
 {% endblock %}
 
 {% block content %}
@@ -11,13 +11,13 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <h1 class="heading-large">Short-term conditions</h1>
+      <h1 class="heading-large">Back to work</h1>
 
       <form action="special-rules" method="#" class="form">
         <div class="form-group">
-          <fieldset class="inline">
+          <fieldset>
             <legend class="form-label-bold">
-              Are you applying because of a short-term (less that 3 months) injury, illness or because of an operation meaning that you cannot work?
+              Do you know when you will be back to work?
             </legend>
 
             <label for="radio-part-2" data-target="offWork" class="block-label">
@@ -26,8 +26,13 @@
             </label>
 
             <label for="radio-part-3" class="block-label">
-              <input id="radio-part-3" type="radio" name="esaApply" value="No">
-              No
+              <input id="radio-part-3" type="radio" name="esaApply" value="I dont know">
+              I don't know
+            </label>
+
+            <label for="radio-part-4" class="block-label">
+              <input id="radio-part-4" type="radio" name="esaApply" value="Never">
+              I'll never be able to work
             </label>
           </fieldset>
         </div>
@@ -35,8 +40,8 @@
         <div class="panel panel-border-narrow js-hidden" id="offWork">
 
           <div class="form-group">
-            <label for="healTime" class="form-label-bold">How long does your doctor expect you to be off work?</label>
-            <input type="text" name="healTime" class="form-control form-control-1-4"> <span>weeks</span>
+            <label for="healTime" class="form-label-bold">When do you expect to go back to work?</label>
+            <input type="text" name="healTime" class="form-control">
           </div>
 
         </div>
