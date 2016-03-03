@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Household
+  Your household
 {% endblock %}
 
 {% block content %}
@@ -9,38 +9,282 @@
 <main id="content" role="main">
 	{% include "../includes/phase_banner_alpha.html" %}
 
-	<form action="claim-date" method="#" class="form">
+	<form action="expected-return-date" method="#" class="form">
 		<div class="grid-row">
 			<div class="column-two-thirds">
 				<header>
 			    <h1 class="form-title heading-large">
-			    	<!-- <span class="heading-secondary">Section 12 of 23</span> -->
-			      Special rules
+			    	<!-- <span class="heading-secondary">Section 11 of 23</span> -->
+			      Other people in your household
 			    </h1>
 			  </header>
 
-			  <div class="form-group">
-			  	<fieldset class="inline">
+			  <p>List all the people over the age of 18 who live with you. Do not include your partner.</p>
 
-            <legend class="heading-medium">
-              Have you been diagnosed as having 6 months or less to live?
-            </legend>
+        <div class="" id="partner-yes">
+          <h2 class="heading-small">Person 1</h2>
 
-            <label for="radio-part-2" data-target="partners-hours" class="block-label">
-              <input id="radio-part-2" type="radio" name="housing-act" value="Yes">
-              Yes
-            </label>
+          <div class="form-group">
+            <label class="form-label" for="firstname1">First name</label>
+            <input class="form-control" id="firstname1" type="text" name="firstname1"> 
+          </div>
 
-            <label for="radio-part-3" class="block-label">
-              <input id="radio-part-3" type="radio" name="housing-act" value="No">
-              No
-            </label>
+          <div class="form-group">
+            <label class="form-label" for="surname2">Surname</label>
+            <input class="form-control" id="surname2" type="text" name="surname2"> 
+          </div>
 
-          </fieldset>
+          <div class="form-group">
+            <fieldset>
+              <legend><span class="form-label">Date of birth</span></legend>
+              <div class="form-date">
+                <div class="form-group form-group-day">
+                  <label for="dob-day1">Day</label>
+                  <input type="text" class="form-control" id="dob-day1" maxlength="2" name="dob-day1">
+                </div>
+                <div class="form-group form-group-month">
+                  <label for="dob-month1">Month</label>
+                  <input type="text" class="form-control" id="dob-month1" maxlength="2" name="dob-month1">
+                </div>
+                <div class="form-group form-group-year">
+                  <label for="dob-year1">Year</label>
+                  <input type="text" class="form-control" id="dob-year1" maxlength="4" name="dob-year1">
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="relationship1">What is their relationship to you?</label>
+            <input class="form-control" id="relationship1" type="text" name="relationship1"> 
+          </div>
+
+          <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
+            <fieldset class="inline">
+              <legend class="form-label" for="moneyin1">Do they have any money coming in?</legend>
+              <label class="block-label" data-target="money1" for="radio-inline-1">
+                <input id="radio-inline-1" type="radio" name="moneyin1" value="Yes">
+                Yes
+              </label>
+              <label class="block-label" for="radio-inline-2">
+                <input id="radio-inline-2" type="radio" name="moneyin1" value="No">
+                No
+              </label>
+            </fieldset>
+
+            <div class="panel panel-border-narrow js-hidden" id="money1">
+              <div class="form-group">
+                <label class="form-label" for="wherefrom1">Where does the money come from?</label>
+                <input class="form-control" id="wherefrom1" type="text" name="wherefrom1"> 
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="howmuch1">How much do they get?</label>
+                £ <input class="form-control form-control-1-4" id="howmuch1" type="text" name="howmuch1"> 
+              </div>
+
+              <div class="form-group">
+                <fieldset class="inline">
+                  <legend class="form-label" for="howoften1">How often?</legend>
+                  <label class="block-label" for="weekly1">
+                    <input id="weekly1" type="radio" name="howoften1" value="weekly">
+                    Weekly
+                  </label>
+                  <label class="block-label" for="monthly1">
+                    <input id="monthly1" type="radio" name="howoften1" value="monthly">
+                    Monthly
+                  </label>
+                  <label class="block-label" for="yearly1">
+                    <input id="yearly1" type="radio" name="howoften1" value="yearly">
+                    Yearly
+                  </label>
+                </fieldset>
+              </div>
+
+            </div>
+
+          </div>
+
+          <p><a href="#" id="show-payment2" class="add-another secondary-button">Add another</a></p>
+
         </div>
 
-        <div class="js-hidden panel panel-border-narrow" id="partners-hours">
-    			<p>Ask your doctor for a DS1500 and send it to us.</p>
+        <div class="js-hidden" id="payment2">
+
+          <h2 class="heading-small">Person 2</h2>
+
+          <div class="form-group">
+            <label class="form-label" for="firstname10">First name</label>
+            <input class="form-control" id="firstname10" type="text" name="firstname10"> 
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="surname20">Surname</label>
+            <input class="form-control" id="surname20" type="text" name="surname20"> 
+          </div>
+
+          <div class="form-group">
+            <fieldset>
+              <legend><span class="form-label">Date of birth</span></legend>
+              <div class="form-date">
+                <div class="form-group form-group-day">
+                  <label for="dob-day10">Day</label>
+                  <input type="text" class="form-control" id="dob-day10" maxlength="2" name="dob-day10">
+                </div>
+                <div class="form-group form-group-month">
+                  <label for="dob-month10">Month</label>
+                  <input type="text" class="form-control" id="dob-month10" maxlength="2" name="dob-month10">
+                </div>
+                <div class="form-group form-group-year">
+                  <label for="dob-year10">Year</label>
+                  <input type="text" class="form-control" id="dob-year10" maxlength="4" name="dob-year10">
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="relationship10">What is their relationship to you?</label>
+            <input class="form-control" id="relationship10" type="text" name="relationship10"> 
+          </div>
+
+          <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
+            <fieldset class="inline">
+              <legend class="form-label" for="moneyin10">Do they have any money coming in?</legend>
+              <label class="block-label" data-target="money10" for="radio-inline-10">
+                <input id="radio-inline-10" type="radio" name="moneyin10" value="Yes">
+                Yes
+              </label>
+              <label class="block-label" for="radio-inline-20">
+                <input id="radio-inline-20" type="radio" name="moneyin10" value="No">
+                No
+              </label>
+            </fieldset>
+
+            <div class="panel panel-border-narrow js-hidden" id="money10">
+              <div class="form-group">
+                <label class="form-label" for="wherefrom10">Where does the money come from?</label>
+                <input class="form-control" id="wherefrom10" type="text" name="wherefrom10"> 
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="howmuch10">How much do they get?</label>
+                £ <input class="form-control form-control-1-4" id="howmuch10" type="text" name="howmuch10"> 
+              </div>
+
+              <div class="form-group">
+                <fieldset class="inline">
+                  <legend class="form-label" for="howoften10">How often?</legend>
+                  <label class="block-label" for="weekly10">
+                    <input id="weekly10" type="radio" name="howoften10" value="weekly">
+                    Weekly
+                  </label>
+                  <label class="block-label" for="monthly10">
+                    <input id="monthly10" type="radio" name="howoften10" value="monthly">
+                    Monthly
+                  </label>
+                  <label class="block-label" for="yearly10">
+                    <input id="yearly10" type="radio" name="howoften10" value="yearly">
+                    Yearly
+                  </label>
+                </fieldset>
+              </div>
+              
+            </div>
+
+          </div>
+
+          <p><a href="#" id="show-payment3" class="add-another secondary-button">Add another</a></p>
+
+        </div>
+
+        <div class="js-hidden" id="payment3">
+
+          <h2 class="heading-small">Person 3</h2>
+
+          <div class="form-group">
+            <label class="form-label" for="firstname11">First name</label>
+            <input class="form-control" id="firstname11" type="text" name="firstname11"> 
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="surname21">Surname</label>
+            <input class="form-control" id="surname21" type="text" name="surname21"> 
+          </div>
+
+          <div class="form-group">
+            <fieldset>
+              <legend><span class="form-label">Date of birth</span></legend>
+              <div class="form-date">
+                <div class="form-group form-group-day">
+                  <label for="dob-day11">Day</label>
+                  <input type="text" class="form-control" id="dob-day11" maxlength="2" name="dob-day11">
+                </div>
+                <div class="form-group form-group-month">
+                  <label for="dob-month11">Month</label>
+                  <input type="text" class="form-control" id="dob-month11" maxlength="2" name="dob-month11">
+                </div>
+                <div class="form-group form-group-year">
+                  <label for="dob-year11">Year</label>
+                  <input type="text" class="form-control" id="dob-year11" maxlength="4" name="dob-year11">
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="relationship11">What is their relationship to you?</label>
+            <input class="form-control" id="relationship11" type="text" name="relationship11"> 
+          </div>
+
+          <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
+            <fieldset class="inline">
+              <legend class="form-label" for="moneyin11">Do they have any money coming in?</legend>
+              <label class="block-label" data-target="money11" for="radio-inline-11">
+                <input id="radio-inline-11" type="radio" name="moneyin11" value="Yes">
+                Yes
+              </label>
+              <label class="block-label" for="radio-inline-21">
+                <input id="radio-inline-21" type="radio" name="moneyin11" value="No">
+                No
+              </label>
+            </fieldset>
+
+            <div class="panel panel-border-narrow js-hidden" id="money11">
+              <div class="form-group">
+                <label class="form-label" for="wherefrom11">Where does the money come from?</label>
+                <input class="form-control" id="wherefrom11" type="text" name="wherefrom11"> 
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="howmuch11">How much do they get?</label>
+                £ <input class="form-control form-control-1-4" id="howmuch11" type="text" name="howmuch11"> 
+              </div>
+
+              <div class="form-group">
+                <fieldset class="inline">
+                  <legend class="form-label" for="howoften11">How often?</legend>
+                  <label class="block-label" for="weekly11">
+                    <input id="weekly11" type="radio" name="howoften11" value="weekly">
+                    Weekly
+                  </label>
+                  <label class="block-label" for="monthly11">
+                    <input id="monthly11" type="radio" name="howoften11" value="monthly">
+                    Monthly
+                  </label>
+                  <label class="block-label" for="yearly11">
+                    <input id="yearly11" type="radio" name="howoften11" value="yearly">
+                    Yearly
+                  </label>
+                </fieldset>
+              </div>
+              
+            </div>
+
+          </div>
+
+          <p><a href="#" id="show-payment4" class="add-another secondary-button">Add another</a></p>
+
         </div>
 
 		    <!-- Primary buttons, secondary links -->
@@ -56,5 +300,24 @@
 
   </form>
 </main>
+{% endblock %}
 
+{% block body_end %}
+  {% include "includes/scripts.html" %}
+  <script>
+    $(document).ready(function() {
+
+      $("#show-payment2").click(function() {
+        $("#payment2").show();
+        $("#show-payment2").hide();
+         return false;
+      });
+      $("#show-payment3").click(function() {
+        $("#payment3").show();
+        $("#show-payment3").hide();
+         return false;
+      });
+
+    });
+  </script>
 {% endblock %}
