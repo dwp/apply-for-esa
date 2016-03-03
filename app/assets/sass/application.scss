@@ -46,3 +46,12 @@ b {font-weight: bold;}
   box-shadow:0 2px 0 $secondary-text-colour;
   padding: 0.4em 0.7em 0.1em 0.7em;
 }
+
+.panel-indent.disclaimer {
+  position: relative;
+  background: #28a197;
+  /* Fallback for older browsers without RGBA-support */
+  background: rgba(40, 161, 151, 0.25);
+  border-left: 6px solid #28A197;
+  padding: 20px 27px 15px;
+}
