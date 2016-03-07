@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Speaking
+  Using you hands
 {% endblock %}
 
 {% block content %}
@@ -16,30 +16,33 @@
 
 			  <div class="form-group">
 	        <fieldset class="">
-	          <h1 class="form-title heading-large"><legend for="partner">Are you affected by any of the following?</legend></h1>
+	          <h1 class="form-title heading-large"><legend for="partner">Which of the following do you have physical trouble with?</legend></h1>
 	          <label class="block-label" data-target="mortgage" for="radio-inline-1">
 	            <input id="radio-inline-1" type="checkbox" name="partner" value="Yes">
-	            Fainting
+	            Pressing buttons on a telephone keypad
 	          </label>
 	          <label class="block-label" data-target="mortgage" for="radio-inline-2">
 	            <input id="radio-inline-2" type="checkbox" name="partner" value="No">
-	            Fits or epileptic seizures
+	            Turning the pages of a book
 	          </label>
 	          <label class="block-label" data-target="mortgage" for="radio-inline-7">
 	            <input id="radio-inline-7" type="checkbox" name="partner" value="No">
-	            Blackouts
+	            Picking up a &pound;1 coin from a table
 	          </label>
 	          <label class="block-label" data-target="mortgage" for="radio-inline-3">
 	            <input id="radio-inline-3" type="checkbox" name="partner" value="No">
-	            Partial or focal seizures
+	            Holding a pen or pencil
 	          </label>
 	          <label class="block-label" data-target="mortgage" for="radio-inline-6">
 	            <input id="radio-inline-6" type="checkbox" name="partner" value="No">
-	            Diabetic hypos
+	            Using a suitable keyboard or mouse
 	          </label>
+	          <div class="form-group">
+	          	<p>or</p>
+	          </div>
 	          <label class="block-label" for="radio-inline-5">
 	            <input id="radio-inline-5" type="checkbox" name="partner" value="No">
-	            I am not affected by any of these
+	            I do not have any problems with my hands
 	          </label>
 	          
 	          <div class="panel panel-border-narrow js-hidden" id="other">
@@ -52,7 +55,7 @@
 	      <div class="panel panel-border-narrow js-hidden" id="mortgage">
 	      	<div class="form-group">
 		      	<fieldset class="">
-		          <legend class="form-label-bold" for="have-mortgage">How often are you affected by any of the above?</legend>
+		          <legend class="form-label-bold" for="have-mortgage">How often do you have difficulty with any of the above?</legend>
 		          <label class="block-label" data-target="have-mortgage" for="radio-inline-20">
 		            <input id="radio-inline-20" type="radio" name="have-mortgage" value="Daily">
 		            Daily
