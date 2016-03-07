@@ -12,16 +12,11 @@
 	<form action="household" method="#" class="form">
 		<div class="grid-row">
 			<div class="column-two-thirds">
-				<header>
-			    <h1 class="form-title heading-large">
-			    	<!-- <span class="heading-secondary">Section 8 of 23</span> -->
-			      Consciousness
-			    </h1>
-			  </header>
+				
 
 			  <div class="form-group">
 	        <fieldset class="">
-	          <legend class="form-label" for="partner">Are you affected by any of the following?</legend>
+	          <h1 class="form-title heading-large"><legend for="partner">Are you affected by any of the following?</legend></h1>
 	          <label class="block-label" data-target="mortgage" for="radio-inline-1">
 	            <input id="radio-inline-1" type="checkbox" name="partner" value="Yes">
 	            Fainting
@@ -57,7 +52,7 @@
 	      <div class="panel panel-border-narrow js-hidden" id="mortgage">
 	      	<div class="form-group">
 		      	<fieldset class="">
-		          <legend class="form-label-bold" for="have-mortgage">How oftern are you affected by any of the above?</legend>
+		          <legend class="form-label-bold" for="have-mortgage">How often are you affected by any of the above?</legend>
 		          <label class="block-label" data-target="have-mortgage" for="radio-inline-20">
 		            <input id="radio-inline-20" type="radio" name="have-mortgage" value="Daily">
 		            Daily
@@ -75,6 +70,11 @@
 		            Less than monthly
 		          </label>
 		        </fieldset>
+		      </div>
+
+		      <div class="form-group">
+		      	<label class="form-label" for="tell-more">Tell us more about this</label>
+		      	<textarea id="tell-more" class="form-control" rows="5"></textarea>
 		      </div>
 	      </div>
 
