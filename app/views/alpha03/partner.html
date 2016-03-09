@@ -62,7 +62,7 @@
 		              Have you had a partner in the last 6 months?
 		            </legend>
 
-		            <label for="radio-part-4" class="block-label">
+		            <label for="radio-part-4" data-target="previous-partner" class="block-label">
 		              <input id="radio-part-4" type="radio" name="partner-6" value="Yes">
 		              Yes
 		            </label>
@@ -73,6 +73,27 @@
 		            </label>
 
 		          </fieldset>
+
+		          <div class="js-hidden form-group" id="previous-partner" style="margin-top: 10px;">
+		          	<fieldset class="inline">
+
+			            <legend class="form-label-bold">
+			              Are they making any regular payments to you?
+			            </legend>
+
+			            <label for="radio-part-7" data-target="yes-pay" class="block-label">
+			              <input id="radio-part-7" type="radio" name="partner-61" value="Yes">
+			              Yes
+			            </label>
+
+			            <label for="radio-part-8" class="block-label">
+			              <input id="radio-part-8" type="radio" name="partner-61" value="No">
+			              No
+			            </label>
+
+			          </fieldset>
+			        </div>
+
 		        </div>
 
           </fieldset>
