@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Speaking 
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "../includes/phase_banner_alpha.html" %}
+
+	<form action="hearing" method="#" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+
+	      <div id="mortgage">
+	      	<div class="form-group">
+		      	<fieldset class="">
+		          <h1 class="form-title heading-large"><legend for="have-mortgage">Which of the following affects you?</legend></h1>
+		          <label class="block-label" for="radio-inline-20">
+		            <input id="radio-inline-20" type="checkbox" name="have-mortgage" value="Daily">
+		            I have difficulties controlling my bladder
+		          </label>
+		          <label class="block-label"  for="radio-inline-28">
+		            <input id="radio-inline-28" type="checkbox" name="have-mortgage" value="Daily">
+		            I have difficulties controlling my bowels
+		          </label>
+		          <div class="form-group">
+		          	<p>or</p>
+		          </div>
+		          <label class="block-label" for="radio-inline-21">
+		            <input id="radio-inline-21" type="checkbox" name="have-mortgage" value="Weekly">
+		            I have no problems controlling my bladder or bowels
+		          </label>
+		        </fieldset>
+		      </div>
+
+		      <div class="panel panel-narrow-border js-hidden" id="more-info">
+			      <div class="form-group">
+			      	<fieldset class="">
+			          <h1 class="form-title heading-large"><legend for="partner">Are you affected by any of the following?</legend></h1>
+			          <label class="block-label" data-target="mortgage" for="radio-inline-1">
+			            <input id="radio-inline-1" type="checkbox" name="partner" value="Yes">
+			            Fainting
+			          </label>
+			          <label class="block-label" data-target="mortgage" for="radio-inline-2">
+			            <input id="radio-inline-2" type="checkbox" name="partner" value="No">
+			            Fits or epileptic seizures
+			          </label>
+			          <label class="block-label" data-target="mortgage" for="radio-inline-7">
+			            <input id="radio-inline-7" type="checkbox" name="partner" value="No">
+			            Blackouts
+			          </label>
+			          <label class="block-label" data-target="mortgage" for="radio-inline-3">
+			            <input id="radio-inline-3" type="checkbox" name="partner" value="No">
+			            Partial or focal seizures
+			          </label>
+			          <label class="block-label" data-target="mortgage" for="radio-inline-6">
+			            <input id="radio-inline-6" type="checkbox" name="partner" value="No">
+			            Diabetic hypos
+			          </label>
+			          <label class="block-label" for="radio-inline-5">
+			            <input id="radio-inline-5" type="checkbox" name="partner" value="No">
+			            I am not affected by any of these
+			          </label>
+			        </fieldset>
+			      </div>
+			      <div class="form-group">
+			      	<label class="form-label" for="tell-more">How do you communicate now?</label>
+			      	<textarea id="tell-more" class="form-control" rows="5"></textarea>
+			      </div>
+			    </div>
+	      </div>
+
+		    <!-- Primary buttons, secondary links -->
+		    <div class="form-group">
+		      <input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
+		    </div>
+
+		  </div>
+		  <div class="column-one-third">
+		  	<p>&nbsp;</p>
+		  </div>
+		</div>
+
+  </form>
+</main>
+
+{% endblock %}
