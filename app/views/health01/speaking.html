@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Speaking 
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "../includes/phase_banner_alpha.html" %}
+
+	<form action="household" method="#" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+
+	      <div id="mortgage">
+	      	<div class="form-group">
+		      	<fieldset class="">
+		          <h1 class="form-title heading-large"><legend for="have-mortgage">Can you physically speak?</legend></h1>
+		          <label class="block-label" for="radio-inline-20">
+		            <input id="radio-inline-20" type="radio" name="have-mortgage" value="Daily">
+		            Yes
+		          </label>
+		          <label class="block-label"  for="radio-inline-28">
+		            <input id="radio-inline-28" type="radio" name="have-mortgage" value="Daily">
+		            Yes, but I don't like to in social situations
+		          </label>
+		          <label class="block-label" data-target="more-info" for="radio-inline-21">
+		            <input id="radio-inline-21" type="radio" name="have-mortgage" value="Weekly">
+		            I struggle to physically say words
+		          </label>
+		          <label class="block-label" data-target="more-info" for="radio-inline-22">
+		            <input id="radio-inline-22" type="radio" name="have-mortgage" value="Monthly">
+		            No, I'm mute
+		          </label>
+		        </fieldset>
+		      </div>
+
+		      <div class="panel panel-narrow-border js-hidden" id="more-info">
+			      <div class="form-group">
+			      	<label class="form-label" for="tell-more">Why does your condition make it difficult to talk?</label>
+			      	<textarea id="tell-more" class="form-control" rows="5"></textarea>
+			      </div>
+			      <div class="form-group">
+			      	<label class="form-label" for="tell-more">How do you communicate now?</label>
+			      	<textarea id="tell-more" class="form-control" rows="5"></textarea>
+			      </div>
+			    </div>
+	      </div>
+
+		    <!-- Primary buttons, secondary links -->
+		    <div class="form-group">
+		      <input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
+		    </div>
+
+		  </div>
+		  <div class="column-one-third">
+		  	<p>&nbsp;</p>
+		  </div>
+		</div>
+
+  </form>
+</main>
+
+{% endblock %}

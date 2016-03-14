@@ -11,21 +11,33 @@
 
   <div class="grid-row">
     <div class="column-two-thirds">
-
+  
       <form action="what-happens-next" method="#" class="form">
 
       <h1 class="form-title heading-large">
         Declaration
       </h1>
+      
+      <div class="form-group">
+        <p>By sending this application you agree:</p>
+        <ul class="list-bullet">
+          <li>that the <strong>information</strong> in this application is complete and correct</li>
+          <li>to promptly <a href="#" id="circs-button">report any changes to your circumstances</a></li>
+        </ul>
+        <div id="change-circs" class="form-group js-hidden" style="margin-left:25px;">
+          <p>You must call 0345 850 3322, or textphone 0345 601 6677 if:</p>
+          <ul class="list-bullet" style="margin-top:-10px;">
+            <li> your personal details change, eg your name, address or doctor</li>
+            <li>the help you need or your condition changes</li>
+            <li>you stay overnight in a hospital or care home</li>
+            <li>you go abroad for more than 13 weeks</li>
+            <li>you’re imprisoned or held in detention</li>
+          </ul>
+        </div>
+      </div>
 
-      <p>By sending this application you agree:</p>
-      <ul class="list-bullet">
-        <li>that the <strong>information</strong> in this application is complete and correct</li>
-        <li>to report any changes to your circumstances</li>
-      </ul>
-
-      <div class="application-notice help-notice">
-        <p>You might have to go to court or pay a penalty if you deliberately give false or incomplete information, or do not report changes. Your Employment and Support Allowance may also be stopped or reduced.</p>
+      <div class="form-group panel-indent disclaimer">
+        <p>Your benefit may be stopped if you deliberately give the wrong information that would affect your claim, or don't report changes.</p>
       </div>
 
       <div class="form-group">
@@ -39,5 +51,17 @@
 
 
 </main><!-- / #page-container -->
+
+{% endblock %}
+
+{% block body_end %}
+  {% include "includes/scripts.html" %}
+  <script>
+  $("#circs-button").click(function(e) {
+    $("#change-circs").toggle();
+
+    e.preventDefault;
+  });
+  </script>
 
 {% endblock %}

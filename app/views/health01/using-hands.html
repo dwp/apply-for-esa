@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Using you hands
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "../includes/phase_banner_alpha.html" %}
+
+	<form action="household" method="#" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				
+
+			  <div class="form-group">
+	        <fieldset class="">
+	          <h1 class="form-title heading-large"><legend for="partner">Which of the following do you have physical trouble with?</legend></h1>
+	          <label class="block-label" data-target="mortgage" for="radio-inline-1">
+	            <input id="radio-inline-1" type="checkbox" name="partner" value="Yes">
+	            Pressing buttons on a telephone keypad
+	          </label>
+	          <label class="block-label" data-target="mortgage" for="radio-inline-2">
+	            <input id="radio-inline-2" type="checkbox" name="partner" value="No">
+	            Turning the pages of a book
+	          </label>
+	          <label class="block-label" data-target="mortgage" for="radio-inline-7">
+	            <input id="radio-inline-7" type="checkbox" name="partner" value="No">
+	            Picking up a &pound;1 coin from a table
+	          </label>
+	          <label class="block-label" data-target="mortgage" for="radio-inline-3">
+	            <input id="radio-inline-3" type="checkbox" name="partner" value="No">
+	            Holding a pen or pencil
+	          </label>
+	          <label class="block-label" data-target="mortgage" for="radio-inline-6">
+	            <input id="radio-inline-6" type="checkbox" name="partner" value="No">
+	            Using a suitable keyboard or mouse
+	          </label>
+	          <div class="form-group">
+	          	<p>or</p>
+	          </div>
+	          <label class="block-label" for="radio-inline-5">
+	            <input id="radio-inline-5" type="checkbox" name="partner" value="No">
+	            I do not have any problems with my hands
+	          </label>
+	          
+	          <div class="panel panel-border-narrow js-hidden" id="other">
+	            <label class="form-label"><input type="text" class="form-control" id="address-line1"></label>
+	          </div>
+	        </fieldset>
+	      </div>
+
+
+	      <div class="panel panel-border-narrow js-hidden" id="mortgage">
+	      	<div class="form-group">
+		      	<fieldset class="">
+		          <legend class="form-label-bold" for="have-mortgage">How often do you have difficulty with any of the above?</legend>
+		          <label class="block-label" data-target="have-mortgage" for="radio-inline-20">
+		            <input id="radio-inline-20" type="radio" name="have-mortgage" value="Daily">
+		            Daily
+		          </label>
+		          <label class="block-label" for="radio-inline-21">
+		            <input id="radio-inline-21" type="radio" name="have-mortgage" value="Weekly">
+		            Weekly
+		          </label>
+		          <label class="block-label" for="radio-inline-22">
+		            <input id="radio-inline-22" type="radio" name="have-mortgage" value="Monthly">
+		            Monthly
+		          </label>
+		          <label class="block-label" for="radio-inline-23">
+		            <input id="radio-inline-23" type="radio" name="have-mortgage" value="Less than monthly">
+		            Less than monthly
+		          </label>
+		        </fieldset>
+		      </div>
+
+		      <div class="form-group">
+		      	<label class="form-label" for="tell-more">Tell us more about this</label>
+		      	<textarea id="tell-more" class="form-control" rows="5"></textarea>
+		      </div>
+	      </div>
+
+		    <!-- Primary buttons, secondary links -->
+		    <div class="form-group">
+		      <input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
+		    </div>
+
+		  </div>
+		  <div class="column-one-third">
+		  	<p>&nbsp;</p>
+		  </div>
+		</div>
+
+  </form>
+</main>
+
+{% endblock %}
