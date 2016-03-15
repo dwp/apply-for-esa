@@ -24,8 +24,8 @@
 	            <input id="radio-inline-28" type="radio" name="ears" value="Daily">
 	            Yes, I am partially deaf
 	          </label>
-	          <label class="block-label"  for="radio-inline-28">
-	            <input id="radio-inline-28" type="radio" name="ears" value="Daily">
+	          <label class="block-label" data-target="struggle" for="radio-inline-29">
+	            <input id="radio-inline-29" type="radio" name="ears" value="Daily">
 	            Yes, I sometimes struggle to hear
 	          </label>
 	          <label class="block-label" data-target="more-info" for="radio-inline-22">
@@ -53,11 +53,11 @@
 	        </fieldset>
 		      <div class="js-hidden" id="more-info">
 		      	<div class="form-group">
-			      	<label class="form-label-bold" for="tell-more">How do you understand people now?</label>
+			      	<label class="form-label-bold" for="tell-more">How do you work out what people are saying to you?</label>
 			      	<textarea id="tell-more" class="form-control" rows="5"></textarea>
 			      </div>
 		      	<fieldset class="inline form-group">
-		          <legend for="help" class="form-label-bold">Do you need help from another person to understand simple messages?</legend>
+		          <legend for="help" class="form-label-bold">Do you need help from another person to translate simple messages?</legend>
 		          <label class="block-label" for="radio-inline-4">
 		            <input id="radio-inline-4" type="radio" name="help" value="Yes">
 		            Yes
@@ -88,11 +88,11 @@
 	        </fieldset>
 	        <div class="js-hidden" id="aid-info">
 		      	<div class="form-group">
-			      	<label class="form-label-bold" for="aid-more">How do you understand people now?</label>
+			      	<label class="form-label-bold" for="aid-more">How do you work out what people are saying to you?</label>
 			      	<textarea id="aid-more" class="form-control" rows="5"></textarea>
 			      </div>
 		      	<fieldset class="inline form-group">
-		          <legend for="help2" class="form-label-bold">Do you need help from another person to understand simple messages?</legend>
+		          <legend for="help2" class="form-label-bold">Do you need help from another person to translate simple messages?</legend>
 		          <label class="block-label" for="radio-inline-9">
 		            <input id="radio-inline-9" type="radio" name="help2" value="Yes">
 		            Yes
@@ -102,6 +102,13 @@
 		            No
 		          </label>
 		        </fieldset>
+		      </div>
+		    </div>
+
+		    <div class="panel panel-narrow-border js-hidden" id="struggle">
+		    	<div class="form-group">
+		      	<label class="form-label-bold" for="tell-more">When do you struggle to hear?</label>
+		      	<textarea id="tell-more" class="form-control" rows="5"></textarea>
 		      </div>
 		    </div>
 
