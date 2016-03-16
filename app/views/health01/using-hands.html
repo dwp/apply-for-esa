@@ -12,11 +12,16 @@
 	<form action="speaking" method="#" class="form">
 		<div class="grid-row">
 			<div class="column-two-thirds">
+
+				<h1 class="form-title heading-large">
+        <!-- <span class="heading-secondary">Section 16 of 16</span> -->
+        Using your hands
+        </h1>
 				
 
 			  <div class="form-group">
 	        <fieldset class="">
-	          <h1 class="form-title heading-large"><legend for="partner">Which of the following do you have physical trouble with?</legend></h1>
+	          <h1 class="form-title-bold"><legend for="partner">Which of the following do you have physical trouble with?</legend></h1>
 	          <label class="block-label" data-target="mortgage" for="radio-inline-1">
 	            <input id="radio-inline-1" type="checkbox" name="partner" value="Yes">
 	            Pressing buttons on a telephone keypad
@@ -68,10 +73,15 @@
 		            <input id="radio-inline-22" type="radio" name="have-mortgage" value="Monthly">
 		            Monthly
 		          </label>
-		          <label class="block-label" for="radio-inline-23">
+		          <label class="block-label" data-target="d-other" for="radio-inline-23">
 		            <input id="radio-inline-23" type="radio" name="have-mortgage" value="Less than monthly">
-		            Less than monthly
+		            Other
 		          </label>
+		          <div class="panel panel-narrow-border js-hidden" id="d-other">
+		          	<div class="form-group">
+		          		<label class="form-label" ><input type="text" class="form-control" id="address-line2"></label>
+		          	</div>
+		          </div>
 		        </fieldset>
 		      </div>
 
