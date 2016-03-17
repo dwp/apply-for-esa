@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  GP Details
+	GP Details
 {% endblock %}
 
 {% block content %}
@@ -13,55 +13,56 @@
 		<div class="grid-row">
 			<div class="column-two-thirds">
 				<header>
-			    <h1 class="form-title heading-large">
-			    	<!-- <span class="heading-secondary">Section 10 of 23</span> -->
-			      Your doctor
-			    </h1>
-			  </header>
+				<h1 class="form-title heading-large">
+					<!-- <span class="heading-secondary">Section 10 of 23</span> -->
+					Your GP's details
+				</h1>
+				<p></p>
+				</header>
 
-	      <div class="form-group">
-	        <label class="form-label-bold" for="full-name">
-	        Doctor's name
-	        </label>
-	        <input type="text" class="form-control" id="full-name" name="full-name">
-	      </div>
+			<div class="form-group">
+			<label class="form-label-bold" for="full-name">
+			Doctor's name
+			</label>
+			<input type="text" class="form-control" id="full-name" name="full-name">
+			</div>
 
-	      <fieldset>
+			<fieldset>
 
-	        <legend class="form-label-bold">Their address</legend>
+			<legend class="form-label-bold">Their address</legend>
 
-	        <div class="form-group">
-	          <label class="form-label"><input type="text" class="form-control" id="address-line1"></label>
-	          <label class="form-label"><input type="text" class="form-control" id="address-line2"></label>
-	          <label class="form-label"><input type="text" class="form-control" id="address-line3"></label>
-	        </div>
+			<div class="form-group">
+				<label class="form-label"><input type="text" class="form-control" id="address-line1"></label>
+				<label class="form-label"><input type="text" class="form-control" id="address-line2"></label>
+				<label class="form-label"><input type="text" class="form-control" id="address-line3"></label>
+			</div>
 
-	        <div class="form-group">
-	          <label class="form-label-bold" for="postcode">Postcode</label>
-	          <input type="text" class="form-control" id="postcode">
-	        </div>
+			<div class="form-group">
+				<label class="form-label-bold" for="postcode">Postcode</label>
+				<input type="text" class="form-control" id="postcode">
+			</div>
 
-	      </fieldset>
+			</fieldset>
 
-	      <div class="form-group">
-	        <label class="form-label-bold" for="nino">
-	        Their phone number
-	        </label>
-	        <input type="text" class="form-control" id="nino" name="nino">
-	      </div>
+			<div class="form-group">
+			<label class="form-label-bold" for="nino">
+			Their phone number
+			</label>
+			<input type="text" class="form-control" id="nino" name="nino">
+			</div>
 
-		    <!-- Primary buttons, secondary links -->
-		    <div class="form-group">
-		      <input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
-		    </div>
+			<!-- Primary buttons, secondary links -->
+			<div class="form-group">
+				<input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
+			</div>
 
-		  </div>
-		  <div class="column-one-third">
-		  	<p>&nbsp;</p>
-		  </div>
+			</div>
+			<div class="column-one-third">
+			<p>&nbsp;</p>
+			</div>
 		</div>
 
-  </form>
+	</form>
 </main>
 
 {% endblock %}
