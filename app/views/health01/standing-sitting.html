@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Controlling your bladder and bowels
+  Standing and sitting
 {% endblock %}
 
 {% block content %}
@@ -9,33 +9,30 @@
 <main id="content" role="main">
 	{% include "../includes/phase_banner_alpha.html" %}
 
-	<form action="consciousness" method="#" class="form">
+	<form action="raising-your-arms" method="#" class="form">
 		<div class="grid-row">
 			<div class="column-two-thirds">
 				<h1 class="form-title heading-large">
         <!-- <span class="heading-secondary">Section 16 of 16</span> -->
-        Controlling your bladder and bowels
+        Standing and sitting
         </h1>
 
-	      <div id="mortgage">
+	      <div id="need-help">
 	      	<div class="form-group">
-		      	<fieldset class="">
-		          <legend class="form-label" for="have-mortgage">Do you have difficulty:</legend>
+		      	<fieldset class="inline">
+		          <legend class="form-label-bold" for="help">Do you need help to stand or sit comfortably?</legend>
 		          <label class="block-label" data-target="more-info" for="radio-inline-20">
-		            <input id="radio-inline-20" type="checkbox" name="have-mortgage" value="Daily">
-		            controlling your bowels
+		            <input id="radio-inline-20" type="checkbox" name="help" value="Daily">
+		            Yes
 		          </label>
 		          <label class="block-label" data-target="more-info" for="radio-inline-28">
-		            <input id="radio-inline-28" type="checkbox" name="have-mortgage" value="Daily">
-		            controlling your bladder
+		            <input id="radio-inline-28" type="checkbox" name="help" value="Daily">
+		            No
 		          </label>
-		          <div class="form-group">
-		          	<p>or</p>
+		          <div class="panel panel-border-narrow js-hidden" id="other2">
+		            <label class="form-label" for="help-need">Explain what help you need</label>
+		            <input type="text" class="form-control" id="help-need">
 		          </div>
-		          <label class="block-label" for="radio-inline-21">
-		            <input id="radio-inline-21" type="checkbox" name="have-mortgage" value="Weekly">
-		            You do not have difficulty controlling your bladder or bowels
-		          </label>
 		        </fieldset>
 		      </div>
 		    </div>
