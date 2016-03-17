@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Identifying Condition Recovery date
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include "../includes/phase_banner_alpha.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">Back to work</h1>
+
+      <form action="special-rules" method="#" class="form">
+        <div class="form-group">
+          <fieldset>
+            <legend class="form-label-bold">
+              Do you know when you will be back to work?
+            </legend>
+
+            <label for="radio-part-2" data-target="offWork" class="block-label">
+              <input id="radio-part-2" type="radio" name="esaApply" value="Yes">
+              Yes
+            </label>
+
+            <label for="radio-part-3" class="block-label">
+              <input id="radio-part-3" type="radio" name="esaApply" value="I dont know">
+              I don't know
+            </label>
+
+            <label for="radio-part-4" class="block-label">
+              <input id="radio-part-4" type="radio" name="esaApply" value="Never">
+              I'll never be able to work
+            </label>
+          </fieldset>
+        </div>
+
+        <div class="panel panel-border-narrow js-hidden" id="offWork">
+
+          <div class="form-group">
+            <label for="healTime" class="form-label-bold">When do you expect to go back to work?</label>
+            <input type="text" name="healTime" class="form-control">
+          </div>
+
+        </div>
+
+        <input class="button" type="submit" value="Continue"></input>
+      </form>
+
+    </div>
+
+    <div class="column-one-third"></div>
+  </div>
+</main>
+{% endblock %}

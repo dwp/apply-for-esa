@@ -1,0 +1,127 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Personal details
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% include "../includes/phase_banner_alpha.html" %}
+
+	<form action="contact-details" method="#" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<header>
+			    <h1 class="form-title heading-large">
+			    	<!-- <span class="heading-secondary">Section 2 of 23</span> -->
+			      Personal details
+			    </h1>
+			  </header>
+
+        <div class="form-group">
+          <label class="form-label-bold" for="title">Title</label>
+          <input type="text" class="form-control form-control-1-4" id="title" name="title">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label-bold" for="full-name">First name</label>
+          <input type="text" class="form-control" id="full-name" name="full-name">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label-bold" for="other-name">Middle names</label>
+          <input type="text" class="form-control" id="other-name" name="other-name">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label-bold" for="surname">Surname</label>
+          <input type="text" class="form-control" id="surname" name="surname">
+        </div>
+
+        <div class="form-group">
+          <fieldset>
+            <legend><span class="form-label-bold">Date of birth</span></legend>
+
+            <div class="form-date">
+
+              <div class="form-group form-group-day">
+                <label for="dob-day">Day</label>
+                <input type="text" class="form-control" id="dob-day" maxlength="2" name="dob-day">
+              </div>
+              <div class="form-group form-group-month">
+                <label for="dob-month">Month</label>
+                <input type="text" class="form-control" id="dob-month" maxlength="2" name="dob-month">
+              </div>
+              <div class="form-group form-group-year">
+                <label for="dob-year">Year</label>
+                <input type="text" class="form-control" id="dob-year" maxlength="4" name="dob-year">
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="panel panel-border-narrow js-hidden" id="state-age">
+          <fieldset class="inline form-group">
+            <legend class="form-label-bold">
+              What sex are you?
+            </legend>
+
+            <label for="radio-part-4" data-target="yesHeal" class="block-label">
+              <input id="radio-part-4" type="radio" name="esaHeal" value="Male">
+              Male
+            </label>
+
+            <label for="radio-part-5" data-target="noHeal" class="block-label">
+              <input id="radio-part-5" type="radio" name="esaHeal" value="Female">
+              Female
+            </label>
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label-bold" for="nino">
+          National Insurance number
+          </label>
+          <input type="text" class="form-control" id="nino" name="nino">
+        </div>
+
+
+        <!-- Primary buttons, secondary links -->
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
+        </div>
+
+      </div>
+      <div class="column-one-third">
+      	<p>&nbsp;</p>
+      </div>
+    </div>
+
+  </form>
+</main>
+
+{% endblock %}
+
+{% block body_end %}
+  {% include "includes/scripts.html" %}
+  <script src="/public/javascripts/moment.js"></script>
+  <script>
+    $("#dob-year").change(function(e) {
+      var $this = $(this);
+      var maxAge = 60;
+
+      var dob = $("#dob-day").val();
+          dob += $("#dob-month").val();
+          dob += $("#dob-year").val();
+
+      var years = moment(dob, 'DDMMYYYY').fromNow();
+          years = years.split(' ');
+          years = parseInt(years[0]);
+
+      if(years >= maxAge) {
+        $("#state-age").removeClass('js-hidden').addClass('js-show');
+      }
+    });
+  </script>
+{% endblock %}

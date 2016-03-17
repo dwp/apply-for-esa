@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Contact details
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% include "../includes/phase_banner_alpha.html" %}
+
+	<form action="work" method="#" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<header>
+			    <h1 class="form-title heading-large">
+			    	<!-- <span class="heading-secondary">Section 3 of 23</span> -->
+			      Contact details
+			    </h1>
+			  </header>
+
+        <p class="lede">Updates about your application will be sent to you by letter, text message and email.</p>
+
+
+        <div class="form-group">
+          <fieldset>
+
+            <h2 class="form-title heading-medium">Address</h2>
+
+            <p>Information about your claim will be sent to this address.</p>
+
+
+            <div class="form-group">
+              <label class="form-label"><input type="text" class="form-control" id="address-line1"></label>
+              <label class="form-label"><input type="text" class="form-control" id="address-line2"></label>
+              <label class="form-label"><input type="text" class="form-control" id="address-line3"></label>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="postcode">Postcode</label>
+              <input type="text" class="form-control form-control-1-4" id="postcode">
+            </div>
+
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label-bold" for="phone">Mobile</label>
+
+          <input type="text" class="form-control" id="phone">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label-bold" for="other-phone">Other phone number</label>
+
+          <input type="text" class="form-control" id="other-phone">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label-bold" for="email">Email</label>
+
+          <input type="text" class="form-control" id="email">
+        </div>
+
+
+        <!-- Primary buttons, secondary links -->
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
+        </div>
+
+      </div>
+      <div class="column-one-third">
+      	<p>&nbsp;</p>
+      </div>
+    </div>
+
+  </form>
+</main>
+
+{% endblock %}
