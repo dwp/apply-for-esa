@@ -22,24 +22,15 @@
       </h1>
 
       <div class="form-group">
-        <fieldset>
-          <legend class="form-label-bold heading-large" for="partner">You are currently in:</legend>
-          <label class="block-label" data-target="education" for="radio-inline-1">
-            <input id="radio-inline-1" type="checkbox" name="partner" value="Yes">
-            education
+        <fieldset class="inline">
+          <legend class="heading-medium" for="question1">Are you currently in education?</legend>
+          <label class="block-label" data-target="education" for="livewith1">
+            <input id="livewith1" type="radio" name="question1" value="Yes">
+            Yes
           </label>
-          <label class="block-label" data-target="training" for="radio-inline-2">
-            <input id="radio-inline-2" type="checkbox" name="partner" value="No">
-            training
-          </label>
-          <label class="block-label" data-target="app" for="radio-inline-3">
-            <input id="radio-inline-3" type="checkbox" name="partner" value="No">
-            an apprenticeship
-          </label>
-
-          <label class="block-label" for="radio-inline-4">
-            <input id="radio-inline-4" type="checkbox" name="partner" value="No">
-            You are not in education, training or an apprenticeship
+          <label class="block-label" for="livewith2">
+            <input id="livewith2" type="radio" name="question1" value="No">
+            No
           </label>
         </fieldset>
       </div>
@@ -128,6 +119,20 @@
       </div>
 <!-- Education end -->
 
+      <div class="form-group">
+        <fieldset class="inline">
+          <legend class="heading-medium" for="question2">Are you currently in training?</legend>
+          <label class="block-label" data-target="training" for="livewith3">
+            <input id="livewith3" type="radio" name="question2" value="Yes">
+            Yes
+          </label>
+          <label class="block-label" for="livewith4">
+            <input id="livewith4" type="radio" name="question2" value="No">
+            No
+          </label>
+        </fieldset>
+      </div>
+
 <!-- Training box -->
       <div class="panel panel-border-narrow js-hidden" id="training">
         <fieldset class="inline">
@@ -212,6 +217,20 @@
         </fieldset>
       </div>
 <!-- Training end -->
+
+      <div class="form-group">
+        <fieldset class="inline">
+          <legend class="heading-medium" for="question3">Are you currently in an apprenticeship?</legend>
+          <label class="block-label" data-target="app" for="livewith5">
+            <input id="livewith5" type="radio" name="question3" value="Yes">
+            Yes
+          </label>
+          <label class="block-label" for="livewith6">
+            <input id="livewith6" type="radio" name="question3" value="No">
+            No
+          </label>
+        </fieldset>
+      </div>
 
 <!-- Apprenticeship box -->
       <div class="panel panel-border-narrow js-hidden" id="app">
