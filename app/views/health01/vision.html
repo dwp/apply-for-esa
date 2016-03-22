@@ -20,18 +20,21 @@
 							<input id="radio-inline-20" type="radio" name="ears" value="Daily">
 							Yes, you're blind
 						</label>
-						<label class="block-label" data-target="partially-deaf" for="radio-inline-28">
+						<label class="block-label" data-target="blind" for="radio-inline-28">
 							<input id="radio-inline-28" type="radio" name="ears" value="Daily">
 							Yes, you're partially sighted
 						</label>
-						<label class="block-label"  for="radio-inline-28">
-							<input id="radio-inline-28" type="radio" name="ears" value="Daily">
+						<label class="block-label" data-target="glasses" for="radio-inline-21">
+							<input id="radio-inline-21" type="radio" name="ears" value="Daily">
 							Yes, you wear glasses or contact lenses
 						</label>
-						<label class="block-label"  for="radio-inline-28">
-							<input id="radio-inline-28" type="radio" name="ears" value="Daily">
+						<label class="block-label"  for="radio-inline-23">
+							<input id="radio-inline-23" type="radio" name="ears" value="Daily">
 							Yes, you have other problems with my eyesight
 						</label>
+						<div class="form-group">
+							<p>or</p>
+						</div>
 						<label class="block-label" data-target="more-info" for="radio-inline-22">
 							<input id="radio-inline-22" type="radio" name="ears" value="Monthly">
 							No, your eyesight is fine
@@ -53,11 +56,11 @@
 					</fieldset>
 					<div class="js-hidden" id="no-dog">
 						<div class="form-group">
-							<label class="form-label-bold" for="tell-more">How do you understand people now?</label>
+							<label class="form-label-bold" for="tell-more">How do you get around now?</label>
 							<textarea id="tell-more" class="form-control" rows="5"></textarea>
 						</div>
 						<fieldset class="inline form-group">
-							<legend for="help" class="form-label-bold">Do you need help from another person to understand simple messages?</legend>
+							<legend for="help" class="form-label-bold">Do you need help from another person to get around?</legend>
 							<label class="block-label" for="radio-inline-4">
 								<input id="radio-inline-4" type="radio" name="help" value="Yes">
 								Yes
@@ -70,25 +73,25 @@
 					</div>
 				</div>
 
-				<div class="panel panel-narrow-border js-hidden" id="partially-deaf">
-					<fieldset class="inline form-group">
-						<legend for="aid" class="form-label-bold">Can you hear with the use of an aid such as a hearing aid?</legend>
-						<label class="block-label" for="radio-inline-6">
+				<div class="panel panel-narrow-border js-hidden" id="glasses">
+					<fieldset class="form-group">
+						<legend for="aid" class="form-label-bold">When you are wearing your glasses or contact lenses do you have any problems moving around safely?</legend>
+						<label class="block-label" data-target="see-more" for="radio-inline-6">
 							<input id="radio-inline-6" type="radio" name="aid" value="Daily">
-							Yes, I can hear fine with the use of an aid
+							Yes
 						</label>
-						<label class="block-label" for="radio-inline-7">
+						<label class="block-label" data-target="see-more" for="radio-inline-7">
 							<input id="radio-inline-7" type="radio" name="aid" value="Daily">
-							I can hear fine without an aid
+							Sometimes
 						</label>
-						<label class="block-label" data-target="aid-info" for="radio-inline-8">
+						<label class="block-label" for="radio-inline-8">
 							<input id="radio-inline-8" type="radio" name="aid" value="Monthly">
-							No, I can't hear well even with an aid
+							No I can see fine
 						</label>
 					</fieldset>
-					<div class="js-hidden" id="aid-info">
+					<div class="js-hidden" id="see-more">
 						<div class="form-group">
-							<label class="form-label-bold" for="aid-more">How do you understand people now?</label>
+							<label class="form-label-bold" for="see-more">Why do you have problems?</label>
 							<textarea id="aid-more" class="form-control" rows="5"></textarea>
 						</div>
 						<fieldset class="inline form-group">
