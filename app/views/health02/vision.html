@@ -1,0 +1,144 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	Vision
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "../includes/phase_banner_alpha.html" %}
+
+	<form action="toilet-needs" method="#" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+
+				<div class="form-group">
+					<fieldset>
+						<h1 class="form-title heading-large"><legend for="ears">Do you have any problems with your eyesight?</legend></h1>
+						<label class="block-label" data-target="blind" for="radio-inline-20">
+							<input id="radio-inline-20" type="radio" name="ears" value="Daily">
+							Yes, you're blind
+						</label>
+						<label class="block-label" data-target="blind" for="radio-inline-28">
+							<input id="radio-inline-28" type="radio" name="ears" value="Daily">
+							Yes, you're partially sighted
+						</label>
+						<label class="block-label" data-target="glasses" for="radio-inline-21">
+							<input id="radio-inline-21" type="radio" name="ears" value="Daily">
+							Yes, you wear glasses or contact lenses
+						</label>
+						<label class="block-label" data-target="other-eyesight" for="radio-inline-23">
+							<input id="radio-inline-23" type="radio" name="ears" value="Daily">
+							Yes, you have other problems with my eyesight
+						</label>
+						<div class="form-group">
+							<p>or</p>
+						</div>
+						<label class="block-label" data-target="more-info" for="radio-inline-22">
+							<input id="radio-inline-22" type="radio" name="ears" value="Monthly">
+							No, your eyesight is fine
+						</label>
+					</fieldset>
+				</div>
+
+				<div class="panel panel-narrow-border js-hidden" id="blind">
+					<fieldset class="inline form-group">
+						<legend for="lip-read" class="form-label-bold">Do you have a guide dog?</legend>
+						<label class="block-label" for="radio-inline-1">
+							<input id="radio-inline-1" type="radio" name="lip-read" value="Daily">
+							Yes
+						</label>
+						<label class="block-label" data-target="no-dog" for="radio-inline-3">
+							<input id="radio-inline-3" type="radio" name="lip-read" value="Monthly">
+							No
+						</label>
+					</fieldset>
+					<div class="js-hidden" id="no-dog">
+						<div class="form-group">
+							<label class="form-label-bold" for="tell-more">How do you get around now?</label>
+							<textarea id="tell-more" class="form-control" rows="5"></textarea>
+						</div>
+						<fieldset class="inline form-group">
+							<legend for="help" class="form-label-bold">Do you need help from another person to get around?</legend>
+							<label class="block-label" for="radio-inline-4">
+								<input id="radio-inline-4" type="radio" name="help" value="Yes">
+								Yes
+							</label>
+							<label class="block-label" for="radio-inline-5">
+								<input id="radio-inline-5" type="radio" name="help" value="No">
+								No
+							</label>
+						</fieldset>
+					</div>
+				</div>
+
+				<div class="panel panel-narrow-border js-hidden" id="glasses">
+					<fieldset class="form-group">
+						<legend for="aid" class="form-label-bold">When you are wearing your glasses or contact lenses do you have any problems moving around safely?</legend>
+						<label class="block-label" data-target="see-more" for="radio-inline-6">
+							<input id="radio-inline-6" type="radio" name="aid" value="Daily">
+							Yes
+						</label>
+						<label class="block-label" data-target="see-more" for="radio-inline-7">
+							<input id="radio-inline-7" type="radio" name="aid" value="Daily">
+							Sometimes
+						</label>
+						<label class="block-label" for="radio-inline-8">
+							<input id="radio-inline-8" type="radio" name="aid" value="Monthly">
+							No I can see fine
+						</label>
+					</fieldset>
+					<div class="js-hidden" id="see-more">
+						<div class="form-group">
+							<label class="form-label-bold" for="se-more">Why do you have problems?</label>
+							<textarea id="se-more" class="form-control" rows="5"></textarea>
+						</div>
+						<fieldset class="inline form-group">
+							<legend for="help2" class="form-label-bold">Do you need help from another person to get around because of your eyesight?</legend>
+							<label class="block-label" for="radio-inline-9">
+								<input id="radio-inline-9" type="radio" name="help2" value="Yes">
+								Yes
+							</label>
+							<label class="block-label" for="radio-inline-10">
+								<input id="radio-inline-10" type="radio" name="help2" value="No">
+								No
+							</label>
+						</fieldset>
+					</div>
+				</div>
+
+				<div class="panel panel-narrow-border js-hidden" id="other-eyesight">
+					<div class="form-group">
+						<label class="form-label-bold" for="see-more-eyes">Explain more about the problems that you have with your eyesight</label>
+						<textarea id="see-more-eyes" class="form-control" rows="5"></textarea>
+					</div>
+					<fieldset class="inline form-group">
+						<legend for="help3" class="form-label-bold">Do you need help from another person to get around because of your eyesight?</legend>
+						<label class="block-label" for="radio-inline-90">
+							<input id="radio-inline-90" type="radio" name="help3" value="Yes">
+							Yes
+						</label>
+						<label class="block-label" for="radio-inline-100">
+							<input id="radio-inline-100" type="radio" name="help3" value="No">
+							No
+						</label>
+					</fieldset>
+				</div>
+
+
+				<!-- Primary buttons, secondary links -->
+				<div class="form-group">
+					<input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
+				</div>
+
+			</div>
+			<div class="column-one-third">
+				<p>&nbsp;</p>
+			</div>
+		</div>
+
+	</form>
+</main>
+
+{% endblock %}
