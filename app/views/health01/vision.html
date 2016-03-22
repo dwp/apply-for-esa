@@ -28,7 +28,7 @@
 							<input id="radio-inline-21" type="radio" name="ears" value="Daily">
 							Yes, you wear glasses or contact lenses
 						</label>
-						<label class="block-label"  for="radio-inline-23">
+						<label class="block-label" data-target="other-eyesight" for="radio-inline-23">
 							<input id="radio-inline-23" type="radio" name="ears" value="Daily">
 							Yes, you have other problems with my eyesight
 						</label>
@@ -91,11 +91,11 @@
 					</fieldset>
 					<div class="js-hidden" id="see-more">
 						<div class="form-group">
-							<label class="form-label-bold" for="see-more">Why do you have problems?</label>
-							<textarea id="aid-more" class="form-control" rows="5"></textarea>
+							<label class="form-label-bold" for="se-more">Why do you have problems?</label>
+							<textarea id="se-more" class="form-control" rows="5"></textarea>
 						</div>
 						<fieldset class="inline form-group">
-							<legend for="help2" class="form-label-bold">Do you need help from another person to understand simple messages?</legend>
+							<legend for="help2" class="form-label-bold">Do you need help from another person to get around because of your eyesight?</legend>
 							<label class="block-label" for="radio-inline-9">
 								<input id="radio-inline-9" type="radio" name="help2" value="Yes">
 								Yes
@@ -106,6 +106,24 @@
 							</label>
 						</fieldset>
 					</div>
+				</div>
+
+				<div class="panel panel-narrow-border js-hidden" id="other-eyesight">
+					<div class="form-group">
+						<label class="form-label-bold" for="see-more-eyes">Explain more about the problems that you have with your eyesight</label>
+						<textarea id="see-more-eyes" class="form-control" rows="5"></textarea>
+					</div>
+					<fieldset class="inline form-group">
+						<legend for="help3" class="form-label-bold">Do you need help from another person to get around because of your eyesight?</legend>
+						<label class="block-label" for="radio-inline-90">
+							<input id="radio-inline-90" type="radio" name="help3" value="Yes">
+							Yes
+						</label>
+						<label class="block-label" for="radio-inline-100">
+							<input id="radio-inline-100" type="radio" name="help3" value="No">
+							No
+						</label>
+					</fieldset>
 				</div>
 
 
