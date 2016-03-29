@@ -20,78 +20,72 @@
 				</header>
 
 				<div class="form-group">
-					<fieldset class="inline">
-						<legend class="form-label-bold heading-medium" for="partner">Are you getting any statutory payments?</legend>
+					<fieldset>
+						<legend class="form-label-bold" for="partner">Have you received any of the following in the last 3 months?</legend>
 						<!-- <p class="hint-text">If you are part-time employed select 'Employed or self-employed'.</p> -->
 						<label class="block-label" data-target="working" for="radio-inline-1">
 							<input id="radio-inline-1" type="radio" name="partner" value="Yes">
-							Yes
+							Statutory sick pay
 						</label>
-						<label class="block-label" for="radio-inline-2">
+						<label class="block-label" data-target="working" for="radio-inline-2">
 							<input id="radio-inline-2" type="radio" name="partner" value="No">
-							No
+							Statutory maternity pay
+						</label>
+						<label class="block-label" data-target="working" for="radio-inline-3">
+							<input id="radio-inline-3" type="radio" name="partner" value="Yes">
+							Statutory paternity pay
+						</label>
+						<label class="block-label" data-target="working" for="radio-inline-4">
+							<input id="radio-inline-4" type="radio" name="partner" value="No">
+							Statutory adoption pay
+						</label>
+						<div class="form-group">
+							<p>or</p>
+						</div>
+						<label class="block-label" for="radio-inline-5">
+							<input id="radio-inline-5" type="radio" name="partner" value="No">
+							None
 						</label>
 					</fieldset>
 				</div>
 
 				<div class="panel panel-border-narrow js-hidden" id="working">
+
 					<div class="form-group">
-						<label class="form-label-bold" for="hours">
-							What is the name of the statutory payments received?
-						</label>
-						<input type="text" class="form-control" id="hours" name="hours">
+						<label class="form-label-bold" for="howmuch1">How much is paid?</label>
+						£ <input class="form-control form-control-1-4" id="howmuch1" type="text" name="howmuch1"> 
 					</div>
 
-          <div class="form-group">
-            <label class="form-label-bold" for="howmuch1">How much do you get?</label>
-            £ <input class="form-control form-control-1-4" id="howmuch1" type="text" name="howmuch1"> 
-          </div>
-
-          <div class="form-group">
-            <fieldset class="">
-              <legend class="form-label-bold" for="howoften1">How often?</legend>
-              <label class="block-label" for="weekly1">
-                <input id="weekly1" type="radio" name="howoften1" value="weekly">
-                Weekly
-              </label>
-              <label class="block-label" for="monthly1">
-                <input id="monthly1" type="radio" name="howoften1" value="monthly">
-                Monthly
-              </label>
-              <label class="block-label" for="yearly">
-                <input id="yearly" type="radio" name="howoften1" value="yearly">
-                Yearly
-              </label>
-              <label class="block-label" data-target="pay-other" for="yearly1">
-                <input id="yearly1" type="radio" name="howoften1" value="other">
-                Other
-              </label>
-              <div class="form-group js-hidden" id="pay-other">
+					<div class="form-group">
+						<fieldset class="">
+							<legend class="form-label-bold" for="howoften1">How often?</legend>
+							<label class="block-label" for="weekly1">
+								<input id="weekly1" type="radio" name="howoften1" value="weekly">
+								Weekly
+							</label>
+							<label class="block-label" for="monthly1">
+								<input id="monthly1" type="radio" name="howoften1" value="monthly">
+								Monthly
+							</label>
+							<label class="block-label" for="yearly">
+								<input id="yearly" type="radio" name="howoften1" value="yearly">
+								Yearly
+							</label>
+							<label class="block-label" data-target="pay-other" for="yearly1">
+								<input id="yearly1" type="radio" name="howoften1" value="other">
+								Other
+							</label>
+							<div class="form-group js-hidden" id="pay-other">
 								<label class="form-label-bold" for="surgery-name">
 									<input type="text" class="form-control" id="surgery-name">
 								</label>
 							</div>
-            </fieldset>
-          </div>
-
-          <div class="form-group">
-						<fieldset class="inline">
-							<legend class="form-label-bold heading-medium" for="stat">Has the statutory payment ended?</legend>
-							<!-- <p class="hint-text">If you are part-time employed select 'Employed or self-employed'.</p> -->
-							<label class="block-label" data-target="yes-ssp" for="radio-inline-13">
-								<input id="radio-inline-13" type="radio" name="stat" value="Yes">
-								Yes
-							</label>
-							<label class="block-label" for="radio-inline-23">
-								<input id="radio-inline-23" type="radio" name="stat" value="No">
-								No
-							</label>
 						</fieldset>
 					</div>
 
-					<div class="form-group js-hidden" id="yes-ssp" style="margin-top: 15px;">
+					<div class="form-group" id="yes-ssp" style="margin-top: 15px;">
 						<fieldset>
-							<legend class="form-label-bold">What date  did the statutory pay finish?</legend>
+							<legend class="form-label-bold">What date does it end?</legend>
 							
 							<div class="form-date">
 								<p class="form-hint">DD MM YYYY</p>
@@ -107,6 +101,34 @@
 								<div class="form-group form-group-year">
 									<label for="dob-year">Year</label>
 									<input type="text" class="form-control" id="dob-year" maxlength="4" name="dob-year">
+								</div>
+							</div>
+						</fieldset>
+					</div>
+
+					<div class="form-group">
+						<label class="form-label-bold" for="howmuch1">How much is the final payment?</label>
+						£ <input class="form-control form-control-1-4" id="howmuch1" type="text" name="howmuch1"> 
+					</div>
+
+					<div class="form-group" id="yes-ssp" style="margin-top: 15px;">
+						<fieldset>
+							<legend class="form-label-bold">What date is the final payment paid?</legend>
+							
+							<div class="form-date">
+								<p class="form-hint">DD MM YYYY</p>
+								
+								<div class="form-group form-group-day">
+									<label for="pay-day">Day</label>
+									<input type="text" class="form-control" id="pay-day" maxlength="2" name="pay-day">
+								</div>
+								<div class="form-group form-group-month">
+									<label for="pay-month">Month</label>
+									<input type="text" class="form-control" id="pay-month" maxlength="2" name="pay-month">
+								</div>
+								<div class="form-group form-group-year">
+									<label for="pay-year">Year</label>
+									<input type="text" class="form-control" id="pay-year" maxlength="4" name="pay-year">
 								</div>
 							</div>
 						</fieldset>
