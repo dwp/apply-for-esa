@@ -77,48 +77,108 @@
           </div>
 
           <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
-            <fieldset class="inline">
-              <legend class="form-label" for="moneyin1">Do they have any money coming in?</legend>
-              <label class="block-label" data-target="money1" for="radio-inline-1">
-                <input id="radio-inline-1" type="radio" name="moneyin1" value="Yes">
-                Yes
+            <fieldset>
+              <legend class="form-label" for="moneyin1">Do they get:</legend>
+              <label class="block-label" data-target="money1a" for="get-1">
+                <input id="get-1" type="checkbox" name="moneyin1" value="Yes">
+                wages
               </label>
-              <label class="block-label" for="radio-inline-2">
-                <input id="radio-inline-2" type="radio" name="moneyin1" value="No">
-                No
+              <div class="panel panel-border-narrow js-hidden" id="money1a">
+
+                <div class="form-group">
+                  <label class="form-label" for="howmuch1a">How much do they get?</label>
+                  £ <input class="form-control form-control-1-4" id="howmuch1a" type="text" name="howmuch1a"> 
+                </div>
+
+                <div class="form-group">
+                  <fieldset class="inline">
+                    <legend class="form-label" for="howoften1a">How often do they get it?</legend>
+                    <label class="block-label" for="weekly1a">
+                      <input id="weekly1a" type="radio" name="howoften1a" value="weekly">
+                      Weekly
+                    </label>
+                    <label class="block-label" for="monthly1a">
+                      <input id="monthly1a" type="radio" name="howoften1a" value="monthly">
+                      Monthly
+                    </label>
+                    <label class="block-label" for="yearly1a">
+                      <input id="yearly1a" type="radio" name="howoften1a" value="yearly">
+                      Yearly
+                    </label>
+                  </fieldset>
+                </div>
+
+              </div>
+              <label class="block-label" data-target="money1b" for="get-2">
+                <input id="get-2" type="checkbox" name="moneyin1" value="No">
+                a pension
+              </label>
+              <div class="panel panel-border-narrow js-hidden" id="money1b">
+
+                <div class="form-group">
+                  <label class="form-label" for="howmuch1b">How much do they get?</label>
+                  £ <input class="form-control form-control-1-4" id="howmuch1b" type="text" name="howmuch1b"> 
+                </div>
+
+                <div class="form-group">
+                  <fieldset class="inline">
+                    <legend class="form-label" for="howoften1b">How often do they get it?</legend>
+                    <label class="block-label" for="weekly1b">
+                      <input id="weekly1b" type="radio" name="howoften1b" value="weekly">
+                      Weekly
+                    </label>
+                    <label class="block-label" for="monthly1b">
+                      <input id="monthly1b" type="radio" name="howoften1b" value="monthly">
+                      Monthly
+                    </label>
+                    <label class="block-label" for="yearly1b">
+                      <input id="yearly1b" type="radio" name="howoften1b" value="yearly">
+                      Yearly
+                    </label>
+                  </fieldset>
+                </div>
+
+              </div>
+              <label class="block-label" data-target="money1c" for="get-3">
+                <input id="get-3" type="checkbox" name="moneyin1" value="No">
+                any benefits
+              </label>
+              <div class="panel panel-border-narrow js-hidden" id="money1c">
+
+                <div class="form-group">
+                  <label class="form-label" for="howmuch1c">How much do they get?</label>
+                  £ <input class="form-control form-control-1-4" id="howmuch1c" type="text" name="howmuch1c"> 
+                </div>
+
+                <div class="form-group">
+                  <fieldset class="inline">
+                    <legend class="form-label" for="howoften1c">How often do they get it?</legend>
+                    <label class="block-label" for="weekly1c">
+                      <input id="weekly1c" type="radio" name="howoften1c" value="weekly">
+                      Weekly
+                    </label>
+                    <label class="block-label" for="monthly1c">
+                      <input id="monthly1c" type="radio" name="howoften1c" value="monthly">
+                      Monthly
+                    </label>
+                    <label class="block-label" for="yearly1c">
+                      <input id="yearly1c" type="radio" name="howoften1c" value="yearly">
+                      Yearly
+                    </label>
+                  </fieldset>
+                </div>
+
+              </div>
+              <div class="form-group"  style="margin-bottom: 0;">
+                <p>or</p>
+              </div>
+              <label class="block-label" for="get-4">
+                <input id="get-4" type="radio" name="moneyin1" value="No">
+                They do <span style="font-weight: bold;">not</span> get any money from wages, a pension or any benefits
               </label>
             </fieldset>
 
-            <div class="panel panel-border-narrow js-hidden" id="money1">
-              <div class="form-group">
-                <label class="form-label" for="wherefrom1">Where does the money come from?</label>
-                <input class="form-control" id="wherefrom1" type="text" name="wherefrom1"> 
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="howmuch1">How much do they get?</label>
-                £ <input class="form-control form-control-1-4" id="howmuch1" type="text" name="howmuch1"> 
-              </div>
-
-              <div class="form-group">
-                <fieldset class="inline">
-                  <legend class="form-label" for="howoften1">How often?</legend>
-                  <label class="block-label" for="weekly1">
-                    <input id="weekly1" type="radio" name="howoften1" value="weekly">
-                    Weekly
-                  </label>
-                  <label class="block-label" for="monthly1">
-                    <input id="monthly1" type="radio" name="howoften1" value="monthly">
-                    Monthly
-                  </label>
-                  <label class="block-label" for="yearly1">
-                    <input id="yearly1" type="radio" name="howoften1" value="yearly">
-                    Yearly
-                  </label>
-                </fieldset>
-              </div>
-
-            </div>
+            
 
           </div>
 
