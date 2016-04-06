@@ -110,7 +110,7 @@
 							</label>
 						</fieldset>
 					</div>
-					<div class="js-hidden" id="how-much">
+					<div class="form-group js-hidden" id="how-much">
 						<div class="form-group">
 							<label class="form-label-bold" for="service-cost">How much service charge do you pay?</label>
 							£ <input type="text" class="form-control form-control-1-4" id="service-cost">
@@ -130,6 +130,13 @@
 									<input id="radio-inline-16" type="radio" name="service-charge2" value="Every year">
 									Every year
 								</label>
+								<label class="block-label" data-target="other-sc2" for="radio-inline-17">
+									<input id="radio-inline-17" type="radio" name="service-charge28" value="Every year">
+									Other
+								</label>
+								<div class="form-group js-hidden" id="other-sc2">
+									<label class="form-label"><input type="text" class="form-control" id="address-line111"></label>
+								</div>
 							</fieldset>
 						</div>
 						
@@ -228,7 +235,7 @@
 									<input id="radio-inline-178" type="radio" name="service-charge28" value="Every year">
 									Other
 								</label>
-								<div class="panel panel-border-narrow js-hidden" id="other-sc">
+								<div class="form-group js-hidden" id="other-sc">
 									<label class="form-label"><input type="text" class="form-control" id="address-line11"></label>
 								</div>
 
