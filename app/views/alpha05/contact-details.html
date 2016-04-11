@@ -9,7 +9,7 @@
 <main id="content" role="main">
   {% include "../includes/phase_banner_alpha.html" %}
 
-	<form action="work" method="#" class="form">
+	<form action="contact-pref" method="#" class="form">
 		<div class="grid-row">
 			<div class="column-two-thirds">
 				<header>
@@ -52,9 +52,14 @@
         </div>
 
         <div class="form-group">
-          <label class="form-label-bold" for="other-phone">Other phone number</label>
+          <label class="form-label-bold" for="other-phone">Mobile number</label>
 
           <input type="text" class="form-control" id="other-phone">
+
+          <label class="form-checkbox" for="checkbox-telephone-number">
+            <input id="checkbox-telephone-number" name="contact-by-text-phone" type="checkbox" value="true">
+            Tick this if you want to get text messages about the progress of your claim
+          </label>
         </div>
 
         <div class="form-group">
