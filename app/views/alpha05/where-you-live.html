@@ -24,7 +24,7 @@
 						<legend class="form-label" for="partner">You live:</legend>
 						<label class="block-label" data-target="mortgage" for="radio-inline-1">
 							<input id="radio-inline-1" type="radio" name="partner" value="Yes">
-							in a place you own or pay the mortgage for
+							in a place you or a partner have bought
 						</label>
 						<label class="block-label" data-target="rented" for="radio-inline-2">
 							<input id="radio-inline-2" type="radio" name="partner" value="No">
@@ -40,11 +40,11 @@
 						</label>
 						<label class="block-label" data-target="homeless" for="radio-inline-6">
 							<input id="radio-inline-6" type="radio" name="partner" value="No">
-							you're homeless
+							at no fixed address
 						</label>
 						<label class="block-label" data-target="other" for="radio-inline-5">
 							<input id="radio-inline-5" type="radio" name="partner" value="No">
-							in something else
+							somewhere else
 						</label>
 						
 						<div class="panel panel-border-narrow js-hidden" id="other">
@@ -56,16 +56,25 @@
 
 				<div class="panel panel-border-narrow js-hidden" id="mortgage">
 					<div class="form-group">
-						<fieldset class="inline">
-							<legend class="form-label-bold" for="have-mortgage">Do you or your partner have a mortgage?</legend>
+						<fieldset>
+							<legend class="form-label-bold" for="have-mortgage">Do you:</legend>
 							<label class="block-label" data-target="have-mortgage" for="radio-inline-20">
 								<input id="radio-inline-20" type="radio" name="have-mortgage" value="Yes">
-								Yes
+								own the property outright
 							</label>
 							<label class="block-label" for="radio-inline-21">
 								<input id="radio-inline-21" type="radio" name="have-mortgage" value="No">
-								No
+								pay a mortgage on your own
 							</label>
+							<label class="block-label" for="radio-inline-22">
+								<input id="radio-inline-22" type="radio" name="have-mortgage" value="No">
+								pay a joint mortgage with a partner
+							</label>
+							<label class="block-label" for="radio-inline-23">
+								<input id="radio-inline-23" type="radio" name="have-mortgage" value="No">
+								pay a joint mortgage with someone else
+							</label>
+
 						</fieldset>
 					</div>
 					<div class="form-group js-hidden" id="have-mortgage">
