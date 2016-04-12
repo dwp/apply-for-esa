@@ -58,28 +58,27 @@
 					<div class="form-group">
 						<fieldset>
 							<legend class="form-label-bold" for="have-mortgage">Do you:</legend>
-							<label class="block-label" data-target="have-mortgage" for="radio-inline-20">
+							<label class="block-label" for="radio-inline-20">
 								<input id="radio-inline-20" type="radio" name="have-mortgage" value="Yes">
 								own the property outright
 							</label>
-							<label class="block-label" for="radio-inline-21">
+							<label class="block-label" data-target="have-mortgage" for="radio-inline-21">
 								<input id="radio-inline-21" type="radio" name="have-mortgage" value="No">
 								pay a mortgage on your own
 							</label>
-							<label class="block-label" for="radio-inline-22">
+							<label class="block-label" data-target="have-mortgage" for="radio-inline-22">
 								<input id="radio-inline-22" type="radio" name="have-mortgage" value="No">
 								pay a joint mortgage with a partner
 							</label>
-							<label class="block-label" for="radio-inline-23">
+							<label class="block-label" data-target="have-mortgage" for="radio-inline-23">
 								<input id="radio-inline-23" type="radio" name="have-mortgage" value="No">
 								pay a joint mortgage with someone else
 							</label>
-
 						</fieldset>
 					</div>
 					<div class="form-group js-hidden" id="have-mortgage">
 						<fieldset class="inline">
-							<legend class="form-label-bold" for="pay-mortgage">Does anyone else apart from your partner pay towards the mortgage?</legend>
+							<legend class="form-label-bold" for="pay-mortgage">Does anyone else help pay towards your mortgage?</legend>
 							<label class="block-label" data-target="who-pay-mortgage" for="radio-inline-10">
 								<input id="radio-inline-10" type="radio" name="pay-mortgage" value="Yes">
 								Yes
@@ -153,7 +152,7 @@
 					
 					<div class="form-group">
 						<fieldset class="inline">
-							<legend class="form-label-bold" for="have-loan">Do you or your partner have a loan against your house?</legend>
+							<legend class="form-label-bold" for="have-loan">Has any money been borrowed against your home?</legend>
 							<label class="block-label" data-target="have-loan" for="radio-inline-30">
 								<input id="radio-inline-30" type="radio" name="have-loan" value="Yes">
 								Yes
@@ -258,12 +257,38 @@
 
 				<div class="panel panel-border-narrow js-hidden" id="parents">
 					<div class="form-group">
-						<label class="form-label" for="house-head">Full name of the head of the house</label>
-						<input type="text" class="form-control" id="house-head">
+						<fieldset>
+							<legend class="form-label-bold visibly-hidden" for="live-parents">How often do you pay service charges?</legend>
+							<label class="block-label" for="radio-inline-148">
+								<input id="radio-inline-148" type="radio" name="live-parents" value="Every week">
+								Parents
+							</label>
+							<label class="block-label" data-target="other-rel" for="radio-inline-178">
+								<input id="radio-inline-178" type="radio" name="live-parents" value="Every year">
+								Relative
+							</label>
+							<div class="form-group js-hidden" id="other-rel">
+								<label class="form-label" for="rel-them">Your relationship to them</label>
+								<input type="text" class="form-control" id="rel-them">
+							</div>
+							<label class="block-label" for="radio-inline-158">
+								<input id="radio-inline-158" type="radio" name="live-parents" value="Every month">
+								Ex-spouse
+							</label>
+						</fieldset>
 					</div>
 					<div class="form-group">
-						<label class="form-label" for="house-rel">How you know them</label>
-						<input type="text" class="form-control" id="house-rel">
+						<fieldset class="inline">
+							<legend class="form-label-bold" for="live-rel">Do you live with them?</legend>
+							<label class="block-label" for="live-rel-9">
+								<input id="live-rel-9" type="radio" name="live-rel" value="Yes">
+								Yes
+							</label>
+							<label class="block-label" for="live-rel-8">
+								<input id="live-rel-8" type="radio" name="live-rel" value="No">
+								No
+							</label>
+						</fieldset>
 					</div>
 				</div>
 
