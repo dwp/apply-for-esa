@@ -81,8 +81,30 @@
         </div>
 
         <div class="form-group">
+          <fieldset class="inline">
+            <legend class="form-label" for="howoften1">How often do you get your pension?</legend>
+            <label class="block-label" for="weekly1">
+              <input id="weekly1" type="radio" name="howoften1" value="weekly">
+              Weekly
+            </label>
+            <label class="block-label" for="4weekly">
+              <input id="4weekly" type="radio" name="howoften1" value="4 weekly">
+              Every 4 weeks
+            </label>
+            <label class="block-label" for="monthly1">
+              <input id="monthly1" type="radio" name="howoften1" value="monthly">
+              Monthly
+            </label>
+            <label class="block-label" for="yearly1">
+              <input id="yearly1" type="radio" name="howoften1" value="quarterly">
+              Quarterly
+            </label>
+          </fieldset>
+        </div>
+
+        <div class="form-group">
           <fieldset>
-            <legend><span class="heading-small">Start date of pension</span></legend>
+            <legend><span class="heading-small">Date of first payment</span></legend>
             
             <div class="form-date">
               
@@ -152,6 +174,36 @@
           </fieldset>
         </div>
 
+        <p><a href="#" id="show-payment2" class="add-another secondary-button">Add another</a></p>
+
+      </div>
+
+
+
+      <div class="panel panel-border-narrow js-hidden" id="payment2">
+
+        <h2 class="heading-small">Condition 4</h2>
+        <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
+          <label class="form-label" for="condition02">Name of condition</label>
+          <input class="form-control" id="who01" type="text" name="condition02"> &nbsp; <a href="#">Remove</a>
+        </div>
+
+        <p><a href="#" id="show-payment3" class="add-another secondary-button">Add another</a></p>
+
+      </div>
+
+      
+
+      <div class="panel panel-border-narrow js-hidden" id="payment3">
+
+        <h2 class="heading-small">Condition 5</h2>
+        <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
+          <label class="form-label" for="condition03">Name of condition</label>
+          <input class="form-control" id="who01" type="text" name="condition03"> &nbsp; <a href="#">Remove</a>
+        </div>
+
+        <p><a href="#" id="show-payment4" class="add-another secondary-button">Add another</a></p>
+
       </div>
 
 
@@ -167,4 +219,24 @@
 
 
 </main><!-- / #page-container -->
+{% endblock %}
+
+{% block body_end %}
+  {% include "includes/scripts.html" %}
+  <script>
+    $(document).ready(function() {
+
+      $("#show-payment2").click(function() {
+        $("#payment2").show();
+        $("#show-payment2").hide();
+         return false;
+      });
+      $("#show-payment3").click(function() {
+        $("#payment3").show();
+        $("#show-payment3").hide();
+         return false;
+      });
+
+    });
+  </script>
 {% endblock %}
