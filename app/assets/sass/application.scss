@@ -42,8 +42,8 @@
 b {font-weight: bold;}
 
 .secondary-button {
-  @include button ($panel-colour);
-  box-shadow:0 2px 0 $secondary-text-colour;
+  @include button ($govuk-blue);
+  box-shadow:0 2px 0 $light-blue;
   padding: 0.4em 0.7em 0.1em 0.7em;
 }
 
@@ -54,4 +54,90 @@ b {font-weight: bold;}
   background: rgba(40, 161, 151, 0.25);
   border-left: 6px solid #28A197;
   padding: 20px 27px 15px;
+}
+
+/* Intro page */
+
+.intro-nav {
+  padding-bottom: 1.2em;
+  border-bottom: 1px solid #bbb;
+  ol {
+    list-style: none;
+    li {
+      display: inline-block;
+      width: 48%;
+      padding: 6px 0;
+    }
+  }
+}
+
+.intro-content {
+  
+}
+
+.intro-next {
+  margin-top: 2em;
+  padding-bottom: 1.2em;
+  border-bottom: 1px solid #bbb;
+  overflow: hidden;
+  a {
+    float: right;
+    display: block;
+    width: 35%;
+    padding: 20px 60px 20px 10px;
+    font-size: 28px;
+    text-decoration: none;
+    text-align: right;
+    position: relative;
+    &:before {
+        content: "\003e";
+        font-size: 50px;
+        font-family: georgia;
+        color: #2b8cc4;
+        position: absolute;
+        top: 1px;
+        right: 7%;
+      }
+    &.first {
+      float: left;
+      text-align: left;
+      padding: 20px 10px 20px 60px;
+      &:before {
+        content: "\003c";
+        top: 1px;
+        left: 7%;
+        right: 0;
+      }
+    }
+    span {
+      display: block;
+      font-size: 19px;
+    }
+    &:hover {
+      background-color: #eee;
+      text-decoration: underline;
+    }
+  }
+  @media screen and (max-width: 640px) {
+    a {
+      font-size: 19px;
+      width: 28%;
+      span {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.intro-right {
+  border-top: 10px solid #005ea5;
+  padding-top: 12px;
+}
+
+.intro-right-nav {
+  margin-top: -10px;
+  li {
+    padding: 5px 0;
+    font-size: 17px;
+  }
 }
