@@ -141,3 +141,119 @@ b {font-weight: bold;}
     font-size: 17px;
   }
 }
+
+/* pagination solen from GOV UK */
+.pagination {
+    display: block;
+    margin: 4em 0 0 0;
+    border-bottom: 1px solid #bfc1c3
+}
+
+@media (max-width: 640px) {
+    .pagination {
+        margin: 2em 0 0 0
+    }
+}
+
+.pagination ul {
+    margin: 0;
+    padding: 0
+}
+
+.pagination li {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 400;
+    text-transform: none;
+    float: left;
+    list-style: none;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    width: 49%
+}
+
+@media (max-width: 640px) {
+    .pagination li {
+        font-size: 14px;
+        line-height: 1.14286
+    }
+}
+
+.pagination li a {
+    background-color: transparent;
+    display: block;
+    color: #005ea5;
+    text-decoration: none
+}
+
+.pagination li a:hover, .pagination li a:active {
+    background-color: #f8f8f8
+}
+
+.pagination li a .pagination-label {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 27px;
+    line-height: 1.25;
+    font-weight: 400;
+    text-transform: none;
+    margin-bottom: 0.1em;
+    display: block
+}
+
+@media (max-width: 640px) {
+    .pagination li a .pagination-label {
+        font-size: 20px;
+        line-height: 1.11111
+    }
+}
+
+.pagination li a .pagination-part-title {
+    text-decoration: underline
+}
+
+.pagination li.next {
+    float: right;
+    text-align: right
+}
+
+.pagination li.next a:before {
+    background: transparent url(/public/images/icons/arrow-sprite-8275c6a71c56adfe1ac2b06ae7d4b12e.png) no-repeat -102px -11px;
+    margin: -4px -32px 0 0;
+    display: block;
+    float: right;
+    width: 30px;
+    height: 38px;
+    content: " "
+}
+
+.pagination li.previous a:before {
+    background: transparent url(/public/images/icons/arrow-sprite-8275c6a71c56adfe1ac2b06ae7d4b12e.png) no-repeat -20px -11px;
+    margin: -4px 0 0 -32px;
+    display: block;
+    float: left;
+    width: 30px;
+    height: 38px;
+    content: " "
+}
+
+.pagination li.previous {
+    float: left;
+    text-align: left
+}
+
+.pagination li.previous a {
+    padding: 0.75em 0 0.75em 3em
+}
+
+.pagination li.next a {
+    padding: 0.75em 3em 0.75em 0
+}
+
+@media (max-width: 640px) {
+    .pagination li.previous, .pagination li.next {
+        float: left;
+        width: 50%
+    }
+}
