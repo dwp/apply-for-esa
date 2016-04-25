@@ -1,0 +1,219 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	Work
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "../includes/phase_banner_alpha.html" %}
+
+	<form action="statutory-payments" method="#" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<header>
+					<h1 class="form-title heading-large">
+						<!-- <span class="heading-secondary">Section 5 of 23</span> -->
+						Work
+					</h1>
+				</header>
+
+				<div class="form-group">
+					<fieldset class="">
+						<legend class="form-label-bold" for="partner">What is your employment status?</legend>
+						<p class="hint-text">If you are part-time employed select 'Employed or self-employed'.</p>
+						<label class="block-label" data-target="working" for="radio-inline-1">
+							<input id="radio-inline-1" type="radio" name="partner" value="Yes">
+							Employed or self-employed
+						</label>
+						<label class="block-label" for="radio-inline-2">
+							<input id="radio-inline-2" type="radio" name="partner" value="No">
+							Unemployed
+						</label>
+					</fieldset>
+				</div>
+
+				<div class="panel panel-border-narrow js-hidden" id="working">
+
+					<div class="form-group">
+						<label class="form-label" for="job-title">Job title</label>
+						<input type="text" class="form-control" id="job-title">
+					</div>
+
+					<div class="form-group">
+						<label class="form-label" for="surgery-name">Company name</label>
+						<input type="text" class="form-control" id="surgery-name">
+					</div>
+
+					<div class="form-group">
+						<p class="form-label">Company Address</p>
+						<label class="form-label" style="margin: 4px 0;"><input type="text" class="form-control" id="address-line1"></label>
+						<label class="form-label" style="margin: 4px 0;"><input type="text" class="form-control" id="address-line2"></label>
+						<label class="form-label" style="margin: 4px 0;"><input type="text" class="form-control" id="address-line3"></label>
+						<label class="form-label" style="margin: 4px 0;"><input type="text" class="form-control" id="address-line4"></label>
+					</div>
+
+					<div class="form-group">
+						<label class="form-label" for="postcode">Postcode</label>
+						<input type="text" class="form-control form-control-1-4" id="postcode">
+					</div>
+
+					<div class="form-group">
+						<label class="form-label" for="hours">
+							How many hours a week did you usually work?
+						</label>
+						<input type="text" class="form-control form-control-1-8" id="hours" name="hours">
+					</div>
+
+					<div class="form-group">
+						<label class="form-label" data-target="earnings" for="hours2">
+							How many hours a week are you currently working?
+						</label>
+						<input type="text" class="form-control form-control-1-8" id="hours2" name="hours2">
+					</div>
+					<div class="panel panel-border-narrow" id="earnings">
+						<div class="form-group">
+							<label class="form-label" for="how-much">
+								How much do you earn at present?
+							</label>
+							&pound; <input type="text" class="form-control form-control-1-4" id="how-much" name="how-much">
+						</div>
+						<div class="form-group">
+              <fieldset>
+                <legend class="form-label" for="howoften1b">How often?</legend>
+                <label class="block-label" for="daily">
+                  <input id="daily" type="radio" name="howoften1b" value="daily">
+                  Daily
+                </label>
+                <label class="block-label" for="weekly1b">
+                  <input id="weekly1b" type="radio" name="howoften1b" value="weekly">
+                  Weekly
+                </label>
+                <label class="block-label" for="fortnight">
+                  <input id="fortnight" type="radio" name="howoften1b" value="fortnight">
+                  Fortnightly
+                </label>
+                <label class="block-label" for="monthly1b">
+                  <input id="monthly1b" type="radio" name="howoften1b" value="monthly">
+                  Monthly
+                </label>
+                <label class="block-label" for="yearly1b">
+                  <input id="yearly1b" type="radio" name="howoften1b" value="yearly">
+                  Yearly
+                </label>
+              </fieldset>
+            </div>
+
+            <fieldset class="inline">
+		          <legend class="form-label" for="part">Is this supported by a professional support worker?</legend>
+		          <label class="block-label" data-target="yes-support" for="radio-inline-3">
+		            <input id="radio-inline-3" type="radio" name="part" value="Yes">
+		            Yes
+		          </label>
+		          <label class="block-label" for="radio-inline-4">
+		            <input id="radio-inline-4" type="radio" name="part" value="No">
+		            No
+		          </label>
+		        </fieldset>
+
+		        <div class="panel panel-border-narrow js-hidden" id="yes-support">
+		        	<div class="form-group">
+								<label class="form-label" for="worker-name">Support worker name</label>
+								<input type="text" class="form-control" id="worker-name">
+							</div>
+
+							<div class="form-group">
+								<p class="form-label">Address of support worker</p>
+								<label class="form-label" style="margin: 4px 0;"><input type="text" class="form-control" id="address-line1b"></label>
+								<label class="form-label" style="margin: 4px 0;"><input type="text" class="form-control" id="address-line2b"></label>
+								<label class="form-label" style="margin: 4px 0;"><input type="text" class="form-control" id="address-line3b"></label>
+								<label class="form-label" style="margin: 4px 0;"><input type="text" class="form-control" id="address-line4b"></label>
+							</div>
+
+							<div class="form-group">
+								<label class="form-label" for="postcodeb">Postcode</label>
+								<input type="text" class="form-control form-control-1-4" id="postcodeb">
+							</div>
+		        </div>
+
+
+		      </div>
+
+		      <fieldset class="form-group">
+						<legend class="form-label-bold" for="apply">Tick all that apply to you?</legend>
+						<label class="block-label" for="check-inline-1">
+							<input id="check-inline-1" type="checkbox" name="apply" value="Yes">
+							The work you do is voluntary
+						</label>
+						<label class="block-label" for="check-inline-2">
+							<input id="check-inline-2" type="checkbox" name="apply" value="No">
+							You get money from expenses
+						</label>
+						<label class="block-label" data-target="other-work" for="check-inline-7">
+							<input id="check-inline-7" type="checkbox" name="apply" value="No">
+							You are self-employed or a sub-contractor
+						</label>
+						<div class="panel panel-border-narrow js-hidden" id="other-work">
+							<fieldset class="inline">
+								<legend class="form-label-bold" for="partnerr">Are you doing any self-employed work presently?</legend>
+								<label class="block-label" for="radio-inline-1r">
+								<input id="radio-inline-1r" type="radio" name="partnerr" value="Yes">
+								Yes
+								</label>
+								<label class="block-label" for="radio-inline-2r">
+								<input id="radio-inline-2r" type="radio" name="partnerr" value="No">
+								No
+								</label>
+							</fieldset>
+						</div>
+
+						<label class="block-label" data-target="company" for="check-inline-3">
+							<input id="check-inline-3" type="checkbox" name="apply" value="No">
+							You are a company director
+						</label>
+						<div class="panel panel-border-narrow js-hidden" id="company">
+							<fieldset class="inline">
+								<legend class="form-label-bold" for="partnerrc">Is someone else running the company?</legend>
+								<label class="block-label" for="radio-inline-1rc">
+								<input id="radio-inline-1rc" type="radio" name="partnerrc" value="Yes">
+								Yes
+								</label>
+								<label class="block-label" for="radio-inline-2rc">
+								<input id="radio-inline-2rc" type="radio" name="partnerrc" value="No">
+								No
+								</label>
+							</fieldset>
+						</div>
+
+						<label class="block-label" for="check-inline-6">
+							<input id="check-inline-6" type="checkbox" name="apply" value="No">
+							You work in a specialist occupation (such as an auxiliary coastguard, a part-time fire-fighter, a part-time member of a lifeboat crew, or territorial or reserve forces.)
+						</label>
+						<label class="block-label" for="check-inline-5">
+							<input id="check-inline-5" type="checkbox" name="apply" value="No">
+							You are none of these
+						</label>
+
+						<div class="panel panel-border-narrow js-hidden" id="other">
+							<label class="form-label"><input type="text" class="form-control" id="address-line1"></label>
+						</div>
+					</fieldset>
+
+				</div>
+
+				<!-- Primary buttons, secondary links -->
+				<div class="form-group">
+					<input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
+				</div>
+
+			</div>
+			<div class="column-one-third">
+				<p>&nbsp;</p>
+			</div>
+		</div>
+
+	</form>
+</main>
+
+{% endblock %}

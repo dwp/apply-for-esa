@@ -1,0 +1,115 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for Employment and Support Allowance
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="breadcrumbs">
+    <ol role="breadcrumbs">
+      <li><a href="http://www.gov.uk">Home</a></li>
+      <li><a href="https://www.gov.uk/browse/benefits">Benefits</a></li>
+      <li><a href="https://www.gov.uk/browse/benefits/disability">Carers and disability benefits</a></li>
+    </ol>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        {% if serviceName %} {{ serviceName }} {% endif %}
+      </h1>
+
+      <!-- INTRO NAVIGAITON -->
+      <nav class="intro-nav">
+        <ol>
+          <li class="active font-xsmall">
+            <span class="part-number">1.</span>
+            <a href="gov-overview" title="Part 2: Eligibility">Overview</a>
+          </li>
+          <li class="font-xsmall">
+            <span class="part-number">4.</span>
+            <a href="gov-apply" title="Part 4: How to claim">Apply</a>
+          </li>
+          <li class="font-xsmall">
+            <span class="part-number">2.</span>
+            <a href="gov-eligibility" title="Part 2: Eligibility">Eligibility</a>
+          </li>
+          <li class="font-xsmall">
+            <span class="part-number">5.</span>
+            <span>If your circumstances change</span>
+          </li>
+          <li class="font-xsmall">
+            <span class="part-number">3.</span>
+            <a href="gov-assessed" title="Part 3: What you'll get">How you're assessed</a>
+          </li>
+        </ol>
+      </nav>
+
+      <h2 class="heading-medium">5. If your circumstances change</h2>
+
+      <p>You must call if:</p>
+      <ul class="list list-bullet">
+        <li>your personal details change</li>
+        <li>your medical condition or help you need changes</li>
+        <li>you or any partner’s work situation changes</li>
+        <li>the amount of money coming into your house changes</li>
+        <li>there are changes to who lives in your house</li>
+        <li>you are involved in a trade dispute, or cannot work because of a trade dispute</li>
+        <li>you go into or leave hospital</li>
+        <li>you go into prison or legal custody</li>
+        <li>you go abroad or are about to go abroad</li>
+        <li>your partner dies</li>
+      </ul>
+      <div class="panel panel-border-narrow">
+        <p>If you do not tell us straight away then you could be paid more or less ESA than you should. You may have to pay back any money you are overpaid and pay a financial penalty or become involved in legal action. </p>
+      </div>
+
+      <h3 class="heading-small">Employment and Support Allowance enquiry line</h3>
+
+      <p>Telephone 0345 6088545<br>
+        Textphone 0345 6088551<br>
+        Monday to Friday, 8am to 6pm</p>
+
+      <footer>
+        <nav class="pagination" role="navigation" aria-label="Pagination">
+          <ul class="group">
+            <li class="previous">
+              <a href="gov-apply" rel="prev" title="Navigate to previous part">
+                <span class="pagination-label">Previous </span> <span class="pagination-part-title"> Apply</span>
+              </a>          
+            </li>
+          </ul>
+        </nav>
+      </footer>
+
+    </div>
+    <div class="column-third">
+
+      <!--div class="related-links">
+        <h2 class="heading-medium">Subsection</h2>
+
+        <ul class="font-xsmall">
+          <li><a href="#">Related link</a></li>
+          <li><a href="#">Related link</a></li>
+          <li><a href="#" class="bold-xsmall">More</a></li>
+        </ul>
+      </div-->
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

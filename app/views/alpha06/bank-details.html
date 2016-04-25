@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Bank details
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% include "../includes/phase_banner_alpha.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form action="additional-information" method="#" class="form">
+
+      <!-- <a href="health-pregnant" class="example-back-link">Back</a> -->
+
+      <h1 class="form-title heading-large">
+        <!-- <span class="heading-secondary">Section 16 of 16</span> -->
+        Bank account details
+        </h1>
+
+        <p class="lede">If you're awarded ESA, the money will be paid into your bank account. Giving your details now could stop any delays in future.</p>
+
+        <div id="add-bank-details">
+
+          <fieldset class="inline">
+
+            <div class="form-group">
+              <label class="form-label-bold" for="account-holder">Account holder's name</label>
+              <input type="text" class="form-control" id="account-holder">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label-bold" for="type-of-account">Name of bank, building society or Post Office</label>
+              <input type="text" class="form-control" id="type-of-account">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label-bold" for="sort-code">Sort code</label>
+              <input type="text" class="form-control" id="sort-code">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label-bold" for="account-number">Account number</label>
+              <input type="text" class="form-control" id="account-number">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label-bold" for="roll-or-reference">Building society roll or reference number</label>
+              <p class="form-hint">If your building society uses a roll or reference number, you'll find it on the passbook.</p>
+              <input type="text" class="form-control" id="roll-or-reference">
+            </div>
+
+          </fieldset>
+
+        </div>
+
+        <!-- Primary buttons, secondary links -->
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+    </div>
+    <div class="column-third">
+    </div>
+  </div>
+
+</main><!-- / #page-container -->
+
+{% endblock %}

@@ -1,0 +1,327 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	Where you live
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "../includes/phase_banner_alpha.html" %}
+
+	<form action="other-money" method="#" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<header>
+					<h1 class="form-title heading-large">
+						<!-- <span class="heading-secondary">Section 8 of 23</span> -->
+						Where you live
+					</h1>
+				</header>
+
+				<div class="form-group">
+					<fieldset class="">
+						<legend class="form-label" for="partner">You live:</legend>
+						<label class="block-label" data-target="mortgage" for="radio-inline-1">
+							<input id="radio-inline-1" type="radio" name="partner" value="Yes">
+							in a place you or a partner have bought
+						</label>
+						<label class="block-label" data-target="rented" for="radio-inline-2">
+							<input id="radio-inline-2" type="radio" name="partner" value="No">
+							in rented accomodation
+						</label>
+						<label class="block-label" data-target="parents" for="radio-inline-7">
+							<input id="radio-inline-7" type="radio" name="partner" value="No">
+							in a place owned by your parents, relative or ex-spouse
+						</label>
+						<label class="block-label" data-target="care-home" for="radio-inline-3">
+							<input id="radio-inline-3" type="radio" name="partner" value="No">
+							in a care home
+						</label>
+						<label class="block-label" data-target="homeless" for="radio-inline-6">
+							<input id="radio-inline-6" type="radio" name="partner" value="No">
+							at no fixed address
+						</label>
+						<label class="block-label" data-target="other" for="radio-inline-5">
+							<input id="radio-inline-5" type="radio" name="partner" value="No">
+							somewhere else
+						</label>
+						
+						<div class="panel panel-border-narrow js-hidden" id="other">
+							<label class="form-label"><input type="text" class="form-control" id="address-line1"></label>
+						</div>
+					</fieldset>
+				</div>
+
+
+				<div class="panel panel-border-narrow js-hidden" id="mortgage">
+					<div class="form-group">
+						<fieldset>
+							<legend class="form-label-bold" for="have-mortgage">Do you:</legend>
+							<label class="block-label" for="radio-inline-20">
+								<input id="radio-inline-20" type="radio" name="have-mortgage" value="Yes">
+								own the property outright
+							</label>
+							<label class="block-label" data-target="have-mortgage" for="radio-inline-21">
+								<input id="radio-inline-21" type="radio" name="have-mortgage" value="No">
+								pay a mortgage on your own
+							</label>
+							<label class="block-label" data-target="have-mortgage" for="radio-inline-22">
+								<input id="radio-inline-22" type="radio" name="have-mortgage" value="No">
+								pay a joint mortgage with a partner
+							</label>
+							<label class="block-label" data-target="have-mortgage" for="radio-inline-23">
+								<input id="radio-inline-23" type="radio" name="have-mortgage" value="No">
+								pay a joint mortgage with someone else
+							</label>
+						</fieldset>
+					</div>
+					<div class="form-group js-hidden" id="have-mortgage">
+						<fieldset class="inline">
+							<legend class="form-label-bold" for="pay-mortgage">Does anyone else help pay towards your mortgage?</legend>
+							<label class="block-label" data-target="who-pay-mortgage" for="radio-inline-10">
+								<input id="radio-inline-10" type="radio" name="pay-mortgage" value="Yes">
+								Yes
+							</label>
+							<label class="block-label" for="radio-inline-11">
+								<input id="radio-inline-11" type="radio" name="pay-mortgage" value="No">
+								No
+							</label>
+						</fieldset>
+						<div class="form-group js-hidden" id="who-pay-mortgage">
+							<label class="form-label" for="mort-name">Their full name</label>
+							<input type="text" class="form-control" id="mort-name">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<fieldset class="inline">
+							<legend class="form-label-bold" for="service-charges">Do you pay service charges for where you live?</legend>
+							<details>
+								<summary><span class="summary">What is a 'service charge'?</span></summary>
+								<div class="panel panel-border-narrow">
+									<p>
+										A service charge is a payment made for the upkeep of the building your home is in.
+									</p>
+									<p>
+										You might have to pay a service charge if you own a leasehold property eg a flat or house brought through the shared ownership scheme.
+									</p>
+								</div>
+							</details>
+							<label class="block-label" data-target="how-much" for="radio-inline-12">
+								<input id="radio-inline-12" type="radio" name="service-charges" value="Yes">
+								Yes
+							</label>
+							<label class="block-label" for="radio-inline-13">
+								<input id="radio-inline-13" type="radio" name="service-charges" value="No">
+								No
+							</label>
+						</fieldset>
+					</div>
+					<div class="form-group js-hidden" id="how-much">
+						<div class="form-group">
+							<label class="form-label-bold" for="service-cost">How much service charge do you pay?</label>
+							£ <input type="text" class="form-control form-control-1-4" id="service-cost">
+						</div>
+						<div class="form-group">
+							<fieldset>
+								<!-- <legend class="form-label-bold visibly-hidden" for="service-charge2">How often do you pay service charges?</legend> -->
+								<label class="block-label" for="radio-inline-14">
+									<input id="radio-inline-14" type="radio" name="service-charge2" value="Every week">
+									Every week
+								</label>
+								<label class="block-label" for="radio-inline-15">
+									<input id="radio-inline-15" type="radio" name="service-charge2" value="Every month">
+									Every month
+								</label>
+								<label class="block-label" for="radio-inline-16">
+									<input id="radio-inline-16" type="radio" name="service-charge2" value="Every year">
+									Every year
+								</label>
+								<label class="block-label" data-target="other-sc2" for="radio-inline-17">
+									<input id="radio-inline-17" type="radio" name="service-charge28" value="Every year">
+									Other
+								</label>
+								<div class="form-group js-hidden" id="other-sc2">
+									<label class="form-label"><input type="text" class="form-control" id="address-line111"></label>
+								</div>
+							</fieldset>
+						</div>
+						
+					</div>
+					
+					<div class="form-group">
+						<fieldset class="inline">
+							<legend class="form-label-bold" for="have-loan">Has any money been borrowed against your home?</legend>
+							<label class="block-label" data-target="have-loan" for="radio-inline-30">
+								<input id="radio-inline-30" type="radio" name="have-loan" value="Yes">
+								Yes
+							</label>
+							<label class="block-label" for="radio-inline-31">
+								<input id="radio-inline-31" type="radio" name="have-loan" value="No">
+								No
+							</label>
+						</fieldset>
+					</div>
+
+					
+				</div>
+
+
+				<div class="panel panel-border-narrow js-hidden" id="rented">
+					<div class="form-group" id="have-rent">
+						<fieldset class="inline">
+							<legend class="form-label-bold" for="pay-rent">Does anyone else apart from your partner pay towards the rent?</legend>
+							<label class="block-label" data-target="who-pay-rent" for="radio-inline-40">
+								<input id="radio-inline-40" type="radio" name="pay-rent" value="Yes">
+								Yes
+							</label>
+							<label class="block-label" for="radio-inline-41">
+								<input id="radio-inline-41" type="radio" name="pay-rent" value="No">
+								No
+							</label>
+						</fieldset>
+						<div class="form-group js-hidden" id="who-pay-rent">
+							<label class="form-label" for="rent-name">Full name of person who pays towards your rent</label>
+							<input type="text" class="form-control" id="rent-name">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<fieldset>
+							<legend class="form-label-bold" for="service-charges8">Do you pay service charges for where you live?</legend>
+							<details>
+								<summary><span class="summary">What is a 'service charge'?</span></summary>
+								<div class="panel panel-border-narrow">
+									<p>
+										A service charge is a payment made for the upkeep of the building your home is in.
+									</p>
+									<p>
+										You might be charged a service charge if you rent a property in a block of flats or in a housing development.
+									</p>
+									<p>
+										Sometimes the service charge is included in your rent. You can check your tenancy agreement if you’re not sure.
+									</p>
+								</div>
+							</details>
+
+							<label class="block-label" data-target="how-much8" for="radio-inline-128">
+								<input id="radio-inline-128" type="radio" name="service-charges8" value="Yes">
+								Yes, it's included in your rent payment
+							</label>
+							<label class="block-label" data-target="how-much8" for="radio-inline-128b">
+								<input id="radio-inline-128b" type="radio" name="service-charges8" value="Yes">
+								Yes, you pay it in addition to your rent
+							</label>
+							<label class="block-label" for="radio-inline-138">
+								<input id="radio-inline-138" type="radio" name="service-charges8" value="No">
+								No
+							</label>
+						</fieldset>
+					</div>
+					<div class="js-hidden" id="how-much8">
+						<div class="form-group">
+							<label class="form-label-bold" for="service-cost8">How much service charge do you pay?</label>
+							£ <input type="text" class="form-control form-control-1-4" id="service-cost8">
+						</div>
+						<div class="form-group">
+							<fieldset>
+								<!-- <legend class="form-label-bold visibly-hidden" for="service-charge2">How often do you pay service charges?</legend> -->
+								<label class="block-label" for="radio-inline-148">
+									<input id="radio-inline-148" type="radio" name="service-charge28" value="Every week">
+									Weekly
+								</label>
+								<label class="block-label" for="radio-inline-158">
+									<input id="radio-inline-158" type="radio" name="service-charge28" value="Every month">
+									Monthly
+								</label>
+								<label class="block-label" for="radio-inline-168">
+									<input id="radio-inline-168" type="radio" name="service-charge28" value="Every year">
+									Yearly
+								</label>
+								<label class="block-label" data-target="other-sc" for="radio-inline-178">
+									<input id="radio-inline-178" type="radio" name="service-charge28" value="Every year">
+									Other
+								</label>
+								<div class="form-group js-hidden" id="other-sc">
+									<label class="form-label"><input type="text" class="form-control" id="address-line11"></label>
+								</div>
+
+							</fieldset>
+						</div>
+					</div>
+
+
+				</div>
+
+
+				<div class="panel panel-border-narrow js-hidden" id="parents">
+					<div class="form-group">
+						<fieldset>
+							<legend class="form-label-bold visibly-hidden" for="live-parents">How often do you pay service charges?</legend>
+							<label class="block-label" for="radio-inline-148">
+								<input id="radio-inline-148" type="radio" name="live-parents" value="Every week">
+								Parents
+							</label>
+							<label class="block-label" data-target="other-rel" for="radio-inline-178">
+								<input id="radio-inline-178" type="radio" name="live-parents" value="Every year">
+								Relative
+							</label>
+							<div class="form-group js-hidden" id="other-rel">
+								<label class="form-label" for="rel-them">Your relationship to them</label>
+								<input type="text" class="form-control" id="rel-them">
+							</div>
+							<label class="block-label" for="radio-inline-158">
+								<input id="radio-inline-158" type="radio" name="live-parents" value="Every month">
+								Ex-spouse
+							</label>
+						</fieldset>
+					</div>
+					<div class="form-group">
+						<fieldset class="inline">
+							<legend class="form-label-bold" for="live-rel">Do you live with them?</legend>
+							<label class="block-label" for="live-rel-9">
+								<input id="live-rel-9" type="radio" name="live-rel" value="Yes">
+								Yes
+							</label>
+							<label class="block-label" for="live-rel-8">
+								<input id="live-rel-8" type="radio" name="live-rel" value="No">
+								No
+							</label>
+						</fieldset>
+					</div>
+				</div>
+
+
+				<div class="panel panel-border-narrow js-hidden" id="care-home">
+					<div class="form-group">
+						<fieldset class="inline">
+							<legend class="form-label-bold" for="temp">Are you in the care home temporarily?</legend>
+							<label class="block-label" for="radio-inline-9">
+								<input id="radio-inline-9" type="radio" name="temp" value="Yes">
+								Yes
+							</label>
+							<label class="block-label" for="radio-inline-8">
+								<input id="radio-inline-8" type="radio" name="temp" value="No">
+								No
+							</label>
+						</fieldset>
+					</div>
+				</div>
+
+
+				<!-- Primary buttons, secondary links -->
+				<div class="form-group">
+					<input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
+				</div>
+
+			</div>
+			<div class="column-one-third">
+				<p>&nbsp;</p>
+			</div>
+		</div>
+
+	</form>
+</main>
+
+{% endblock %}
