@@ -257,3 +257,12 @@ b {font-weight: bold;}
         width: 50%
     }
 }
+
+.hcp-list {
+  margin: 10px 0;
+  padding-bottom: 10px;
+}
+
+.hcp-list.seperator {
+  border-bottom: 1px solid #bfc1c3;
+}
