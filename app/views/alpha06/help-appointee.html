@@ -88,6 +88,15 @@
                   <input type="radio" id="illDisabled" name="representativeReason" value="So ill or disabled, it is impossible for them to apply">
                   they are so ill or disabled, it is impossible for them to apply
                 </label>
+                <label class="block-label" data-target="pay-other" for="yearly1">
+                  <input id="yearly1" type="radio" name="howoften1" value="other">
+                  Other
+                </label>
+                <div class="form-group js-hidden" id="pay-other">
+                  <label class="form-label-bold" for="surgery-name">
+                    <input type="text" class="form-control" id="surgery-name">
+                  </label>
+                </div>
               </fieldset>
 
               <div class="panel panel-border-narrow form-group js-hidden" id="registeredAppointee">
