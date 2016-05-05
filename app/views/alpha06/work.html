@@ -21,7 +21,7 @@
 
 				<div class="form-group">
 					<fieldset class="">
-						<legend class="form-label-bold" for="partner">While you claim ESA will you be doing:</legend>
+						<legend class="form-label-bold" for="partner">Are you currently doing:</legend>
 						<label class="block-label" data-target="working" for="radio-inline-1">
 							<input id="radio-inline-1" type="checkbox" name="partner" value="Yes">
 							some work (full-time or part-time)
@@ -32,7 +32,7 @@
 						</label>
 						<label class="block-label" data-target="not-working" for="radio-inline-3">
 							<input id="radio-inline-3" type="checkbox" name="partner" value="No">
-							no work
+							no work (including if you're off work due to illness)
 						</label>
 					</fieldset>
 				</div>
@@ -43,20 +43,21 @@
 				<div class="form-group js-hidden panel panel-border-narrow" id="working">
 					<div class="form-group">
 						<label class="form-label" for="hours">
-							How many hours a week will you be working while you claim ESA?
+							How many hours a week are you working at the moment?
 						</label>
+						<p>If your hours vary, enter an average.</p>
 						<input type="text" class="form-control form-control-1-8" id="hours" name="hours">
 					</div>
-					
+
 					<div class="form-group">
 						<label class="form-label" for="how-much">
-							How much do you earn at the moment?
+							How much are you getting paid?
 						</label>
 						&pound; <input type="text" class="form-control form-control-1-4" id="how-much" name="how-much">
 					</div>
 					<div class="form-group">
             <fieldset>
-              <legend class="form-label" for="howoften1b">How often?</legend>
+              <legend class="form-label" for="howoften1b">How often are you getting paid?</legend>
               <label class="block-label" for="daily">
                 <input id="daily" type="radio" name="howoften1b" value="daily">
                 Daily
@@ -81,7 +82,7 @@
           </div>
 
           <fieldset class="inline form-group">
-						<legend class="form-label-bold" for="expenses">Do you claim any money through expenses?</legend>
+						<legend class="form-label-bold" for="expenses">Does your employer pay you expenses regularly?</legend>
 						<label class="block-label" for="expenses-1">
 							<input id="expenses-1" type="radio" name="expenses" value="Yes">
 							Yes
@@ -144,7 +145,7 @@
 					</div>
 
 					<div class="form-group">
-						<p class="form-label">Address where you are volunteering</p>
+						<p class="form-label">Address where you're volunteering</p>
 						<label class="form-label" style="margin: 4px 0;"><input type="text" class="form-control" id="volunteer-line1"></label>
 						<label class="form-label" style="margin: 4px 0;"><input type="text" class="form-control" id="volunteer-line2"></label>
 						<label class="form-label" style="margin: 4px 0;"><input type="text" class="form-control" id="volunteer-line3"></label>
@@ -158,14 +159,13 @@
 
 					<div class="form-group">
 						<label class="form-label" for="volunteer-hours">
-							How many hours a week will you be volunteering?
+							How many hours a week are you volunteering?
 						</label>
 						<input type="text" class="form-control form-control-1-8" id="volunteer-hours" name="volunteer-hours">
 					</div>
 
 					<fieldset class="inline form-group">
-						<legend class="form-label" for="volunteer-return">Do you get anything in return for volunteering?</legend>
-						<p>eg accomodation, food for expenses etc.</p>
+						<legend class="form-label" for="volunteer-return">Do you get anything in return for volunteering eg expenses, food or accomodation?</legend>
 						<label class="block-label" data-target="volunteer-question" for="director-1">
 						<input id="director-1" type="radio" name="volunteer-return" value="Yes">
 						Yes
@@ -174,7 +174,7 @@
 						<input id="director-2" type="radio" name="volunteer-return" value="No">
 						No
 						</label>
-						
+
 					</fieldset>
 					<div class="form-group">
 						<label class="form-label" for="volunteer-get">
@@ -193,13 +193,13 @@
 
 				<div class="form-group panel panel-border-narrow js-hidden" id="not-working">
 					<fieldset class="form-group">
-						<legend class="form-label-bold" for="illness">Are you temporarily out of work because of your illness or condition?</legend>
+						<legend class="form-label-bold" for="illness">Are you temporarily off work because of your illness or condition?</legend>
 						<label class="block-label" data-target="not-working-prev" for="illness-1">
-							<input id="illness-1" type="checkbox" name="illness" value="Yes">
+							<input id="illness-1" type="radio" name="illness" value="Yes">
 							Yes
 						</label>
 						<label class="block-label" for="illness-2">
-							<input id="illness-2" type="checkbox" name="illness" value="No">
+							<input id="illness-2" type="radio" name="illness" value="No">
 							No, you're unemployed
 						</label>
 					</fieldset>
@@ -247,11 +247,12 @@
 
 					<div class="form-group">
 						<label class="form-label" for="usual-hours">
-							How many hours a week do you usually work?
+							How many hours a week did you work before your illness or condition affected you?
 						</label>
+								<p>If your hours varied, enter an average.</p>
 						<input type="text" class="form-control form-control-1-8" id="usual-hours" name="usual-hours">
 					</div>
-					
+
 					<div class="form-group">
 						<label class="form-label" for="job-title">Job title</label>
 						<input type="text" class="form-control" id="job-title">
@@ -311,7 +312,7 @@
 				<!--self-employed-->
 
 				<div class="js-hidden panel panel-border-narrow" id="self-employed">
-					
+
 					<div class="form-group">
 						<label class="form-label" for="self-job-title">Position</label>
 						<input type="text" class="form-control" id="self-job-title">
@@ -386,11 +387,12 @@
 
 					<div class="form-group">
 						<label class="form-label" for="usual-hours-sub">
-							How many hours a week do you usually work?
+							How many hours a week did you work before your illness or condition affected you?
 						</label>
+								<p>If your hours varied, enter an average.</p>
 						<input type="text" class="form-control form-control-1-8" id="usual-hours-sub" name="usual-hours-sub">
 					</div>
-					
+
 					<div class="form-group">
 						<label class="form-label" for="job-title">Job title</label>
 						<input type="text" class="form-control" id="job-title">
@@ -427,11 +429,12 @@
 
 					<div class="form-group">
 						<label class="form-label" for="agency-usual-hours">
-							How many hours a week do you usually work?
+							How many hours a week did you work before your illness or condition affected you?
 						</label>
+								<p>If your hours varied, enter an average.</p>
 						<input type="text" class="form-control form-control-1-8" id="agency-usual-hours" name="agency-usual-hours">
 					</div>
-					
+
 					<div class="form-group">
 						<label class="form-label" for="agency-job-title">Job title</label>
 						<input type="text" class="form-control" id="agency-job-title">
