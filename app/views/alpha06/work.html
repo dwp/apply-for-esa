@@ -131,7 +131,7 @@
 
 				<!--volunteering-->
 
-				<div class="form-group" id="volunteering">
+				<div class="js-hidden panel panel-border-narrow" id="volunteering">
 
 					<div class="form-group">
 						<label class="form-label" for="vol-job-title">Position</label>
@@ -345,6 +345,32 @@
 						No
 						</label>
 					</fieldset>
+
+					<fieldset class="inline form-group">
+						<legend class="form-label" for="director-self">Are you a Company Director?</legend>
+						<label class="block-label" data-target="director-question-self" for="director-1">
+						<input id="director-1" type="radio" name="director-self" value="Yes">
+						Yes
+						</label>
+						<label class="block-label" for="director-2">
+						<input id="director-2" type="radio" name="director-self" value="No">
+						No
+						</label>
+					</fieldset>
+
+					<div class="js-hidden inline form-group" id="director-question-self">
+						<fieldset class="inline form-group">
+							<legend class="form-label" for="director-self-ssp">Are you paying yourself Statutory Sick Pay?</legend>
+							<label class="block-label" for="director-self-ssp-1">
+							<input id="director-self-ssp-1" type="radio" name="director-self-ssp" value="Yes">
+							Yes
+							</label>
+							<label class="block-label" for="director-self-ssp-2">
+							<input id="director-self-ssp-2" type="radio" name="director-self-ssp" value="No">
+							No
+							</label>
+						</fieldset>
+					</div>
 
 				</div>
 
