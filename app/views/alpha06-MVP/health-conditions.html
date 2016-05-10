@@ -1,0 +1,103 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Health conditions
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "../includes/phase_banner_alpha.html" %}
+
+	<form action="expected-return-date" method="#" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<header>
+			    <h1 class="form-title heading-large">
+			    	<!-- <span class="heading-secondary">Section 11 of 23</span> -->
+			      Your conditions and disabilities
+			    </h1>
+			  </header>
+
+			  <p>List all the conditions or disabilities you currently have that affect you.</p>
+        <p>You will be able to describe how your conditions affects you later.</p>
+
+        <div class="" id="partner-yes">
+          <h2 class="heading-small">Condition 1</h2>
+          <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
+            <label class="form-label" for="condition01">Name of condition</label>
+            <input class="form-control" id="who01" type="text" name="condition01">
+          </div>
+          <h2 class="heading-small">Condition 2</h2>
+          <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
+            <label class="form-label" for="condition01b">Name of condition</label>
+            <input class="form-control" id="condition01b" type="text" name="condition01b">
+          </div>
+          <h2 class="heading-small">Condition 3</h2>
+          <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
+            <label class="form-label" for="condition01c">Name of condition</label>
+            <input class="form-control" id="condition01c" type="text" name="condition01c">
+          </div>
+
+          <p><a href="#" id="show-payment2" class="add-another secondary-button">Add another</a></p>
+
+        </div>
+
+        <div class="js-hidden" id="payment2">
+
+          <h2 class="heading-small">Condition 4</h2>
+          <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
+            <label class="form-label" for="condition02">Name of condition</label>
+            <input class="form-control" id="who01" type="text" name="condition02"> &nbsp; <a href="#">Remove</a>
+          </div>
+
+          <p><a href="#" id="show-payment3" class="add-another secondary-button">Add another</a></p>
+
+        </div>
+
+        <div class="js-hidden" id="payment3">
+
+          <h2 class="heading-small">Condition 5</h2>
+          <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
+            <label class="form-label" for="condition03">Name of condition</label>
+            <input class="form-control" id="who01" type="text" name="condition03"> &nbsp; <a href="#">Remove</a>
+          </div>
+
+          <p><a href="#" id="show-payment4" class="add-another secondary-button">Add another</a></p>
+
+        </div>
+
+		    <!-- Primary buttons, secondary links -->
+		    <div class="form-group">
+		      <input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
+		    </div>
+
+		  </div>
+		  <div class="column-one-third">
+		  	<p>&nbsp;</p>
+		  </div>
+		</div>
+
+  </form>
+</main>
+{% endblock %}
+
+{% block body_end %}
+  {% include "includes/scripts.html" %}
+  <script>
+    $(document).ready(function() {
+
+      $("#show-payment2").click(function() {
+        $("#payment2").show();
+        $("#show-payment2").hide();
+         return false;
+      });
+      $("#show-payment3").click(function() {
+        $("#payment3").show();
+        $("#show-payment3").hide();
+         return false;
+      });
+
+    });
+  </script>
+{% endblock %}
