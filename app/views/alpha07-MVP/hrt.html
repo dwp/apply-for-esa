@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Nationality and going abroad
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "../includes/phase_banner_alpha.html" %}
+
+	<form action="where-you-live" method="#" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<header>
+			    <h1 class="form-title heading-large">
+			    	<!-- <span class="heading-secondary">Section 13 of 23</span> -->
+			      Nationality and time spent abroad
+			    </h1>
+			  </header>
+
+			  <div class="form-group">
+	        <fieldset class="inline">
+	          <legend class="form-label-bold" for="partner">What is your nationality? </legend>
+	          <label class="block-label" for="radio-inline-1">
+	            <input id="radio-inline-1" type="radio" name="partner" value="Yes">
+	            British
+	          </label>
+	          <label class="block-label" data-target="not-brit" for="radio-inline-2">
+	            <input id="radio-inline-2" type="radio" name="partner" value="No">
+	            Other
+	          </label>
+	        </fieldset>
+	      </div>
+
+	      <div class="panel panel-border-narrow js-hidden" id="not-brit">
+          <label class="form-label-bold" for="full-name">What nationality are you?</label>
+          <input type="text" class="form-control" id="full-name" name="full-name">
+        </div>
+
+        <div class="form-group">
+          <fieldset class="inline">
+            <legend class="form-label-bold" for="question2">Have you worked abroad in the last 2 years?</legend>
+            <label class="block-label" for="radio-inline-3">
+              <input id="radio-inline-3" type="radio" name="question2" value="Yes">
+              Yes
+            </label>
+            <label class="block-label" for="radio-inline-4">
+              <input id="radio-inline-4" type="radio" name="question2" value="No">
+              No
+            </label>
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <fieldset class="inline">
+            <legend class="form-label-bold" for="question3">Have you been abroad for 13 weeks or more in the last 2 years?</legend>
+            <label class="block-label" for="radio-inline-5">
+              <input id="radio-inline-5" type="radio" name="question3" value="Yes">
+              Yes
+            </label>
+            <label class="block-label" for="radio-inline-6">
+              <input id="radio-inline-6" type="radio" name="question3" value="No">
+              No
+            </label>
+          </fieldset>
+        </div>
+
+		    <!-- Primary buttons, secondary links -->
+		    <div class="form-group">
+		      <input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
+		    </div>
+
+		  </div>
+		  <div class="column-one-third">
+		  	<p>&nbsp;</p>
+		  </div>
+		</div>
+
+  </form>
+</main>
+
+{% endblock %}
