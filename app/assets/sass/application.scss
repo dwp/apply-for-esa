@@ -266,3 +266,27 @@ b {font-weight: bold;}
 .hcp-list.seperator {
   border-bottom: 1px solid #bfc1c3;
 }
+
+/*********************
+Helpline number
+**********************/
+#ad-helpline {
+  border-top: 3px solid #28A197;
+  margin-top: 54px;
+  padding-top: 5px;
+}
+
+#ad-helpline p {
+  margin-bottom: 10px;
+}
+
+#ad-helpline h3 {
+  margin: 10px 0;
+}
+
+@media (max-width: 640px) {
+  #ad-helpline {
+    float: left;
+    margin-top: 0;
+  }
+}
