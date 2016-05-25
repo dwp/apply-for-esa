@@ -9,7 +9,7 @@
 <main id="content" role="main">
 	{% include "../includes/phase_banner_alpha.html" %}
 
-	<form action="education" method="#" class="form">
+	<form action="other-money" method="#" class="form">
 		<div class="grid-row">
 			<div class="column-two-thirds">
 				<header>
@@ -242,9 +242,9 @@
   <script>
     $('form').on('submit', function(e) {
       if($('#radio-part-4').is(':checked')) {
-        window.location = '/alpha07-MVP/gp-details';
+        window.location = '/alpha07-MVP/housing-benefit';
       } else {
-        window.location = '/alpha07-MVP/education';
+        window.location = '/alpha07-MVP/other-money';
       }
 
       e.preventDefault();
