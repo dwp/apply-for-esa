@@ -23,33 +23,98 @@
 					<fieldset>
 						<legend class="form-label-bold" for="partner">Have you received any of the following in the last 3 months?</legend>
 						<!-- <p class="hint-text">If you are part-time employed select 'Employed or self-employed'.</p> -->
-						<label class="block-label" data-target="working" for="radio-inline-1">
+						<label class="block-label" data-target="ssp" for="radio-inline-1">
 							<input id="radio-inline-1" type="radio" name="partner" value="Yes">
-							Statutory sick pay
+							Statutory Sick Pay
 						</label>
-						<label class="block-label" data-target="working" for="radio-inline-2">
+						<label class="block-label" data-target="smp" for="radio-inline-2">
 							<input id="radio-inline-2" type="radio" name="partner" value="No">
-							Statutory maternity pay
+							Statutory Maternity Pay
 						</label>
-						<label class="block-label" data-target="working" for="radio-inline-3">
+						<label class="block-label" data-target="spp" for="radio-inline-3">
 							<input id="radio-inline-3" type="radio" name="partner" value="Yes">
-							Statutory paternity pay
+							Statutory Paternity Pay
 						</label>
-						<label class="block-label" data-target="working" for="radio-inline-4">
+						<label class="block-label" data-target="sap" for="radio-inline-4">
 							<input id="radio-inline-4" type="radio" name="partner" value="No">
-							Statutory adoption pay
+							Statutory Adoption Pay
 						</label>
-						<div class="form-group">
+						<div class="form-group" style="margin-bottom:0px;">
 							<p>or</p>
 						</div>
-						<label class="block-label" for="radio-inline-5">
+						<label class="block-label" data-target="no-ssp" for="radio-inline-5">
 							<input id="radio-inline-5" type="radio" name="partner" value="No">
 							None
 						</label>
 					</fieldset>
 				</div>
 
-				<div class="panel panel-border-narrow js-hidden" id="working">
+				<div class="panel panel-border-narrow js-hidden" id="ssp">
+					<div class="form-group">
+				        <fieldset class="inline">
+					        <legend class="form-label-bold heading-large" for="ssp-pay">Has your Statutory Sick Pay ended?</legend>
+					        <label class="block-label" data-target="past-tense" for="ssp-1">
+					            <input id="ssp-1" type="radio" name="ssp-pay" value="Yes">
+					            Yes
+					        </label>
+					        <label class="block-label" data-target="present-tense" for="ssp-2">
+					            <input id="ssp-2" type="radio" name="ssp-pay" value="No">
+					            No
+					        </label>
+				        </fieldset>
+				    </div>
+				</div>
+
+				<div class="panel panel-border-narrow js-hidden" id="smp">
+					<div class="form-group">
+				        <fieldset class="inline">
+					        <legend class="form-label-bold heading-large" for="smp-pay">Has your Statutory Maternity Pay ended?</legend>
+					        <label class="block-label" data-target="past-tense" for="smp-1">
+					            <input id="smp-1" type="radio" name="smp-pay" value="Yes">
+					            Yes
+					        </label>
+					        <label class="block-label" data-target="present-tense" for="smp-2">
+					            <input id="smp-2" type="radio" name="smp-pay" value="No">
+					            No
+					        </label>
+				        </fieldset>
+				    </div>
+				</div>
+
+				<div class="panel panel-border-narrow js-hidden" id="spp">
+					<div class="form-group">
+				        <fieldset class="inline">
+					        <legend class="form-label-bold heading-large" for="spp-pay">Has your Statutory Paternity Pay ended?</legend>
+					        <label class="block-label" data-target="past-tense" for="spp-1">
+					            <input id="spp-1" type="radio" name="spp-pay" value="Yes">
+					            Yes
+					        </label>
+					        <label class="block-label" data-target="present-tense" for="spp-2">
+					            <input id="spp-2" type="radio" name="spp-pay" value="No">
+					            No
+					        </label>
+				        </fieldset>
+				    </div>
+				</div>
+
+				<div class="panel panel-border-narrow js-hidden" id="sap">
+					<div class="form-group">
+				        <fieldset class="inline">
+					        <legend class="form-label-bold heading-large" for="sap-pay">Has your Statutory Adoption Pay ended?</legend>
+					        <label class="block-label" data-target="past-tense" for="sap-1">
+					            <input id="sap-1" type="radio" name="sap-pay" value="Yes">
+					            Yes
+					        </label>
+					        <label class="block-label" data-target="present-tense" for="sap-2">
+					            <input id="sap-2" type="radio" name="sap-pay" value="No">
+					            No
+					        </label>
+				        </fieldset>
+				    </div>
+				</div>
+
+<!-- Present tense questions -->
+				<div class="panel panel-border-narrow js-hidden" id="present-tense">
 
 					<div class="form-group">
 						<label class="form-label-bold" for="howmuch1">How much do you get?</label>
@@ -133,8 +198,101 @@
 							</div>
 						</fieldset>
 					</div>
-
 				</div>
+
+<!-- End of present tense questions -->
+<!-- Past tense questions -->
+
+				<div class="panel panel-border-narrow js-hidden" id="past-tense">
+
+					<div class="form-group">
+						<label class="form-label-bold" for="howmuch1p">How much did you get?</label>
+						£ <input class="form-control form-control-1-4" id="howmuch1p" type="text" name="howmuch1p">
+					</div>
+
+					<div class="form-group">
+						<fieldset class="">
+							<legend class="form-label-bold" for="howoften1p">How often did you get it?</legend>
+							<label class="block-label" for="weekly1p">
+								<input id="weekly1p" type="radio" name="howoften1p" value="weekly">
+								Weekly
+							</label>
+							<label class="block-label" for="monthly1p">
+								<input id="monthly1p" type="radio" name="howoften1p" value="monthly">
+								Monthly
+							</label>
+							<label class="block-label" for="yearlyp">
+								<input id="yearlyp" type="radio" name="howoften1p" value="yearly">
+								Yearly
+							</label>
+							<label class="block-label" data-target="pay-otherp" for="yearly1p">
+								<input id="yearly1p" type="radio" name="howoften1p" value="other">
+								Other
+							</label>
+							<div class="form-group js-hidden" id="pay-otherp">
+								<label class="form-label-bold" for="surgery-namep">
+									<input type="text" class="form-control" id="surgery-namep">
+								</label>
+							</div>
+						</fieldset>
+					</div>
+
+					<div class="form-group" style="margin-top: 15px;">
+						<fieldset>
+							<legend class="form-label-bold">What date did it end?</legend>
+
+							<div class="form-date">
+								<p class="form-hint">DD MM YYYY</p>
+
+								<div class="form-group form-group-day">
+									<label for="dob-dayp">Day</label>
+									<input type="text" class="form-control" id="dob-dayp" maxlength="2" name="dob-day">
+								</div>
+								<div class="form-group form-group-month">
+									<label for="dob-monthp">Month</label>
+									<input type="text" class="form-control" id="dob-monthp" maxlength="2" name="dob-month">
+								</div>
+								<div class="form-group form-group-year">
+									<label for="dob-yearp">Year</label>
+									<input type="text" class="form-control" id="dob-yearp" maxlength="4" name="dob-year">
+								</div>
+							</div>
+						</fieldset>
+					</div>
+
+					<div class="form-group">
+						<label class="form-label-bold" for="howmuch1p">How much was the final payment?</label>
+						£ <input class="form-control form-control-1-4" id="howmuch1p" type="text" name="howmuch1">
+					</div>
+
+					<div class="form-group" style="margin-top: 15px;">
+						<fieldset>
+							<legend class="form-label-bold">What date was the final payment paid?</legend>
+
+							<div class="form-date">
+								<p class="form-hint">DD MM YYYY</p>
+
+								<div class="form-group form-group-day">
+									<label for="pay-dayp">Day</label>
+									<input type="text" class="form-control" id="pay-dayp" maxlength="2" name="pay-day">
+								</div>
+								<div class="form-group form-group-month">
+									<label for="pay-monthp">Month</label>
+									<input type="text" class="form-control" id="pay-monthp" maxlength="2" name="pay-month">
+								</div>
+								<div class="form-group form-group-year">
+									<label for="pay-yearp">Year</label>
+									<input type="text" class="form-control" id="pay-yearp" maxlength="4" name="pay-year">
+								</div>
+							</div>
+						</fieldset>
+					</div>
+				</div>
+<!-- End of past tense questions -->
+<!-- Not recieved any stat pay -->
+				<div class="js-hidden panel panel-border-narrow" id="no-ssp" style="margin-top: 15px;">
+		            <p>You may be eligible for Statutory Sick Pay. Contact your employer immediately to see if you are entitled to it.</p>
+	            </div>
 
 				<!-- Primary buttons, secondary links -->
 				<div class="form-group">
