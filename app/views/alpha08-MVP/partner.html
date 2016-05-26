@@ -1,0 +1,165 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Partner
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "../includes/phase_banner_alpha.html" %}
+
+	<form action="savings" method="#" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<header>
+			    <h1 class="form-title heading-large">
+			    	<!-- <span class="heading-secondary">Section 8 of 23</span> -->
+			      Your partner
+			    </h1>
+			  </header>
+
+			  <div class="form-group">
+			  	<fieldset class="inline">
+
+            <legend class="heading-medium">
+              Do you have a partner?
+            </legend>
+
+            <p>A partner is a person you are married to or a person you live with as if you are married to them.</p>
+
+            <label for="radio-part-2" data-target="partners-hours" class="block-label">
+              <input id="radio-part-2" type="radio" name="housing-act" value="Yes">
+              Yes
+            </label>
+
+            <label for="radio-part-3" data-target="no-partner" class="block-label">
+              <input id="radio-part-3" type="radio" name="housing-act" value="No">
+              No
+            </label>
+
+            <div class="js-hidden panel panel-border-narrow" id="partners-hours">
+        			<fieldset class="inline">
+
+		            <legend class="form-label-bold" for="third">Does your partner work 24 hours or more a week?</legend>
+
+		            <label for="third-party-yes" class="block-label">
+		              <input type="radio" id="third-party-yes" name="third" value="Yes">
+		              Yes
+		            </label>
+
+		            <label for="third-party-no" class="block-label">
+		              <input type="radio" id="third-party-no" name="third" value="No">
+		              No
+		            </label>
+		          </fieldset>
+		        </div>
+
+		        <div class="form-group js-hidden panel panel-border-narrow" id="no-partner">
+					  	<fieldset class="inline">
+
+		            <legend class="form-label-bold">
+		              Have you had a partner in the last 6 months?
+		            </legend>
+
+		            <label for="radio-part-4" data-target="previous-partner" class="block-label">
+		              <input id="radio-part-4" type="radio" name="partner-6" value="Yes">
+		              Yes
+		            </label>
+
+		            <label for="radio-part-5" class="block-label">
+		              <input id="radio-part-5" type="radio" name="partner-6" value="No">
+		              No
+		            </label>
+
+		          </fieldset>
+
+		          <div class="js-hidden form-group" id="previous-partner" style="margin-top: 10px;">
+		          	<fieldset class="inline">
+
+			            <legend class="form-label-bold">
+			              Are they making any regular payments to you?
+			            </legend>
+
+			            <label for="radio-part-7" data-target="yes-pay" class="block-label">
+			              <input id="radio-part-7" type="radio" name="partner-61" value="Yes">
+			              Yes
+			            </label>
+
+			            <label for="radio-part-8" class="block-label">
+			              <input id="radio-part-8" type="radio" name="partner-61" value="No">
+			              No
+			            </label>
+
+			          </fieldset>
+			        </div>
+
+			        <div class="js-hidden" id="yes-pay" style="margin-top: 10px;">
+			        	<div class="form-group">
+			        		<label class="form-label" for="amount">How much do they pay?</label>
+			        		<span>£ </span> <input class="form-control-1-8" id="amount" type="text">
+			        	</div>
+			        	<div class="form-group">
+			        		<fieldset class="">
+					          <legend class="form-label-bold" for="have-mortgage">How often?</legend>
+					          <label class="block-label" data-target="have-mortgage" for="radio-inline-20">
+					            <input id="radio-inline-20" type="radio" name="have-mortgage" value="Daily">
+					            Daily
+					          </label>
+					          <label class="block-label" for="radio-inline-21">
+					            <input id="radio-inline-21" type="radio" name="have-mortgage" value="Weekly">
+					            Weekly
+					          </label>
+					          <label class="block-label" for="radio-inline-22">
+					            <input id="radio-inline-22" type="radio" name="have-mortgage" value="Monthly">
+					            Monthly
+					          </label>
+					          <label class="block-label" for="radio-inline-23">
+					            <input id="radio-inline-23" type="radio" name="have-mortgage" value="Less than monthly">
+					            Yearly
+					          </label>
+					        </fieldset>
+			        	</div>
+			        	<div class="form-group">
+			        		<label class="form-label" for="whatfor">What is this for?</label>
+			        		<input class="form-control" id="whatfor" type="text">
+			        	</div>
+			        </div>
+
+		        </div>
+
+          </fieldset>
+        </div>
+
+
+
+		    <!-- Primary buttons, secondary links -->
+		    <div class="form-group">
+		      <input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
+		    </div>
+
+		  </div>
+		  <div class="column-one-third">
+		  	{% include "../includes/help.html" %}
+		  </div>
+		</div>
+
+  </form>
+</main>
+
+{% endblock %}
+
+{% block body_end %}
+  {% include "includes/scripts.html" %}
+  <script>
+    $('form').on('submit', function(e) {
+      if($('#third-party-yes').is(':checked')) {
+        window.location = '/alpha06/gp-details';
+      } else {
+        window.location = '/alpha06/savings';
+      }
+
+      e.preventDefault();
+    });
+  </script>
+{% endblock %}

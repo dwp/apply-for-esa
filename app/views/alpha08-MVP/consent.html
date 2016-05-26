@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Consent
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% include "../includes/phase_banner_alpha.html" %}
+
+	<form action="review" method="#" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+    		<header>
+    	    <h1 class="form-title heading-large">
+    	    	<!-- <span class="heading-secondary">Section 1 of 23</span> -->
+    	      People who might be contacted
+    	    </h1>
+    	  </header>
+    	  <p class="lede">The following person may be asked for information about your claim. This could include personal and medical information:</p>
+
+        <ul class="hcp-list seperator">
+              
+          <li>Dr John Jones </li> 
+          <li>GP </li> 
+          <li>Chandos Clinic, Gledhow road, Leeds LS8 1WR </li> 
+          <li>079704949283 </li>
+              
+        </ul>
+
+    	  <div class="form-group">
+          <fieldset id="consent" >
+            <legend for="consent">
+              <span class="frequency-question"></span>
+            </legend>
+            <div class="form-group">
+              <label class="block-label" for="consent-That&#39;s OK">
+                <input id="consent-That&#39;s OK" type="radio" name="consent" value="That&#39;s OK" aria-controls="">That&#39;s OK
+              </label>
+    
+              <label class="block-label" for="consent-That&#39;s not OK" data-target="notContactDetails" >
+                <input id="consent-That&#39;s not OK" type="radio" name="consent" value="That&#39;s not OK" aria-controls="notContactDetails">That&#39;s not OK
+              </label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form-group panel panel-border-narrow js-hidden" id="notContactDetails">
+          <fieldset>
+            <legend class="form-label-bold form-group">Who should be contacted for information about your condition?    </legend>
+            <div class="form-group">
+              <label class="form-label" for="full-name">
+              Their name
+              </label>
+              <input type="text" class="form-control" id="full-name" name="full-name">
+            </div>
+
+            <fieldset class="form-group">
+
+              <legend class="form-label">Their address</legend>
+
+              <div class="form-group">
+                <label class="form-label"><input type="text" class="form-control" id="address-line1"></label>
+                <label class="form-label"><input type="text" class="form-control" id="address-line2"></label>
+                <label class="form-label"><input type="text" class="form-control" id="address-line3"></label>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="postcode">Postcode</label>
+                <input type="text" class="form-control" id="postcode">
+              </div>
+
+            </fieldset>
+
+            <div class="form-group">
+              <label class="form-label" for="nino">
+              Their phone number
+              </label>
+              <input type="text" class="form-control" id="nino" name="nino">
+            </div>
+          </fieldset>
+        </div>
+
+        <!-- Primary buttons, secondary links -->
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
+        </div>
+
+      </div>
+      <div class="column-one-third">
+      	{% include "../includes/help.html" %}
+      </div>
+    </div>
+
+  </form>
+</main>
+
+{% endblock %}
