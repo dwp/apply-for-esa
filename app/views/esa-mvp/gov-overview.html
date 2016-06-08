@@ -1,0 +1,108 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for Employment and Support Allowance
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="breadcrumbs">
+    <ol role="breadcrumbs">
+      <li><a href="http://www.gov.uk">Home</a></li>
+      <li><a href="https://www.gov.uk/browse/benefits">Benefits</a></li>
+      <li><a href="https://www.gov.uk/browse/benefits/disability">Carers and disability benefits</a></li>
+    </ol>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        {% if serviceName %} {{ serviceName }} {% endif %}
+      </h1>
+
+      <!-- INTRO NAVIGAITON -->
+      <nav class="intro-nav">
+        <ol>
+          <li class="active font-xsmall">
+            <span class="part-number">1.</span>
+            <span>Overview</span>
+          </li>
+          <li class="font-xsmall">
+            <span class="part-number">4.</span>
+            <a href="gov-apply" title="Part 4: How to claim">Apply</a>
+          </li>
+          <li class="font-xsmall">
+            <span class="part-number">2.</span>
+            <a href="gov-eligibility" title="Part 2: Eligibility">Eligibility</a>
+          </li>
+          <li class="font-xsmall">
+            <span class="part-number">5.</span>
+            <a href="gov-circs" title="Part 5: If your circumstances change">If your circumstances change</a>
+          </li>
+          <li class="font-xsmall">
+            <span class="part-number">3.</span>
+            <a href="gov-assessed" title="Part 3: What you'll get">How you're assessed</a>
+          </li>
+        </ol>
+      </nav>
+
+      <h2 class="heading-medium">1. Overview</h2>
+      <article>
+
+        <p>If you have an illness or disability that affects your ability to work, Employment and Support Allowance (ESA) offers you:</p>
+        <ul class="list list-bullet">
+          <li>money to help you</li>
+          <li>personalised support to help you prepare for work when you’re able to</li>
+        </ul>
+        <p>If you are awarded Employment and Support Allowance (ESA) you’ll normally get a lower rate of ESA for the first 13 weeks of your claim. </p>
+        <p>For most people this basic rate is:</p>
+        <ul class="list list-bullet">
+          <li>&pound;57.90 a week if you’re aged under 25</li>
+          <li>&pound;73.10 a week if you’re aged 25 or over</li>
+        </ul>
+        <p>The amount paid can be higher or lower depending on your personal circumstances.</p>
+        <p>To get ESA you must have up to date fit notes (used to be called sick notes) until after a decision is made on your ability to work. </p>
+      </article>
+
+      <footer>
+        <nav class="pagination" role="navigation" aria-label="Pagination">
+          <ul class="group">
+              <li class="next">
+                <a href="gov-eligibility" rel="next" title="Navigate to next part">
+                  <span class="pagination-label">Next</span> <span class="pagination-part-title"> Eligibility</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </footer>
+
+    </div>
+    <div class="column-third">
+
+      <!--div class="related-links">
+        <h2 class="heading-medium">Subsection</h2>
+
+        <ul class="font-xsmall">
+          <li><a href="#">Related link</a></li>
+          <li><a href="#">Related link</a></li>
+          <li><a href="#" class="bold-xsmall">More</a></li>
+        </ul>
+      </div-->
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

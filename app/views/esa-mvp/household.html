@@ -1,0 +1,533 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Your household
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "../includes/phase_banner_alpha.html" %}
+
+	<form action="housing-benefit" method="#" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<header>
+			    <h1 class="form-title heading-large">
+			    	<!-- <span class="heading-secondary">Section 11 of 23</span> -->
+			      Other people in your household
+			    </h1>
+			  </header>
+
+        <div class="form-group">
+          <fieldset class="inline">
+            <legend class="heading-medium" for="live">Does anyone live with you over the age of 18?</legend>
+            <label class="block-label" data-target="livewith" for="livewith1">
+              <input id="livewith1" type="radio" name="live" value="Yes">
+              Yes
+            </label>
+            <label class="block-label" for="livewith2">
+              <input id="livewith2" type="radio" name="live" value="No">
+              No
+            </label>
+          </fieldset>
+        </div>
+
+
+        <div class="panel panel-border-narrow js-hidden" id="livewith">
+
+  			  <p>List all the people over the age of 18 who live with you.</p>
+
+<!--person-->
+
+          <div class="" id="partner-yes">
+            <h2 class="heading-small">Person 1</h2>
+
+            <div class="form-group">
+              <label class="form-label" for="firstname1">First name</label>
+              <input class="form-control" id="firstname1" type="text" name="firstname1">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="surname2">Last name</label>
+              <input class="form-control" id="surname2" type="text" name="surname2">
+            </div>
+
+            <div class="form-group">
+              <fieldset>
+                <legend><span class="form-label">Date of birth</span></legend>
+                <div class="form-date">
+                  <p class="form-hint">DD MM YYYY</p>
+                  <div class="form-group form-group-day">
+                    <label for="dob-day1">Day</label>
+                    <input type="text" class="form-control" id="dob-day1" maxlength="2" name="dob-day1">
+                  </div>
+                  <div class="form-group form-group-month">
+                    <label for="dob-month1">Month</label>
+                    <input type="text" class="form-control" id="dob-month1" maxlength="2" name="dob-month1">
+                  </div>
+                  <div class="form-group form-group-year">
+                    <label for="dob-year1">Year</label>
+                    <input type="text" class="form-control" id="dob-year1" maxlength="4" name="dob-year1">
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="relationship1">Their relationship to you</label>
+              <input class="form-control" id="relationship1" type="text" name="relationship1">
+            </div>
+
+            <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
+              <fieldset>
+                <legend class="form-label" for="moneyin1">Do they get:</legend>
+                <label class="block-label" data-target="money1a" for="get-1">
+                  <input id="get-1" type="checkbox" name="moneyin1" value="Yes">
+                  wages
+                </label>
+                <div class="panel panel-border-narrow js-hidden" id="money1a">
+
+                  <div class="form-group">
+                    <label class="form-label" for="howmuch1a">How much do they get?</label>
+                    £ <input class="form-control form-control-1-4" id="howmuch1a" type="text" name="howmuch1a">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="howoften1a">How often do they get paid?</label>
+                    <input class="form-control" id="howoften1a" type="text" name="howoften1a">
+                  </div>
+
+                </div>
+                <label class="block-label" data-target="money1b" for="get-2">
+                  <input id="get-2" type="checkbox" name="moneyin1" value="No">
+                  a pension
+                </label>
+
+                <div class="panel panel-border-narrow js-hidden" id="money1b">
+
+                  <div class="form-group">
+                    <label class="form-label" for="howmuch1b">How much do they get?</label>
+                    £ <input class="form-control form-control-1-4" id="howmuch1b" type="text" name="howmuch1b">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="howoften1b">How often do they get it?</label>
+                    <input class="form-control" id="howoften1b" type="text" name="howoften1b">
+                  </div>
+
+                </div>
+                <label class="block-label" data-target="money1c" for="get-3">
+                  <input id="get-3" type="checkbox" name="moneyin1" value="No">
+                  any benefits
+                </label>
+                <div class="panel panel-border-narrow js-hidden" id="money1c">
+
+                  <div class="form-group">
+                    <label class="form-label" for="howmuch1c">How much do they get?</label>
+                    £ <input class="form-control form-control-1-4" id="howmuch1c" type="text" name="howmuch1c">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="howoften1c">How often do they get it?</label>
+                    <input class="form-control" id="howoften1c" type="text" name="howoften1c">
+                  </div>
+
+                </div>
+                <div class="form-group"  style="margin-bottom: 0;">
+                  <p>or</p>
+                </div>
+                <label class="block-label" for="get-4">
+                  <input id="get-4" type="radio" name="moneyin1" value="No">
+                  They do <span style="font-weight: bold;">not</span> get any money from wages, a pension or any benefits
+                </label>
+              </fieldset>
+
+            </div>
+
+            <p><a href="#" id="show-payment2" class="add-another secondary-button">Add another</a></p>
+
+          </div>
+
+<!--person 2-->
+
+          <div class="form-group js-hidden" id="payment2">
+
+            <h2 class="heading-small">Person 2</h2>
+
+            <div class="form-group">
+              <label class="form-label" for="firstname10">First name</label>
+              <input class="form-control" id="firstname10" type="text" name="firstname10">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="surname20">Surname</label>
+              <input class="form-control" id="surname20" type="text" name="surname20">
+            </div>
+
+            <div class="form-group">
+              <fieldset>
+                <legend><span class="form-label">Date of birth</span></legend>
+                <div class="form-date">
+                  <p class="form-hint">DD MM YYYY</p>
+                  <div class="form-group form-group-day">
+                    <label for="dob-day10">Day</label>
+                    <input type="text" class="form-control" id="dob-day10" maxlength="2" name="dob-day10">
+                  </div>
+                  <div class="form-group form-group-month">
+                    <label for="dob-month10">Month</label>
+                    <input type="text" class="form-control" id="dob-month10" maxlength="2" name="dob-month10">
+                  </div>
+                  <div class="form-group form-group-year">
+                    <label for="dob-year10">Year</label>
+                    <input type="text" class="form-control" id="dob-year10" maxlength="4" name="dob-year10">
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="relationship10">What is their relationship to you?</label>
+              <input class="form-control" id="relationship10" type="text" name="relationship10">
+            </div>
+
+            <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
+              <fieldset>
+                <legend class="form-label" for="moneyin2">Do they get:</legend>
+                <label class="block-label" data-target="money2a" for="get-12">
+                  <input id="get-12" type="checkbox" name="moneyin2" value="Yes">
+                  wages
+                </label>
+                <div class="panel panel-border-narrow js-hidden" id="money2a">
+
+                  <div class="form-group">
+                    <label class="form-label" for="howmuch2a">How much do they get?</label>
+                    £ <input class="form-control form-control-1-4" id="howmuch2a" type="text" name="howmuch2a">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="howoften2a">How often do they get paid?</label>
+                    <input class="form-control" id="howoften2a" type="text" name="howoften2a">
+                  </div>
+
+                </div>
+                <label class="block-label" data-target="money2b" for="get-22">
+                  <input id="get-22" type="checkbox" name="moneyin2" value="No">
+                  a pension
+                </label>
+
+                <div class="panel panel-border-narrow js-hidden" id="money2b">
+
+                  <div class="form-group">
+                    <label class="form-label" for="howmuch2b">How much do they get?</label>
+                    £ <input class="form-control form-control-1-4" id="howmuch2b" type="text" name="howmuch2b">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="howoften2b">How often do they get it?</label>
+                    <input class="form-control" id="howoften2b" type="text" name="howoften2b">
+                  </div>
+
+                </div>
+                <label class="block-label" data-target="money2c" for="get-32">
+                  <input id="get-32" type="checkbox" name="moneyin2" value="No">
+                  any benefits
+                </label>
+                <div class="panel panel-border-narrow js-hidden" id="money2c">
+
+                  <div class="form-group">
+                    <label class="form-label" for="howmuch2c">How much do they get?</label>
+                    £ <input class="form-control form-control-1-4" id="howmuch2c" type="text" name="howmuch2c">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="howoften2c">How often do they get it?</label>
+                    <input class="form-control" id="howoften2c" type="text" name="howoften2c">
+                  </div>
+
+                </div>
+                <div class="form-group"  style="margin-bottom: 0;">
+                  <p>or</p>
+                </div>
+                <label class="block-label" for="get-4">
+                  <input id="get-4" type="radio" name="moneyin1" value="No">
+                  They do <span style="font-weight: bold;">not</span> get any money from wages, a pension or any benefits
+                </label>
+              </fieldset>
+
+            </div>
+
+            <p><a href="#" id="show-payment3" class="add-another secondary-button">Add another</a></p>
+
+          </div>
+
+<!--person 3-->
+
+          <div class="form-group js-hidden" id="payment3">
+
+            <h2 class="heading-small">Person 3</h2>
+
+            <div class="form-group">
+              <label class="form-label" for="firstname11">First name</label>
+              <input class="form-control" id="firstname11" type="text" name="firstname11">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="surname21">Surname</label>
+              <input class="form-control" id="surname21" type="text" name="surname21">
+            </div>
+
+            <div class="form-group">
+              <fieldset>
+                <legend><span class="form-label">Date of birth</span></legend>
+                <div class="form-date">
+                  <p class="form-hint">DD MM YYYY</p>
+                  <div class="form-group form-group-day">
+                    <label for="dob-day11">Day</label>
+                    <input type="text" class="form-control" id="dob-day11" maxlength="2" name="dob-day11">
+                  </div>
+                  <div class="form-group form-group-month">
+                    <label for="dob-month11">Month</label>
+                    <input type="text" class="form-control" id="dob-month11" maxlength="2" name="dob-month11">
+                  </div>
+                  <div class="form-group form-group-year">
+                    <label for="dob-year11">Year</label>
+                    <input type="text" class="form-control" id="dob-year11" maxlength="4" name="dob-year11">
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="relationship11">What is their relationship to you?</label>
+              <input class="form-control" id="relationship11" type="text" name="relationship11">
+            </div>
+
+            <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
+              <fieldset>
+                <legend class="form-label" for="moneyin3">Do they get:</legend>
+                <label class="block-label" data-target="money3a" for="get-13">
+                  <input id="get-13" type="checkbox" name="moneyin3" value="Yes">
+                  wages
+                </label>
+                <div class="panel panel-border-narrow js-hidden" id="money3a">
+
+                  <div class="form-group">
+                    <label class="form-label" for="howmuch3a">How much do they get?</label>
+                    £ <input class="form-control form-control-1-4" id="howmuch3a" type="text" name="howmuch3a">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="howoften3a">How often do they get paid?</label>
+                    <input class="form-control" id="howoften3a" type="text" name="howoften3a">
+                  </div>
+
+                </div>
+                <label class="block-label" data-target="money3b" for="get-23">
+                  <input id="get-23" type="checkbox" name="moneyin3" value="No">
+                  a pension
+                </label>
+
+                <div class="panel panel-border-narrow js-hidden" id="money3b">
+
+                  <div class="form-group">
+                    <label class="form-label" for="howmuch3b">How much do they get?</label>
+                    £ <input class="form-control form-control-1-4" id="howmuch3b" type="text" name="howmuch3b">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="howoften3b">How often do they get it?</label>
+                    <input class="form-control" id="howoften3b" type="text" name="howoften3b">
+                  </div>
+
+                </div>
+                <label class="block-label" data-target="money3c" for="get-33">
+                  <input id="get-33" type="checkbox" name="moneyin3" value="No">
+                  any benefits
+                </label>
+                <div class="panel panel-border-narrow js-hidden" id="money3c">
+
+                  <div class="form-group">
+                    <label class="form-label" for="howmuch3c">How much do they get?</label>
+                    £ <input class="form-control form-control-1-4" id="howmuch3c" type="text" name="howmuch3c">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="howoften3c">How often do they get it?</label>
+                    <input class="form-control" id="howoften3c" type="text" name="howoften3c">
+                  </div>
+
+                </div>
+                <div class="form-group"  style="margin-bottom: 0;">
+                  <p>or</p>
+                </div>
+                <label class="block-label" for="get-4">
+                  <input id="get-4" type="radio" name="moneyin1" value="No">
+                  They do <span style="font-weight: bold;">not</span> get any money from wages, a pension or any benefits
+                </label>
+              </fieldset>
+
+            </div>
+
+            <p><a href="#" id="show-payment4" class="add-another secondary-button">Add another</a></p>
+
+          </div>
+
+<!--person 4-->
+          <div class="form-group js-hidden" id="payment4">
+
+            <h2 class="heading-small">Person 4</h2>
+
+            <div class="form-group">
+              <label class="form-label" for="firstname114">First name</label>
+              <input class="form-control" id="firstname114" type="text" name="firstname114">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="surname214">Surname</label>
+              <input class="form-control" id="surname214" type="text" name="surname214">
+            </div>
+
+            <div class="form-group">
+              <fieldset>
+                <legend><span class="form-label">Date of birth</span></legend>
+                <div class="form-date">
+                  <p class="form-hint">DD MM YYYY</p>
+                  <div class="form-group form-group-day">
+                    <label for="dob-day114">Day</label>
+                    <input type="text" class="form-control" id="dob-day114" maxlength="2" name="dob-day114">
+                  </div>
+                  <div class="form-group form-group-month">
+                    <label for="dob-month114">Month</label>
+                    <input type="text" class="form-control" id="dob-month114" maxlength="2" name="dob-month114">
+                  </div>
+                  <div class="form-group form-group-year">
+                    <label for="dob-year114">Year</label>
+                    <input type="text" class="form-control" id="dob-year114" maxlength="4" name="dob-year114">
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="relationship114">What is their relationship to you?</label>
+              <input class="form-control" id="relationship114" type="text" name="relationship114">
+            </div>
+
+            <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
+              <fieldset>
+                <legend class="form-label" for="moneyin14">Do they get:</legend>
+                <label class="block-label" data-target="money4a" for="get-14">
+                  <input id="get-14" type="checkbox" name="moneyin14" value="Yes">
+                  wages
+                </label>
+                <div class="panel panel-border-narrow js-hidden" id="money4a">
+
+                  <div class="form-group">
+                    <label class="form-label" for="howmuch4a">How much do they get?</label>
+                    £ <input class="form-control form-control-1-4" id="howmuch4a" type="text" name="howmuch4a">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="howoften4a">How often do they get paid?</label>
+                    <input class="form-control" id="howoften4a" type="text" name="howoften4a">
+                  </div>
+
+                </div>
+                <label class="block-label" data-target="money4b" for="get-24">
+                  <input id="get-24" type="checkbox" name="moneyin14" value="No">
+                  a pension
+                </label>
+
+                <div class="panel panel-border-narrow js-hidden" id="money4b">
+
+                  <div class="form-group">
+                    <label class="form-label" for="howmuch4b">How much do they get?</label>
+                    £ <input class="form-control form-control-1-4" id="howmuch4a" type="text" name="howmuch4b">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="howoften4b">How often do they get it?</label>
+                    <input class="form-control" id="howoften4b" type="text" name="howoften4b">
+                  </div>
+
+                </div>
+                <label class="block-label" data-target="money4c" for="get-3">
+                  <input id="get-3" type="checkbox" name="moneyin1" value="No">
+                  any benefits
+                </label>
+                <div class="panel panel-border-narrow js-hidden" id="money4c">
+
+                  <div class="form-group">
+                    <label class="form-label" for="howmuch4c">How much do they get?</label>
+                    £ <input class="form-control form-control-1-4" id="howmuch4c" type="text" name="howmuch4c">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="howoften4c">How often do they get paid?</label>
+                    <input class="form-control" id="howoften4c" type="text" name="howoften4c">
+                  </div>
+
+                </div>
+                <div class="form-group"  style="margin-bottom: 0;">
+                  <p>or</p>
+                </div>
+                <label class="block-label" for="get-4">
+                  <input id="get-4" type="radio" name="moneyin1" value="No">
+                  They do <span style="font-weight: bold;">not</span> get any money from wages, a pension or any benefits
+                </label>
+              </fieldset>
+
+            </div>
+
+            <p><a href="#" id="show-payment4" class="add-another secondary-button">Add another</a></p>
+
+          </div>
+
+
+        </div>
+
+		    <!-- Primary buttons, secondary links -->
+		    <div class="form-group">
+		      <input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
+		    </div>
+
+		  </div>
+		  <div class="column-one-third">
+		  	{% include "../includes/help.html" %}
+		  </div>
+		</div>
+
+  </form>
+</main>
+{% endblock %}
+
+{% block body_end %}
+  {% include "includes/scripts.html" %}
+  <script>
+    $(document).ready(function() {
+
+      $("#show-payment2").click(function() {
+        $("#payment2").show();
+        $("#show-payment2").hide();
+         return false;
+      });
+      $("#show-payment3").click(function() {
+        $("#payment3").show();
+        $("#show-payment3").hide();
+         return false;
+      });
+      $("#show-payment4").click(function() {
+        $("#payment4").show();
+        $("#show-payment4").hide();
+         return false;
+      });
+      $("#show-payment5").click(function() {
+        $("#payment5").show();
+        $("#show-payment5").hide();
+         return false;
+      });
+
+    });
+  </script>
+{% endblock %}
