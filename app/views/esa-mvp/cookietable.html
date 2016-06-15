@@ -1,0 +1,95 @@
+{% extends "application/layout.html" %}
+
+{% block page_title %}About your job{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  {% include "includes/alpha.html" %}
+
+  <div class="grid-row">
+
+    <section class="column-two-thirds cookies" aria-labelledby="cookie">
+
+      <h1 class="title heading-large" id="cookie">Cookies</h1>
+
+      <h3 class="heading-small">Service cookies</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Purpose</th>
+            <th>Expires</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>C3Version</td>
+            <td>This makes sure you see the latest version of the service. </td>
+            <td>90 minutes or when you close your browser</td>
+          </tr>
+          <tr>
+            <td>claimeligibility</td>
+            <td>This records when you pass the eligibility section of the application.</td>
+            <td>90 minutes or when you close your browser</td>
+          </tr>
+          <tr>
+            <td>claimstart</td>
+            <td>This records when you start your application.</td>
+            <td>90 minutes or when you close your browser</td>
+          </tr>
+          <tr>
+            <td>seen_cookie_message </td>
+            <td>This records if you've seen the cookies message at the top of the site when you first come in, so you don't see it on every visit.</td>
+            <td>1 month</td>
+          </tr>
+          <tr>
+            <td>application-finished  </td>
+            <td>This records when you reach the thank you page so you don't submit your application twice.</td>
+            <td>90 minutes or when you close your browser</td>
+          </tr>
+          <tr>
+            <td>unique number (2 cookies of this type)</td>
+            <td>To remember where you are in the application and your previous answers so you can move forwards and backwards through the service.</td>
+            <td>90 minutes or when you close your browser</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 class="heading-small">Google analytics</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Purpose</th>
+            <th>Expires</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_ga</td>
+            <td>Counts how many people visit the service by tracking if you’ve visited before.</td>
+            <td>2 years</td>
+          </tr>
+          <tr>
+            <td>_gat</td>
+            <td>Used to count how many pages are viewed and how often.</td>
+            <td>10 minutes</td>
+          </tr>
+        </tbody>
+      </table>
+      <p><a href='#'>Go back to cookies page</a>
+    </section>
+
+  {% include "application/rightcol.html" %}
+
+</div><!-- .grid-row -->
+
+</main>
+
+{% endblock %}
+
+{% block page_script %} {% endblock %}
