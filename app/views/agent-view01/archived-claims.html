@@ -1,0 +1,108 @@
+{% extends "admin-layout.html" %}
+
+{% block title %}
+  Identifying Condition Recovery date
+{% endblock %}
+
+{% block content %}
+
+
+    <header role="banner" id="global-header" class="with-proposition">
+      <div class="header-wrapper">
+        <div class="header-global">
+          <div class="header-logo">
+            <a href="/" id="logo" class="content adminlogo">
+              DWP
+            </a>
+          </div>
+        </div>
+
+        <div class="header-proposition">
+          <div class="content">
+            <nav id="proposition-menu">
+              <a href="/" id="proposition-name">ESA Applications</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="admin-header-wrapper">
+        <div class="admin-header-content">
+          <ul>
+            <li><a href="#">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <div class="admin-wrapper">
+      <div class="admin-column-wrapper">
+        <div class="admin-content-wrapper">
+          <div class="admin-content">
+            <h1 class="heading-large">Archived claims</h1>
+            <p><b>Submitted claims:</b> 323</p>
+            <p><b>Pending claims:</b> 12</p>
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Email</th>
+                  <th class="numeric" scope="col">Status</th>
+                  <th class="numeric" scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>johnjones@yahoo.co.uk</td>
+                  <td class="numeric">Processed</td>
+                  <td class="numeric"><a href="#" class="button">Restore</a></td>
+                </tr>
+                <tr>
+                  <td>aimeejones@hotmail.com</td>
+                  <td class="numeric">Processed</td>
+                  <td class="numeric"><a href="#" class="button">Restore</a></td>
+                </tr>
+                <tr>
+                 <td>Elizabeth.Gererty@gmail.com</td>
+                  <td class="numeric">Processed</td>
+                  <td class="numeric"><a href="#" class="button">Restore</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="admin-sidebar-wrapper">
+          <div class="admin-sidebar-content">
+            <ul>
+              <li><a href="list-view">New claims</a></li>
+              <li><a href="archived-claims">Archived claims</a></li>
+              <li><a href="add-an-email">Add an email</a></li>
+              <li><a href="email-list">Email list</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}
+
+
+{% block body_end %}
+  {% include "includes/scripts.html" %}
+  <script>
+    $(document).ready(function () {
+      // Get the URL
+      var url = window.location.href.split('/').pop();
+
+      if (url === '') {
+        url = '/';
+      }
+
+      // Check the href of each link in the sidebar
+      $('.admin-sidebar-content a').each(function () {
+        if (url === $(this).attr('href')) {
+          // If the href matches the current URL set it as active
+          $(this).parents('li').addClass('active');
+        }
+      });
+  </script>
+{% endblock %}
