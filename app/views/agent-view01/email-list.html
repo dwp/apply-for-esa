@@ -39,7 +39,7 @@
       <div class="admin-column-wrapper">
         <div class="admin-content-wrapper">
           <div class="admin-content">
-            <h1 class="heading-large">New claims</h1>
+            <h1 class="heading-large">Email list</h1>
             <p><b>Submitted claims:</b> 323</p>
             <p><b>Pending claims:</b> 12</p>
             <table>
@@ -53,18 +53,23 @@
               <tbody>
                 <tr>
                   <td>johnjones@yahoo.co.uk</td>
-                  <td class="numeric">New claim</td>
-                  <td class="numeric"><a href="#" class="button">View</a></td>
+                  <td class="numeric">Used</td>
+                  <td class="numeric"></td>
                 </tr>
                 <tr>
                   <td>aimeejones@hotmail.com</td>
-                  <td class="numeric">New claim</td>
-                  <td class="numeric"><a href="#" class="button">View</a></td>
+                  <td class="numeric">Active</td>
+                  <td class="numeric"><a href="#" class="button">Change status</a></td>
                 </tr>
                 <tr>
                  <td>Elizabeth.Gererty@gmail.com</td>
-                  <td class="numeric">New claim</td>
-                  <td class="numeric"><a href="#" class="button">View</a></td>
+                  <td class="numeric">Expired</td>
+                  <td class="numeric"><a href="#" class="button">Change status</a></td>
+                </tr>
+                <tr>
+                 <td>paolo-maldini@gmail.com</td>
+                  <td class="numeric">Void</td>
+                  <td class="numeric"><a href="#" class="button">Change status</a></td>
                 </tr>
               </tbody>
             </table>
@@ -73,16 +78,15 @@
 
         <div class="admin-sidebar-wrapper">
           <div class="admin-sidebar-content">
-            <div class="admin-sub-menu">
-              <ul>
-                <li class="active"><a href="list-view">New claims</a></li>
-                <li><a href="archived-claims">Archived claims</a></li>
-                <li><a href="add-an-email">Add an email</a></li>
-                <li><a href="email-list">Email list</a></li>
-              </ul>
-            </div>
+            <ul>
+              <li><a href="list-view">New claims</a></li>
+              <li><a href="archived-claims">Archived claims</a></li>
+              <li><a href="add-an-email">Add an email</a></li>
+              <li class="active"><a href="email-list">Email list</a></li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
 {% endblock %}
+

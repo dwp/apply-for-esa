@@ -39,35 +39,18 @@
       <div class="admin-column-wrapper">
         <div class="admin-content-wrapper">
           <div class="admin-content">
-            <h1 class="heading-large">Archived claims</h1>
-            <p><b>Submitted claims:</b> 323</p>
-            <p><b>Pending claims:</b> 12</p>
-            <table>
-              <thead>
-                <tr>
-                  <th scope="col">Email</th>
-                  <th class="numeric" scope="col">Status</th>
-                  <th class="numeric" scope="col"></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>johnjones@yahoo.co.uk</td>
-                  <td class="numeric">Processed</td>
-                  <td class="numeric"><a href="#" class="button">Restore</a></td>
-                </tr>
-                <tr>
-                  <td>aimeejones@hotmail.com</td>
-                  <td class="numeric">Processed</td>
-                  <td class="numeric"><a href="#" class="button">Restore</a></td>
-                </tr>
-                <tr>
-                 <td>Elizabeth.Gererty@gmail.com</td>
-                  <td class="numeric">Processed</td>
-                  <td class="numeric"><a href="#" class="button">Restore</a></td>
-                </tr>
-              </tbody>
-            </table>
+            <h1 class="heading-large">Add an email</h1>
+            <div class="form-group">
+              <label class="form-label" for="email-f1">Email address</label>
+              <input class="form-control" id="email-f1" type="text">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email-f2">Confirm email address</label>
+              <input class="form-control" id="email-f2" type="text">
+            </div>
+            <div class="form-group">
+              <a href="#" class="button">Add</a>
+            </div>
           </div>
         </div>
 
@@ -75,8 +58,8 @@
           <div class="admin-sidebar-content">
             <ul>
               <li><a href="list-view">New claims</a></li>
-              <li class="active"><a href="archived-claims">Archived claims</a></li>
-              <li><a href="add-an-email">Add an email</a></li>
+              <li><a href="archived-claims">Archived claims</a></li>
+              <li class="active"><a href="add-an-email">Add an email</a></li>
               <li><a href="email-list">Email list</a></li>
             </ul>
           </div>
