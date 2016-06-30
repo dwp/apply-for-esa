@@ -16,20 +16,14 @@
 				<header>
 			    <h1 class="form-title heading-large">
 			    	<!-- <span class="heading-secondary">Section 3 of 23</span> -->
-			      Contact details
+			      Address
 			    </h1>
 			  </header>
 
-        <p class="lede">Updates about your application will be sent to you by letter, text message and email.</p>
-
+        <p>Enter an address where you want letters about your claim to be posted.</p>
 
         <div class="form-group">
           <fieldset>
-
-            <h2 class="form-title heading-medium">Address</h2>
-
-            <p>Enter an address where you want letters about your claim to be posted.</p>
-
 
             <div class="form-group">
               <label class="form-label"><input type="text" class="form-control" id="address-line1"></label>
@@ -38,7 +32,7 @@
             </div>
 
             <div class="form-group">
-              <label class="form-label" for="postcode">Postcode</label>
+              <label class="form-label-bold" for="postcode">Postcode</label>
               <input type="text" class="form-control form-control-1-4" id="postcode">
             </div>
 
@@ -46,19 +40,41 @@
         </div>
 
         <div class="form-group">
-          <label class="form-label-bold" for="phone">Phone number</label>
-          <input type="text" class="form-control" id="phone">
+          <fieldset class="inline">
+
+            <p class="form-label-bold">
+              Do you need letters in a different format eg braille, large print or audio CD?
+            </p>
+
+            <label for="radio-part-2" data-target="format" class="block-label">
+              <input id="radio-part-2" type="radio" name="housing-act" value="Yes">
+              Yes
+            </label>
+
+            <label for="radio-part-3" class="block-label">
+              <input id="radio-part-3" type="radio" name="housing-act" value="No">
+              No
+            </label>
+
+          </fieldset>
         </div>
 
-        <div class="form-group">
-          <label class="form-label-bold" for="phone2">Other number</label>
-          <input type="text" class="form-control" id="phone2">
-        </div>
-
-        <div class="form-group">
-          <label class="form-label-bold" for="email">Email</label>
-
-          <input type="text" class="form-control" id="email">
+        <div class="panel panel-border-narrow form-group js-hidden" id="format">
+          <fieldset class="">
+            <legend class="form-labl-bold">What format do you need?</legend>
+            <label class="block-label" for="radio-inline-1">
+              <input id="radio-inline-1" type="radio" name="partner" value="Yes">
+              Large print
+            </label>
+            <label class="block-label" for="radio-inline-2">
+              <input id="radio-inline-2" type="radio" name="partner" value="No">
+              Braille
+            </label>
+            <label class="block-label" for="radio-inline-7">
+              <input id="radio-inline-7" type="radio" name="partner" value="No">
+              Audio CD
+            </label>
+          </fieldset>
         </div>
 
 
