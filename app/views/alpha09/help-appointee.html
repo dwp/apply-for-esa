@@ -17,57 +17,28 @@
     		<header>
     	    <h1 class="form-title heading-large">
     	    	<!-- <span class="heading-secondary">Section 1 of 23</span> -->
-    	      Help with your application
+    	      Power of attorney and appointee
     	    </h1>
     	  </header>
 
     	  <div class="form-group">
-          <fieldset>
+          <fieldset class="inline">
 
-            <legend class="form-label" for="third">Are you:</legend>
-
-            <label for="third-party-yes" class="block-label">
-              <input type="radio" id="third-party-yes" name="third" value="Yes">
-              filling in this application by yourself
-            </label>
-
-            <!-- <label for="third-party-no" data-target="third-party" class="block-label">
-              <input type="radio" id="third-party-no" name="third" value="No">
-              getting help from a friend, relative or third party such as a charity
-            </label> -->
+            <legend class="form-label-bold" for="third">Are you filling this form on behalf of the person claiming?</legend>
 
             <label for="third-party-else" data-target="appointee" class="block-label">
-              <input type="radio" id="third-party-else" name="third" value="No">
-              applying on behalf of someone else
+              <input type="radio" id="third-party-else" name="third" value="Yes">
+              Yes
             </label>
 
-            <div class="panel panel-border-narrow js-hidden" id="third-party">
-            	<div class="form-group">
-    	          <label for="name" class="form-label">
-    	            The name of the person helping you
-    	          </label>
-    	          <input class="form-control" type="text" id="name">
-            	</div>
-
-            	<div class="form-group">
-    	          <label for="relationship" class="form-label">
-    	            How you know them
-    	          </label>
-    	          <input class="form-control" type="text" id="relationship">
-    	        </div>
-
-    	        <div class="form-group">
-    	          <label for="why" class="form-label">
-    	            Why they're helping you
-    	          </label>
-    	          <textarea class="form-control form-control-2-3" type="text" id="why"></textarea>
-    	        </div>
-            </div>
-
-
+            <label for="third-party-yes" class="block-label">
+              <input type="radio" id="third-party-yes" name="third" value="No">
+              No
+            </label>            
+          </fieldset>
             <!-- appointee section -->
             <div class="panel panel-border-narrow form-group js-hidden" id="appointee">
-              <fieldset class="form-group">
+              <fieldset>
                 <legend class="form-label-bold">You are completing this application on their behalf because:</legend>
                 <label for="powerOfAttourney" class="block-label" data-target="power-of-attorney">
                   <input type="radio" id="powerOfAttourney" name="representativeReason" value="I am their registered Power of Attourney">
@@ -85,7 +56,7 @@
                   <input type="radio" id="ownAffairs" name="representativeReason" value="They cannot manage own affairs">
                   they cannot manage own affairs
                 </label>
-                <label class="block-label" data-target="filling-in" for="yearly1">
+                <label class="block-label" data-target="filling-in" for="yearly1" style="margin-bottom: 15px;">
                   <input id="yearly1" type="radio" name="representativeReason" value="other">
                   Other
                 </label>
