@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	Your money
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "../includes/phase_banner_alpha.html" %}
+
+	<form action="pensions" method="#" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<a class="link-back" href="work">Back</a>
+				<header>
+					<h1 class="form-title heading-large">
+						<!-- <span class="heading-secondary">Section 5 of 23</span> -->
+						Your money
+					</h1>
+				</header>
+
+				<div class="form-group">
+					<fieldset>
+						<legend class="form-label-bold" for="partner">Tick all that are true</legend>
+						<!-- <p class="hint-text">If you are part-time employed select 'Employed or self-employed'.</p> -->
+						<label class="block-label" data-target="ssp" for="radio-inline-1">
+							<input id="radio-inline-1" type="checkbox" name="partner" value="Yes">
+							I am currently doing some work
+						</label>
+						<label class="block-label" data-target="smp" for="radio-inline-2">
+							<input id="radio-inline-2" type="checkbox" name="partner" value="No">
+							I am currently doing volunteering 
+						</label>
+						<label class="block-label" data-target="spp" for="radio-inline-3">
+							<input id="radio-inline-3" type="checkbox" name="partner" value="Yes">
+							I am receiving a pension
+						</label>
+						<label class="block-label" data-target="sap" for="radio-inline-4">
+							<input id="radio-inline-4" type="checkbox" name="partner" value="No">
+							I have some money, savings or shares
+						</label>
+					</fieldset>
+				</div>
+
+				<!-- Primary buttons, secondary links -->
+				<div class="form-group">
+					<input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
+				</div>
+
+			</div>
+			<div class="column-one-third">
+				{% include "../includes/help.html" %}
+			</div>
+		</div>
+
+	</form>
+</main>
+
+{% endblock %}

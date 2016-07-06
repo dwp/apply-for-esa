@@ -23,20 +23,23 @@
         <p>Enter an address where you want letters about your claim to be posted.</p>
 
         <div class="form-group">
-          <fieldset>
-
-            <div class="form-group">
-              <label class="form-label"><input type="text" class="form-control" id="address-line1"></label>
-              <label class="form-label"><input type="text" class="form-control" id="address-line2" style="margin-top:8px"></label>
-              <label class="form-label"><input type="text" class="form-control" id="address-line3" style="margin-top:8px"></label>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label-bold" for="postcode">Postcode</label>
-              <input type="text" class="form-control form-control-1-4" id="postcode">
-            </div>
-
-          </fieldset>
+          <div class="form-group">
+            <label class="form-label" for="address-a">Building and street</label>
+            <input type="text" name="address" id="address-a" class="form-control" value="">
+            <input type="text" name="address" id="address-a" class="form-control" value="">
+          </div>
+          <div class="form-group">
+            <label for="town" class="form-label">Town or city</label>
+            <input type="text" name="town" id="town" class="form-control" value="">
+          </div>
+          <div class="form-group">
+            <label for="county" class="form-label">County (optional)</label>
+            <input type="text" name="county" id="county" class="form-control" value="">
+          </div>
+          <div class="form-group">
+            <label for="postCode" class="form-label">Postcode</label>
+            <input type="text" name="postCode" id="postCode" class="form-control" value="">
+          </div>
         </div>
 
         <div class="form-group">
