@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Identifying Condition Recovery date
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include "../includes/phase_banner_alpha.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a class="link-back" href="claim-date">Back</a>
+
+      <h1 class="heading-large">Fit for work</h1>
+
+      <form action="consent" method="#" class="form">
+        <div class="form-group">
+          <fieldset>
+            <legend class="form-label-bold">
+              When do you expect you to be fit for work?
+            </legend>
+            <p></p>
+
+            <label for="radio-part-2" class="block-label">
+              <input id="radio-part-2" type="radio" name="esaApply" value="Yes">
+              in the next 3 months
+            </label>
+
+            <label for="radio-part-3" class="block-label">
+              <input id="radio-part-3" type="radio" name="esaApply" value="I dont know">
+              in the next 3 to 6 months
+            </label>
+
+            <label for="radio-part-4" class="block-label">
+              <input id="radio-part-4" type="radio" name="esaApply" value="Never">
+              in the next 6 months to a year
+            </label>
+            <label class="block-label" data-target="pay-other" for="yearly1">
+              <input id="yearly1" type="radio" name="esaApply" value="other">
+              Other
+            </label>
+            <div class="form-group js-hidden" id="pay-other">
+              <label class="form-label-bold" for="surgery-name">
+                <input type="text" class="form-control" id="surgery-name">
+              </label>
+            </div>
+          </fieldset>
+        </div>
+
+        <input class="button" type="submit" value="Continue"></input>
+      </form>
+
+    </div>
+
+    <div class="column-one-third">
+      {% include "../includes/help.html" %}
+    </div>
+  </div>
+</main>
+{% endblock %}

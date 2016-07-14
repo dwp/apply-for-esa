@@ -1,0 +1,126 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for Employment and Support Allowance (ESA)
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="breadcrumbs">
+    <ol role="breadcrumbs">
+      <li><a href="http://www.gov.uk">Home</a></li>
+      <li><a href="https://www.gov.uk/browse/benefits">Benefits</a></li>
+      <li><a href="https://www.gov.uk/browse/benefits/disability">Carers and disability benefits</a></li>
+    </ol>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        {% if serviceName %} {{ serviceName }} {% endif %}
+      </h1>
+
+      <!-- INTRO NAVIGAITON -->
+      <nav class="intro-nav">
+        <ol>
+          <li class="active font-xsmall">
+            <span class="part-number">1.</span>
+            <a href="gov-overview" title="Part 2: Eligibility">Overview</a>
+          </li>
+          <li class="font-xsmall">
+            <span class="part-number">4.</span>
+            <span>Apply</span>
+          </li>
+          <li class="font-xsmall">
+            <span class="part-number">2.</span>
+            <a href="gov-eligibility" title="Part 2: Eligibility">Eligibility</a>
+          </li>
+          <li class="font-xsmall">
+            <span class="part-number">5.</span>
+            <a href="gov-circs" title="Part 5: If your circumstances change">If your circumstances change</a>
+          </li>
+          <li class="font-xsmall">
+            <span class="part-number">3.</span>
+            <a href="gov-assessed" title="Part 3: What you'll get">How you're assessed</a>
+          </li>
+        </ol>
+      </nav>
+
+      <h2 class="heading-medium">4. Apply</h2>
+
+      <p>Before you apply make sure you have:</p>
+      <ul class="list list-bullet">
+        <li>your National Insurance number</li>
+        <li>the name, address and telephone number of your General Practitioner (GP)</li>
+        <li>your fit note if you have one (also known as a sick note or doctor’s note)</li>
+        <!-- <div class="panel panel-border-narrow"><p>A fit note describes how your condition affects your ability to work and is issued by a hospital doctor or GP.</p></div> -->
+        <li>hospital admission date if you’re currently in hospital</li>
+        <li>your employer’s address and telephone number</li>
+        <li>dates of employment</li>
+        <li>your last 2 payslips</li>
+        <li>form SSP1 if you have one - your employer should give you an SSP1 if you’re not entitled to Statutory Sick Pay (SSP), or when it’s coming to an end.</li>
+        <li>details of any income other than earnings or SSP</li>
+        <li>details of your money, savings or investments</li>
+        <li>bank, building society or post office account details</li>
+      </ul>
+
+      <div>
+        <p>You’ll be asked to give consent for the Department of Work and Pensions to contact your GP (doctor). If you give consent you may withdraw it at any time.</p>
+      </div>
+
+      <p>
+        <a class="button button-start" href="help-appointee" role="button">Start now</a>
+      </p>
+
+      <p>The application will reset if you don’t do anything for more than 30 minutes - you’ll have to restart your application.</p>
+
+      <p>The online service is also available in <a href="#">Welsh (Cymraeg).</a></p>
+
+      <p>You cannot register for this service if you’re in the UK illegally.</p>
+      <footer>
+        <nav class="pagination" role="navigation" aria-label="Pagination">
+          <ul class="group">
+            <li class="previous">
+              <a href="gov-assessed" rel="prev" title="Navigate to previous part">
+                <span class="pagination-label">Previous </span> <span class="pagination-part-title"> How you're assessed</span>
+              </a>
+            </li>
+            <li class="next">
+              <a href="gov-circs" rel="next" title="Navigate to next part">
+                <span class="pagination-label">Next</span> <span class="pagination-part-title"> If your circumstances change</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </footer>
+
+    </div>
+    <div class="column-third">
+
+      <!--div class="related-links">
+        <h2 class="heading-medium">Subsection</h2>
+
+        <ul class="font-xsmall">
+          <li><a href="#">Related link</a></li>
+          <li><a href="#">Related link</a></li>
+          <li><a href="#" class="bold-xsmall">More</a></li>
+        </ul>
+      </div-->
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}
