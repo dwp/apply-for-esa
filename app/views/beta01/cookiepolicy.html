@@ -1,12 +1,13 @@
-{% extends "application/layout.html" %}
+{% extends "layout.html" %}
 
-{% block page_title %}Cookie policay{% endblock %}
+{% block page_title %}
+  Cookie policy
+{% endblock %}
 
 {% block content %}
 
 <main id="content" role="main">
-
-  {% include "includes/alpha.html" %}
+  {% include "../includes/phase_banner_beta.html" %}
 
   <div class="grid-row">
 
@@ -80,12 +81,12 @@
 
     </section>
 
-  {% include "application/rightcol.html" %}
+      <div class="column-one-third">
+        {% include "../includes/help.html" %}
+      </div>
 
 </div><!-- .grid-row -->
 
 </main>
 
 {% endblock %}
-
-{% block page_script %}{% endblock %}

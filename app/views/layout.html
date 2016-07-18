@@ -1,5 +1,9 @@
 {% extends "govuk_template.html" %}
 
+{% block cookie_message %}
+  <p>GOV.UK uses <a href="cookiepolicy">cookies</a> to make the site simpler. <a href="#" id="cookie_gotit">Got it</a></p>
+{% endblock %}
+
 {% block head %}
   {% include "includes/head.html" %}
 {% endblock %}

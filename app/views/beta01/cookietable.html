@@ -1,12 +1,13 @@
-{% extends "application/layout.html" %}
+{% extends "layout.html" %}
 
-{% block page_title %}Cookies{% endblock %}
+{% block page_title %}
+  Service cookies
+{% endblock %}
 
 {% block content %}
 
 <main id="content" role="main">
-
-  {% include "includes/alpha.html" %}
+  {% include "../includes/phase_banner_beta.html" %}
 
   <div class="grid-row">
 
@@ -84,12 +85,12 @@
       <p><a href='#'>Go back to cookies page</a>
     </section>
 
-  {% include "application/rightcol.html" %}
+      <div class="column-one-third">
+        {% include "../includes/help.html" %}
+      </div>
 
 </div><!-- .grid-row -->
 
 </main>
 
 {% endblock %}
-
-{% block page_script %} {% endblock %}
