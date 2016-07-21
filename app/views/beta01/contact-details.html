@@ -1,98 +1,80 @@
-{% extends "layout.html" %}
+{% extends "layout.html" %} 
 
-{% block page_title %}
-  Contact details
-{% endblock %}
+{% block page_title %} 
+    Address
+{% endblock %} 
 
 {% block content %}
 
 <main id="content" role="main">
-  {% include "../includes/phase_banner_beta.html" %}
+    {% include "../includes/phase_banner_beta.html" %}
+    <form action="contact-pref" method="#" class="form">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <a class="link-back" href="personal-details">Back</a>
 
-	<form action="contact-pref" method="#" class="form">
-		<div class="grid-row">
-			<div class="column-two-thirds">
-        <a class="link-back" href="personal-details">Back</a>
-				<header>
-			    <h1 class="form-title heading-large">
-			    	<!-- <span class="heading-secondary">Section 3 of 23</span> -->
-			      Address
-			    </h1>
-			  </header>
+                {% include "../includes/error-summary.html" %}
 
-        <p>Enter an address where you want letters about your claim to be posted.</p>
-
-        <div class="form-group">
-          <div class="form-group">
-            <label class="form-label" for="address-a">Building and street</label>
-            <input type="text" name="address" id="address-a" class="form-control" value="">
-            <input type="text" name="address" id="address-a" class="form-control" value="">
-          </div>
-          <div class="form-group">
-            <label for="town" class="form-label">Town or city</label>
-            <input type="text" name="town" id="town" class="form-control" value="">
-          </div>
-          <div class="form-group">
-            <label for="county" class="form-label">County (optional)</label>
-            <input type="text" name="county" id="county" class="form-control" value="">
-          </div>
-          <div class="form-group">
-            <label for="postCode" class="form-label">Postcode</label>
-            <input type="text" name="postCode" id="postCode" class="form-control" value="">
-          </div>
+                <header>
+                    <h1 class="form-title heading-large">Address</h1>
+                </header>
+                <p>Enter an address where you want letters about your claim to be posted.</p>
+                <div class="form-group">
+                    <div class="form-group">
+                        <label class="form-label" for="address-a">House or flat number and street</label>
+                        <input type="text" name="address" id="address-a" class="form-control" value="">
+                        <input type="text" name="address" id="address-a" class="form-control" value="">
+                    </div>
+                    <div class="form-group" data-required data-error="Enter your town or city">
+                        <label for="town" class="form-label">Town or city</label>
+                        <input type="text" name="town" id="town" class="form-control" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="county" class="form-label">County (optional)</label>
+                        <input type="text" name="county" id="county" class="form-control" value="">
+                    </div>
+                    <div class="form-group" data-required data-error="Enter your postcode">
+                        <label for="postCode" class="form-label">Postcode</label>
+                        <input type="text" name="postCode" id="postCode" class="form-control" value="">
+                    </div>
+                </div>
+                <div class="form-group" data-required data-error="Select an option">
+                    <fieldset class="inline">
+                        <p class="form-label-bold">
+                            Do you need letters in a different format eg braille, large print or audio CD?
+                        </p>
+                        <label for="radio-part-2" data-target="format" class="block-label">
+                            <input id="radio-part-2" type="radio" name="housing-act" value="Yes"> Yes
+                        </label>
+                        <label for="radio-part-3" class="block-label">
+                            <input id="radio-part-3" type="radio" name="housing-act" value="No"> No
+                        </label>
+                    </fieldset>
+                </div>
+                <div class="panel panel-border-narrow form-group js-hidden" id="format" data-required data-error="Select which format you need">
+                    <fieldset class="">
+                        <legend class="form-labl-bold">What format do you need?</legend>
+                        <label class="block-label" for="radio-inline-1">
+                            <input id="radio-inline-1" type="radio" name="partner" value="Yes"> Large print
+                        </label>
+                        <label class="block-label" for="radio-inline-2">
+                            <input id="radio-inline-2" type="radio" name="partner" value="No"> Braille
+                        </label>
+                        <label class="block-label" for="radio-inline-7">
+                            <input id="radio-inline-7" type="radio" name="partner" value="No"> Audio CD
+                        </label>
+                    </fieldset>
+                </div>
+                <!-- Primary buttons, secondary links -->
+                <div class="form-group">
+                    <input type="submit" class="button" value="Continue">
+                    <!--a href="overview">I do not agree - leave now</a-->
+                </div>
+            </div>
+            <div class="column-one-third">
+                {% include "../includes/help.html" %}
+            </div>
         </div>
-
-        <div class="form-group">
-          <fieldset class="inline">
-
-            <p class="form-label-bold">
-              Do you need letters in a different format eg braille, large print or audio CD?
-            </p>
-
-            <label for="radio-part-2" data-target="format" class="block-label">
-              <input id="radio-part-2" type="radio" name="housing-act" value="Yes">
-              Yes
-            </label>
-
-            <label for="radio-part-3" class="block-label">
-              <input id="radio-part-3" type="radio" name="housing-act" value="No">
-              No
-            </label>
-
-          </fieldset>
-        </div>
-
-        <div class="panel panel-border-narrow form-group js-hidden" id="format">
-          <fieldset class="">
-            <legend class="form-labl-bold">What format do you need?</legend>
-            <label class="block-label" for="radio-inline-1">
-              <input id="radio-inline-1" type="radio" name="partner" value="Yes">
-              Large print
-            </label>
-            <label class="block-label" for="radio-inline-2">
-              <input id="radio-inline-2" type="radio" name="partner" value="No">
-              Braille
-            </label>
-            <label class="block-label" for="radio-inline-7">
-              <input id="radio-inline-7" type="radio" name="partner" value="No">
-              Audio CD
-            </label>
-          </fieldset>
-        </div>
-
-
-        <!-- Primary buttons, secondary links -->
-        <div class="form-group">
-          <input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
-        </div>
-
-      </div>
-      <div class="column-one-third">
-      	{% include "../includes/help.html" %}
-      </div>
-    </div>
-
-  </form>
+    </form>
 </main>
-
 {% endblock %}
