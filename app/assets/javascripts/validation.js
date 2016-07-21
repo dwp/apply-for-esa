@@ -102,7 +102,7 @@ function validate(e) {
                 var id = $(this).attr('id');
                 var formGroup = $(this).parent();
                 var label = $('label[for="' + $(this).attr('id') + '"]');
-                var errorMessage = $(this).parents('fieldset').attr('data-error') || 'Enter ' + label.text().toLowerCase();
+                var errorMessage = $(this).parent().attr('data-error') || 'Enter ' + label.text().toLowerCase();
 
                 if ($(this).val().length === 0) {
                     invalid.push($(this).attr('id'));
@@ -137,7 +137,7 @@ function validate(e) {
                 var id = $(this).attr('id');
                 var formGroup = $(this).parents('.form-group');
                 var label = $('label[for="' + $(this).attr('id') + '"]');
-                var errorMessage = $(this).parents('fieldset').attr('data-error') || 'Enter ' + label.text().toLowerCase();
+                var errorMessage = $(this).parent().attr('data-error') || 'Enter ' + label.text().toLowerCase();
 
                 if ($(this).val().length === 0) {
                     invalid.push($(this).attr('id'));
