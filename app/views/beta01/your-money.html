@@ -13,14 +13,14 @@
 		<div class="grid-row">
 			<div class="column-two-thirds">
 				<a class="link-back" href="contact-pref">Back</a>
+
+				{% include "../includes/error-summary.html" %}
+
 				<header>
-					<h1 class="form-title heading-large">
-						<!-- <span class="heading-secondary">Section 5 of 23</span> -->
-						Your money
-					</h1>
+					<h1 class="form-title heading-large">Your money</h1>
 				</header>
 
-				<div class="form-group">
+				<div class="form-group" data-required data-error="Select an option">
 					<fieldset>
 						<legend class="form-label-bold" for="partner">Select all that apply:</legend>
 						<!-- <p class="hint-text">If you are part-time employed select 'Employed or self-employed'.</p> -->
@@ -38,6 +38,11 @@
 							<input id="radio-inline-1" type="checkbox" name="partner" value="Yes">
 							<b>I've received statutory payments in the last 3 months</b><br>
 							For example statutory sick pay, maternity pay, paternity pay or adoption pay
+						</label>
+
+						<label class="block-label" data-target="spp" for="radio-inline-2">
+							<input id="radio-inline-2" type="checkbox" name="partner" value="Yes">
+							<b>None of these apply to me</b>
 						</label>
 						
 					</fieldset>
