@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Housing benefit
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+{% include "../includes/phase_banner_beta.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <a class="link-back" href="household">Back</a>
+  
+      <form action="gp-details" method="#" class="form">
+
+      <h1 class="form-title heading-large">
+        <!-- <span class="heading-secondary">Section 14 of 23</span> -->
+        Housing Benefit &amp; Council Tax Reduction
+      </h1>
+
+      <div class="form-group">
+        <fieldset class="inline">
+          <legend class="form-label-bold heading-large" for="partner">Are you currently getting Housing Benefit or Council Tax Reduction, or both?</legend>
+          <label class="block-label" for="radio-inline-1">
+            <input id="radio-inline-1" type="radio" name="partner" value="Yes">
+            Yes
+          </label>
+          <label class="block-label" data-target="no-housing" for="radio-inline-2">
+            <input id="radio-inline-2" type="radio" name="partner" value="No">
+            No
+          </label>
+        </fieldset>
+      </div>
+
+      <div class="panel panel-border-narrow js-hidden" id="no-housing">
+        <div class="form-group">
+          <fieldset class="inline">
+            <legend class="form-label-bold heading-large" for="house">Are you planning on applying for Housing Benefit or Council Tax Reduction, or both?</legend>
+            <label class="block-label" for="radio-inline-3">
+              <input id="radio-inline-3" type="radio" name="house" value="Yes">
+              Yes
+            </label>
+            <label class="block-label" for="radio-inline-4">
+              <input id="radio-inline-4" type="radio" name="house" value="No">
+              No
+            </label>
+          </fieldset>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <input type="submit" class="button" value="Continue">
+      </div>
+
+    </div>
+    <div class="column-third">
+      {% include "../includes/help.html" %}
+    </div>
+  </div>
+
+
+</main><!-- / #page-container -->
+{% endblock %}
