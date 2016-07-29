@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	Additional information
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "../includes/phase_banner_beta.html" %}
+
+	<form action="consent" method="#" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<a class="link-back" href="expected-return-date">Back</a>
+				<header>
+					<h1 class="form-title heading-large">
+						<!-- <span class="heading-secondary">Section 5 of 23</span> -->
+						Additional information
+					</h1>
+				</header>
+
+				<div class="form-group">
+          <label for="why" class="form-label-bold">Is there anything else you want to tell us about?</label>
+          <textarea class="form-control" type="text" id="why" style="width: 100%; height: 350px;"></textarea>
+        </div>
+
+
+				<!-- Primary buttons, secondary links -->
+				<div class="form-group">
+					<input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
+				</div>
+
+			</div>
+			<div class="column-one-third">
+				{% include "../includes/help.html" %}
+			</div>
+		</div>
+
+	</form>
+</main>
+
+{% endblock %}
