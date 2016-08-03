@@ -25,7 +25,7 @@
 						<legend class="form-label" for="partner">You live:</legend>
 						<label class="block-label" data-target="mortgage" for="radio-inline-1">
 							<input id="radio-inline-1" type="radio" name="partner" value="Yes">
-							in a place you have bought
+							in a place you own or pay a mortgage on
 						</label>
 						<label class="block-label" data-target="rented" for="radio-inline-2">
 							<input id="radio-inline-2" type="radio" name="partner" value="No">
@@ -33,7 +33,7 @@
 						</label>
 						<label class="block-label" data-target="parents" for="radio-inline-7">
 							<input id="radio-inline-7" type="radio" name="partner" value="No">
-							in a place owned by your parents, relative, friend or ex-partner
+							in someone else's place, for example, your parent's, relative's, friend's or ex-partner's
 						</label>
 						<label class="block-label" data-target="care-home" for="radio-inline-3">
 							<input id="radio-inline-3" type="radio" name="partner" value="No">
@@ -329,4 +329,19 @@
 	</form>
 </main>
 
+{% endblock %}
+
+{% block body_end %}
+  	{% include "includes/scripts.html" %}
+  	<script>
+	    $('form').on('submit', function(e) {
+		      if($('#radio-inline-1').is(':checked') || $('#radio-inline-2').is(':checked')) {
+		        	window.location = '/esa-mvp/housing-benefit';
+		      } else {
+		        	window.location = '/esa-mvp/gp-details';
+		      }
+
+		      e.preventDefault();
+	    });
+  	</script>
 {% endblock %}
