@@ -57,32 +57,32 @@
 						&pound; <input type="text" class="form-control form-control-1-4" id="how-much" name="how-much">
 					</div>
 					<div class="form-group">
-            <fieldset>
-              <legend class="form-label" for="howoften1b">How often are you getting paid?</legend>
-              <label class="block-label" for="daily">
-                <input id="daily" type="radio" name="howoften1b" value="daily">
-                Daily
-              </label>
-              <label class="block-label" for="weekly1b">
-                <input id="weekly1b" type="radio" name="howoften1b" value="weekly">
-                Weekly
-              </label>
-              <label class="block-label" for="fortnight">
-                <input id="fortnight" type="radio" name="howoften1b" value="fortnight">
-                Fortnightly
-              </label>
-              <label class="block-label" for="monthly1b">
-                <input id="monthly1b" type="radio" name="howoften1b" value="monthly">
-                Monthly
-              </label>
-              <label class="block-label" for="yearly1b">
-                <input id="yearly1b" type="radio" name="howoften1b" value="yearly">
-                Yearly
-              </label>
-            </fieldset>
-          </div>
+			            <fieldset>
+			              	<legend class="form-label" for="howoften1b">How often are you getting paid?</legend>
+			              	<label class="block-label" for="daily">
+			                	<input id="daily" type="radio" name="howoften1b" value="daily">
+			                	Daily
+			              	</label>
+			              	<label class="block-label" for="weekly1b">
+			                	<input id="weekly1b" type="radio" name="howoften1b" value="weekly">
+			                	Weekly
+			              	</label>
+			              	<label class="block-label" for="fortnight">
+			                	<input id="fortnight" type="radio" name="howoften1b" value="fortnight">
+			                	Fortnightly
+			              	</label>
+			              	<label class="block-label" for="monthly1b">
+			                	<input id="monthly1b" type="radio" name="howoften1b" value="monthly">
+			                	Monthly
+			              	</label>
+			              	<label class="block-label" for="yearly1b">
+			                	<input id="yearly1b" type="radio" name="howoften1b" value="yearly">
+			                	Yearly
+			              	</label>
+			            </fieldset>
+			        </div>
 
-          <fieldset class="inline form-group">
+            		<fieldset class="inline form-group">
 						<legend class="form-label" for="expenses">Does your employer pay you expenses regularly?</legend>
 						<label class="block-label" for="expenses-1">
 							<input id="expenses-1" type="radio" name="expenses" value="Yes">
@@ -93,6 +93,38 @@
 							No
 						</label>
 					</fieldset>
+
+					<fieldset class="inline form-group">
+				        <legend class="form-label" for="part">Is this supported by a professional support worker?</legend>
+				        <label class="block-label" data-target="yes-support" for="radio--3">
+				            <input id="radio--3" type="radio" name="part" value="Yes">
+				            Yes
+				        </label>
+				        <label class="block-label" for="radio--4">
+				            <input id="radio--4" type="radio" name="part" value="No">
+				            No
+				        </label>
+			        </fieldset>
+
+			        <div class="panel panel-border-narrow js-hidden" id="yes-support">
+			        	<div class="form-group">
+							<label class="form-label" for="worker-name">Support worker name</label>
+							<input type="text" class="form-control" id="worker-name">
+						</div>
+
+						<div class="form-group">
+							<p class="form-label">Address of support worker</p>
+							<label class="form-label" style="margin: 4px 0;"><input type="text" class="form-control" id="address-line1b"></label>
+							<label class="form-label" style="margin: 4px 0;"><input type="text" class="form-control" id="address-line2b"></label>
+							<label class="form-label" style="margin: 4px 0;"><input type="text" class="form-control" id="address-line3b"></label>
+							<label class="form-label" style="margin: 4px 0;"><input type="text" class="form-control" id="address-line4b"></label>
+						</div>
+
+						<div class="form-group">
+							<label class="form-label" for="postcodeb">Postcode</label>
+							<input type="text" class="form-control form-control-1-4" id="postcodeb">
+						</div>
+			        </div>
 
 					<div class="form-group">
 						<fieldset class="form-group">
@@ -118,11 +150,11 @@
 								other
 							</label>
 							<div class="form-group js-hidden" id="are-other">
-	              <label class="form-label-bold" for="surgery-name2">
-	                <input type="text" class="form-control" id="surgery-name2">
-	              </label>
-	            </div>
-	          </fieldset>
+	              				<label class="form-label-bold" for="surgery-name2">
+	                				<input type="text" class="form-control" id="surgery-name2">
+	              				</label>
+	            			</div>
+	          			</fieldset>
 					</div>
 
 				</div>
