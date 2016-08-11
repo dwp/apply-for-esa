@@ -1,0 +1,208 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	Other money
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "../includes/phase_banner_beta.html" %}
+
+	<form action="education" method="#" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<a class="link-back" href="savings">Back</a>
+				<header>
+					<h1 class="form-title heading-large">
+						<!-- <span class="heading-secondary">Section 5 of 23</span> -->
+						Other money
+					</h1>
+				</header>
+
+				<div class="form-group">
+					<fieldset class="inline">
+						<legend class="form-label-bold" for="partner">Apart from benefits, do you get any other money, for example, Working Tax Credit, insurance payments, loans, grants?</legend>
+						<label class="block-label" data-target="working1" for="radio-inline-1">
+						<input id="radio-inline-1" type="radio" name="partner" value="Yes">
+						Yes
+						</label>
+						<label class="block-label" for="radio-inline-2">
+						<input id="radio-inline-2" type="radio" name="partner" value="No">
+						No
+						</label>
+					</fieldset>
+				</div>
+
+				<div class="panel panel-border-narrow js-hidden" id="working1">
+
+					<div class="form-group">
+						<label class="form-label-bold" for="hours">
+							Where is the money coming from?
+						</label>
+						<input type="text" class="form-control" id="hours" name="hours">
+					</div>
+
+					<div class="form-group">
+						<fieldset class="">
+							<legend class="form-label-bold" for="howoften1">How often do you get it?</legend>
+							<label class="block-label" for="weekly1">
+								<input id="weekly1" type="radio" name="howoften1" value="weekly">
+								Weekly
+							</label>
+							<label class="block-label" for="monthly1">
+								<input id="monthly1" type="radio" name="howoften1" value="monthly">
+								Monthly
+							</label>
+							<label class="block-label" for="yearly">
+								<input id="yearly" type="radio" name="howoften1" value="yearly">
+								Yearly
+							</label>
+							<label class="block-label" data-target="pay-other" for="yearly1">
+								<input id="yearly1" type="radio" name="howoften1" value="other">
+								Other
+							</label>
+							<div class="form-group js-hidden" id="pay-other">
+								<label class="form-label-bold" for="surgery-name">
+									<input type="text" class="form-control" id="surgery-name">
+								</label>
+							</div>
+						</fieldset>
+					</div>
+
+					<div class="form-group">
+						<label class="form-label-bold" for="howmuch1">How much do you get?</label>
+						£ <input class="form-control form-control-1-4" id="howmuch1" type="text" name="howmuch1">
+					</div>
+
+					<p><a href="#" id="show-payment2" class="add-another secondary-button">Add another</a></p>
+
+				</div>
+
+
+				<div class="panel panel-border-narrow js-hidden" id="working2">
+
+					<div class="form-group">
+						<label class="form-label-bold" for="hoursb">
+							Where is the money coming from?
+						</label>
+						<input type="text" class="form-control" id="hoursb" name="hours">
+					</div>
+
+					<div class="form-group">
+						<fieldset class="">
+							<legend class="form-label-bold" for="howoften1b">How often do you get it?</legend>
+							<label class="block-label" for="weekly1b">
+								<input id="weekly1b" type="radio" name="howoften1b" value="weekly">
+								Weekly
+							</label>
+							<label class="block-label" for="monthly1b">
+								<input id="monthly1b" type="radio" name="howoften1b" value="monthly">
+								Monthly
+							</label>
+							<label class="block-label" for="yearlyb">
+								<input id="yearlyb" type="radio" name="howoften1b" value="yearly">
+								Yearly
+							</label>
+							<label class="block-label" data-target="pay-otherb" for="yearly1b">
+								<input id="yearly1b" type="radio" name="howoften1b" value="other">
+								Other
+							</label>
+							<div class="form-group js-hidden" id="pay-otherb">
+								<label class="form-label-bold" for="surgery-nameb">
+									<input type="text" class="form-control" id="surgery-nameb">
+								</label>
+							</div>
+						</fieldset>
+					</div>
+
+					<div class="form-group">
+						<label class="form-label-bold" for="howmuch1b">How much do you get?</label>
+						£ <input class="form-control form-control-1-4" id="howmuch1b" type="text" name="howmuch1b">
+					</div>
+					
+					<p><a href="#" id="show-payment3" class="add-another secondary-button">Add another</a></p>
+					
+				</div>
+
+
+				<div class="panel panel-border-narrow js-hidden" id="working3">
+
+					<div class="form-group">
+						<label class="form-label-bold" for="hoursc">
+							Where is the money coming from?
+						</label>
+						<input type="text" class="form-control" id="hoursc" name="hours">
+					</div>
+
+					<div class="form-group">
+						<fieldset class="">
+							<legend class="form-label-bold" for="howoften1c">How often do you get it?</legend>
+							<label class="block-label" for="weekly1c">
+								<input id="weekly1c" type="radio" name="howoften1c" value="weekly">
+								Weekly
+							</label>
+							<label class="block-label" for="monthly1c">
+								<input id="monthly1c" type="radio" name="howoften1c" value="monthly">
+								Monthly
+							</label>
+							<label class="block-label" for="yearlyc">
+								<input id="yearlyc" type="radio" name="howoften1c" value="yearly">
+								Yearly
+							</label>
+							<label class="block-label" data-target="pay-otherc" for="yearly1c">
+								<input id="yearly1c" type="radio" name="howoften1c" value="other">
+								Other
+							</label>
+							<div class="form-group js-hidden" id="pay-otherc">
+								<label class="form-label-bold" for="surgery-namec">
+									<input type="text" class="form-control" id="surgery-namec">
+								</label>
+							</div>
+						</fieldset>
+					</div>
+
+					<div class="form-group">
+						<label class="form-label-bold" for="howmuch1c">How much do you get?</label>
+						£ <input class="form-control form-control-1-4" id="howmuch1c" type="text" name="howmuch1">
+					</div>
+					
+				</div>
+
+				<div class="form-group">
+					<input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
+				</div>
+
+			</div>
+
+			<!-- Primary buttons, secondary links -->
+
+			<div class="column-one-third">
+				{% include "../includes/help.html" %}
+			</div>
+		</div>
+
+	</form>
+</main>
+
+{% endblock %}
+
+{% block body_end %}
+  {% include "includes/scripts.html" %}
+  <script>
+    $(document).ready(function() {
+
+      $("#show-payment2").click(function() {
+        $("#working2").show();
+        $("#show-payment2").hide();
+         return false;
+      });
+      $("#show-payment3").click(function() {
+        $("#working3").show();
+        $("#show-payment3").hide();
+         return false;
+      });
+
+    });
+  </script>
+{% endblock %}
