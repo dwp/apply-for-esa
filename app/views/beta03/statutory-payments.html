@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	Statutory payments
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "../includes/phase_banner_beta.html" %}
+
+	<form action="pensions" method="#" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<a class="link-back" href="work">Back</a>
+				<header>
+					<h1 class="form-title heading-large">
+						Statutory payments
+					</h1>
+				</header>
+
+				<div class="form-group">
+					<fieldset>
+						<legend class="form-label-bold" for="partner">Have you received any of the following in the last 3 months?</legend>
+						<!-- <p class="hint-text">If you are part-time employed select 'Employed or self-employed'.</p> -->
+						<label class="block-label" for="radio-inline-1">
+							<input id="radio-inline-1" type="radio" name="partner" value="sick">
+							Statutory Sick Pay
+						</label>
+						<label class="block-label" for="radio-inline-2">
+							<input id="radio-inline-2" type="radio" name="partner" value="maternity">
+							Statutory Maternity Pay
+						</label>
+						<label class="block-label" for="radio-inline-3">
+							<input id="radio-inline-3" type="radio" name="partner" value="parternity">
+							Statutory Paternity Pay
+						</label>
+						<label class="block-label" for="radio-inline-4">
+							<input id="radio-inline-4" type="radio" name="partner" value="adoption">
+							Statutory Adoption Pay
+						</label>
+						<div class="form-group" style="margin-bottom:0px;">
+							<p>or</p>
+						</div>
+						<label class="block-label" for="radio-inline-5">
+							<input id="radio-inline-5" type="radio" name="partner" value="none">
+							None
+						</label>
+					</fieldset>
+				</div>
+
+				
+				<!-- Not recieved any stat pay -->
+				<div class="js-hidden panel panel-border-narrow" id="no-ssp" style="margin-top: 15px;">
+		            <p>You may be eligible for Statutory Sick Pay. Contact your employer immediately to see if you are entitled to it.</p>
+	            </div>
+
+				<!-- Primary buttons, secondary links -->
+				<div class="form-group">
+					<input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
+				</div>
+
+			</div>
+			<div class="column-one-third">
+				{% include "../includes/help.html" %}
+			</div>
+		</div>
+
+	</form>
+</main>
+
+{% endblock %}
+
+{% block body_end %}
+  {% include "includes/scripts.html" %}
+  <script>
+    $('form').on('submit', function(e) {
+    	
+    	switch($('input[name="partner"]:checked').val()){
+    		case 'sick':
+    			window.location = 'statutory-sick';
+    		break;
+
+    		case 'maternity':
+    			window.location = 'statutory-maternity';
+    		break;
+
+			case 'paternity':
+    			window.location = 'statutory-paternity';
+    		break;
+
+    		case 'adoption':
+    			window.location = 'statutory-adoption';
+    		break;
+
+    		default:
+    			window.location = 'pensions';
+    		break;
+    	}
+      
+      e.preventDefault();
+    });
+  </script>
+{% endblock %}
