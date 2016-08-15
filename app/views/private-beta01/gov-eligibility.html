@@ -1,0 +1,118 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for Employment and Support Allowance (ESA)
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="breadcrumbs">
+    <ol role="breadcrumbs">
+      <li><a href="http://www.gov.uk">Home</a></li>
+      <li><a href="https://www.gov.uk/browse/benefits">Benefits</a></li>
+      <li><a href="https://www.gov.uk/browse/benefits/disability">Carers and disability benefits</a></li>
+    </ol>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        {% if serviceName %} {{ serviceName }} {% endif %}
+      </h1>
+
+      <!-- INTRO NAVIGAITON -->
+      <nav class="intro-nav">
+        <ol>
+          <li class="active font-xsmall">
+            <span class="part-number">1.</span>
+            <a href="gov-overview" title="Part 2: Eligibility">Overview</a>
+          </li>
+          <li class="font-xsmall">
+            <span class="part-number">4.</span>
+            <a href="gov-apply" title="Part 4: How to claim">Apply</a>
+          </li>
+          <li class="font-xsmall">
+            <span class="part-number">2.</span>
+            <span>Eligibility</span>
+          </li>
+          <li class="font-xsmall">
+            <span class="part-number">5.</span>
+            <a href="gov-circs" title="Part 5: If your circumstances change">If your circumstances change</a>
+          </li>
+          <li class="font-xsmall">
+            <span class="part-number">3.</span>
+            <a href="gov-assessed" title="Part 3: What you'll get">How you're assessed</a>
+          </li>
+        </ol>
+      </nav>
+
+      <h2 class="heading-medium">2. Eligibility</h2>
+
+      <p>You can get Employment and Support Allowance (ESA) if you have an illness or disability which affects your ability to work and you:</p>
+      <ul class="list list-bullet">
+        <li>are under state pension age - <a href="https://www.gov.uk/state-pension-age">check your state pension age</a></li>
+        <li>are not getting Jobseekers Allowance</li>
+        <li>are unemployed </li>
+        <li>are self-employed</li>
+        <li>work for an employer but cannot get Statutory Sick Pay (SSP)</li>
+        <li>were getting SSP which has now stopped</li>
+        <li>are a student who is getting Disability Living Allowance or Personal Independence Payment</li>
+        <li>have a valid fit note from your doctor for any period of illness after the first 7 days</li>
+      </ul>
+      <div class="panel panel-border-narrow">
+        <p>Even if you can't get paid ESA, it is worthwhile claiming to get National Insurance credits that count towards your State Pension. </p>
+      </div>
+      <h3 class="heading-small">Terminal illness</h3>
+      <p>If you have a terminal illness and less than six months to live, you still have to claim but will get a decision faster.</p>
+      <h3 class="heading-small">Repeat claims</h3>
+      <p>In most cases, if you have claimed ESA before and were found to be capable of doing some work, you will not be able to get ESA unless either: </p>
+      <ul class="list list-bullet">
+        <li>your current condition has got a lot worse</li>
+        <li>you’re claiming with a new condition</li>
+      </ul>
+      <footer>
+        <nav class="pagination" role="navigation" aria-label="Pagination">
+          <ul class="group">
+            <li class="previous">
+              <a href="gov-overview" rel="prev" title="Navigate to previous part">
+                <span class="pagination-label">Previous </span> <span class="pagination-part-title"> Overview</span>
+              </a>
+            </li>
+            <li class="next">
+              <a href="gov-assessed" rel="next" title="Navigate to next part">
+                <span class="pagination-label">Next</span> <span class="pagination-part-title"> How you're assessed</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </footer>
+    </div>
+    <div class="column-third">
+
+      <!--div class="related-links">
+        <h2 class="heading-medium">Subsection</h2>
+
+        <ul class="font-xsmall">
+          <li><a href="#">Related link</a></li>
+          <li><a href="#">Related link</a></li>
+          <li><a href="#" class="bold-xsmall">More</a></li>
+        </ul>
+      </div-->
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

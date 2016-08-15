@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Claim date
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "../includes/phase_banner_alpha.html" %}
+
+	<form action="expected-return-date" method="#" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<a class="link-back" href="fit-note">Back</a>
+				<header>
+			    <h1 class="form-title heading-large">
+			    	<!-- <span class="heading-secondary">Section 6 of 23</span> -->
+			      Claim date
+			    </h1>
+			  </header>
+
+
+
+			  <div class="form-group">
+        <fieldset class="form-group">
+            <legend><span class="heading-medium">You want Employment and Support Allowance to start:</span></legend>
+
+            <label class="block-label" for="radio-inline-10">
+				<input id="radio-inline-10" type="radio" name="pay-mortgage" value="Yes">
+					today
+			</label>
+			<label class="block-label" data-target="anotherClaimDate" for="radio-inline-11">
+				<input id="radio-inline-11" type="radio" name="pay-mortgage" value="No">
+				from another date
+			</label>
+		</fieldset>
+
+					<div class="js-hidden panel panel-border-narrow form" id="anotherClaimDate">
+						<p>Claims can be backdated 3 months if you have fit notes (was 'sick notes') to cover the period.</p>
+			  		<!-- <p class="lede">You can forward date your claim up to 6 weeks.</p> -->
+
+            <div class="form-date">
+            	<legend class="form-label-bold">What date you want Employment and Support Allowance to start from?</legend>
+
+            	<p class="form-hint">DD MM YYYY</p>
+
+              <div class="form-group form-group-day">
+                <label for="dob-day">Day</label>
+                <input type="text" class="form-control" id="dob-day" maxlength="2" name="dob-day">
+              </div>
+              <div class="form-group form-group-month">
+                <label for="dob-month">Month</label>
+                <input type="text" class="form-control" id="dob-month" maxlength="2" name="dob-month">
+              </div>
+              <div class="form-group form-group-year">
+                <label for="dob-year">Year</label>
+                <input type="text" class="form-control" id="dob-year" maxlength="4" name="dob-year">
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+		    <!-- Primary buttons, secondary links -->
+		    <div class="form-group">
+		      <input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
+		    </div>
+
+		  </div>
+		  <div class="column-one-third">
+		  	{% include "../includes/help.html" %}
+		  </div>
+		</div>
+
+  </form>
+</main>
+
+{% endblock %}

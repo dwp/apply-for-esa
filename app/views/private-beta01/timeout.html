@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Declaration
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% include "../includes/phase_banner_beta.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form action="gov-apply" method="#" class="form">
+
+      <h1 class="form-title heading-large">
+        Sorry, you'll have to start again
+      </h1>
+
+
+        <div class="form-group">
+          <p>You haven't entered any details for 30 minutes, so we've cleared your information to keep it secure.</p>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Start again">
+        </div>
+
+    </div>
+    <div class="column-one-third">
+      {% include "../includes/help.html" %}
+    </div>
+  </div>
+
+
+</main><!-- / #page-container -->
+
+{% endblock %}
+
+
+{% block body_end %}
+  {% include "includes/scripts.html" %}
+  <script>
+  $("#circs-button").click(function(e) {
+    $("#change-circs").toggle();
+
+    e.preventDefault;
+  });
+  </script>
+
+{% endblock %}
