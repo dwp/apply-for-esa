@@ -12,11 +12,11 @@
 	<form action="service-charges" method="#" class="form">
 		<div class="grid-row">
 			<div class="column-two-thirds">
-				<a class="link-back" href="hrt">Back</a>
+				<a class="link-back" href="where-you-live">Back</a>
 				<header>
 					<h1 class="form-title heading-large">
 						<!-- <span class="heading-secondary">Section 8 of 23</span> -->
-						Your property
+						Where you live - mortgage
 					</h1>
 				</header>
 
@@ -32,7 +32,7 @@
 								<input id="radio-inline-23" type="radio" name="have-mortgage" value="No">
 								You pay a joint mortgage with someone else
 							</label>
-							<label class="block-label" for="radio-inline-20">
+							<label class="block-label" data-target="own" for="radio-inline-20">
 								<input id="radio-inline-20" type="radio" name="have-mortgage" value="Yes">
 								You own the property outright
 							</label>
@@ -67,64 +67,21 @@
 								</label>
 							</fieldset>
 						</div>
-						<div class="form-group">
-							<fieldset class="inline">
-								<legend class="form-label-bold" for="service-charges">Do you pay service charges for where you live?</legend>
-								<details>
-									<summary><span class="summary">What is a 'service charge'?</span></summary>
-									<div class="panel panel-border-narrow">
-										<p>
-											A service charge is a payment made for the upkeep of the building your home is in.
-										</p>
-										<p>
-											You might have to pay a service charge if you own a leasehold property eg a flat or house brought through the shared ownership scheme.
-										</p>
-									</div>
-								</details>
-								<label class="block-label" data-target="how-much" for="radio-inline-12">
-									<input id="radio-inline-12" type="radio" name="service-charges" value="Yes">
-									Yes
-								</label>
-								<label class="block-label" for="radio-inline-13">
-									<input id="radio-inline-13" type="radio" name="service-charges" value="No">
-									No
-								</label>
-							</fieldset>
-						</div>
-						<div class="form-group js-hidden" id="how-much">
-							<div class="form-group">
-								<label class="form-label-bold" for="service-cost">How much service charge do you pay?</label>
-								£ <input type="text" class="form-control form-control-1-4" id="service-cost">
-							</div>
-							<div class="form-group">
-								<fieldset>
-									<!-- <legend class="form-label-bold visibly-hidden" for="service-charge2">How often do you pay service charges?</legend> -->
-									<label class="block-label" for="radio-inline-14">
-										<input id="radio-inline-14" type="radio" name="service-charge2" value="Every week">
-										Every week
-									</label>
-									<label class="block-label" for="radio-inline-15">
-										<input id="radio-inline-15" type="radio" name="service-charge2" value="Every month">
-										Every month
-									</label>
-									<label class="block-label" for="radio-inline-16">
-										<input id="radio-inline-16" type="radio" name="service-charge2" value="Every year">
-										Every year
-									</label>
-									<label class="block-label" data-target="other-sc2" for="radio-inline-17">
-										<input id="radio-inline-17" type="radio" name="service-charge28" value="Every year">
-										Other
-									</label>
-									<div class="form-group js-hidden" id="other-sc2">
-										<label class="form-label"><input type="text" class="form-control" id="address-line111"></label>
-									</div>
-								</fieldset>
-							</div>
-						</div>
 					</div>
-
+					<div class="form-group js-hidden panel panel-border-narrow" id="own">
+						<fieldset class="inline">
+							<legend class="form-label-bold" for="have-loan2">Has any money been borrowed against your home?</legend>
+							<label class="block-label" for="radio-inline-300">
+								<input id="radio-inline-300" type="radio" name="have-loan2" value="Yes">
+								Yes
+							</label>
+							<label class="block-label" for="radio-inline-310">
+								<input id="radio-inline-310" type="radio" name="have-loan2" value="No">
+								No
+							</label>
+						</fieldset>
+					</div>
 				</div>
-
 
 				<!-- Primary buttons, secondary links -->
 				<div class="form-group">
@@ -140,19 +97,4 @@
 	</form>
 </main>
 
-{% endblock %}
-
-{% block body_end %}
-  	{% include "includes/scripts.html" %}
-  	<script>
-	    $('form').on('submit', function(e) {
-		      if($('#radio-inline-1').is(':checked') || $('#radio-inline-2').is(':checked')) {
-		        	window.location = '/beta03/household';
-		      } else {
-		        	window.location = '/beta03/gp-details';
-		      }
-
-		      e.preventDefault();
-	    });
-  	</script>
 {% endblock %}

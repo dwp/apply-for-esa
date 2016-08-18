@@ -12,7 +12,7 @@
 	<form action="household" method="#" class="form">
 		<div class="grid-row">
 			<div class="column-two-thirds">
-				<a class="link-back" href="where-you-live-mortgage">Back</a>
+				<a class="link-back" href="where-you-live-rent">Back</a>
 				<header>
 					<h1 class="form-title heading-large">
 						Service charges
@@ -20,7 +20,7 @@
 				</header>
 						
 				<div class="form-group">
-					<fieldset class="inline">
+					<fieldset>
 						<legend class="form-label-bold" for="service-charges">Do you pay service charges for where you live?</legend>
 						<details>
 							<summary><span class="summary">What is a 'service charge'?</span></summary>
@@ -35,7 +35,11 @@
 						</details>
 						<label class="block-label" data-target="how-much" for="radio-inline-12">
 							<input id="radio-inline-12" type="radio" name="service-charges" value="Yes">
-							Yes
+							Yes, it's included in your rent payment
+						</label>
+						<label class="block-label" data-target="how-much" for="radio-inline-12b">
+							<input id="radio-inline-12b" type="radio" name="service-charges" value="Yes">
+							Yes, you pay it in addition to your rent
 						</label>
 						<label class="block-label" for="radio-inline-13">
 							<input id="radio-inline-13" type="radio" name="service-charges" value="No">
