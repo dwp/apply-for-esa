@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	Feedback
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "../includes/phase_banner_alpha.html" %}
+
+	<form action="feedback-confirmation" method="#" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<a class="link-back" href="what-happens-next">Back</a>
+				<header>
+					<h1 class="form-title heading-large">
+						<!-- <span class="heading-secondary">Section 8 of 23</span> -->
+						Tell us what you think about this service
+					</h1>
+				</header>
+
+				<div class="form-group">
+					<fieldset class="">
+						<legend class="form-label-bold" for="partner">How satisfied were you with the service today?</legend>
+						<div class="form-group">
+							<label class="block-label" for="radio-inline-1">
+								<input id="radio-inline-1" type="radio" name="partner" value="Yes">
+								Very satisfied
+							</label>
+							<label class="block-label" for="radio-inline-2">
+								<input id="radio-inline-2" type="radio" name="partner" value="No">
+								Satisfied
+							</label>
+							<label class="block-label" for="radio-inline-7">
+								<input id="radio-inline-7" type="radio" name="partner" value="No">
+								Neither satisfied nor dissatisfied
+							</label>
+							<label class="block-label" for="radio-inline-3">
+								<input id="radio-inline-3" type="radio" name="partner" value="No">
+								Dissatisfied
+							</label>
+							<label class="block-label" for="radio-inline-6">
+								<input id="radio-inline-6" type="radio" name="partner" value="No">
+								Very dissatisfied
+							</label>
+						</div>
+
+						<div class="panel panel-border-narrow js-hidden" id="other">
+							<label class="form-label"><input type="text" class="form-control" id="address-line1"></label>
+						</div>
+					</fieldset>
+				</div>
+
+				<fieldset class="inline form-group">
+					<legend class="form-label-bold" for="partner">Did you have difficulty using the service?</legend>
+					<label class="block-label" data-target="had-difficulty" for="expenses-1">
+						<input id="expenses-1" type="radio" name="expenses" value="Yes">
+						Yes
+					</label>
+					<label class="block-label" data-target="no-difficulty" for="expenses-2">
+						<input id="expenses-2" type="radio" name="expenses" value="No">
+						No
+					</label>
+					
+				</fieldset>
+
+				<div class="js-hidden panel panel-border-narrow" id="had-difficulty">
+					<div class="form-group">
+		        		<label for="why" class="form-label-bold">What went wrong?</label>
+		        		<p class="hint-text">Include as much detail as you want, including where you had the problem. Don't include any personal or financial information, for example your National Insurance or credit card numbers.</p>
+		        		<textarea class="form-control" type="text" id="why"></textarea>
+			        </div>
+				</div>
+
+				<div class="js-hidden panel panel-border-narrow" id="no-difficulty">
+					<div class="form-group">
+		        		<label for="why2" class="form-label-bold">Leave any comments or feedback you have.</label>
+		        		<p class="hint-text">Don't include any personal or financial information, for example your National Insurance or credit card numbers.</p>
+		        		<textarea class="form-control" type="text" id="why2"></textarea>
+			        </div>
+				</div>
+
+				<!-- Primary buttons, secondary links -->
+				<div class="form-group">
+					<input type="submit" class="button" value="Submit"> <!--a href="overview">I do not agree - leave now</a-->
+				</div>
+
+			</div>
+			<div class="column-one-third">
+				{% include "../includes/help.html" %}
+			</div>
+		</div>
+
+	</form>
+</main>
+
+{% endblock %}
+
+
