@@ -31,8 +31,8 @@
 							<input id="radio-inline-2" type="radio" name="partner" value="rent">
 							In a place you pay rent for
 						</label>
-						<label class="block-label" for="radio-inline-1">
-							<input id="radio-inline-1" type="radio" name="partner" value="mortgage">
+						<label class="block-label" for="radio-inline-4">
+							<input id="radio-inline-4" type="radio" name="partner" value="shared">
 							In a place that you own a share of and pay rent on (shared ownership)
 						</label>
 						<label class="block-label" for="radio-inline-7">
@@ -82,6 +82,10 @@
 
     		case 'rent':
     			window.location = 'where-you-live-rent';
+    		break;
+
+    		case 'shared':
+    			window.location = 'where-you-live-shared';
     		break;
 
 			case 'friends':
