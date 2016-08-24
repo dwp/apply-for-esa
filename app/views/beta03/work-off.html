@@ -17,31 +17,19 @@
                 
                 <header>
                     <h1 class="form-title heading-large">
-						<!-- <span class="heading-secondary">Section 5 of 23</span> -->
-						Company Director
+						Work
 					</h1>
                 </header>
                 
                 <fieldset class="inline form-group" data-required data-error="Select whether you're a company director">
-                    <legend class="form-label-bold" for="directory">Are you a company director?</legend>
-                    <label class="block-label" data-target="director-question" for="director-1a">
-                        <input id="director-1a" type="radio" name="directory" value="Yes"> Yes
+                    <legend class="form-label-bold" for="directory">Are you temporarily off work because of your illness or condition?</legend>
+                    <label class="block-label" for="director-1a">
+                        <input id="director-1a" type="radio" name="directory" value="yes"> Yes
                     </label>
                     <label class="block-label" for="director-2ay">
-                        <input id="director-2ay" type="radio" name="directory" value="No"> No
+                        <input id="director-2ay" type="radio" name="directory" value="No"> No, you're not working
                     </label>
                 </fieldset>
-                <div class="js-hidden inline form-group" id="director-question" data-required data-error="Select whether you're paying yourself Statutory Sick Pay">
-                    <fieldset class="inline form-group">
-                        <legend class="form-label-bold" for="director-ssp">Are you paying yourself Statutory Sick Pay?</legend>
-                        <label class="block-label" for="director-ssp-1">
-                            <input id="director-ssp-1" type="radio" name="director-ssp" value="Yes"> Yes
-                        </label>
-                        <label class="block-label" for="director-ssp-2">
-                            <input id="director-ssp-2" type="radio" name="director-ssp" value="No"> No
-                        </label>
-                    </fieldset>
-                </div>
                 <!-- Primary buttons, secondary links -->
                 <div class="form-group">
                     <input type="submit" class="button" value="Continue">
@@ -54,4 +42,24 @@
         </div>
     </form>
 </main>
+{% endblock %}
+
+{% block body_end %}
+  {% include "includes/scripts.html" %}
+  <script>
+    $('form').on('submit', function(e) {
+        
+        switch($('input[name="directory"]:checked').val()){
+            case 'yes':
+                window.location = 'work-type';
+            break;
+
+            default:
+                window.location = 'statutory-payments';
+            break;
+        }
+      
+      e.preventDefault();
+    });
+  </script>
 {% endblock %}
