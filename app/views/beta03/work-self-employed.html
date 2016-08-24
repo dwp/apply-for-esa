@@ -1,0 +1,76 @@
+{% extends "layout.html" %} 
+
+{% block page_title %}
+ Work 
+{% endblock %} 
+
+{% block content %}
+
+<main id="content" role="main">
+    {% include "../includes/phase_banner_beta.html" %}
+    <form action="statutory-payments" method="#" class="form">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <a class="link-back" href="your-money">Back</a> 
+
+                {% include "../includes/error-summary.html" %}
+                
+                <header>
+                    <h1 class="form-title heading-large">
+						<!-- <span class="heading-secondary">Section 5 of 23</span> -->
+						Self-employment details
+					</h1>
+                </header>
+                
+                <!--self-employed-->
+                <div class="form-group" data-required data-error="Enter your position">
+                    <label class="form-label-bold" for="self-job-title">Position</label>
+                    <input type="text" class="form-control" id="self-job-title">
+                </div>
+                <div class="form-group" data-required data-error="Enter your company name">
+                    <label class="form-label-bold" for="self-company-name">Your company name</label>
+                    <input type="text" class="form-control" id="self-company-name">
+                </div>
+                <div data-required data-error="Enter your registered company address">
+                    <legend class="form-label-bold" for="address2">Registered company address</legend>
+                    <div class="form-group">
+                        <label class="form-label" for="address2-a">House or flat number and street</label>
+                        <input type="text" name="address2" id="address2-a" class="form-control" value="">
+                        <input type="text" name="address2" id="address2-a" class="form-control" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="town2" class="form-label">Town or city</label>
+                        <input type="text" name="town2" id="town2" class="form-control" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="county2" class="form-label">County (optional)</label>
+                        <input type="text" name="county2" id="county2" class="form-control" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="postCode2" class="form-label">Postcode</label>
+                        <input type="text" name="postCode2" id="postCode2" class="form-control form-control-1-4" value="">
+                    </div>
+                </div>
+                <fieldset class="inline form-group" data-required data-error="Select if someone else is running the company">
+                    <legend class="form-label-bold" for="partnerrc">Is someone else running the company while you are not working?</legend>
+                    <label class="block-label" for="radio-inline-1rc">
+                        <input id="radio-inline-1rc" type="radio" name="partnerrc" value="Yes"> Yes
+                    </label>
+                    <label class="block-label" for="radio-inline-2rc">
+                        <input id="radio-inline-2rc" type="radio" name="partnerrc" value="No"> No
+                    </label>
+                </fieldset>
+                <!--end self-employed-->
+                <!-- Primary buttons, secondary links -->
+                <div class="form-group">
+                    <input type="submit" class="button" value="Continue">
+                    <!--a href="overview">I do not agree - leave now</a-->
+                </div>
+            </div>
+            <div class="column-one-third">
+                {% include "../includes/help.html" %}
+            </div>
+        </div>
+    </form>
+</main>
+{% endblock %}

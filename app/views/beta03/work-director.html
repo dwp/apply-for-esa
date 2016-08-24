@@ -1,0 +1,57 @@
+{% extends "layout.html" %} 
+
+{% block page_title %}
+ Employment details 
+{% endblock %} 
+
+{% block content %}
+
+<main id="content" role="main">
+    {% include "../includes/phase_banner_beta.html" %}
+    <form action="statutory-payments" method="#" class="form">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <a class="link-back" href="your-money">Back</a> 
+
+                {% include "../includes/error-summary.html" %}
+                
+                <header>
+                    <h1 class="form-title heading-large">
+						<!-- <span class="heading-secondary">Section 5 of 23</span> -->
+						Company Director
+					</h1>
+                </header>
+                
+                <fieldset class="inline form-group" data-required data-error="Select whether you're a company director">
+                    <legend class="form-label-bold" for="directory">Are you a company director?</legend>
+                    <label class="block-label" data-target="director-question" for="director-1a">
+                        <input id="director-1a" type="radio" name="directory" value="Yes"> Yes
+                    </label>
+                    <label class="block-label" for="director-2ay">
+                        <input id="director-2ay" type="radio" name="directory" value="No"> No
+                    </label>
+                </fieldset>
+                <div class="js-hidden inline form-group" id="director-question" data-required data-error="Select whether you're paying yourself Statutory Sick Pay">
+                    <fieldset class="inline form-group">
+                        <legend class="form-label-bold" for="director-ssp">Are you paying yourself Statutory Sick Pay?</legend>
+                        <label class="block-label" for="director-ssp-1">
+                            <input id="director-ssp-1" type="radio" name="director-ssp" value="Yes"> Yes
+                        </label>
+                        <label class="block-label" for="director-ssp-2">
+                            <input id="director-ssp-2" type="radio" name="director-ssp" value="No"> No
+                        </label>
+                    </fieldset>
+                </div>
+                <!-- Primary buttons, secondary links -->
+                <div class="form-group">
+                    <input type="submit" class="button" value="Continue">
+                    <!--a href="overview">I do not agree - leave now</a-->
+                </div>
+            </div>
+            <div class="column-one-third">
+                {% include "../includes/help.html" %}
+            </div>
+        </div>
+    </form>
+</main>
+{% endblock %}

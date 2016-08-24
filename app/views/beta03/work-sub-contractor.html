@@ -1,0 +1,73 @@
+{% extends "layout.html" %} 
+
+{% block page_title %}
+ Sub-contractor details 
+{% endblock %} 
+
+{% block content %}
+
+<main id="content" role="main">
+    {% include "../includes/phase_banner_beta.html" %}
+    <form action="statutory-payments" method="#" class="form">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <a class="link-back" href="your-money">Back</a> 
+
+                {% include "../includes/error-summary.html" %}
+                
+                <header>
+                    <h1 class="form-title heading-large">
+						<!-- <span class="heading-secondary">Section 5 of 23</span> -->
+						Sub-contractor details
+					</h1>
+                </header>
+                <!--sub-contractor-->
+                <div class="form-group" data-required data-error="Enter how many hours you worked before your illness or condition">
+                    <label class="form-label-bold" for="usual-hours-sub">
+                        How many hours a week did you work before your illness or condition affected you?
+                    </label>
+                    <p>If your hours varied, enter an average.</p>
+                    <input type="text" class="form-control form-control-1-8" id="usual-hours-sub" name="usual-hours-sub">
+                </div>
+                <div class="form-group" data-required data-error="Enter job title">
+                    <label class="form-label-bold" for="job-title">Job title</label>
+                    <input type="text" class="form-control" id="job-title">
+                </div>
+                <div class="form-group" data-required data-error="Enter company name">
+                    <label class="form-label-bold" for="sub-company-name">Company name</label>
+                    <input type="text" class="form-control" id="sub-company-name">
+                </div>
+                <div class="form-group" data-required data-error="Enter the company address">
+                    <legend class="form-label-bold" for="address3">Company address</legend>
+                    <div class="form-group">
+                        <label class="form-label" for="address3-a">House or flat number and street</label>
+                        <input type="text" name="address3" id="address3-a" class="form-control" value="">
+                        <input type="text" name="address3b" id="address3-b" class="form-control" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="town3" class="form-label">Town or city</label>
+                        <input type="text" name="town3" id="town3" class="form-control" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="county3" class="form-label">County (optional)</label>
+                        <input type="text" name="county3" id="county3" class="form-control" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="postCode3" class="form-label">Postcode</label>
+                        <input type="text" name="postCode3" id="postCode3" class="form-control form-control-1-4" value="">
+                    </div>
+                </div>
+                <!--end sub-contractor-->
+                <!-- Primary buttons, secondary links -->
+                <div class="form-group">
+                    <input type="submit" class="button" value="Continue">
+                    <!--a href="overview">I do not agree - leave now</a-->
+                </div>
+            </div>
+            <div class="column-one-third">
+                {% include "../includes/help.html" %}
+            </div>
+        </div>
+    </form>
+</main>
+{% endblock %}
