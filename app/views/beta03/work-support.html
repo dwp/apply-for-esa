@@ -1,0 +1,84 @@
+{% extends "layout.html" %} 
+
+{% block page_title %}
+ Support worker 
+{% endblock %} 
+
+{% block content %}
+
+<main id="content" role="main">
+    {% include "../includes/phase_banner_beta.html" %}
+    <form action="statutory-payments" method="#" class="form">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <a class="link-back" href="your-money">Back</a> 
+
+                {% include "../includes/error-summary.html" %}
+                
+                <header>
+                    <h1 class="form-title heading-large">
+						<!-- <span class="heading-secondary">Section 5 of 23</span> -->
+						Support worker
+					</h1>
+                </header>
+                <!--working-->
+                    
+                <fieldset class="inline form-group">
+                    <legend class="form-label-bold" for="part">Is your work supported by a professional support worker?</legend>
+                    <label class="block-label" data-target="yes-support" for="radio--3">
+                        <input id="radio--3" type="radio" name="part" value="Yes">
+                        Yes
+                    </label>
+                    <label class="block-label" for="radio--4">
+                        <input id="radio--4" type="radio" name="part" value="No">
+                        No
+                    </label>
+                </fieldset>
+
+                <div class="panel panel-border-narrow js-hidden" id="yes-support">
+                    <div class="form-group">
+                        <label class="form-label-bold" for="worker-name">Support worker name</label>
+                        <input type="text" class="form-control" id="worker-name">
+                    </div>
+
+                    <div class="form-group">
+                        <p class="form-label-bold">Address of support worker</p>
+                        <div class="form-group">
+                            <label class="form-label" for="address-a">House or flat number and street</label>
+                            <input type="text" name="address" id="address-a" class="form-control" value="">
+                            <input type="text" name="address" id="address-a" class="form-control" value="">
+                        </div>
+                        <div class="form-group" data-required data-error="Enter your town or city">
+                            <label for="town" class="form-label">Town or city</label>
+                            <input type="text" name="town" id="town" class="form-control" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="county" class="form-label">County (optional)</label>
+                            <input type="text" name="county" id="county" class="form-control" value="">
+                        </div>
+                        <div class="form-group" data-required data-error="Enter your postcode">
+                            <label for="postCode" class="form-label">Postcode</label>
+                            <input type="text" name="postCode" id="postCode" class="form-control" value="">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="postcodeb">Postcode</label>
+                        <input type="text" class="form-control form-control-1-4" id="postcodeb">
+                    </div>
+                </div>
+                    
+                <!--end working-->
+                <!-- Primary buttons, secondary links -->
+                <div class="form-group">
+                    <input type="submit" class="button" value="Continue">
+                    <!--a href="overview">I do not agree - leave now</a-->
+                </div>
+            </div>
+            <div class="column-one-third">
+                {% include "../includes/help.html" %}
+            </div>
+        </div>
+    </form>
+</main>
+{% endblock %}

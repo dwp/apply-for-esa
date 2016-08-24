@@ -1,0 +1,84 @@
+{% extends "layout.html" %} 
+
+{% block page_title %}
+ Work 
+{% endblock %} 
+
+{% block content %}
+
+<main id="content" role="main">
+    {% include "../includes/phase_banner_beta.html" %}
+    <form action="statutory-payments" method="#" class="form">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <a class="link-back" href="your-money">Back</a> 
+
+                {% include "../includes/error-summary.html" %}
+                
+                <header>
+                    <h1 class="form-title heading-large">
+						<!-- <span class="heading-secondary">Section 5 of 23</span> -->
+						Work income
+					</h1>
+                </header>
+                <!--working-->
+                <div class="form-group" id="working">
+                    <div class="form-group" data-required data-error="Enter how many hours you are working">
+                        <label class="form-label-bold" for="hours">
+                            How many hours a week are you working at the moment?
+                        </label>
+                        <p>If your hours vary, enter an average.</p>
+                        <input type="text" class="form-control form-control-1-8" id="hours" name="hours">
+                    </div>
+                    <div class="form-group" data-required data-error="Enter how much you are getting paid">
+                        <label class="form-label-bold" for="how-much">
+                            How much are you getting paid?
+                        </label>
+                        &pound;
+                        <input type="text" class="form-control form-control-1-4" id="how-much" name="how-much">
+                    </div>
+                    <div class="form-group" data-required data-error="Select how often you are getting paid">
+                        <fieldset>
+                            <legend class="form-label-bold" for="howoften1b">How often are you getting paid?</legend>
+                            <label class="block-label" for="daily">
+                                <input id="daily" type="radio" name="howoften1b" value="daily"> Daily
+                            </label>
+                            <label class="block-label" for="weekly1b">
+                                <input id="weekly1b" type="radio" name="howoften1b" value="weekly"> Weekly
+                            </label>
+                            <label class="block-label" for="fortnight">
+                                <input id="fortnight" type="radio" name="howoften1b" value="fortnight"> Fortnightly
+                            </label>
+                            <label class="block-label" for="monthly1b">
+                                <input id="monthly1b" type="radio" name="howoften1b" value="monthly"> Monthly
+                            </label>
+                            <label class="block-label" for="yearly1b">
+                                <input id="yearly1b" type="radio" name="howoften1b" value="yearly"> Yearly
+                            </label>
+                        </fieldset>
+                    </div>
+                    <fieldset class="inline form-group" data-required data-error="Select whether you get expenses of not">
+                        <legend class="form-label-bold" for="expenses">Does your employer pay you expenses?</legend>
+                        <label class="block-label" for="expenses-1">
+                            <input id="expenses-1" type="radio" name="expenses" value="Yes"> Yes
+                        </label>
+                        <label class="block-label" for="expenses-2">
+                            <input id="expenses-2" type="radio" name="expenses" value="No"> No
+                        </label>
+                    </fieldset>
+                </div>
+                <!--end working-->
+                
+                <!-- Primary buttons, secondary links -->
+                <div class="form-group">
+                    <input type="submit" class="button" value="Continue">
+                    <!--a href="overview">I do not agree - leave now</a-->
+                </div>
+            </div>
+            <div class="column-one-third">
+                {% include "../includes/help.html" %}
+            </div>
+        </div>
+    </form>
+</main>
+{% endblock %}
