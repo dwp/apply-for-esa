@@ -43,23 +43,3 @@
     </form>
 </main>
 {% endblock %}
-
-{% block body_end %}
-  {% include "includes/scripts.html" %}
-  <script>
-    $('form').on('submit', function(e) {
-        
-        switch($('input[name="directory"]:checked').val()){
-            case 'yes':
-                window.location = 'work-type';
-            break;
-
-            default:
-                window.location = 'statutory-payments';
-            break;
-        }
-      
-      e.preventDefault();
-    });
-  </script>
-{% endblock %}
