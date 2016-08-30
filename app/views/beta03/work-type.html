@@ -8,10 +8,10 @@
 
 <main id="content" role="main">
     {% include "../includes/phase_banner_beta.html" %}
-    <form action="statutory-payments" method="#" class="form">
+    <form action="work-employed" method="#" class="form">
         <div class="grid-row">
             <div class="column-two-thirds">
-                <a class="link-back" href="your-money">Back</a> 
+                <a class="link-back" href="work">Back</a> 
 
                 {% include "../includes/error-summary.html" %}
                 
@@ -39,7 +39,7 @@
                             <input id="are-4" type="checkbox" name="are" value="agency-worker">Agency worker
                         </label>
                         <label class="block-label" data-target="are-other" for="are-5">
-                            <input id="are-5" type="checkbox" name="are" value="sub-contractor">Other
+                            <input id="are-5" type="checkbox" name="are" value="other">Other
                         </label>
                         <div class="form-group js-hidden panel panel-border-narrow" id="are-other">
                             <label class="form-label" for="surgery-name2">What is your type of employment?</label>
@@ -61,4 +61,36 @@
         </div>
     </form>
 </main>
+{% endblock %}
+
+{% block body_end %}
+  {% include "includes/scripts.html" %}
+  <script>
+    $('form').on('submit', function(e) {
+        
+        switch($('input[name="partner"]:checked').val()){
+            case 'employed':
+                window.location = 'work-employed';
+            break;
+
+            case 'self-employed':
+                window.location = 'work-self-employed';
+            break;
+
+            case 'sub-contractor':
+                window.location = 'work-sub-contractor';
+            break;
+
+            case 'agency-worker':
+                window.location = 'work-agency';
+            break;
+
+            default:
+                window.location = 'work-employed';
+            break;
+        }
+      
+      e.preventDefault();
+    });
+  </script>
 {% endblock %}
