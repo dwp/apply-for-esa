@@ -48,3 +48,18 @@
 </main>
 
 {% endblock %}
+
+{% block body_end %}
+  	{% include "includes/scripts.html" %}
+  	<script>
+	    $('form').on('submit', function(e) {
+		      if($('#radio-inline-9').is(':checked')) {
+		        	window.location = 'household';
+		      } else {
+		        	window.location = 'gp-details';
+		      }
+
+		      e.preventDefault();
+	    });
+  	</script>
+{% endblock %}
