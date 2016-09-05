@@ -30,33 +30,72 @@
                         <p>If your hours vary, enter an average.</p>
                         <input type="text" class="form-control form-control-1-8" id="hours" name="hours">
                     </div>
-                    <div class="form-group" data-required data-error="Enter how much you are getting paid">
-                        <label class="form-label-bold" for="how-much">
-                            How much do you get paid?
-                        </label>
-                        &pound;
-                        <input type="text" class="form-control form-control-1-4" id="how-much" name="how-much">
-                    </div>
+                    
                     <div class="form-group" data-required data-error="Select how often you are getting paid">
                         <fieldset>
                             <legend class="form-label-bold" for="howoften1b">How often do you get paid?</legend>
-                            <label class="block-label" for="daily">
+                            <label class="block-label" data-target="daily-pay" for="daily">
                                 <input id="daily" type="radio" name="howoften1b" value="daily"> Daily
                             </label>
-                            <label class="block-label" for="weekly1b">
+                            <div class="form-group js-hidden panel panel-border-narrow" id="daily-pay" data-required data-error="Enter how much you are getting paid">
+                                <label class="form-label-bold" for="how-much-daily">
+                                    How much do you get paid each day?
+                                </label>
+                                &pound;
+                                <input type="text" class="form-control form-control-1-4" id="how-much-daily" name="how-much-daily">
+                            </div>
+                            <label class="block-label" data-target="weekly-pay" for="weekly1b">
                                 <input id="weekly1b" type="radio" name="howoften1b" value="weekly"> Weekly
                             </label>
-                            <label class="block-label" for="fortnight">
+                            <div class="form-group js-hidden panel panel-border-narrow" id="weekly-pay" data-required data-error="Enter how much you are getting paid">
+                                <label class="form-label-bold" for="how-much-weekly">
+                                    How much do you get paid each week?
+                                </label>
+                                &pound;
+                                <input type="text" class="form-control form-control-1-4" id="how-much-weekly" name="how-much-weekly">
+                            </div>
+                            <label class="block-label" data-target="fortnightly-pay" for="fortnight">
                                 <input id="fortnight" type="radio" name="howoften1b" value="fortnight"> Fortnightly
                             </label>
-                            <label class="block-label" for="monthly1b">
+                            <div class="form-group js-hidden panel panel-border-narrow" id="fortnightly-pay" data-required data-error="Enter how much you are getting paid">
+                                <label class="form-label-bold" for="how-much-fortnight">
+                                    How much do you get paid each fortnight?
+                                </label>
+                                &pound;
+                                <input type="text" class="form-control form-control-1-4" id="how-much-fortnight" name="how-much-fortnight">
+                            </div>
+                            <label class="block-label" data-target="monthly-pay" for="monthly1b">
                                 <input id="monthly1b" type="radio" name="howoften1b" value="monthly"> Monthly
                             </label>
-                            <label class="block-label" for="yearly1b">
+                            <div class="form-group js-hidden panel panel-border-narrow" id="monthly-pay" data-required data-error="Enter how much you are getting paid">
+                                <label class="form-label-bold" for="how-much-monthly">
+                                    How much do you get paid each month?
+                                </label>
+                                &pound;
+                                <input type="text" class="form-control form-control-1-4" id="how-much-monthly" name="how-much-monthly">
+                            </div>
+                            <label class="block-label" data-target="yearly-pay" for="yearly1b">
                                 <input id="yearly1b" type="radio" name="howoften1b" value="yearly"> Yearly
                             </label>
+                            <div class="form-group js-hidden panel panel-border-narrow" id="yearly-pay" data-required data-error="Enter how much you are getting paid">
+                                <label class="form-label-bold" for="how-much-yearly">
+                                    How much do you get paid each year?
+                                </label>
+                                &pound;
+                                <input type="text" class="form-control form-control-1-4" id="how-much-yearly" name="how-much-yearly">
+                            </div>
                         </fieldset>
                     </div>
+                    <div class="form-group js-hidden panel panel-border-narrow" id="daily-pay" data-required data-error="Enter how much you are getting paid">
+                        <label class="form-label-bold" for="how-much-daily">
+                            How much do you get paid each day?
+                        </label>
+                        &pound;
+                        <input type="text" class="form-control form-control-1-4" id="how-much-daily" name="how-much-daily">
+                    </div>
+
+
+
                     <fieldset class="inline form-group" data-required data-error="Select whether you get expenses of not">
                         <legend class="form-label-bold" for="expenses">Does your employer pay you expenses?</legend>
                         <label class="block-label" for="expenses-1">
