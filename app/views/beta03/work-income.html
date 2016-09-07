@@ -37,23 +37,51 @@
                             <label class="block-label" data-target="daily-pay" for="daily">
                                 <input id="daily" type="radio" name="howoften1b" value="daily"> Daily
                             </label>
-                            <div class="form-group js-hidden panel panel-border-narrow" id="daily-pay" data-required data-error="Enter how much you are getting paid">
-                                <label class="form-label-bold" for="how-much-daily">
-                                    How much do you get paid each day?
-                                </label>
-                                &pound;
-                                <input type="text" class="form-control form-control-1-4" id="how-much-daily" name="how-much-daily">
+
+                            <div class="js-hidden panel panel-border-narrow" id="daily-pay" data-required data-error="Enter how much you are getting paid">
+                                
+                                <div class="form-group">
+                                    <label class="form-label-bold" for="how-much-daily">
+                                        How much do you get paid each day?
+                                    </label>
+                                    &pound;
+                                    <input type="text" class="form-control form-control-1-4" id="how-much-daily" name="how-much-daily">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label-bold" for="number-days">
+                                        How many days a week do you work?
+                                    </label>
+                                    <input type="text" class="form-control form-control-1-4" id="number-days" name="number-days">
+                                </div>
                             </div>
+
+
+
                             <label class="block-label" data-target="weekly-pay" for="weekly1b">
                                 <input id="weekly1b" type="radio" name="howoften1b" value="weekly"> Weekly
                             </label>
+
                             <div class="form-group js-hidden panel panel-border-narrow" id="weekly-pay" data-required data-error="Enter how much you are getting paid">
-                                <label class="form-label-bold" for="how-much-weekly">
-                                    How much do you get paid each week?
-                                </label>
-                                &pound;
-                                <input type="text" class="form-control form-control-1-4" id="how-much-weekly" name="how-much-weekly">
+                                <fieldset class="inline form-group" data-required data-error="Select whether you get paid the same">
+                                    <legend class="form-label-bold" for="day-regular">Do you get paid the same amount each week?</legend>
+                                    <label class="block-label" data-target="yes-weekly" for="day-regular-1">
+                                        <input id="expenses-1" type="radio" name="day-regular" value="Yes"> Yes
+                                    </label>
+                                    <label class="block-label" for="day-regular-2">
+                                        <input id="expenses-2" type="radio" name="day-regular" value="No"> No
+                                    </label>
+                                </fieldset>
+                                <div class="js-hidden form-group" id="yes-weekly">
+                                    <label class="form-label-bold" for="how-much-weekly">
+                                        How much do you get paid each week?
+                                    </label>
+                                    &pound;
+                                    <input type="text" class="form-control form-control-1-4" id="how-much-weekly" name="how-much-weekly">
+                                </div>
+                                <div class="js-hidden form-group" id="no-weekly">
+                                </div>
                             </div>
+
                             <label class="block-label" data-target="fortnightly-pay" for="fortnight">
                                 <input id="fortnight" type="radio" name="howoften1b" value="fortnight"> Fortnightly
                             </label>
