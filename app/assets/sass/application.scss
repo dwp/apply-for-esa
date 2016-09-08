@@ -485,3 +485,18 @@ ul.completed > li span {
 .form-control.full {
   width: 80%;
 }
+
+.alert-default {
+  border-color: #2b8cc4;
+  background-color: #eaf4f9;
+}
+
+.alert-warning {
+  border-color: #b10e1e;
+  background-color: #fceaeb;
+}
+
+.alert-success {
+  border-color: #28a197;
+  background-color: #eaf6f5;
+}
