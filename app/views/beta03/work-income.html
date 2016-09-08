@@ -63,15 +63,15 @@
 
                             <div class="form-group js-hidden panel panel-border-narrow" id="weekly-pay" data-required data-error="Enter how much you are getting paid">
                                 <fieldset class="inline form-group" data-required data-error="Select whether you get paid the same">
-                                    <legend class="form-label-bold" for="day-regular">Do you get paid the same amount each week?</legend>
-                                    <label class="block-label" data-target="yes-weekly" for="day-regular-1">
-                                        <input id="expenses-1" type="radio" name="day-regular" value="Yes"> Yes
+                                    <legend class="form-label-bold" for="week-regular">Do you get paid the same amount each week?</legend>
+                                    <label class="block-label" data-target="yes-weekly" for="week-regular-1">
+                                        <input id="week-regular-1" type="radio" name="week-regular" value="Yes"> Yes
                                     </label>
-                                    <label class="block-label" for="day-regular-2">
-                                        <input id="expenses-2" type="radio" name="day-regular" value="No"> No
+                                    <label class="block-label" data-target="no-weekly" for="week-regular-2">
+                                        <input id="week-regular-2" type="radio" name="week-regular" value="No"> No
                                     </label>
                                 </fieldset>
-                                <div class="js-hidden form-group" id="yes-weekly">
+                                <div class="js-hidden" id="yes-weekly">
                                     <label class="form-label-bold" for="how-much-weekly">
                                         How much do you get paid each week?
                                     </label>
@@ -79,6 +79,29 @@
                                     <input type="text" class="form-control form-control-1-4" id="how-much-weekly" name="how-much-weekly">
                                 </div>
                                 <div class="js-hidden form-group" id="no-weekly">
+                                    <h3 class="heading-small">Enter your last 5 weekly payments</h3>
+
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" width="20%">Week 1</th>
+                                                <th scope="col" width="20%">Week 2</th>
+                                                <th scope="col" width="20%">Week 3</th>
+                                                <th scope="col" width="20%">Week 4</th>
+                                                <th scope="col" width="20%">Week 5</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="numeric">£ <input class="form-control full" id="howmuch0" type="text" name="howmuch1" width="100%"></td>
+                                                <td class="numeric">£ <input class="form-control full" id="howmuch1" type="text" name="howmuch1" width="100%"></td>
+                                                <td class="numeric">£ <input class="form-control full" id="howmuch2" type="text" name="howmuch1"></td>
+                                                <td class="numeric">£ <input class="form-control full" id="howmuch3" type="text" name="howmuch1"></td>
+                                                <td class="numeric">£ <input class="form-control full" id="howmuch4" type="text" name="howmuch1"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
                                 </div>
                             </div>
 
@@ -86,22 +109,88 @@
                                 <input id="fortnight" type="radio" name="howoften1b" value="fortnight"> Fortnightly
                             </label>
                             <div class="form-group js-hidden panel panel-border-narrow" id="fortnightly-pay" data-required data-error="Enter how much you are getting paid">
-                                <label class="form-label-bold" for="how-much-fortnight">
-                                    How much do you get paid each fortnight?
-                                </label>
-                                &pound;
-                                <input type="text" class="form-control form-control-1-4" id="how-much-fortnight" name="how-much-fortnight">
+
+                                <fieldset class="inline form-group" data-required data-error="Select whether you get paid the same">
+                                    <legend class="form-label-bold" for="fortnight-regular">Do you get paid the same amount each fortnight?</legend>
+                                    <label class="block-label" data-target="yes-fortnight" for="fortnight-regular-1">
+                                        <input id="fortnight-regular-1" type="radio" name="fortnight-regular" value="Yes"> Yes
+                                    </label>
+                                    <label class="block-label" data-target="no-fortnight" for="fortnight-regular-2">
+                                        <input id="fortnight-regular-2" type="radio" name="fortnight-regular" value="No"> No
+                                    </label>
+                                </fieldset>
+                                <div class="js-hidden" id="yes-fortnight"> 
+                                    <label class="form-label-bold" for="how-much-fortnight">
+                                        How much do you get paid each fortnight?
+                                    </label>
+                                    &pound;
+                                    <input type="text" class="form-control form-control-1-4" id="how-much-fortnight" name="how-much-fortnight">
+                                </div>
+                                <div class="js-hidden form-group" id="no-fortnight">
+                                    <h3 class="heading-small">Enter your last 3 fortnightly payments</h3>
+
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" width="33%">Fortnight 1</th>
+                                                <th scope="col" width="33%">Fortnight 2</th>
+                                                <th scope="col" width="34%">Fortnight 3</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="numeric">£ <input class="form-control full" id="fn0" type="text" name="fn1" width="100%"></td>
+                                                <td class="numeric">£ <input class="form-control full" id="fn1" type="text" name="fn1" width="100%"></td>
+                                                <td class="numeric">£ <input class="form-control full" id="fn2" type="text" name="fn1"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
+
                             <label class="block-label" data-target="monthly-pay" for="monthly1b">
                                 <input id="monthly1b" type="radio" name="howoften1b" value="monthly"> Monthly
                             </label>
                             <div class="form-group js-hidden panel panel-border-narrow" id="monthly-pay" data-required data-error="Enter how much you are getting paid">
-                                <label class="form-label-bold" for="how-much-monthly">
-                                    How much do you get paid each month?
-                                </label>
-                                &pound;
-                                <input type="text" class="form-control form-control-1-4" id="how-much-monthly" name="how-much-monthly">
+
+                                <fieldset class="inline form-group" data-required data-error="Select whether you get paid the same">
+                                    <legend class="form-label-bold" for="month-regular">Do you get paid the same amount each month?</legend>
+                                    <label class="block-label" data-target="yes-month" for="month-regular-1">
+                                        <input id="month-regular-1" type="radio" name="month-regular" value="Yes"> Yes
+                                    </label>
+                                    <label class="block-label" data-target="no-month" for="month-regular-2">
+                                        <input id="month-regular-2" type="radio" name="month-regular" value="No"> No
+                                    </label>
+                                </fieldset>
+                                <div class="js-hidden" id="yes-month"> 
+                                    <label class="form-label-bold" for="how-much-monthly">
+                                        How much do you get paid each month?
+                                    </label>
+                                    &pound;
+                                    <input type="text" class="form-control form-control-1-4" id="how-much-monthly" name="how-much-monthly">
+                                </div>
+                                <div class="js-hidden form-group" id="no-month">
+                                    <h3 class="heading-small">Enter your last 2 monthly payments</h3>
+
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th class="numeric" scope="col" width="50%" align="right">Month 1</th>
+                                                <th class="numeric" scope="col" width="50%" align="right">Month 2</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="numeric">£ <input class="form-control full" id="m0" type="text" name="m1" width="100%"></td>
+                                                <td class="numeric">£ <input class="form-control full" id="m1" type="text" name="fn1" width="100%"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
                             </div>
+
+
                             <label class="block-label" data-target="yearly-pay" for="yearly1b">
                                 <input id="yearly1b" type="radio" name="howoften1b" value="yearly"> Yearly
                             </label>
