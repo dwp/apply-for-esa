@@ -5,3 +5,5 @@ public
 govuk_modules
 node_modules/*
 .tmuxp.*
+app/assets/sass/elements/*
+app/assets/sass/_govuk-elements.scss

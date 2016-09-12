@@ -11,7 +11,8 @@ module.exports = function(grunt){
           sourcemap: true,
           includePaths: [
             'govuk_modules/govuk_template/assets/stylesheets',
-            'govuk_modules/govuk_frontend_toolkit/stylesheets'
+            'govuk_modules/govuk_frontend_toolkit/stylesheets',
+            'govuk_modules/govuk-elements-sass/'
           ],
           outputStyle: 'expanded'
         },
@@ -67,14 +68,6 @@ module.exports = function(grunt){
           cwd: 'govuk_modules/govuk_template_jinja/views/layouts/',
           src: '**',
           dest: 'lib/'
-        }]
-      },
-      govuk_elements: {
-        files: [{
-          expand: true,
-          cwd: 'govuk_modules/govuk-elements-sass',
-          src: ['**'],
-          dest: 'app/assets/sass/'
         }]
       },
     },
