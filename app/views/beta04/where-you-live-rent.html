@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	Where you live
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "../includes/phase_banner_beta.html" %}
+
+	<form action="service-charges-rent" method="#" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<a class="link-back" href="where-you-live">Back</a>
+				<header>
+					<h1 class="form-title heading-large">
+						<!-- <span class="heading-secondary">Section 8 of 23</span> -->
+						Rent
+					</h1>
+				</header>
+
+				<div class="form-group" id="have-rent">
+					<fieldset class="inline">
+						<legend class="form-label-bold" for="pay-rent">Does anyone else pay towards the rent?</legend>
+						<label class="block-label" data-target="who-pay-rent" for="radio-inline-40">
+							<input id="radio-inline-40" type="radio" name="pay-rent" value="Yes">
+							Yes
+						</label>
+						<label class="block-label" for="radio-inline-41">
+							<input id="radio-inline-41" type="radio" name="pay-rent" value="No">
+							No
+						</label>
+					</fieldset>
+					<div class="form-group js-hidden panel panel-border-narrow" id="who-pay-rent">
+						<label class="form-label" for="rent-name">Full name of person who pays towards your rent</label>
+						<input type="text" class="form-control" id="rent-name">
+					</div>
+				</div>
+
+				<!-- Primary buttons, secondary links -->
+				<div class="form-group">
+					<input type="submit" class="button" value="Continue"> 
+				</div>
+
+			</div>
+			<div class="column-one-third">
+				{% include "../includes/help.html" %}
+			</div>
+		</div>
+
+	</form>
+</main>
+
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends "layout.html" %} 
+
+{% block page_title %}
+ Volunteering 
+{% endblock %} 
+
+{% block content %}
+
+<main id="content" role="main">
+    {% include "../includes/phase_banner_beta.html" %}
+    <form action="volunteer-details" method="#" class="form">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <a class="link-back" href="your-money">Back</a> 
+
+                {% include "../includes/error-summary.html" %}
+                
+                <header>
+                    <h1 class="form-title heading-large">
+						<!-- <span class="heading-secondary">Section 5 of 23</span> -->
+						Volunteering
+					</h1>
+                </header>
+                <div class="form-group" data-required data-error="Select an option">
+                    <fieldset class="inline">
+                        <legend class="form-label-bold" for="partner">Are you currently doing any volunteering?</legend>
+                        <label class="block-label" for="radio-inline-1">
+                            <input id="radio-inline-1" type="radio" name="partner" value="yes"> Yes
+                        </label>
+                        <label class="block-label" for="radio-inline-3">
+                            <input id="radio-inline-3" type="radio" name="partner" value="no"> No
+                        </label>
+                    </fieldset>
+                </div>
+                <!-- Primary buttons, secondary links -->
+                <div class="form-group">
+                    <input type="submit" class="button" value="Continue">
+                    <!--a href="overview">I do not agree - leave now</a-->
+                </div>
+            </div>
+            <div class="column-one-third">
+                {% include "../includes/help.html" %}
+            </div>
+        </div>
+    </form>
+</main>
+{% endblock %}
+
+{% block body_end %}
+  {% include "includes/scripts.html" %}
+  <script>
+    $('form').on('submit', function(e) {
+        
+        switch($('input[name="partner"]:checked').val()){
+            case 'yes':
+                window.location = 'volunteer-details';
+            break;
+
+            default:
+                window.location = 'statutory-payments';
+            break;
+        }
+      
+      e.preventDefault();
+    });
+  </script>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	Where you live
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "../includes/phase_banner_beta.html" %}
+
+	<form action="gp-details" method="#" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<a class="link-back" href="where-you-live">Back</a>
+				<header>
+					<h1 class="form-title heading-large">
+						<!-- <span class="heading-secondary">Section 8 of 23</span> -->
+						Where you live
+					</h1>
+				</header>
+
+				<div class="form-group">
+			        <label for="why" class="form-label-bold">Tell us about where you are living</label>
+			        <textarea class="form-control" type="text" id="why" style="width: 80%; height: 220px;"></textarea>
+			    </div>
+
+				<!-- Primary buttons, secondary links -->
+				<div class="form-group">
+					<input type="submit" class="button" value="Continue">
+				</div>
+
+			</div>
+			<div class="column-one-third">
+				{% include "../includes/help.html" %}
+			</div>
+		</div>
+
+	</form>
+</main>
+
+{% endblock %}

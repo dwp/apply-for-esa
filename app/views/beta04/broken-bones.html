@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Identifying Short Term Conditions
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include "../includes/phase_banner_beta.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">Short-term conditions</h1>
+
+      <form action="special-rules" method="#" class="form">
+        <div class="form-group">
+          <fieldset class="inline">
+            <legend class="form-label-bold">
+              Are you applying because of a short-term (less that 3 months) injury, illness or because of an operation meaning that you cannot work?
+            </legend>
+
+            <label for="radio-part-2" data-target="offWork" class="block-label">
+              <input id="radio-part-2" type="radio" name="esaApply" value="Yes">
+              Yes
+            </label>
+
+            <label for="radio-part-3" class="block-label">
+              <input id="radio-part-3" type="radio" name="esaApply" value="No">
+              No
+            </label>
+          </fieldset>
+        </div>
+
+        <div class="panel panel-border-narrow js-hidden" id="offWork">
+
+          <div class="form-group">
+            <label for="healTime" class="form-label-bold">How long does your doctor expect you to be off work?</label>
+            <input type="text" name="healTime" class="form-control form-control-1-4"> <span>weeks</span>
+          </div>
+
+        </div>
+
+        <input class="button" type="submit" value="Continue"></input>
+      </form>
+
+    </div>
+
+    <div class="column-one-third">
+      {% include "../includes/help.html" %}
+    </div>
+  </div>
+</main>
+{% endblock %}
