@@ -1,0 +1,116 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	Where you live
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "../includes/phase_banner_beta.html" %}
+
+	<form action="household" method="#" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<a class="link-back" href="children">Back</a>
+				<header>
+					<h1 class="form-title heading-large">
+						<!-- <span class="heading-secondary">Section 8 of 23</span> -->
+						Where do you live?
+					</h1>
+				</header>
+
+				<div class="form-group">
+					<fieldset class="">
+
+						<label class="block-label" for="radio-inline-1">
+							<input id="radio-inline-1" type="radio" name="partner" value="mortgage">
+							In a place you own or pay a mortgage on
+						</label>
+						<label class="block-label" for="radio-inline-2">
+							<input id="radio-inline-2" type="radio" name="partner" value="rent">
+							In a place you pay rent for
+						</label>
+						<label class="block-label" for="radio-inline-4">
+							<input id="radio-inline-4" type="radio" name="partner" value="shared">
+							In a place that you part own and part rent
+						</label>
+						<label class="block-label" for="radio-inline-7">
+							<input id="radio-inline-7" type="radio" name="partner" value="friends">
+							In someone else's place but not paying rent
+						</label>
+						<label class="block-label" for="radio-inline-3">
+							<input id="radio-inline-3" type="radio" name="partner" value="care-home">
+							In a care home
+						</label>
+						<label class="block-label" data-target="no-address" for="radio-inline-6">
+							<input id="radio-inline-6" type="radio" name="partner" value="homeless">
+							At no fixed address
+						</label>
+						<label class="block-label" for="radio-inline-5">
+							<input id="radio-inline-5" type="radio" name="partner" value="other">
+							Somewhere else
+						</label>
+					</fieldset>
+				</div>
+
+				<div class="js-hidden panel panel-border-narrow" id="no-address">
+					<label for="why" class="form-label-bold">Tell us about your current living arrangements</label>
+			        <textarea class="form-control" type="text" id="why"></textarea>
+				</div>
+
+				<!-- Primary buttons, secondary links -->
+				<div class="form-group">
+					<input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
+				</div>
+
+			</div>
+			<div class="column-one-third">
+				{% include "../includes/help.html" %}
+			</div>
+		</div>
+
+	</form>
+</main>
+
+{% endblock %}
+
+{% block body_end %}
+  {% include "includes/scripts.html" %}
+  <script>
+    $('form').on('submit', function(e) {
+    	
+    	switch($('input[name="partner"]:checked').val()){
+    		case 'mortgage':
+    			window.location = 'where-you-live-mortgage';
+    		break;
+
+    		case 'rent':
+    			window.location = 'where-you-live-rent';
+    		break;
+
+    		case 'shared':
+    			window.location = 'where-you-live-shared';
+    		break;
+
+			case 'friends':
+    			window.location = 'where-you-live-friends';
+    		break;
+
+    		case 'care-home':
+    			window.location = 'where-you-live-care-home';
+    		break;
+
+    		case 'homeless':
+    			window.location = 'gp-details';
+    		break;
+
+    		default:
+    			window.location = 'where-you-live-other';
+    		break;
+    	}
+      
+      e.preventDefault();
+    });
+  </script>
+{% endblock %}

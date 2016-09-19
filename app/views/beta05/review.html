@@ -1,0 +1,483 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Check your answers
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% include "../includes/phase_banner_beta.html" %}
+
+  <h1 class="heading-large">
+    Check your answers
+  </h1>
+  <div class="form-group">
+    <table class="check-your-answers">
+
+      <thead>
+        <tr>
+          <th colspan="2">
+            <h2 class="heading-medium">
+              Help with application
+            </h2>
+          </th>
+
+          <th class="change-answer">
+            <a href="help-appointee">
+              Change <span class="visuallyhidden">details</span>
+            </a>
+          </th>
+        </tr>
+      </thead>  
+      <tbody>
+        <tr>
+          <td>
+            <b>You are:</b>
+          </td>
+          <td colspan="2">
+            getting help from a friend, relative or third party such as a charity
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b>The name of the person helping you</b>
+          </td>
+          <td colspan="2">
+            Jessica Agnew
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b>How you know them</b>
+          </td>
+          <td colspan="2">
+            My neice
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b>Why they're helping you</b>
+          </td>
+          <td colspan="2">
+            I'm not confident and just need the help
+          </td>
+        </tr>
+      </tbody>    
+      
+
+      <thead>
+        <tr>
+          <th colspan="2">
+            <h2 class="heading-medium">
+              Personal details
+            </h2>
+          </th>
+
+          <th class="change-answer">
+            <a href="personal-details">
+              Change <span class="visuallyhidden">personal details</span>
+            </a>
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td width="40%">
+            <b>Name</b>
+          </td>
+          <td colspan="2">
+            Mr John Adam Leonard Smith
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b>Date of birth</b>
+          </td>
+          <td colspan="2">
+            4th February 1970
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b>National Insurance number</b>
+          </td>
+          <td colspan="2">
+            *******89H
+          </td>
+        </tr>
+      </tbody>
+
+
+      <thead>
+        <tr>
+          <th colspan="2">
+            <h2 class="heading-medium">
+              Contact details
+            </h2>
+          </th>
+
+          <th class="change-answer">
+            <a href="contact-details">
+              Change <span class="visuallyhidden">contact details</span>
+            </a>
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>
+            <b>Address</b>
+          </td>
+          <td colspan="2">
+            1 Acacia Avenue<br>
+            Leeds<br>
+            LS1 2AA
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b>Phone number</b>
+          </td>
+          <td colspan="2">
+            07123 456789
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b>Other phone number</b>
+          </td>
+          <td colspan="2">
+            0113 4456789
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b>Email</b>
+          </td>
+          <td colspan="2">
+            johnsmith@aol.com
+          </td>
+        </tr>
+      </tbody>
+
+
+      <thead>
+        <tr>
+          <th colspan="2">
+            <h2 class="heading-medium">
+              Alternative formats
+            </h2>
+          </th>
+
+          <th class="change-answer">
+            <a href="contact-pref">
+              Change <span class="visuallyhidden">alternative formats</span>
+            </a>
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>
+            <b>You will get your decision letter in the post. Do you need this in a different format eg braille, large print or audio CD?</b>
+          </td>
+          <td colspan="2">
+            No
+          </td>
+        </tr>
+      </tbody>
+
+
+      <thead>
+        <tr>
+          <th colspan="2">
+            <h2 class="heading-medium">
+              Work
+            </h2>
+          </th>
+
+          <th class="change-answer">
+            <a href="contact-pref">
+              Change <span class="visuallyhidden">work</span>
+            </a>
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>
+            <b>Are you currently doing:</b>
+          </td>
+          <td colspan="2">
+            some volunteering
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b>Position</b>
+          </td>
+          <td colspan="2">
+            Front desk
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b>Who are you volunteering for?</b>
+          </td>
+          <td colspan="2">
+            Sue Ryder Charity
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b>Address where you're volunteering</b>
+          </td>
+          <td colspan="2">
+            Chapel Town Surgery<br>
+            50 Lower Dock Road<br>
+            Leeds<br>
+            LS2 1AA
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b>How many hours a week are you volunteering?</b>
+          </td>
+          <td colspan="2">
+            8
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b>Do you get anything in return for volunteering eg expenses, food or accomodation?</b>
+          </td>
+          <td colspan="2">
+            No
+          </td>
+        </tr>
+      </tbody>
+
+
+      <thead>
+        <tr>
+          <th colspan="2">
+            <h2 class="heading-medium">
+              Statutory payments
+            </h2>
+          </th>
+
+          <th class="change-answer">
+            <a href="statutory-payments">
+              Change <span class="visuallyhidden">statutory payments</span>
+            </a>
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>
+            <b>Have you received any statutory payments in the last 3 months?</b>
+          </td>
+          <td colspan="2">
+            None
+          </td>
+        </tr>
+      </tbody>
+
+
+      <thead>
+        <tr>
+          <th colspan="2">
+            <h2 class="heading-medium">
+              Pensions
+            </h2>
+          </th>
+
+          <th class="change-answer">
+            <a href="pensions">
+              Change <span class="visuallyhidden">pensions</span>
+            </a>
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>
+            <b>Are you getting a pension?</b>
+          </td>
+          <td colspan="2">
+            No
+          </td>
+        </tr>
+      </tbody>
+
+
+      <thead>
+        <tr>
+          <th colspan="2">
+            <h2 class="heading-medium">
+              Savings
+            </h2>
+          </th>
+
+          <th class="change-answer">
+            <a href="savings">
+              Change <span class="visuallyhidden">savings</span>
+            </a>
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>
+            <b>How much money do you have saved?</b>
+          </td>
+          <td colspan="2">
+            Less than &pound;5,500
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b>Have you had more than &pound;5,500 savings in the last 6 months?</b>
+          </td>
+          <td colspan="2">
+            Yes
+          </td>
+        </tr>
+      </tbody>
+
+
+      <thead>
+        <tr>
+          <th colspan="2">
+            <h2 class="heading-medium">
+              Other money
+            </h2>
+          </th>
+
+          <th class="change-answer">
+            <a href="other-money">
+              Change <span class="visuallyhidden">other money</span>
+            </a>
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>
+            <b>How much money do you have saved?</b>
+          </td>
+          <td colspan="2">
+            Less than &pound;5,500
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b>Have you had more than &pound;5,500 savings in the last 6 months?</b>
+          </td>
+          <td colspan="2">
+            Yes
+          </td>
+        </tr>
+      </tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <tr>
+          <td>
+            <b>Bank Account Holder's name</b>
+          </td>
+          <td>
+            Mr J A L Smith
+          </td>
+          <td class="change-answer">
+            <a href="#">
+              Change <span class="visuallyhidden">name</span>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b>Name of bank or building society</b>
+          </td>
+          <td>
+            HSBC
+          </td>
+          <td class="change-answer">
+            <a href="#">
+              Change
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b>Sort code</b>
+          </td>
+          <td>
+            40-**-**
+          </td>
+          <td class="change-answer">
+            <a href="#">
+              Change <span class="visuallyhidden">sort code</span>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b>Account number</b>
+          </td>
+          <td>
+            ****1234
+          </td>
+          <td class="change-answer">
+            <a href="#">
+              Change <span class="visuallyhidden">account number</span>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="form-group">
+    <a href="#" class="button">Print summary</a>
+  </div>
+
+  <div class="panel panel-border-narrow">
+    <p>Printing won't send your application - you must press next to continue.</p>
+  </div>
+
+  <div class="form-group">
+    <a href="bank-details" class="button">Next</a>
+  </div>
+
+</main>
+
+{% endblock %}
