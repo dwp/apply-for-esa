@@ -43,7 +43,7 @@
 							<input id="radio-inline-3" type="radio" name="partner" value="care-home">
 							In a care home
 						</label>
-						<label class="block-label" data-target="no-address" for="radio-inline-6">
+						<label class="block-label" for="radio-inline-6">
 							<input id="radio-inline-6" type="radio" name="partner" value="homeless">
 							At no fixed address
 						</label>
@@ -52,11 +52,6 @@
 							Somewhere else
 						</label>
 					</fieldset>
-				</div>
-
-				<div class="js-hidden panel panel-border-narrow" id="no-address">
-					<label for="why" class="form-label-bold">Tell us about your current living arrangements</label>
-			        <textarea class="form-control" type="text" id="why"></textarea>
 				</div>
 
 				<!-- Primary buttons, secondary links -->
@@ -102,7 +97,7 @@
     		break;
 
     		case 'homeless':
-    			window.location = 'gp-details';
+    			window.location = 'where-you-live-other';
     		break;
 
     		default:
