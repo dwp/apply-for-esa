@@ -89,13 +89,13 @@
     $(document).ready(function() {
 
       $("#show-payment2").click(function() {
-        $("#payment2").show();
-        $("#show-payment2").hide();
+        $("#payment2").removeClass("js-hidden");
+        $("#show-payment2").addClass("js-hidden");
          return false;
       });
       $("#show-payment3").click(function() {
-        $("#payment3").show();
-        $("#show-payment3").hide();
+        $("#payment3").removeClass("js-hidden");
+        $("#show-payment3").addClass("js-hidden");
          return false;
       });
 
