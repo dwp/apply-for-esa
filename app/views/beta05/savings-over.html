@@ -9,14 +9,14 @@
 <main id="content" role="main">
 	{% include "../includes/phase_banner_beta.html" %}
 
-	<form action="other-money" method="#" class="form">
+	<form action="savings-property" method="#" class="form">
 		<div class="grid-row">
 			<div class="column-two-thirds">
-        <a class="link-back" href="pensions">Back</a>
+        <a class="link-back" href="savings">Back</a>
 				<header>
 			    <h1 class="form-title heading-large">
 			    	<!-- <span class="heading-secondary">Section 7 of 23</span> -->
-			      Savings
+			      Savings amount
 			    </h1>
 			  </header>
 
@@ -36,7 +36,7 @@
 
 		    <!-- Primary buttons, secondary links -->
 		    <div class="form-group">
-		      <input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
+		      <input type="submit" class="button" value="Continue">
 		    </div>
 
 		  </div>
@@ -48,19 +48,4 @@
   </form>
 </main>
 
-{% endblock %}
-
-{% block body_end %}
-  {% include "includes/scripts.html" %}
-  <script>
-    $('form').on('submit', function(e) {
-      if($('#radio-part-4').is(':checked')) {
-        window.location = 'housing-benefit';
-      } else {
-        window.location = 'other-money';
-      }
-
-      e.preventDefault();
-    });
-  </script>
 {% endblock %}
