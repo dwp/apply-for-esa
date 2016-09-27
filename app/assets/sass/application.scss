@@ -6,6 +6,9 @@ $path: "/public/images/";
 // Take a look at patterns.scss to see which files are imported.
 @import 'patterns';
 
+// Take a look at typeahead.scss to extend GOV.UK elements for typeahead support.
+@import 'typeahead';
+
 // If you need to create a page as part of your journey, but without GOV.UK branding
 // See localhost:3000/examples/unbranded/
 .unbranded {

@@ -1,0 +1,86 @@
+.twitter-typeahead {
+  width: 100%;
+}
+.tt-query,
+.tt-hint {
+  // width: 396px;
+  // height: 30px;
+  // padding: 5px 10px;
+  // font-size: 24px;
+  // line-height: 30px;
+  // border: 10px solid red;
+  // -webkit-border-radius: 5px;
+  //    -moz-border-radius: 5px;
+  //         border-radius: 5px;
+  // outline: none;
+}
+
+.typeahead {
+  // background-color: $white;
+}
+
+.typeahead:focus {
+  // border: 2px solid $focus;
+}
+
+.tt-query {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.tt-hint {
+  color: $secondary-text-colour;
+}
+
+.tt-menu {
+  // width: 422px;
+  margin: -1px;
+  padding: 0;
+  position: relative !important;
+  // background-color: $white;
+  // border: 2px solid $border-colour;
+  // -webkit-border-radius: 8px;
+  //    -moz-border-radius: 8px;
+  //         border-radius: 8px;
+  // -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  //    -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  //         box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+.tt-highlight {
+  font: inherit !important;
+  // border-bottom: 1px solid $secondary-text-colour;
+  background-color: $highlight-colour;
+}
+
+.tt-suggestion {
+  padding: 10px;
+  margin: 5px 0;
+  // border-bottom: 1px solid $white;
+  background-color: $white;
+  border: 2px solid $border-colour;
+  display: block;
+  position: relative;
+  // line-height: 2em;
+}
+
+.tt-selectable:hover {
+  cursor: pointer;
+  color: $white;
+  background-color: $govuk-blue;
+}
+
+.tt-selectable:hover .tt-highlight {
+  // border-bottom: 1px solid $white !important;
+  background-color: $link-hover-colour;
+}
+
+.tt-suggestion.tt-cursor {
+  color: #fff;
+  background-color: $govuk-blue;
+
+}
+
+.tt-suggestion p {
+  margin: 0;
+}

@@ -1,72 +1,69 @@
-{% extends "layout.html" %}
-
-{% block page_title %}
-	GP Details
+{% extends "layout.html" %} {% block page_title %} GP Details {% endblock %} {% block content %}
+<main id="content" role="main">
+    {% include "../includes/phase_banner_beta.html" %}
+    <form action="special-rules" method="post" class="form">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <a class="link-back" href="housing-benefit">Back</a>
+                <header>
+                    <h1 class="heading-large">
+        				Find your GP surgery
+    				</h1>
+                </header>
+           
+                <div id="typeahead" class="form-group" data-required data-error="Enter the name of your GP practice">
+                    <label for="practiceSearch" class="form-label">Your GP surgery</label>
+                    <input type="text" name="practiceSearch" id="practiceSearch" class="form-control form-control-2-3 typeahead" value="">
+                </div>
+                <!-- Primary buttons, secondary links -->
+                <div class="form-group">
+                    <input type="submit" class="button" value="Continue">
+                    <!--a href="overview">I do not agree - leave now</a-->
+                </div>
+            </div>
+            <div class="column-one-third">
+                {% include "../includes/help.html" %}
+            </div>
+        </div>
+    </form>
+</main>
 {% endblock %}
 
-{% block content %}
+{% block body_end %}
 
-<main id="content" role="main">
-	{% include "../includes/phase_banner_beta.html" %}
+{{ super() }}
 
-	<form action="special-rules" method="#" class="form">
-		<div class="grid-row">
-			<div class="column-two-thirds">
-				<a class="link-back" href="housing-benefit">Back</a>
-				<header>
-					<h1 class="form-title heading-large">
-						<!-- <span class="heading-secondary">Section 10 of 23</span> -->
-						Your GP's details
-					</h1>
-				</header>
+<script src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
 
-			<div class="form-group">
-			<label class="form-label-bold" for="full-name">
-			GP's name or surgery name
-			</label>
-			<input type="text" class="form-control" id="full-name" name="full-name">
-			</div>
-
-			<div class="form-group">
-        <legend class="form-label-bold" for="address">Their address</legend>
-        <div class="form-group">
-          <label class="form-label" for="address-a">Building and street</label>
-          <input type="text" name="address" id="address-a" class="form-control" value="">
-          <input type="text" name="address" id="address-a" class="form-control" value="">
-        </div>
-        <div class="form-group">
-          <label for="town" class="form-label">Town or city</label>
-          <input type="text" name="town" id="town" class="form-control" value="">
-        </div>
-        <div class="form-group">
-          <label for="county" class="form-label">County (optional)</label>
-          <input type="text" name="county" id="county" class="form-control" value="">
-        </div>
-        <div class="form-group">
-          <label for="postCode" class="form-label">Postcode</label>
-          <input type="text" name="postCode" id="postCode" class="form-control" value="">
-        </div>
-      </div>
-
-			<div class="form-group">
-			<label class="form-label-bold" for="nino">
-			Their phone number
-			</label>
-			<input type="text" class="form-control" id="nino" name="nino">
-			</div>
-
-			<!-- Primary buttons, secondary links -->
-			<div class="form-group">
-				<input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
-			</div>
-
-			</div>
-			<div class="column-one-third">
-				{% include "../includes/help.html" %}
-			</div>
-		</div>
-
-	</form>
-</main>
+<script>
+var dataGP = new Bloodhound({
+  datumTokenizer: Bloodhound.tokenizers.obj.whitespace('OrganisationName', 'Address1', 'City', 'Postcode', 'Phone'),
+  queryTokenizer: Bloodhound.tokenizers.whitespace,
+  prefetch: '/public/javascripts/gp.json'
+});
+dataGP.initialize();
+$('.typeahead').typeahead({
+  hint: true,
+  highlight: true,
+  minLength: 3
+},
+{
+  name: 'dataGP',
+  display: function (item) { return item.OrganisationName + ' - ' + item.Address1 },
+  limit: 10,
+  source: dataGP.ttAdapter(),
+  templates: {
+        empty: [
+            '<p class="tt-suggestion">No matches found - <a href="manual-gp">enter details manually</a></p>'].join('\n'),
+        suggestion: function (data) {
+          return '<p><strong>' + data.OrganisationName + '</strong><br>' + data.Address1 + ', ' + data.City + ', ' + data.Postcode + '<br>' + data.Phone + '</p>';
+        }
+    }
+});
+$('.typeahead').bind('typeahead:select', function(ev, suggestion) {
+  $('#typeahead').after('<div class="call-to-action"><p><strong>' + suggestion.OrganisationName + '</strong><br>' + suggestion.Address1 + ', ' + suggestion.City + ', ' + suggestion.Postcode + '<br>' + suggestion.Phone + '</p>');
+  $(this).typeahead("val", "");
+});
+</script>
 
 {% endblock %}
