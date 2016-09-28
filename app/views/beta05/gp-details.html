@@ -1,4 +1,11 @@
-{% extends "layout.html" %} {% block page_title %} GP Details {% endblock %} {% block content %}
+{% extends "layout.html" %} 
+
+{% block page_title %}
+ GP Details 
+{% endblock %} 
+
+{% block content %}
+
 <main id="content" role="main">
     {% include "../includes/phase_banner_beta.html" %}
     <form action="special-rules" method="#" class="form">
@@ -20,6 +27,9 @@
                     <input type="submit" class="button" value="Continue">
                     <!--a href="overview">I do not agree - leave now</a-->
                 </div>
+                <p>
+			        <a href="manual-gp">I can't find my GP surgery</a>
+			    </p>
             </div>
             <div class="column-one-third">
                 {% include "../includes/help.html" %}
