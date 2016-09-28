@@ -38,17 +38,23 @@
               Less than £5,500
             </label>
 
-            <label for="radio-part-3" class="block-label">
+            <label for="radio-part-3" data-target="saved" class="block-label">
               <input id="radio-part-3" type="radio" name="housing-act" value="between">
               Between £5,500 and £16,000
             </label>
 
-            <label for="radio-part-4" class="block-label">
+            <label for="radio-part-4" data-target="saved" class="block-label">
               <input id="radio-part-4" type="radio" name="housing-act" value="over">
               Over £16,000
             </label>
 
           </fieldset>
+          
+        </div>
+        <div class="form-group js-hidden panel panel-border-narrow" id="saved">
+          <label class="form-label-bold" for="account-holder">How much do you have saved?</label>
+          £
+          <input type="text" class="form-control" id="account-holder">
         </div>
 
 
@@ -84,11 +90,11 @@
         break;
 
         case 'between':
-          window.location = 'savings-how-much';
+          window.location = 'savings-where-from';
         break;
 
         default:
-          window.location = 'savings-how-much';
+          window.location = 'savings-where-from';
         break;
       }
       
