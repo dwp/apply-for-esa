@@ -1,7 +1,7 @@
 {% extends "layout.html" %} 
 
 {% block page_title %}
- Company Director
+ Work
 {% endblock %} 
 
 {% block content %}
@@ -52,7 +52,7 @@
         
         switch($('input[name="directory"]:checked').val()){
             case 'yes':
-                window.location = 'work-type';
+                window.location = 'work-recent';
             break;
 
             default:
