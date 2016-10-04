@@ -35,9 +35,6 @@
                         <label class="block-label" data-target="sub-contractor" for="are-3">
                             <input id="are-3" type="checkbox" name="are" value="sub-contractor">Sub-contractor
                         </label>
-                        <label class="block-label" data-target="agency-worker" for="are-4">
-                            <input id="are-4" type="checkbox" name="are" value="agency-worker">Agency worker
-                        </label>
                         <label class="block-label" data-target="are-other" for="are-5">
                             <input id="are-5" type="checkbox" name="are" value="other">Other
                         </label>
@@ -68,24 +65,13 @@
     $('form').on('submit', function(e) {
         
         switch($('input[name="are"]:checked').val()){
-            case 'employed':
-                window.location = 'work-employed';
-            break;
 
             case 'self-employed':
                 window.location = 'work-self-employed';
             break;
 
-            case 'sub-contractor':
-                window.location = 'work-sub-contractor';
-            break;
-
-            case 'agency-worker':
-                window.location = 'work-agency';
-            break;
-
             default:
-                window.location = 'work-employed';
+                window.location = 'statutory-payments';
             break;
         }
       
