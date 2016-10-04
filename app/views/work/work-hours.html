@@ -22,16 +22,36 @@
 					</h1>
                 </header>
                 <!--working-->
-                <div class="form-group" id="working">
-                    <div class="form-group" data-required data-error="Enter how many hours you are working">
-                        <label class="form-label-bold" for="hours">
-                            How many hours a week are you working at the moment?
-                        </label>
-                        <p>If your hours vary, enter an average.</p>
-                        <input type="text" class="form-control form-control-1-8" id="hours" name="hours">
-                    </div>
 
+                <div class="form-group" data-required data-error="Enter how many hours you are working">
+                    <label class="form-label-bold" for="hours">
+                        How many hours a week are you working at the moment?
+                    </label>
+                    <p>If your hours vary, enter an average.</p>
+                    <input type="text" class="form-control form-control-1-8" id="hours" name="hours">
                 </div>
+                <div class="form-group">
+                    <fieldset class="inline form-group">
+                        <legend class="form-label-bold">Has your condition affected the number of hours that you can work?<legend>
+                        <label class="block-label" data-target="yes-hours" for="radio--3">
+                            <input id="radio--3" type="radio" name="part" value="Yes">
+                            Yes
+                        </label>
+                        <label class="block-label" for="radio--4">
+                            <input id="radio--4" type="radio" name="part" value="No">
+                            No
+                        </label>
+                    </fieldset>
+                </div>
+
+                <div class="js-hidden panel panel-border-narrow form-group" id="yes-hours" data-error="Enter how many hours you are working">
+                    <label class="form-label-bold" for="hours2">
+                        How many hours did you work before this?
+                    </label>
+                    <p>If your hours vary, enter an average.</p>
+                    <input type="text" class="form-control form-control-1-8" id="hours2" name="hours2">
+                </div>
+
                 <!--end working-->
                 
                 <!-- Primary buttons, secondary links -->
