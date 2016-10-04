@@ -211,15 +211,22 @@
 
 
 
-                    <fieldset class="inline form-group" data-required data-error="Select whether you get expenses of not">
+                    <fieldset class="inline" data-required data-error="Select whether you get expenses of not">
                         <legend class="form-label-bold" for="expenses">Does your employer pay you expenses?</legend>
-                        <label class="block-label" for="expenses-1">
+                        <label class="block-label" data-target="expenses" for="expenses-1">
                             <input id="expenses-1" type="radio" name="expenses" value="Yes"> Yes
                         </label>
                         <label class="block-label" for="expenses-2">
                             <input id="expenses-2" type="radio" name="expenses" value="No"> No
                         </label>
                     </fieldset>
+                    <div class="form-group js-hidden panel panel-border-narrow" id="expenses" data-required data-error="Enter what your expenses are for">
+                        <label class="form-label-bold" for="how-much-daily">
+                            What are your expenses for?
+                        </label>
+                        &pound;
+                        <input type="text" class="form-control form-control-1-4" id="how-much-daily" name="how-much-daily">
+                    </div>
                 </div>
                 <!--end working-->
                 
