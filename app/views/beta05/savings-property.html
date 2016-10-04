@@ -31,16 +31,4 @@
         </div>
     </form>
 </main>
-{% endblock %} {% block body_end %} {% include "includes/scripts.html" %}
-<script>
-$('form').on('submit', function(e) {
-    if ($('#radio-part-4').is(':checked')) {
-        window.location = 'housing-benefit';
-    } else {
-        window.location = 'other-money';
-    }
-
-    e.preventDefault();
-});
-</script>
-{% endblock %}
+{% endblock %} 
