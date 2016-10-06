@@ -22,23 +22,23 @@
 
 				<div class="form-group">
 					<fieldset class="">
-
-						<label class="block-label" for="radio-inline-1">
-							<input id="radio-inline-1" type="radio" name="partner" value="mortgage">
-							In a place you own or pay a mortgage on
-						</label>
 						<label class="block-label" for="radio-inline-2">
 							<input id="radio-inline-2" type="radio" name="partner" value="rent">
 							In a place you pay rent for
+						</label>
+						<label class="block-label" for="radio-inline-7">
+							<input id="radio-inline-7" type="radio" name="partner" value="relative">
+							With your parents', relative or friend 
+						</label>
+						<label class="block-label" for="radio-inline-1">
+							<input id="radio-inline-1" type="radio" name="partner" value="mortgage">
+							In a place you own or pay a mortgage on
 						</label>
 						<label class="block-label" for="radio-inline-4">
 							<input id="radio-inline-4" type="radio" name="partner" value="shared">
 							In a place that you part own and part rent
 						</label>
-						<label class="block-label" for="radio-inline-7">
-							<input id="radio-inline-7" type="radio" name="partner" value="friends">
-							In someone else's place but not paying rent
-						</label>
+					
 						<label class="block-label" for="radio-inline-3">
 							<input id="radio-inline-3" type="radio" name="partner" value="care-home">
 							In a care home
@@ -88,8 +88,8 @@
     			window.location = 'where-you-live-shared';
     		break;
 
-			case 'friends':
-    			window.location = 'where-you-live-friends';
+    		case 'relative':
+    			window.location = 'where-you-live-relatives';
     		break;
 
     		case 'care-home':
