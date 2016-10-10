@@ -129,26 +129,14 @@
   <script>
     $('form').on('submit', function(e) {
     	
-    	switch($('input[name="live-mortgage"]:checked').val()){
-    		case 'yourself':
-    			window.location = 'where-you-live-mortgage';
-    		break;
-
-    		default:
-    			window.location = 'gp-details';
-    		break;
+    	if($('input[name="live-rel"]:checked').val() == 'Yes'){
+    		window.location = ($('input[name="live-parents"]:checked').val() == 'you') ? 'where-you-live-rent' : 'gp-details';
+    	} else if($('input[name="live-rel"]:checked').val() == 'No') {
+    		window.location = ($('input[name="live-mortgage"]:checked').val() == 'yourself') ? 'where-you-live-mortgage' : 'gp-details';
+    	} else{
+    		window.location = 'gp-details';
     	}
-
-    	switch($('input[name="live-parents"]:checked').val()){
-    		case 'you':
-    			window.location = 'where-you-live-rent';
-    		break;
-
-    		default:
-    			window.location = 'gp-details';
-    		break;
-    	}
-      
+    	
       e.preventDefault();
     });
   </script>
