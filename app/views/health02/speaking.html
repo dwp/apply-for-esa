@@ -1,65 +1,72 @@
-{% extends "layout.html" %}
-
-{% block page_title %}
-  Speaking
-{% endblock %}
-
-{% block content %}
-
+{% extends "layout.html" %} {% block page_title %} Speaking {% endblock %} {% block content %}
 <main id="content" role="main">
-	{% include "../includes/phase_banner_alpha.html" %}
-
-	<form action="hearing" method="#" class="form">
-		<div class="grid-row">
-			<div class="column-two-thirds">
-
-	      <div id="mortgage">
-	      	<div class="form-group">
-		      	<fieldset class="">
-		          <h1 class="form-title heading-large"><legend for="have-mortgage">Can you physically speak?</legend></h1>
-		          <label class="block-label" for="radio-inline-20">
-		            <input id="radio-inline-20" type="radio" name="have-mortgage" value="Daily">
-		            Yes
-		          </label>
-		          <label class="block-label"  for="radio-inline-28">
-		            <input id="radio-inline-28" type="radio" name="have-mortgage" value="Daily">
-		            Yes, but you don't like to in social situations
-		          </label>
-		          <label class="block-label" data-target="more-info" for="radio-inline-21">
-		            <input id="radio-inline-21" type="radio" name="have-mortgage" value="Weekly">
-		            You struggle to physically say words
-		          </label>
-		          <label class="block-label" data-target="more-info" for="radio-inline-22">
-		            <input id="radio-inline-22" type="radio" name="have-mortgage" value="Monthly">
-		            No, you cannot speak at all
-		          </label>
-		        </fieldset>
-		      </div>
-
-		      <div class="panel panel-narrow-border js-hidden" id="more-info">
-			      <div class="form-group">
-			      	<label class="form-label" for="tell-more">Why does your condition affect you speaking?</label>
-			      	<textarea id="tell-more" class="form-control" rows="5"></textarea>
-			      </div>
-			      <div class="form-group">
-			      	<label class="form-label" for="tell-more">How do you communicate?</label>
-			      	<textarea id="tell-more" class="form-control" rows="5"></textarea>
-			      </div>
-			    </div>
-	      </div>
-
-		    <!-- Primary buttons, secondary links -->
-		    <div class="form-group">
-		      <input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
-		    </div>
-
-		  </div>
-		  <div class="column-one-third">
-		  	<p>&nbsp;</p>
-		  </div>
-		</div>
-
-  </form>
+    {% include "../includes/phase_banner_beta.html" %}
+    <form action="hearing" method="#" class="form">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <header>
+                    <h1 class="form-title heading-large">Does your condition affect your speech?</h1>
+                </header>
+                <fieldset id="speech" class="inline">
+                    <legend for="speech">
+                        <span class="visually-hidden">Does your condition affect your speech?</span>
+                    </legend>
+                    <div class="form-group">
+                        <label class="block-label" for="speech-Yes" data-target="speechDetails">
+                            <input id="speech-Yes" type="radio" name="speech" value="Yes" aria-controls="speechDetails">Yes
+                        </label>
+                        <label class="block-label" for="speech-No">
+                            <input id="speech-No" type="radio" name="speech" value="No" aria-controls="">No
+                        </label>
+                    </div>
+                </fieldset>
+                <div class="panel panel-border-narrow js-hidden" id="speechDetails">
+                    <fieldset id="allTime" class="form-group inline">
+                        <legend for="allTime">
+                            <span class="form-label-bold">Does your condition affect your speech all the time?</span>
+                        </legend>
+                        <div class="form-group">
+                            <label class="block-label" for="allTime-Yes">
+                                <input id="allTime-Yes" type="radio" name="allTime" value="Yes" aria-controls="">Yes
+                            </label>
+                            <label class="block-label" for="allTime-No" data-target="allTimeDetails">
+                                <input id="allTime-No" type="radio" name="allTime" value="No" aria-controls="allTimeDetails">No
+                            </label>
+                        </div>
+                    </fieldset>
+                    <div class="form-group js-hidden" id="allTimeDetails">
+                        <div class="form-group" id="form-group-howOften">
+                            <label class="form-label" for="howOften">How often is your speech affected?
+                                <span class="form-hint">Include how many days out of each week or month you&#39;re affected.</span>
+                            </label>
+                            <input type="text" class="form-control  " id="howOften" name="howOften" value="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="howDoes">
+                            <span class="form-label">In your own words, describe how your condition affects your speech on a typical day.
+                            </span>
+                        </label>
+                        <p>Include if your speech changes depending on:</p>
+                        <ul id="explain-how" class="list-bullet list-help-text">
+                            <li>where you are</li>
+                            <li>what you’re doing</li>
+                            <li>who you’re with</li>
+                        </ul>
+                        <textarea maxlength="1500" class="form-control form-control-3-4" id="howDoes" name="howDoes"></textarea>
+                        <span class="font-xsmall form-control-3-4 character-count"><span class="char-count">1500</span> characters left</span>
+                    </div>
+                </div>
+                    <!-- Primary buttons, secondary links -->
+                <div class="form-group">
+                    <input type="submit" class="button" value="Continue">
+                    <!--a href="overview">I do not agree - leave now</a-->
+                </div>
+            </div>
+            <div class="column-one-third">
+				{% include "../includes/help.html" %}
+			</div>
+        </div>
+    </form>
 </main>
-
 {% endblock %}

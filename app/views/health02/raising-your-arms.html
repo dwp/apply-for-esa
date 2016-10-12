@@ -1,79 +1,60 @@
-{% extends "layout.html" %}
-
-{% block page_title %}
-  Raising your arms
-{% endblock %}
-
-{% block content %}
-
+{% extends "layout.html" %} {% block page_title %} Raising your arms {% endblock %} {% block content %}
 <main id="content" role="main">
-	{% include "../includes/phase_banner_alpha.html" %}
-
-	<form action="moving-things" method="#" class="form">
-		<div class="grid-row">
-			<div class="column-two-thirds">
-				<h1 class="form-title heading-large">
+    {% include "../includes/phase_banner_alpha.html" %}
+    <form action="moving-things" method="#" class="form">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <h1 class="form-title heading-large">
         <!-- <span class="heading-secondary">Section 16 of 16</span> -->
         Raising your arm
         </h1>
-
-			  <div class="form-group">
-	        <fieldset class="">
-	          <h1 class="form-title-bold"><legend for="partner">Does your condition affect you raising both arms:</legend></h1>
-	          <label class="block-label" data-target="info" for="radio-inline-1">
-	            <input id="radio-inline-1" type="checkbox" name="partner" value="Yes">
-	            to your chest
-	          </label>
-	          <label class="block-label" data-target="info" for="radio-inline-2">
-	            <input id="radio-inline-2" type="checkbox" name="partner" value="No">
-	            to the opposite shoulder
-	          </label>
-	          <label class="block-label" data-target="info" for="radio-inline-7">
-	            <input id="radio-inline-7" type="checkbox" name="partner" value="No">
-	            to the top of your head
-	          </label>
-	          <label class="block-label" data-target="info" for="radio-inline-3">
-	            <input id="radio-inline-3" type="checkbox" name="partner" value="No">
-	            above your head
-	          </label>
-	          <label class="block-label" data-target="other" for="radio-inline-6">
-	            <input id="radio-inline-6" type="checkbox" name="partner" value="No">
-	            to somewhere else
-	          </label>
-	          <div class="panel panel-border-narrow js-hidden" id="other">
-	            <label class="form-label"><input type="text" class="form-control" id="address-line1"></label>
-	          </div>
-	          <div class="form-group">
-	          	<p>or</p>
-	          </div>
-	          <label class="block-label" for="radio-inline-5">
-	            <input id="radio-inline-5" type="checkbox" name="partner" value="No">
-	            You do <span style="font-weight:bold;">not</span> have any problems raising both arms
-	          </label>
-
-	        </fieldset>
-	      </div>
-
-
-	      <div class="panel panel-border-narrow js-hidden" id="info">
-		      <div class="form-group">
-		      	<label class="form-label-bold" for="tell-more">Explain more about the difficulty you have raising your arms.</label>
-		      	<textarea id="tell-more" class="form-control" rows="5"></textarea>
-		      </div>
-	      </div>
-
-		    <!-- Primary buttons, secondary links -->
-		    <div class="form-group">
-		      <input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
-		    </div>
-
-		  </div>
-		  <div class="column-one-third">
-		  	<p>&nbsp;</p>
-		  </div>
-		</div>
-
-  </form>
+                <div class="form-group">
+                    <fieldset class="">
+                        <h1 class="form-title-bold"><legend for="partner">Does your condition affect you raising both arms:</legend></h1>
+                        <label class="block-label" data-target="info" for="radio-inline-1">
+                            <input id="radio-inline-1" type="checkbox" name="partner" value="Yes"> to your chest
+                        </label>
+                        <label class="block-label" data-target="info" for="radio-inline-2">
+                            <input id="radio-inline-2" type="checkbox" name="partner" value="No"> to the opposite shoulder
+                        </label>
+                        <label class="block-label" data-target="info" for="radio-inline-7">
+                            <input id="radio-inline-7" type="checkbox" name="partner" value="No"> to the top of your head
+                        </label>
+                        <label class="block-label" data-target="info" for="radio-inline-3">
+                            <input id="radio-inline-3" type="checkbox" name="partner" value="No"> above your head
+                        </label>
+                        <label class="block-label" data-target="other" for="radio-inline-6">
+                            <input id="radio-inline-6" type="checkbox" name="partner" value="No"> to somewhere else
+                        </label>
+                        <div class="panel panel-border-narrow js-hidden" id="other">
+                            <label class="form-label">
+                                <input type="text" class="form-control" id="address-line1">
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <p>or</p>
+                        </div>
+                        <label class="block-label" for="radio-inline-5">
+                            <input id="radio-inline-5" type="checkbox" name="partner" value="No"> You do <span style="font-weight:bold;">not</span> have any problems raising both arms
+                        </label>
+                    </fieldset>
+                </div>
+                <div class="panel panel-border-narrow js-hidden" id="info">
+                    <div class="form-group">
+                        <label class="form-label-bold" for="tell-more">Explain more about the difficulty you have raising your arms.</label>
+                        <textarea id="tell-more" class="form-control" rows="5"></textarea>
+                    </div>
+                </div>
+                <!-- Primary buttons, secondary links -->
+                <div class="form-group">
+                    <input type="submit" class="button" value="Continue">
+                    <!--a href="overview">I do not agree - leave now</a-->
+                </div>
+            </div>
+            <div class="column-one-third">
+				{% include "../includes/help.html" %}
+			</div>
+        </div>
+    </form>
 </main>
-
 {% endblock %}

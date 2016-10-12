@@ -1,107 +1,90 @@
-{% extends "layout.html" %}
-
-{% block page_title %}
-  Controlling your bladder and bowels
-{% endblock %}
-
-{% block content %}
-
+{% extends "layout.html" %} {% block page_title %} Controlling your bladder and bowels {% endblock %} {% block content %}
 <main id="content" role="main">
-	{% include "../includes/phase_banner_alpha.html" %}
-
-	<form action="consciousness" method="#" class="form">
-		<div class="grid-row">
-			<div class="column-two-thirds">
-				<h1 class="form-title heading-large">
+    {% include "../includes/phase_banner_alpha.html" %}
+    <form action="consciousness" method="#" class="form">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <h1 class="form-title heading-large">
         <!-- <span class="heading-secondary">Section 16 of 16</span> -->
         Controlling your bladder and bowels
         </h1>
-
-	      <div id="mortgage">
-	      	<div class="form-group">
-		      	<fieldset class="">
-		          <legend class="form-label" for="have-mortgage">Do you have difficulty:</legend>
-		          <label class="block-label" data-target="more-info" for="radio-inline-20">
-		            <input id="radio-inline-20" type="checkbox" name="have-mortgage" value="Daily">
-		            controlling your bowels
-		          </label>
-		          <label class="block-label" data-target="more-info" for="radio-inline-28">
-		            <input id="radio-inline-28" type="checkbox" name="have-mortgage" value="Daily">
-		            controlling your bladder
-		          </label>
-		          <div class="form-group">
-		          	<p>or</p>
-		          </div>
-		          <label class="block-label" for="radio-inline-21">
-		            <input id="radio-inline-21" type="checkbox" name="have-mortgage" value="Weekly">
-		            You do <span style="font-weight:bold;">not</span> have difficulty controlling your bladder or bowels
-		          </label>
-		        </fieldset>
-		      </div>
-		    </div>
-
-	      <div class="panel panel-narrow-border js-hidden" id="more-info">
-		      <div class="form-group">
-		      	<fieldset class="">
-		          <legend for="partner" class="form-label-bold">What helps you manage your bladder or bowel difficulty?</legend>
-		          <label class="block-label" for="radio-inline-1">
-		            <input id="radio-inline-1" type="checkbox" name="partner" value="Yes">
-		            Stoma bags
-		          </label>
-		          <label class="block-label" for="radio-inline-2">
-		            <input id="radio-inline-2" type="checkbox" name="partner" value="No">
-		            A catheter
-		          </label>
-		          <label class="block-label" data-target="other" for="radio-inline-7">
-		            <input id="radio-inline-7" type="checkbox" name="partner" value="No">
-		            Something else
-		          </label>
-		          <div class="panel panel-border-narrow js-hidden" id="other">
-		            <label class="form-label"><input type="text" class="form-control" id="address-line1"></label>
-		          </div>
-		          <label class="block-label" data-target="other2" for="radio-inline-3">
-		            <input id="radio-inline-3" type="checkbox" name="partner" value="No">
-		            You manage without help, but with difficulty
-		          </label>
-		          <div class="panel panel-border-narrow js-hidden" id="other2">
-		            <label class="form-label"><input type="text" class="form-control" id="address-line1"></label>
-		          </div>
-		        </fieldset>
-		      </div>
-	      	<div class="form-group">
-		      	<fieldset class="inline">
-		          <legend class="form-label-bold" for="leaks">Have you had to change your clothes in the last month because of leaks?</legend>
-		          <label class="block-label" data-target="leak-freq" for="radio-inline-120">
-		            <input id="radio-inline-120" type="checkbox" name="leaks" value="Daily">
-		            Yes
-		          </label>
-		          <label class="block-label" for="radio-inline-128">
-		            <input id="radio-inline-128" type="checkbox" name="leaks" value="Daily">
-		            No
-		          </label>
-		          <div class="panel panel-border-narrow js-hidden" id="leak-freq">
-			      		<label class="form-label inline" for="time">You have had to change my clothes roughly <input type="text" class="form-control form-control-1-8" id="why"> times in the last month because of leaks</label>
-			      	</div>
-		        </fieldset>
-		      </div>
-		      <div class="form-group">
-		      	<label class="form-label" for="tell-more">Explain more about the difficulty you have controlling your bladder or bowels.</label>
-		      	<textarea id="tell-more" class="form-control" rows="5"></textarea>
-		      </div>
-		    </div>
-
-		    <!-- Primary buttons, secondary links -->
-		    <div class="form-group">
-		      <input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
-		    </div>
-
-		  </div>
-		  <div class="column-one-third">
-		  	<p>&nbsp;</p>
-		  </div>
-		</div>
-
-  </form>
+                <div id="mortgage">
+                    <div class="form-group">
+                        <fieldset class="">
+                            <legend class="form-label" for="have-mortgage">Do you have difficulty:</legend>
+                            <label class="block-label" data-target="more-info" for="radio-inline-20">
+                                <input id="radio-inline-20" type="checkbox" name="have-mortgage" value="Daily"> controlling your bowels
+                            </label>
+                            <label class="block-label" data-target="more-info" for="radio-inline-28">
+                                <input id="radio-inline-28" type="checkbox" name="have-mortgage" value="Daily"> controlling your bladder
+                            </label>
+                            <div class="form-group">
+                                <p>or</p>
+                            </div>
+                            <label class="block-label" for="radio-inline-21">
+                                <input id="radio-inline-21" type="checkbox" name="have-mortgage" value="Weekly"> You do <span style="font-weight:bold;">not</span> have difficulty controlling your bladder or bowels
+                            </label>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="panel panel-narrow-border js-hidden" id="more-info">
+                    <div class="form-group">
+                        <fieldset class="">
+                            <legend for="partner" class="form-label-bold">What helps you manage your bladder or bowel difficulty?</legend>
+                            <label class="block-label" for="radio-inline-1">
+                                <input id="radio-inline-1" type="checkbox" name="partner" value="Yes"> Stoma bags
+                            </label>
+                            <label class="block-label" for="radio-inline-2">
+                                <input id="radio-inline-2" type="checkbox" name="partner" value="No"> A catheter
+                            </label>
+                            <label class="block-label" data-target="other" for="radio-inline-7">
+                                <input id="radio-inline-7" type="checkbox" name="partner" value="No"> Something else
+                            </label>
+                            <div class="panel panel-border-narrow js-hidden" id="other">
+                                <label class="form-label">
+                                    <input type="text" class="form-control" id="address-line1">
+                                </label>
+                            </div>
+                            <label class="block-label" data-target="other2" for="radio-inline-3">
+                                <input id="radio-inline-3" type="checkbox" name="partner" value="No"> You manage without help, but with difficulty
+                            </label>
+                            <div class="panel panel-border-narrow js-hidden" id="other2">
+                                <label class="form-label">
+                                    <input type="text" class="form-control" id="address-line1">
+                                </label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="form-group">
+                        <fieldset class="inline">
+                            <legend class="form-label-bold" for="leaks">Have you had to change your clothes in the last month because of leaks?</legend>
+                            <label class="block-label" data-target="leak-freq" for="radio-inline-120">
+                                <input id="radio-inline-120" type="checkbox" name="leaks" value="Daily"> Yes
+                            </label>
+                            <label class="block-label" for="radio-inline-128">
+                                <input id="radio-inline-128" type="checkbox" name="leaks" value="Daily"> No
+                            </label>
+                            <div class="panel panel-border-narrow js-hidden" id="leak-freq">
+                                <label class="form-label inline" for="time">You have had to change my clothes roughly
+                                    <input type="text" class="form-control form-control-1-8" id="why"> times in the last month because of leaks</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="tell-more">Explain more about the difficulty you have controlling your bladder or bowels.</label>
+                        <textarea id="tell-more" class="form-control" rows="5"></textarea>
+                    </div>
+                </div>
+                <!-- Primary buttons, secondary links -->
+                <div class="form-group">
+                    <input type="submit" class="button" value="Continue">
+                    <!--a href="overview">I do not agree - leave now</a-->
+                </div>
+            </div>
+            <div class="column-one-third">
+                {% include "../includes/help.html" %}
+            </div>
+        </div>
+    </form>
 </main>
-
 {% endblock %}

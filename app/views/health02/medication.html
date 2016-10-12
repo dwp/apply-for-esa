@@ -1,0 +1,116 @@
+{% extends "layout.html" %} {% block page_title %} Medication {% endblock %} {% block content %}
+<main id="content" role="main">
+    {% include "../includes/phase_banner_beta.html" %}
+    <form action="fit-note" method="#" class="form">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <a class="link-back" href="hospital">Back</a>
+                <header>
+                    <h1 class="form-title heading-large">Are you taking any medication?</h1>
+                </header>
+                <fieldset id="speech" class="inline">
+                    <legend for="speech">
+                        <span class="visually-hidden">Are you taking any medication?</span>
+                    </legend>
+                    <div class="form-group">
+                        <label class="block-label" for="meds-Yes" data-target="meds">
+                            <input id="meds-Yes" type="radio" name="speech" value="Yes">Yes
+                        </label>
+                        <label class="block-label" for="meds-No">
+                            <input id="meds-No" type="radio" name="speech" value="No">No
+                        </label>
+                    </div>
+                </fieldset>
+                <div class="js-hidden panel panel-border-narrow" id="meds">
+                    <h2 class="heading-small">Medication 1</h2>
+                    <div class="form-group" id="form-group-medication1">
+                        <label class="form-label" for="medication1">Name of medication
+                        </label>
+                        <input type="text" data-name="medication-1" class="form-control " id="medication1" name="medication1" value="">
+                    </div>
+                    <div class="form-group" id="form-group-dosage1">
+                        <label class="form-label" for="dosage1">Dose
+                            <span class="form-hint">For example, 40mg</span>
+                        </label>
+                        <input type="text" data-name="dosage-1" class="form-control " id="dosage1" name="dosage1" value="">
+                    </div>
+                    <div class="form-group" id="form-group-often1">
+                        <label class="form-label" for="often1">How often you take it
+                            <span class="form-hint">For example, 2 tablets, twice a day</span>
+                        </label>
+                        <input type="text" data-name="often-1" class="form-control " id="often1" name="often1" value="">
+                    </div>
+                    <p><a href="#" id="show-payment2" class="add-another secondary-button">Add another</a></p>
+                </div>
+                <div class="js-hidden panel panel-border-narrow" id="payment2">
+                    <h2 class="heading-small">Medication 2</h2>
+                    <div class="form-group" id="form-group-medication1">
+                        <label class="form-label" for="medication2">Name of medication
+                        </label>
+                        <input type="text" data-name="medication-2" class="form-control " id="medication2" name="medication2" value="">
+                    </div>
+                    <div class="form-group" id="form-group-dosage2">
+                        <label class="form-label" for="dosage2">Dose
+                            <span class="form-hint">For example, 40mg</span>
+                        </label>
+                        <input type="text" data-name="dosage-2" class="form-control " id="dosage2" name="dosage2" value="">
+                    </div>
+                    <div class="form-group" id="form-group-often2">
+                        <label class="form-label" for="often2">How often you take it
+                            <span class="form-hint">For example, 2 tablets, twice a day</span>
+                        </label>
+                        <input type="text" data-name="often-2" class="form-control " id="often2" name="often2" value="">
+                    </div>
+                    <p><a href="#" id="show-payment3" class="add-another secondary-button">Add another</a></p>
+                </div>
+                <div class="js-hidden panel panel-border-narrow" id="payment3">
+                    <h2 class="heading-small">Medication 3</h2>
+                    <div class="form-group" id="form-group-medication1">
+                        <label class="form-label" for="medication3">Name of medication
+                        </label>
+                        <input type="text" data-name="medication-3" class="form-control " id="medication3" name="medication3" value="">
+                    </div>
+                    <div class="form-group" id="form-group-dosage3">
+                        <label class="form-label" for="dosage3">Dose
+                            <span class="form-hint">For example, 40mg</span>
+                        </label>
+                        <input type="text" data-name="dosage-3" class="form-control " id="dosage3" name="dosage3" value="">
+                    </div>
+                    <div class="form-group" id="form-group-often3">
+                        <label class="form-label" for="often3">How often you take it
+                            <span class="form-hint">For example, 2 tablets, twice a day</span>
+                        </label>
+                        <input type="text" data-name="often-3" class="form-control " id="often3" name="often3" value="">
+                    </div>
+                    <p><a href="#" id="show-payment4" class="add-another secondary-button">Add another</a></p>
+                </div>
+                <!-- Primary buttons, secondary links -->
+                <div class="form-group">
+                    <input type="submit" class="button" value="Continue">
+                    <!--a href="overview">I do not agree - leave now</a-->
+                </div>
+            </div>
+            <div class="column-one-third">
+                {% include "../includes/help.html" %}
+            </div>
+        </div>
+    </form>
+</main>
+{% endblock %} {% block body_end %} {% include "includes/scripts.html" %}
+<script>
+$(document).ready(function() {
+
+    $("#show-payment2").click(function() {
+        $("#payment2").removeClass("js-hidden");
+        $("#show-payment2").addClass("js-hidden");
+        return false;
+    });
+    $("#show-payment3").click(function() {
+        $("#payment3").removeClass("js-hidden");
+        $("#show-payment3").addClass("js-hidden");
+        return false;
+    });
+
+});
+</script>
+{% endblock %}
