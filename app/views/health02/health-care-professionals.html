@@ -1,0 +1,141 @@
+{% extends "layout.html" %} {% block page_title %} Healthcare professional {% endblock %} {% block content %}
+<main id="content" role="main">
+    {% include "../includes/phase_banner_beta.html" %}
+    <form action="fit-note" method="#" class="form">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <a class="link-back" href="hospital">Back</a>
+                <header>
+                    <h1 class="form-title heading-large">Are there any professionals who can tell us about your condition?</h1>
+                </header>
+                <p>They could be your doctor, support worker, carer or anyone else who has information about the effects of your condition.</p>
+                <fieldset id="speech" class="inline">
+                    <legend for="speech">
+                        <span class="visually-hidden">Are there any professionals who can tell us about your condition?</span>
+                    </legend>
+                    <div class="form-group">
+                        <label class="block-label" for="meds-Yes" data-target="meds">
+                            <input id="meds-Yes" type="radio" name="speech" value="Yes">Yes
+                        </label>
+                        <label class="block-label" for="meds-No">
+                            <input id="meds-No" type="radio" name="speech" value="No">No
+                        </label>
+                    </div>
+                </fieldset>
+                <div class="js-hidden panel panel-border-narrow" id="meds">
+                    <h2 class="heading-small">Professional 1</h2>
+                    <div class="form-group" id="form-group-medication1">
+                        <label class="form-label" for="medication1">Their name
+                        </label>
+                        <input type="text" data-name="medication-1" class="form-control" id="medication1" name="medication1" value="">
+                    </div>
+                    <div class="form-group" id="form-group-dosage1">
+                        <label class="form-label" for="dosage1">Their profession
+                        </label>
+                        <input type="text" data-name="dosage-1" class="form-control" id="dosage1" name="dosage1" value="">
+                    </div>
+                    <div class="form-group" id="form-group-address1">
+                        <label class="form-label" for="address1">Their address
+                        </label>
+                        <textarea type="text" data-name="address-1" class="form-control" id="address1" name="address1" value="" style="width: 350px; height: 100px;"></textarea>
+                    </div>
+                    <div class="form-group" id="form-group-often1">
+                        <label class="form-label" for="often1">Their phone number
+                        </label>
+                        <input type="text" data-name="often-1" class="form-control" id="often1" name="often1" value="">
+                    </div>
+                    <div class="form-group" id="form-group-when1">
+                        <label class="form-label" for="when1">When you last saw them
+                        </label>
+                        <input type="text" data-name="when-1" class="form-control" id="when1" name="when1" value="">
+                    </div>
+                    <p><a href="#" id="show-payment2" class="add-another secondary-button">Add another professional</a></p>
+                </div>
+                <div class="js-hidden panel panel-border-narrow" id="payment2">
+                    <h2 class="heading-small">Professional 2</h2>
+                    <div class="form-group" id="form-group-medication2">
+                        <label class="form-label" for="medication2">Their name
+                        </label>
+                        <input type="text" data-name="medication-2" class="form-control" id="medication2" name="medication2" value="">
+                    </div>
+                    <div class="form-group" id="form-group-dosage2">
+                        <label class="form-label" for="dosage2">Their profession
+                        </label>
+                        <input type="text" data-name="dosage-2" class="form-control" id="dosage2" name="dosage2" value="">
+                    </div>
+                    <div class="form-group" id="form-group-address2">
+                        <label class="form-label" for="address2">Their address
+                        </label>
+                        <textarea type="text" data-name="address-2" class="form-control" id="address2" name="address2" value="" style="width: 350px; height: 100px;"></textarea>
+                    </div>
+                    <div class="form-group" id="form-group-often2">
+                        <label class="form-label" for="often2">Their phone number
+                        </label>
+                        <input type="text" data-name="often-2" class="form-control" id="often2" name="often2" value="">
+                    </div>
+                    <div class="form-group" id="form-group-when2">
+                        <label class="form-label" for="when2">When you last saw them
+                        </label>
+                        <input type="text" data-name="when-2" class="form-control" id="when2" name="when2" value="">
+                    </div>
+                    <p><a href="#" id="show-payment3" class="add-another secondary-button">Add another professional</a></p>
+                </div>
+                <div class="js-hidden panel panel-border-narrow" id="payment3">
+                    <h2 class="heading-small">Professional 3</h2>
+                    <div class="form-group" id="form-group-medication3">
+                        <label class="form-label" for="medication3">Their name
+                        </label>
+                        <input type="text" data-name="medication-3" class="form-control" id="medication3" name="medication3" value="">
+                    </div>
+                    <div class="form-group" id="form-group-dosage3">
+                        <label class="form-label" for="dosage3">Their profession
+                        </label>
+                        <input type="text" data-name="dosage-3" class="form-control" id="dosage3" name="dosage3" value="">
+                    </div>
+                    <div class="form-group" id="form-group-address3">
+                        <label class="form-label" for="address3">Their address
+                        </label>
+                        <textarea type="text" data-name="address-3" class="form-control" id="address3" name="address3" value="" style="width: 350px; height: 100px;"></textarea>
+                    </div>
+                    <div class="form-group" id="form-group-often3">
+                        <label class="form-label" for="often3">Their phone number
+                        </label>
+                        <input type="text" data-name="often-3" class="form-control" id="often3" name="often3" value="">
+                    </div>
+                    <div class="form-group" id="form-group-when3">
+                        <label class="form-label" for="when3">When you last saw them
+                        </label>
+                        <input type="text" data-name="when-3" class="form-control" id="when3" name="when3" value="">
+                    </div>
+                    <p><a href="#" id="show-payment4" class="add-another secondary-button">Add another professional</a></p>
+                </div>
+                <!-- Primary buttons, secondary links -->
+                <div class="form-group">
+                    <input type="submit" class="button" value="Continue">
+                    <!--a href="overview">I do not agree - leave now</a-->
+                </div>
+            </div>
+            <div class="column-one-third">
+                {% include "../includes/help.html" %}
+            </div>
+        </div>
+    </form>
+</main>
+{% endblock %} {% block body_end %} {% include "includes/scripts.html" %}
+<script>
+$(document).ready(function() {
+
+    $("#show-payment2").click(function() {
+        $("#payment2").removeClass("js-hidden");
+        $("#show-payment2").addClass("js-hidden");
+        return false;
+    });
+    $("#show-payment3").click(function() {
+        $("#payment3").removeClass("js-hidden");
+        $("#show-payment3").addClass("js-hidden");
+        return false;
+    });
+
+});
+</script>
+{% endblock %}
