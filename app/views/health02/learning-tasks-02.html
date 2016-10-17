@@ -5,18 +5,18 @@
         <div class="grid-row">
             <div class="column-two-thirds">
                 <header>
-                    <h1 class="form-title heading-large">Can you learn how to do basic everyday tasks?</h1>
+                    <h1 class="form-title heading-large">Can you learn how to do more complicated everyday tasks?</h1>
                 </header>
                 <fieldset id="speech" class="">
                     <legend for="speech">
-                        <span class="visually-hidden">Can you learn how to do basic everyday tasks?</span>
+                        <span class="visually-hidden">Can you learn how to do more complicated everyday tasks?</span>
                     </legend>
-                    <p>Basic everyday tasks are things like:</p>
+                    <p>More complicated everyday tasks are things like:</p>
                     <ul class="list-bullet form-group">
-                        <li>switching the lights on or off</li>
-                        <li>turning on the tv or switching channels</li>
-                        <li>brushing your teeth</li>
-                        <li>getting a glass of water</li>
+                        <li>making a cup of tea</li>
+                        <li>using a new household appliance like a washing machine or microwave oven</li>
+                        <li>setting a TV programme or series to record</li>
+                        <li>cooking a meal</li>
                     </ul>
                     <div class="form-group">
                         <label class="block-label" for="speech-Yes">
@@ -33,7 +33,7 @@
 
                 <div class="panel panel-border-narrow js-hidden" id="speechDetails">
                     <label for="howDoes">
-                        <span class="form-label-bold">Why do you find it hard to do basic tasks?
+                        <span class="form-label-bold">Why do you find it hard to do more complicated tasks?
                         </span>
                     </label>
                     <textarea maxlength="1500" class="form-control form-control-3-4" id="howDoes" name="howDoes"></textarea>
@@ -51,24 +51,4 @@
         </div>
     </form>
 </main>
-{% endblock %}
-
-{% block body_end %}
-  {% include "includes/scripts.html" %}
-  <script>
-    $('form').on('submit', function(e) {
-      
-      switch($('input[name="speech"]:checked').val()){
-        case 'No':
-          window.location = 'next-healthq';
-        break;
-
-        default:
-          window.location = 'learning-tasks-02';
-        break;
-      }
-      
-      e.preventDefault();
-    });
-  </script>
 {% endblock %}
