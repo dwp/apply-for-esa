@@ -1,17 +1,18 @@
-{% extends "layout.html" %} {% block page_title %} Coping with change {% endblock %} {% block content %}
+{% extends "layout.html" %} {% block page_title %} Coping with social situations {% endblock %} {% block content %}
 <main id="content" role="main">
     {% include "../includes/phase_banner_beta.html" %}
-    <form action="going-out" method="#" class="form">
+    <form action="behave-appropiately" method="#" class="form">
         <div class="grid-row">
             <div class="column-two-thirds">
-                <a class="link-back" href="starting-finishing">Back</a>
+                <a class="link-back" href="going-out">Back</a>
                 <header>
-                    <h1 class="form-title heading-large">Can you cope with changes to your daily routine?</h1>
+                    <h1 class="form-title heading-large">Can you cope with social situations without feeling too anxious or scared?</h1>
                 </header>
                 <fieldset id="speech" class="">
                     <legend for="speech">
-                        <span class="visually-hidden">Can you cope with changes to your daily routine?</span>
+                        <span class="visually-hidden">Can you cope with social situations without feeling too anxious or scared?</span>
                     </legend>
+                    <p>Social situations might include meeting new people or going to meetings and appointments.</p>
                     
                     <div class="form-group">
                         <label class="block-label" for="speech-Yes">
@@ -29,9 +30,8 @@
                 <div class="panel panel-border-narrow js-hidden" id="speechDetails">
                     <fieldset id="safe" class="form-group">
                         <legend for="safe" class="form-label-bold">
-                            Can you cope with small changes to your daily routine if you know about them before they happen?
+                            Can you meet people you know without feeling too anxious or scared?
                         </legend>
-                        <p>For example, things like having a meal earlier or later than usual, or an appointment time being changed.</p>
                         <div class="form-group">
                             <label class="block-label" for="safe-Yes">
                                 <input id="safe-Yes" type="radio" name="safe" value="Yes">Yes
@@ -44,38 +44,34 @@
                             </label>
                         </div>
                     </fieldset>
-
-                    <fieldset id="cope" class="form-group">
-                        <legend for="cope" class="form-label-bold">
-                            Can you cope with small changes to your daily routine if they are expected?
+                    <fieldset id="meet" class="form-group">
+                        <legend for="meet" class="form-label-bold">
+                            Can you meet people you don't know without feeling too anxious or scared?
                         </legend>
-                        <p>For example, things like your bus or train not running on time, or a visitor coming to your house earlier or later than planned.</p>
                         <div class="form-group">
-                            <label class="block-label" for="cope-Yes">
-                                <input id="cope-Yes" type="radio" name="cope" value="Yes">Yes
+                            <label class="block-label" for="meet-Yes">
+                                <input id="meet-Yes" type="radio" name="meet" value="Yes">Yes
                             </label>
-                            <label class="block-label" for="cope-No">
-                                <input id="cope-No" type="radio" name="cope" value="No">No
+                            <label class="block-label" for="meet-No">
+                                <input id="meet-No" type="radio" name="meet" value="No">No
                             </label>
-                            <label class="block-label" for="cope-Sometimes">
-                                <input id="cope-Sometimes" type="radio" name="cope" value="No">Sometimes
+                            <label class="block-label" for="meet-Sometimes">
+                                <input id="meet-Sometimes" type="radio" name="meet" value="No">Sometimes
                             </label>
                         </div>
                     </fieldset>
-
                     <div class="form-group">
-                        <label for="howOften">
-                            <span class="form-label-bold">Describe how you cope with change. Explain what problems you have and give examples if you can. If it varies tell us how.
+                        <label for="howDoes">
+                            <span class="form-label-bold">Describe why you find it hard to meet people and how often this happens. Give examples if you can.
                             </span>
                         </label>
-                        <textarea maxlength="1500" class="form-control form-control-3-4" id="howOften" name="howOften"></textarea>
+                        <textarea maxlength="1500" class="form-control form-control-3-4" id="howDoes" name="howDoes"></textarea>
                         <span class="font-xsmall form-control-3-4 character-count"><span class="char-count">1500</span> characters left</span>
                     </div>
                 </div>
                     <!-- Primary buttons, secondary links -->
                 <div class="form-group">
                     <input type="submit" class="button" value="Continue">
-                    <!--a href="overview">I do not agree - leave now</a-->
                 </div>
             </div>
             <div class="column-one-third">
