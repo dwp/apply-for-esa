@@ -1,9 +1,10 @@
 {% extends "layout.html" %} {% block page_title %} Learning tasks {% endblock %} {% block content %}
 <main id="content" role="main">
     {% include "../includes/phase_banner_beta.html" %}
-    <form action="hearing" method="#" class="form">
+    <form action="staying-safe" method="#" class="form">
         <div class="grid-row">
             <div class="column-two-thirds">
+                <a class="link-back" href="consciousness">Back</a>
                 <header>
                     <h1 class="form-title heading-large">Can you learn how to do basic everyday tasks?</h1>
                 </header>
@@ -60,7 +61,7 @@
       
       switch($('input[name="speech"]:checked').val()){
         case 'No':
-          window.location = 'next-healthq';
+          window.location = 'staying-safe';
         break;
 
         default:

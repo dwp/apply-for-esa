@@ -5,19 +5,12 @@
         <div class="grid-row">
             <div class="column-two-thirds">
                 <header>
-                    <h1 class="form-title heading-large">Can you learn how to do more complicated everyday tasks?</h1>
+                    <h1 class="form-title heading-large">When you're alone, can you stay safe when doing tasks like boiling water or using sharp objects?</h1>
                 </header>
-                <fieldset id="speech" class="">
+                <fieldset id="speech" class="inline">
                     <legend for="speech">
-                        <span class="visually-hidden">Can you learn how to do more complicated everyday tasks?</span>
+                        <span class="visually-hidden">When you're alone, can you stay safe when doing tasks like boiling water or using sharp objects?</span>
                     </legend>
-                    <p>More complicated everyday tasks are things like:</p>
-                    <ul class="list-bullet form-group">
-                        <li>making a cup of tea</li>
-                        <li>using a new household appliance like a washing machine or microwave oven</li>
-                        <li>setting a TV programme or series to record</li>
-                        <li>cooking a meal</li>
-                    </ul>
                     <div class="form-group">
                         <label class="block-label" for="speech-Yes">
                             <input id="speech-Yes" type="radio" name="speech" value="Yes" aria-controls="">Yes
@@ -25,15 +18,30 @@
                         <label class="block-label" for="speech-No" data-target="speechDetails">
                             <input id="speech-No" type="radio" name="speech" value="No" aria-controls="speechDetails">No
                         </label>
-                        <label class="block-label" for="speech-Sometimes" data-target="speechDetails">
-                            <input id="speech-Sometimes" type="radio" name="speech" value="Sometimes" aria-controls="speechDetails">Sometimes
-                        </label>
                     </div>
                 </fieldset>
 
                 <div class="panel panel-border-narrow js-hidden" id="speechDetails">
+
+                    <fieldset id="safe" class="form-group">
+                        <legend for="safe" class="form-label-bold">
+                            How often do  you need someone to help you stay safe?
+                        </legend>
+                        <div class="form-group">
+                            <label class="block-label" for="safe-Yes">
+                                <input id="safe-Yes" type="radio" name="safe" value="Yes">All the time
+                            </label>
+                            <label class="block-label" for="safe-No">
+                                <input id="safe-No" type="radio" name="safe" value="No">Most of the time
+                            </label>
+                            <label class="block-label" for="safe-Sometimes">
+                                <input id="safe-Sometimes" type="radio" name="safe" value="No">Sometimes
+                            </label>
+                        </div>
+                    </fieldset>
+
                     <label for="howDoes">
-                        <span class="form-label-bold">Why do you find it hard to do more complicated tasks?
+                        <span class="form-label-bold">What problems do you have satying safe?
                         </span>
                     </label>
                     <textarea maxlength="1500" class="form-control form-control-3-4" id="howDoes" name="howDoes"></textarea>
