@@ -9,7 +9,7 @@
 <main id="content" role="main">
 	{% include "../includes/phase_banner_beta.html" %}
 
-	<form action="medication" method="#" class="form">
+	<form action="health-information" method="#" class="form">
 		<div class="grid-row">
 			<div class="column-two-thirds">
         <a class="link-back" href="start">Back</a>
@@ -22,23 +22,39 @@
 
 			  <p>List all the conditions or disabilities you currently have that affect you. If you're unsure, put what's on your sick note.</p>
 
-        <p>You'll get a form in the post later to give more information about how your condition affects you.<p>
-
         <div class="" id="partner-yes">
           <h2 class="heading-small">Condition 1</h2>
-          <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
-            <label class="form-label" for="condition01">Name of condition</label>
-            <input class="form-control" id="who01" type="text" name="condition01">
+          <div class="form-group" style="border-bottom: 1px solid #bfc1c3;">
+            <div class="form-group">
+              <label class="form-label" for="condition01">Name of condition</label>
+              <input class="form-control" id="who01" type="text" name="condition01">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="datestarted01">When it started</label>
+              <input class="form-control" id="datestarted01" type="text" name="when01">
+            </div>
           </div>
           <h2 class="heading-small">Condition 2</h2>
-          <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
-            <label class="form-label" for="condition01b">Name of condition</label>
-            <input class="form-control" id="condition01b" type="text" name="condition01b">
+          <div class="form-group" style="border-bottom: 1px solid #bfc1c3;">
+            <div class="form-group">
+              <label class="form-label" for="condition01b">Name of condition</label>
+              <input class="form-control" id="condition01b" type="text" name="condition01b">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="datestarted02">When it started</label>
+              <input class="form-control" id="datestarted02" type="text" name="when02">
+            </div>
           </div>
           <h2 class="heading-small">Condition 3</h2>
-          <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
-            <label class="form-label" for="condition01c">Name of condition</label>
-            <input class="form-control" id="condition01c" type="text" name="condition01c">
+          <div class="form-group" style="border-bottom: 1px solid #bfc1c3;">
+            <div class="form-group">
+              <label class="form-label" for="condition01c">Name of condition</label>
+              <input class="form-control" id="condition01c" type="text" name="condition01c">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="datestarted03">When it started</label>
+              <input class="form-control" id="datestarted03" type="text" name="when03">
+            </div>
           </div>
 
           <p><a href="#" id="show-payment2" class="add-another secondary-button">Add another</a></p>
@@ -48,9 +64,15 @@
         <div class="js-hidden" id="payment2">
 
           <h2 class="heading-small">Condition 4</h2>
-          <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
-            <label class="form-label" for="condition02">Name of condition</label>
-            <input class="form-control" id="who01" type="text" name="condition02"> &nbsp; <a href="#">Remove</a>
+          <div class="form-group" style="border-bottom: 1px solid #bfc1c3;">
+            <div class="form-group">
+              <label class="form-label" for="condition02">Name of condition</label>
+              <input class="form-control" id="who01" type="text" name="condition02"> &nbsp; <a href="#">Remove</a>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="datestarted04">When it started</label>
+              <input class="form-control" id="datestarted04" type="text" name="when04">
+            </div>
           </div>
 
           <p><a href="#" id="show-payment3" class="add-another secondary-button">Add another</a></p>
@@ -60,9 +82,15 @@
         <div class="js-hidden" id="payment3">
 
           <h2 class="heading-small">Condition 5</h2>
-          <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
-            <label class="form-label" for="condition03">Name of condition</label>
-            <input class="form-control" id="who01" type="text" name="condition03"> &nbsp; <a href="#">Remove</a>
+          <div class="form-group" style="border-bottom: 1px solid #bfc1c3;">
+            <div class="form-group">
+              <label class="form-label" for="condition03">Name of condition</label>
+              <input class="form-control" id="who01" type="text" name="condition03"> &nbsp; <a href="#">Remove</a>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="datestarted05">When it started</label>
+              <input class="form-control" id="datestarted05" type="text" name="when05">
+            </div>
           </div>
 
           <p><a href="#" id="show-payment4" class="add-another secondary-button">Add another</a></p>
