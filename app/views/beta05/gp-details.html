@@ -56,11 +56,11 @@ var dataGPName = new Bloodhound({
   queryTokenizer: Bloodhound.tokenizers.whitespace,
   limit: 10,
   remote: {
-    url: 'http://localhost:8087/findGpByName?name=%QUERY',
+    url: 'http://gp-look-up.herokuapp.com/findGpByName?name=%QUERY',
     wildcard: '%QUERY',
     filter: function (response) {
             // Map the remote source JSON array to a JavaScript object array
-            return $.map(response.feedList, function (org) {
+            return $.map(response.entry, function (org) {
               console.log(response);
                 return {
                     orgName: org.content.organisationSummary.name,
@@ -79,7 +79,7 @@ dataGPName.initialize();
 $('#name .typeahead').typeahead({minLength : 2}, {
   display: function (item) { return item.orgName  },
   source: dataGPName.ttAdapter(),
-  limit: 100,
+  limit: 20,
   templates: {
         empty: [
             '<p class="tt-suggestion">No matches found - <a href="manual-gp">enter details manually</a></p>'].join('\n'),
