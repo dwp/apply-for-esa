@@ -54,9 +54,8 @@
 var dataGPName = new Bloodhound({
   datumTokenizer: Bloodhound.tokenizers.whitespace('orgName', 'orgPostcode','orgAdd','orgTelephone'),
   queryTokenizer: Bloodhound.tokenizers.whitespace,
-  limit: 10,
   remote: {
-    url: 'https://gp-look-up.herokuapp.com/findGpByName?name=%QUERY',
+    url: 'http://localhost:8087/findGpByName?name=%QUERY',
     wildcard: '%QUERY',
     filter: function (response) {
             // Map the remote source JSON array to a JavaScript object array
@@ -79,7 +78,7 @@ dataGPName.initialize();
 $('#name .typeahead').typeahead({minLength : 2}, {
   display: function (item) { return item.orgName  },
   source: dataGPName.ttAdapter(),
-  limit: 20,
+  limit: 50,
   templates: {
         empty: [
             '<p class="tt-suggestion">No matches found - <a href="manual-gp">enter details manually</a></p>'].join('\n'),
