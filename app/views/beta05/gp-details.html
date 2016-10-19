@@ -55,7 +55,7 @@ var dataGPName = new Bloodhound({
   datumTokenizer: Bloodhound.tokenizers.whitespace('orgName', 'orgPostcode','orgAdd','orgTelephone'),
   queryTokenizer: Bloodhound.tokenizers.whitespace,
   remote: {
-    url: 'http://localhost:8087/findGpByName?name=%QUERY',
+    url: 'https://gp-look-up.herokuapp.com/findGpByName?name=%QUERY',
     wildcard: '%QUERY',
     filter: function (response) {
             // Map the remote source JSON array to a JavaScript object array
