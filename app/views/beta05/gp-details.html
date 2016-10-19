@@ -18,10 +18,15 @@
     				</h1>
                 </header>
            
-                <div id="typeahead" class="form-group" data-error="Enter the name of your GP practice">
+                <div id="name" class="form-group" data-error="Enter the name of your GP practice">
                     <label for="practiceSearch" class="form-label">Your GP surgery</label>
                     <input type="text" name="practiceSearch" id="practiceSearch" class="form-control form-control-2-3 typeahead" value="">
                 </div>
+
+               <!--  <div id="location" class="form-group" data-error="Enter a location or postcode">
+                    <label for="locationSearch" class="form-label">Nearby location</label>
+                    <input type="text" name="locationSearch" id="locationSearch" class="form-control form-control-2-3 typeahead" value="">
+               </div> -->
                 <!-- Primary buttons, secondary links -->
                 <div class="form-group">
                   <input id="continueButton" type="submit" class="button disabled" disabled="disabled" value="Continue">
@@ -46,17 +51,17 @@
 <script src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
 
 <script>
-var dataGP = new Bloodhound({
+var dataGPName = new Bloodhound({
   datumTokenizer: Bloodhound.tokenizers.whitespace('orgName', 'orgPostcode','orgAdd','orgTelephone'),
   queryTokenizer: Bloodhound.tokenizers.whitespace,
   limit: 10,
   remote: {
-    url: 'https://gp-look-up.herokuapp.com/findGp?name=%QUERY',
+    url: 'http://localhost:8087/findGpByName?name=%QUERY',
     wildcard: '%QUERY',
     filter: function (response) {
             // Map the remote source JSON array to a JavaScript object array
-            return $.map(response.entry, function (org) {
-              console.log(org)
+            return $.map(response.feedList, function (org) {
+              console.log(response);
                 return {
                     orgName: org.content.organisationSummary.name,
                     orgAdd: org.content.organisationSummary.address.addressLine,
@@ -68,12 +73,13 @@ var dataGP = new Bloodhound({
   }
 });
 
-dataGP.initialize();
+dataGPName.initialize();
 
-$('.typeahead').typeahead({minLength : 2}, {
+
+$('#name .typeahead').typeahead({minLength : 2}, {
   display: function (item) { return item.orgName  },
-  source: dataGP.ttAdapter(),
-  limit: 200,
+  source: dataGPName.ttAdapter(),
+  limit: 100,
   templates: {
         empty: [
             '<p class="tt-suggestion">No matches found - <a href="manual-gp">enter details manually</a></p>'].join('\n'),
@@ -82,13 +88,14 @@ $('.typeahead').typeahead({minLength : 2}, {
         }
     }
 });
-$('.typeahead').bind('typeahead:select', function(ev, suggestion) {
-  $('#typeahead').after('<div class="call-to-action"><p><strong>' + suggestion.orgName + '</strong><br>' + suggestion.orgAdd + ', ' + suggestion.orgPostcode  + '<br>' + suggestion.orgTelephone + '</p>');
+$('#name .typeahead').bind('typeahead:select', function(ev, suggestion) {
+  $('#name').after('<div class="call-to-action"><p><strong>' + suggestion.orgName + '</strong><br>' + suggestion.orgAdd + ', ' + suggestion.orgPostcode  + '<br>' + suggestion.orgTelephone + '</p>');
   $(this).typeahead("val", "");
 
   //enable the continue button
   $('#continueButton').prop('disabled', false).removeClass('disabled');
 });
+
 
 </script>
 
