@@ -87,7 +87,7 @@ $('#name .typeahead').typeahead({
         empty: [
             '<p class="tt-suggestion">No matches found - <a href="manual-gp">enter details manually</a></p>'].join('\n'),
         suggestion: function (data) {
-          return '<p><strong>' + data.orgName + '</strong><br>' + data.orgAdd + ', ' + data.orgPostcode  + '<br>' + data.orgTelephone +'</p>';
+          return '<p><span class="bold-medium">' + data.orgName + '</span><br>' + data.orgAdd + ', ' + data.orgPostcode  + '<br>' + data.orgTelephone +'</p>';
         }
     }
 });
