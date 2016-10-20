@@ -75,7 +75,11 @@ var dataGPName = new Bloodhound({
 dataGPName.initialize();
 
 
-$('#name .typeahead').typeahead({minLength : 2}, {
+$('#name .typeahead').typeahead({
+  hint: true,
+  highlight: true,
+  minLength: 2
+}, {
   display: function (item) { return item.orgName  },
   source: dataGPName.ttAdapter(),
   limit: 50,
