@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        Search address
+      </h1>
+
+      <form action="complete" method="#" class="form">
+
+        <div id="typeahead" class="form-group" data-required data-error="Enter your postcode">
+          <label for="postcode" class="form-label">Postcode or first line of address</label>
+          <input type="text" name="postcode" id="postcode" class="form-control typeahead" value="">
+        </div>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+      </form>
+
+      <p>
+        <a href="manual-address">I can't find the address</a>
+      </p>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+{% block body_end %}
+
+{{ super() }}
+
+<script src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
+
+<script>
+var dataAddress = new Bloodhound({
+  datumTokenizer: Bloodhound.tokenizers.obj.whitespace('buildingNumber','buildingName','posttown','postcode'),
+  queryTokenizer: Bloodhound.tokenizers.whitespace,
+  prefetch: '/public/javascripts/address.json'
+});
+dataAddress.initialize();
+$('.typeahead').typeahead({
+  hint: true,
+  highlight: true,
+  minLength: 3
+},
+{
+  name: 'dataAddress',
+  display: function (item) { return item.buildingNumber + ' - ' + item.buildingName + ' - ' + item.posttown + ' - ' + item.postcode },
+  limit: 10,
+  source: dataAddress.ttAdapter(),
+  templates: {
+        empty: [
+            '<p class="tt-suggestion">No matches found - <a href="manual-address">enter details manually</a></p>'].join('\n'),
+        suggestion: function (data) {
+          return '<p><strong>' + data.buildingNumber + '<br>' + data.buildingName + '<br>' + data.posttown + '<br>' + data.postcode + '</strong></p>';
+        }
+    }
+});
+$('.typeahead').bind('typeahead:select', function(ev, suggestion) {
+  $('#typeahead').after('<div class="call-to-action"><p><strong>' + suggestion.buildingNumber + '<br>' + suggestion.buildingName + '<br>' + suggestion.posttown + '<br>' + suggestion.postcode + '</strong></p>');
+  $(this).typeahead("val", "");
+});
+</script>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+[
+  {
+        "uprn": 1001,
+        "address": "organisationName_1,poBoxNumber_1,subBuildingName_1,buildingName_1,1,thoroughfareName_1,dependentLocality_1,posttown_1,NE12 9DS",
+        "buildingNumber": "151",
+        "buildingName": "Rockingham House",
+        "subBuildingName": "Main building",
+        "organisationName": "Department for Work and Pensions",
+        "thoroughfareName": "thoroughfareName_1",
+        "dependentLocality": "City Centre",
+        "posttown": "Sheffield",
+        "postcode": "S1 1DJ",
+        "poBoxNumber": "poBoxNumber_1"
+    }, 
+    {
+        "uprn": 1002,
+        "address": "organisationName_2,poBoxNumber_2,subBuildingName_2,buildingName_2,2,thoroughfareName_2,dependentLocality_2,posttown_2,NE12 9DS",
+        "buildingNumber": "2",
+        "buildingName": "buildingName_2",
+        "subBuildingName": "subBuildingName_2",
+        "organisationName": "organisationName_2",
+        "thoroughfareName": "thoroughfareName_2",
+        "dependentLocality": "dependentLocality_2",
+        "posttown": "posttown_2",
+        "postcode": "NE12 9DS",
+        "poBoxNumber": "poBoxNumber_2"
+    }
+]
