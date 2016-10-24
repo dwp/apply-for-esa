@@ -97,6 +97,60 @@
 
         </div>
 
+        <div class="js-hidden" id="payment4">
+
+          <h2 class="heading-small">Condition 6</h2>
+          <div class="form-group" style="border-bottom: 1px solid #bfc1c3;">
+            <div class="form-group">
+              <label class="form-label" for="condition06">Name of condition</label>
+              <input class="form-control" id="who06" type="text" name="condition06"> &nbsp; <a href="#">Remove</a>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="datestarted06">When it started</label>
+              <input class="form-control" id="datestarted06" type="text" name="when05">
+            </div>
+          </div>
+
+          <p><a href="#" id="show-payment5" class="add-another secondary-button">Add another</a></p>
+
+        </div>
+
+        <div class="js-hidden" id="payment5">
+
+          <h2 class="heading-small">Condition 7</h2>
+          <div class="form-group" style="border-bottom: 1px solid #bfc1c3;">
+            <div class="form-group">
+              <label class="form-label" for="condition07">Name of condition</label>
+              <input class="form-control" id="who07" type="text" name="condition07"> &nbsp; <a href="#">Remove</a>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="datestarted07">When it started</label>
+              <input class="form-control" id="datestarted07" type="text" name="when07">
+            </div>
+          </div>
+
+          <p><a href="#" id="show-payment6" class="add-another secondary-button">Add another</a></p>
+
+        </div>
+
+        <div class="js-hidden" id="payment6">
+
+          <h2 class="heading-small">Condition 8</h2>
+          <div class="form-group" style="border-bottom: 1px solid #bfc1c3;">
+            <div class="form-group">
+              <label class="form-label" for="condition08">Name of condition</label>
+              <input class="form-control" id="who08" type="text" name="condition08"> &nbsp; <a href="#">Remove</a>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="datestarted08">When it started</label>
+              <input class="form-control" id="datestarted08" type="text" name="when08">
+            </div>
+          </div>
+
+          <p><a href="#" id="show-payment7" class="add-another secondary-button">Add another</a></p>
+
+        </div>
+
 		    <!-- Primary buttons, secondary links -->
 		    <div class="form-group">
 		      <input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
@@ -125,6 +179,21 @@
       $("#show-payment3").click(function() {
         $("#payment3").removeClass("js-hidden");
         $("#show-payment3").addClass("js-hidden");
+         return false;
+      });
+      $("#show-payment4").click(function() {
+        $("#payment4").removeClass("js-hidden");
+        $("#show-payment4").addClass("js-hidden");
+         return false;
+      });
+      $("#show-payment5").click(function() {
+        $("#payment5").removeClass("js-hidden");
+        $("#show-payment5").addClass("js-hidden");
+         return false;
+      });
+      $("#show-payment6").click(function() {
+        $("#payment6").removeClass("js-hidden");
+        $("#show-payment6").addClass("js-hidden");
          return false;
       });
 

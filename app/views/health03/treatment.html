@@ -6,9 +6,9 @@
             <div class="column-two-thirds">
                 <a class="link-back" href="medication">Back</a>
                 <header>
-                    <h1 class="form-title heading-large">Are you having, or do you have planned, any treatments?</h1>
+                    <h1 class="form-title heading-large">Are you having, or do you have planned, any treatments or therapy?</h1>
                 </header>
-                <p>Including chemotherapy, physiotherapy, dialysis, or medical massages or exercises.</p>
+                <p>Including chemotherapy, physiotherapy, counselling, dialysis, or medical massages or exercises.</p>
                 <fieldset id="speech" class="inline">
                     <legend for="speech">
                         <span class="visually-hidden">Are you having, or do you have planned, any treatments?</span>
@@ -64,6 +64,34 @@
                     </div>
                     <p><a href="#" id="show-payment4" class="add-another secondary-button">Add another treatment</a></p>
                 </div>
+                <div class="js-hidden panel panel-border-narrow" id="payment4">
+                    <h2 class="heading-small">Treatment or therapy 4</h2>
+                    <div class="form-group" id="form-group-medication4">
+                        <label class="form-label" for="medication4">Name of treatment or therapy
+                        </label>
+                        <input type="text" data-name="medication-4" class="form-control" id="medication4" name="medication4" value="">
+                    </div>
+                    <div class="form-group" id="form-group-dosage4">
+                        <label class="form-label" for="dosage4">When or how often
+                        </label>
+                        <input type="text" data-name="dosage-4" class="form-control" id="dosage4" name="dosage4" value="">
+                    </div>
+                    <p><a href="#" id="show-payment5" class="add-another secondary-button">Add another treatment</a></p>
+                </div>
+                <div class="js-hidden panel panel-border-narrow" id="payment5">
+                    <h2 class="heading-small">Treatment or therapy 5</h2>
+                    <div class="form-group" id="form-group-medication5">
+                        <label class="form-label" for="medication5">Name of treatment or therapy
+                        </label>
+                        <input type="text" data-name="medication-5" class="form-control" id="medication5" name="medication5" value="">
+                    </div>
+                    <div class="form-group" id="form-group-dosage5">
+                        <label class="form-label" for="dosage5">When or how often
+                        </label>
+                        <input type="text" data-name="dosage-5" class="form-control" id="dosage5" name="dosage5" value="">
+                    </div>
+                    <p><a href="#" id="show-payment6" class="add-another secondary-button">Add another treatment</a></p>
+                </div>
                 <!-- Primary buttons, secondary links -->
                 <div class="form-group">
                     <input type="submit" class="button" value="Continue">
@@ -88,6 +116,16 @@ $(document).ready(function() {
     $("#show-payment3").click(function() {
         $("#payment3").removeClass("js-hidden");
         $("#show-payment3").addClass("js-hidden");
+        return false;
+    });
+    $("#show-payment4").click(function() {
+        $("#payment4").removeClass("js-hidden");
+        $("#show-payment4").addClass("js-hidden");
+        return false;
+    });
+    $("#show-payment5").click(function() {
+        $("#payment5").removeClass("js-hidden");
+        $("#show-payment5").addClass("js-hidden");
         return false;
     });
 
