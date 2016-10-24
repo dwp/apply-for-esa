@@ -1,0 +1,143 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	Where you live
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "../includes/phase_banner_beta.html" %}
+
+	<form action="gp-details" method="#" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<a class="link-back" href="where-you-live">Back</a>
+				<header>
+					<h1 class="form-title heading-large">
+						Living with parents, relatives or friends
+					</h1>
+				</header>
+				<div class="form-group">
+					<fieldset class="inline">
+						<legend class="form-label-bold" for="live-rel">Is the property rented?</legend>
+						<label class="block-label" data-target="rented" for="live-rel-9">
+							<input id="live-rel-9" type="radio" name="live-rel" value="Yes">
+							Yes
+						</label>
+						<label class="block-label" data-target="not-rented" for="live-rel-8">
+							<input id="live-rel-8" type="radio" name="live-rel" value="No">
+							No
+						</label>
+					</fieldset>
+				</div>
+				<div class="form-group panel panel-border-narrow js-hidden" id="rented">
+					<fieldset>
+						<legend class="form-label-bold visibly-hidden" for="live-parents">Who pays the rent?</legend>
+						<label class="block-label" for="radio-inline-148">
+							<input id="radio-inline-148" type="radio" name="live-parents" value="Every week">
+							Parents
+						</label>
+						<label class="block-label" data-target="other-rel" for="radio-inline-178">
+							<input id="radio-inline-178" type="radio" name="live-parents" value="Every year">
+							Relative
+						</label>
+						<div class="js-hidden panel panel-border-narrow" id="other-rel">
+							<label class="form-label" for="rel-them">Your relationship to them</label>
+							<input type="text" class="form-control" id="rel-them">
+						</div>
+						<label class="block-label" data-target="other-friend" for="radio-inline-378">
+							<input id="radio-inline-378" type="radio" name="live-parents" value="Every year">
+							Friend
+						</label>
+						<div class="js-hidden panel panel-border-narrow" id="other-friend">
+							<label class="form-label" for="rel-them2">Your friend's name</label>
+							<input type="text" class="form-control" id="rel-them2">
+						</div>
+						<label class="block-label" for="radio-inline-158">
+							<input id="radio-inline-158" type="radio" name="live-parents" value="you">
+							You
+						</label>
+						<label class="block-label" data-target="other-person" for="radio-inline-158g">
+							<input id="radio-inline-158g" type="radio" name="live-parents" value="Every month">
+							Other
+						</label>
+						<div class="js-hidden panel panel-border-narrow" id="other-person">
+							<label class="form-label" for="rel-who">Who pays the rent?</label>
+							<input type="text" class="form-control" id="rel-who">
+						</div>
+					</fieldset>
+				</div>
+
+				<div class="form-group panel panel-border-narrow js-hidden" id="not-rented">
+					<fieldset>
+						<legend class="form-label-bold visibly-hidden" for="live-mortgage">Who owns the property?</legend>
+						<label class="block-label" for="radio-inline-248">
+							<input id="radio-inline-248" type="radio" name="live-mortgage" value="Every week">
+							Parents
+						</label>
+						<label class="block-label" data-target="other-rel2" for="radio-inline-278">
+							<input id="radio-inline-278" type="radio" name="live-mortgage" value="Every year">
+							Relative
+						</label>
+						<div class="js-hidden panel panel-border-narrow" id="other-rel2">
+							<label class="form-label" for="rel-them2">Your relationship to them</label>
+							<input type="text" class="form-control" id="rel-them2">
+						</div>
+						<label class="block-label" data-target="other-friend2" for="radio-inline-3781">
+							<input id="radio-inline-3781" type="radio" name="live-mortgage" value="Every year">
+							Friend
+						</label>
+						<div class="js-hidden panel panel-border-narrow" id="other-friend2">
+							<label class="form-label" for="rel-them3">Your friend's name</label>
+							<input type="text" class="form-control" id="rel-them3">
+						</div>
+						<label class="block-label" for="radio-inline-258">
+							<input id="radio-inline-258" type="radio" name="live-mortgage" value="yourself">
+							You
+						</label>
+						<label class="block-label" data-target="other-person2" for="radio-inline-258g">
+							<input id="radio-inline-258g" type="radio" name="live-mortgage" value="Every month">
+							Other
+						</label>
+						<div class="js-hidden panel panel-border-narrow" id="other-person2">
+							<label class="form-label" for="rel-who2">Who pays the rent?</label>
+							<input type="text" class="form-control" id="rel-who2">
+						</div>
+					</fieldset>
+				</div>
+				
+
+				<!-- Primary buttons, secondary links -->
+				<div class="form-group">
+					<input type="submit" class="button" value="Continue">
+				</div>
+
+			</div>
+			<div class="column-one-third">
+				{% include "../includes/help.html" %}
+			</div>
+		</div>
+
+	</form>
+</main>
+
+{% endblock %}
+
+{% block body_end %}
+  {% include "includes/scripts.html" %}
+  <script>
+    $('form').on('submit', function(e) {
+    	
+    	if($('input[name="live-rel"]:checked').val() == 'Yes'){
+    		window.location = ($('input[name="live-parents"]:checked').val() == 'you') ? 'where-you-live-rent' : 'gp-details';
+    	} else if($('input[name="live-rel"]:checked').val() == 'No') {
+    		window.location = ($('input[name="live-mortgage"]:checked').val() == 'yourself') ? 'where-you-live-mortgage' : 'gp-details';
+    	} else{
+    		window.location = 'gp-details';
+    	}
+    	
+      e.preventDefault();
+    });
+  </script>
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends "layout.html" %} {% block page_title %} Behaviour {% endblock %} {% block content %}
+<main id="content" role="main">
+    {% include "../includes/phase_banner_beta.html" %}
+    <form action="eating-drinking" method="#" class="form">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <a class="link-back" href="social-situations">Back</a>
+                <header>
+                    <h1 class="form-title heading-large">Does your condition cause you to behave in a way that can upset or scare other people?</h1>
+                </header>
+                <fieldset id="speech" class="inline">
+                    <legend for="speech">
+                        <span class="visually-hidden">Does your condition cause you to behave in a way that can upset or scare other people?</span>
+                    </legend>
+                    <div class="form-group">
+                        <label class="block-label" for="speech-Yes" data-target="speechDetails">
+                            <input id="speech-Yes" type="radio" name="speech" value="Yes" aria-controls="speechDetails">Yes
+                        </label>
+                        <label class="block-label" for="speech-No">
+                            <input id="speech-No" type="radio" name="speech" value="No" aria-controls="">No
+                        </label>
+                    </div>
+                </fieldset>
+                <div class="panel panel-border-narrow js-hidden" id="speechDetails">
+                    <fieldset id="allTime" class="form-group">
+                        <legend for="allTime">
+                            <span class="form-label-bold">How often do you behave in a way that upsets or scares other people?</span>
+                        </legend>
+                        <div class="form-group">
+                            <label class="block-label" for="allTime-Yes">
+                                <input id="allTime-Yes" type="radio" name="allTime" value="Yes" aria-controls="">Every day
+                            </label>
+                            <label class="block-label" for="allTime-No" data-target="allTimeDetails">
+                                <input id="allTime-No" type="radio" name="allTime" value="No" aria-controls="allTimeDetails">Frequently
+                            </label>
+                            <label class="block-label" for="allTime-Sometimes" data-target="allTimeDetails">
+                                <input id="allTime-Sometimes" type="radio" name="allTime" value="Sometimes" aria-controls="allTimeDetails">Occasionally
+                            </label>
+                        </div>
+                    </fieldset>
+                    <div class="form-group">
+                        <label for="howDoes">
+                            <span class="form-label-bold">Describe how your behaviour can upset or scare people and how often this happens. Explain what happens and give examples if you can.
+                            </span>
+                        </label>
+                        <textarea maxlength="1500" class="form-control form-control-3-4" id="howDoes" name="howDoes"></textarea>
+                        <span class="font-xsmall form-control-3-4 character-count"><span class="char-count">1500</span> characters left</span>
+                    </div>
+                </div>
+                    <!-- Primary buttons, secondary links -->
+                <div class="form-group">
+                    <input type="submit" class="button" value="Continue">
+                    <!--a href="overview">I do not agree - leave now</a-->
+                </div>
+            </div>
+            <div class="column-one-third">
+				{% include "../includes/help.html" %}
+			</div>
+        </div>
+    </form>
+</main>
+{% endblock %}

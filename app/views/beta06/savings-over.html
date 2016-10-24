@@ -1,0 +1,40 @@
+{% extends "layout.html" %} 
+{% block page_title %} 
+Savings 
+{% endblock %} 
+{% block content %}
+
+<main id="content" role="main">
+    {% include "../includes/phase_banner_beta.html" %}
+    <form action="savings-property" method="#" class="form">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <a class="link-back" href="savings">Back</a>
+                <header>
+                    <h1 class="form-title heading-large">
+			    	Savings amount
+			    	</h1>
+                </header>
+                <div class="form-group" id="no-savings">
+                    <fieldset class="inline">
+                        <legend class="form-label-bold" for="6months">Have you had more than £5,500 savings in the last 6 months?</legend>
+                        <label class="block-label" for="6months-1">
+                            <input id="6months-1" type="radio" name="6months" value="Yes"> Yes
+                        </label>
+                        <label class="block-label" for="6months-2">
+                            <input id="6months-2" type="radio" name="6months" value="No"> No
+                        </label>
+                    </fieldset>
+                </div>
+                <!-- Primary buttons, secondary links -->
+                <div class="form-group">
+                    <input type="submit" class="button" value="Continue">
+                </div>
+            </div>
+            <div class="column-one-third">
+                {% include "../includes/help.html" %}
+            </div>
+        </div>
+    </form>
+</main>
+{% endblock %}

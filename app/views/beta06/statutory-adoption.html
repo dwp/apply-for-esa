@@ -1,0 +1,269 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	Statutory adoption payments
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "../includes/phase_banner_beta.html" %}
+
+	<form action="pensions" method="#" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<a class="link-back" href="statutory-payments">Back</a>
+				<header>
+					<h1 class="form-title heading-large">
+						<!-- <span class="heading-secondary">Section 5 of 23</span> -->
+						Statutory Adoption Pay
+					</h1>
+				</header>
+
+				<div class="form-group" id="ssp">
+					<div class="form-group">
+				        <fieldset class="inline">
+					        <legend class="form-label-bold" for="ssp-pay">Has your Statutory Adoption Pay ended?</legend>
+					        <label class="block-label" data-target="past-tense" for="ssp-1">
+					            <input id="ssp-1" type="radio" name="ssp-pay" value="Yes">
+					            Yes
+					        </label>
+					        <label class="block-label" data-target="present-tense" for="ssp-2">
+					            <input id="ssp-2" type="radio" name="ssp-pay" value="No">
+					            No
+					        </label>
+				        </fieldset>
+				    </div>
+
+				    <!-- Present tense questions -->
+					<div class="panel panel-border-narrow js-hidden" id="present-tense">
+
+						<div class="form-group" id="yes-ssp" style="margin-top: 15px;">
+							<fieldset>
+								<legend class="form-label-bold">What date does it end?</legend>
+
+								<div class="form-date">
+									<p class="form-hint">DD MM YYYY</p>
+
+									<div class="form-group form-group-day">
+										<label for="dob-day">Day</label>
+										<input type="text" class="form-control" id="dob-day" maxlength="2" name="dob-day">
+									</div>
+									<div class="form-group form-group-month">
+										<label for="dob-month">Month</label>
+										<input type="text" class="form-control" id="dob-month" maxlength="2" name="dob-month">
+									</div>
+									<div class="form-group form-group-year">
+										<label for="dob-year">Year</label>
+										<input type="text" class="form-control" id="dob-year" maxlength="4" name="dob-year">
+									</div>
+								</div>
+							</fieldset>
+						</div>
+
+						<div class="form-group" id="yes-ssp" style="margin-top: 15px;">
+							<fieldset>
+								<legend class="form-label-bold">What date is the final payment paid?</legend>
+
+								<div class="form-date">
+									<p class="form-hint">DD MM YYYY</p>
+
+									<div class="form-group form-group-day">
+										<label for="pay-day">Day</label>
+										<input type="text" class="form-control" id="pay-day" maxlength="2" name="pay-day">
+									</div>
+									<div class="form-group form-group-month">
+										<label for="pay-month">Month</label>
+										<input type="text" class="form-control" id="pay-month" maxlength="2" name="pay-month">
+									</div>
+									<div class="form-group form-group-year">
+										<label for="pay-year">Year</label>
+										<input type="text" class="form-control" id="pay-year" maxlength="4" name="pay-year">
+									</div>
+								</div>
+							</fieldset>
+						</div>
+
+						<div class="form-group">
+							<h3 class="heading-medium">Details of pay</h3>
+							<p>You can find this information on your payslips.</p>
+							<table>
+								<thead>
+								    <tr>
+									    <th scope="col" width="20%"></th>
+									    <th class="numeric" scope="col" width="20%">Pay before deductions</th>
+									    <th class="numeric" scope="col" width="20%">Deductions for tax</th>
+									    <th class="numeric" scope="col" width="20%">Deductions for National Insurance</th>
+									    <th class="numeric" scope="col" width="20%">Deductions for pension</th>
+								    </tr>
+								</thead>
+								<tbody>
+								    <tr>
+									    <td>Last payment</td>
+									    <td class="numeric">£ <input class="form-control full" id="howmuch1" type="text" name="howmuch1" width="100%"></td>
+									    <td class="numeric">£ <input class="form-control full" id="howmuch2" type="text" name="howmuch1"></td>
+									    <td class="numeric">£ <input class="form-control full" id="howmuch3" type="text" name="howmuch1"></td>
+									    <td class="numeric">£ <input class="form-control full" id="howmuch4" type="text" name="howmuch1"></td>
+								    </tr>
+								    <tr>
+									    <td>2nd to last payment</td>
+									    <td class="numeric">£ <input class="form-control full" id="howmuch5" type="text" name="howmuch1"></td>
+									    <td class="numeric">£ <input class="form-control full" id="howmuch6" type="text" name="howmuch1"></td>
+									    <td class="numeric">£ <input class="form-control full" id="howmuch7" type="text" name="howmuch1"></td>
+									    <td class="numeric">£ <input class="form-control full" id="howmuch8" type="text" name="howmuch1"></td>
+								    </tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="form-group">
+							<fieldset class="">
+								<legend class="form-label-bold" for="howoften1">How often do you get paid?</legend>
+								<label class="block-label" for="weekly1">
+									<input id="weekly1" type="radio" name="howoften1" value="weekly">
+									Weekly
+								</label>
+								<label class="block-label" for="monthly1">
+									<input id="monthly1" type="radio" name="howoften1" value="monthly">
+									Monthly
+								</label>
+								<label class="block-label" data-target="pay-other" for="yearly1">
+									<input id="yearly1" type="radio" name="howoften1" value="other">
+									Other
+								</label>
+								<div class="form-group js-hidden" id="pay-other">
+									<label class="form-label-bold" for="surgery-name">
+										<input type="text" class="form-control" id="surgery-name">
+									</label>
+								</div>
+							</fieldset>
+						</div>
+						
+					</div>
+
+					<!-- End of present tense questions -->
+					<!-- Past tense questions -->
+
+					<div class="panel panel-border-narrow js-hidden" id="past-tense">
+
+						<div class="form-group" style="margin-top: 15px;">
+							<fieldset>
+								<legend class="form-label-bold">What date did it end?</legend>
+
+								<div class="form-date">
+									<p class="form-hint">DD MM YYYY</p>
+
+									<div class="form-group form-group-day">
+										<label for="dob-dayp">Day</label>
+										<input type="text" class="form-control" id="dob-dayp" maxlength="2" name="dob-day">
+									</div>
+									<div class="form-group form-group-month">
+										<label for="dob-monthp">Month</label>
+										<input type="text" class="form-control" id="dob-monthp" maxlength="2" name="dob-month">
+									</div>
+									<div class="form-group form-group-year">
+										<label for="dob-yearp">Year</label>
+										<input type="text" class="form-control" id="dob-yearp" maxlength="4" name="dob-year">
+									</div>
+								</div>
+							</fieldset>
+						</div>
+
+						<div class="form-group" style="margin-top: 15px;">
+							<fieldset>
+								<legend class="form-label-bold">What date was the final payment paid?</legend>
+
+								<div class="form-date">
+									<p class="form-hint">DD MM YYYY</p>
+
+									<div class="form-group form-group-day">
+										<label for="pay-dayp">Day</label>
+										<input type="text" class="form-control" id="pay-dayp" maxlength="2" name="pay-day">
+									</div>
+									<div class="form-group form-group-month">
+										<label for="pay-monthp">Month</label>
+										<input type="text" class="form-control" id="pay-monthp" maxlength="2" name="pay-month">
+									</div>
+									<div class="form-group form-group-year">
+										<label for="pay-yearp">Year</label>
+										<input type="text" class="form-control" id="pay-yearp" maxlength="4" name="pay-year">
+									</div>
+								</div>
+							</fieldset>
+						</div>
+
+						<div class="form-group">
+							<h3 class="heading-medium">Details of pay</h3>
+							<p>You can find this information on your payslips.</p>
+							<table>
+								<thead>
+								    <tr>
+									    <th scope="col" width="20%"></th>
+									    <th class="numeric" scope="col" width="20%">Pay before deductions</th>
+									    <th class="numeric" scope="col" width="20%">Deductions for tax</th>
+									    <th class="numeric" scope="col" width="20%">Deductions for National Insurance</th>
+									    <th class="numeric" scope="col" width="20%">Deductions for pension</th>
+								    </tr>
+								</thead>
+								<tbody>
+								    <tr>
+									    <td>Last payment</td>
+									    <td class="numeric">£ <input class="form-control full" id="howmuch10" type="text" name="howmuch2" width="100%"></td>
+									    <td class="numeric">£ <input class="form-control full" id="howmuch20" type="text" name="howmuch2"></td>
+									    <td class="numeric">£ <input class="form-control full" id="howmuch30" type="text" name="howmuch2"></td>
+									    <td class="numeric">£ <input class="form-control full" id="howmuch40" type="text" name="howmuch2"></td>
+								    </tr>
+								    <tr>
+									    <td>2nd to last payment</td>
+									    <td class="numeric">£ <input class="form-control full" id="howmuch50" type="text" name="howmuch2"></td>
+									    <td class="numeric">£ <input class="form-control full" id="howmuch60" type="text" name="howmuch2"></td>
+									    <td class="numeric">£ <input class="form-control full" id="howmuch70" type="text" name="howmuch2"></td>
+									    <td class="numeric">£ <input class="form-control full" id="howmuch80" type="text" name="howmuch2"></td>
+								    </tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="form-group">
+							<fieldset class="">
+								<legend class="form-label-bold" for="howoften1p">How often did you get paid?</legend>
+								<label class="block-label" for="weekly1p">
+									<input id="weekly1p" type="radio" name="howoften1p" value="weekly">
+									Weekly
+								</label>
+								<label class="block-label" for="monthly1p">
+									<input id="monthly1p" type="radio" name="howoften1p" value="monthly">
+									Monthly
+								</label>
+								<label class="block-label" data-target="pay-otherp" for="yearly1p">
+									<input id="yearly1p" type="radio" name="howoften1p" value="other">
+									Other
+								</label>
+								<div class="form-group js-hidden" id="pay-otherp">
+									<label class="form-label-bold" for="surgery-namep">
+										<input type="text" class="form-control" id="surgery-namep">
+									</label>
+								</div>
+							</fieldset>
+						</div>
+
+						
+					</div>
+					<!-- End of past tense questions -->
+				</div>
+
+				<!-- Primary buttons, secondary links -->
+				<div class="form-group">
+					<input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
+				</div>
+
+			</div>
+			<div class="column-one-third">
+				{% include "../includes/help.html" %}
+			</div>
+		</div>
+
+	</form>
+</main>
+
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends "layout.html" %} {% block page_title %} Savings {% endblock %} {% block content %}
+<main id="content" role="main">
+    {% include "../includes/phase_banner_beta.html" %}
+    <form action="other-money" method="#" class="form">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <a class="link-back" href="savings-property">Back</a>
+                <header>
+                    <h1 class="form-title heading-large">
+			    	Shares
+			    	</h1>
+                </header>
+                <div class="form-group" id="no-savings">
+                    <fieldset class="inline form-group">
+                        <legend class="form-label-bold" for="shares">Do you have any shares?</legend>
+                        <label class="block-label" data-target="list-shares" for="shares-3">
+                            <input id="shares-3" type="radio" name="shares" value="Yes"> Yes
+                        </label>
+                        <label class="block-label" for="shares-4">
+                            <input id="shares-4" type="radio" name="shares" value="No"> No
+                        </label>
+                    </fieldset>
+                    <div class="panel panel-border-narrow js-hidden" id="list-shares">
+                        <div class="" id="partner-yes">
+                            <h2 class="heading-small">Shares 1</h2>
+                            <div class="form-group">
+                                <label class="form-label" for="shares01a">Name of shares</label>
+                                <input class="form-control" id="shares01a" type="text" name="shares">
+                            </div>
+                            <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
+                                <label class="form-label" for="shares01b">How many</label>
+                                <input class="form-control form-control-1-4" id="shares01b" type="text" name="shares">
+                            </div>
+                            <h2 class="heading-small">Shares 2</h2>
+                            <div class="form-group">
+                                <label class="form-label" for="shares02a">Name of shares</label>
+                                <input class="form-control" id="shares02a" type="text" name="shares">
+                            </div>
+                            <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
+                                <label class="form-label" for="shares02b">How many</label>
+                                <input class="form-control form-control-1-4" id="shares02b" type="text" name="shares">
+                            </div>
+                            <h2 class="heading-small">Shares 3</h2>
+                            <div class="form-group">
+                                <label class="form-label" for="shares03a">Name of shares</label>
+                                <input class="form-control" id="shares03a" type="text" name="shares">
+                            </div>
+                            <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
+                                <label class="form-label" for="shares03b">How many</label>
+                                <input class="form-control form-control-1-4" id="shares03b" type="text" name="shares">
+                            </div>
+                            <p><a href="#" id="show-payment2" class="add-another secondary-button">Add more shares</a></p>
+                        </div>
+                    </div>
+                    <!-- Primary buttons, secondary links -->
+                    <div class="form-group">
+                        <input type="submit" class="button" value="Continue">
+                    </div>
+                </div>
+            </div>
+            <div class="column-one-third">
+                {% include "../includes/help.html" %}
+            </div>
+        </div>
+    </form>
+</main>
+{% endblock %}

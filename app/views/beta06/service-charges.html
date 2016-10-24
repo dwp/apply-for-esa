@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	Where you live
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "../includes/phase_banner_beta.html" %}
+
+	<form action="household" method="#" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<a class="link-back" href="where-you-live-mortgage">Back</a>
+				<header>
+					<h1 class="form-title heading-large">
+						Service charges
+					</h1>
+				</header>
+						
+				<div class="form-group">
+					<fieldset class="inline">
+						<legend class="form-label-bold" for="service-charges">Do you pay service charges for where you live?</legend>
+						<details>
+							<summary><span class="summary">What is a 'service charge'?</span></summary>
+							<div class="panel panel-border-narrow">
+								<p>
+									A service charge is a payment made for the upkeep of the building your home is in.
+								</p>
+								<p>
+									You might have to pay a service charge if you own a leasehold property eg a flat or house brought through the shared ownership scheme.
+								</p>
+							</div>
+						</details>
+						<label class="block-label" data-target="how-much" for="radio-inline-12">
+							<input id="radio-inline-12" type="radio" name="service-charges" value="Yes">
+							Yes
+						</label>
+						<label class="block-label" for="radio-inline-13">
+							<input id="radio-inline-13" type="radio" name="service-charges" value="No">
+							No
+						</label>
+					</fieldset>
+				</div>
+
+				<div class="panel panel-border-narrow js-hidden" id="how-much">
+					<div class="form-group">
+						<label class="form-label-bold" for="service-cost">How much service charge do you pay?</label>
+						£ <input type="text" class="form-control form-control-1-4" id="service-cost">
+					</div>
+					<div class="form-group">
+						<fieldset>
+							<!-- <legend class="form-label-bold visibly-hidden" for="service-charge2">How often do you pay service charges?</legend> -->
+							<label class="block-label" for="radio-inline-14">
+								<input id="radio-inline-14" type="radio" name="service-charge2" value="Every week">
+								Every week
+							</label>
+							<label class="block-label" for="radio-inline-15">
+								<input id="radio-inline-15" type="radio" name="service-charge2" value="Every month">
+								Every month
+							</label>
+							<label class="block-label" for="radio-inline-16">
+								<input id="radio-inline-16" type="radio" name="service-charge2" value="Every year">
+								Every year
+							</label>
+							<label class="block-label" data-target="other-sc2" for="radio-inline-17">
+								<input id="radio-inline-17" type="radio" name="service-charge2" value="Every year">
+								Other
+							</label>
+							<div class="form-group js-hidden" id="other-sc2">
+								<label class="form-label" for="freq">How often?</label><input type="text" class="form-control" id="freq">
+							</div>
+						</fieldset>
+					</div>
+				</div>
+
+				<!-- Primary buttons, secondary links -->
+				<div class="form-group">
+					<input type="submit" class="button" value="Continue">
+				</div>
+
+			</div>
+			<div class="column-one-third">
+				{% include "../includes/help.html" %}
+			</div>
+		</div>
+
+	</form>
+</main>
+
+{% endblock %}

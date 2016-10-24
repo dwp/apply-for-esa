@@ -1,0 +1,96 @@
+{% extends "layout.html" %} {% block page_title %} Savings {% endblock %} {% block content %}
+<main id="content" role="main">
+    {% include "../includes/phase_banner_beta.html" %}
+    <form action="savings-property" method="#" class="form">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <a class="link-back" href="savings">Back</a>
+                <header>
+                    <h1 class="form-title heading-large">
+                    Where are your savings from?
+                    </h1>
+                </header>
+                <div class="form-group" id="no-savings">
+                    <fieldset class="form-group">
+                        <p>Select all that apply </p>
+                        <label for="savings-from" data-target="from-save01" class="block-label">
+                            <input id="savings-from" type="checkbox" name="savings" value="Part 1"> A lump sum personal injury payment you've got in the last year
+                        </label>
+                        <div class="form-group panel panel-border-narrow js-hidden" id="from-save01">
+                            <label class="form-label" for="save01">How much is from a personal injury payment?</label>
+                            £
+                            <input type="text" class="form-control" id="save01">
+                        </div>
+                        <label for="savings-from-8" data-target="from-save08" class="block-label">
+                            <input id="savings-from-8" type="checkbox" name="savings" value="Part 1"> A lump sum from a backdated benefit
+                        </label>
+                        <div class="form-group panel panel-border-narrow js-hidden" id="from-save08">
+                            <label class="form-label" for="save08">How much is from a backdated benefit?</label>
+                            £
+                            <input type="text" class="form-control" id="save08">
+                        </div>
+                        <label for="savings-from-2" data-target="from-save02" class="block-label">
+                            <input id="savings-from-2" type="checkbox" name="savings" value="Part 2"> Insurance for repairs or possessions
+                        </label>
+                        <div class="form-group panel panel-border-narrow js-hidden" id="from-save02">
+                            <label class="form-label" for="save02">How much is from insurance for repairs or possessions?</label>
+                            £
+                            <input type="text" class="form-control" id="save02">
+                        </div>
+                        <label for="savings-from-3" data-target="from-save03" class="block-label">
+                            <input id="savings-from-3" type="checkbox" name="savings" value="Part 3"> Money from the sale of a home
+                        </label>
+                        <div class="form-group panel panel-border-narrow js-hidden" id="from-save03">
+                            <label class="form-label" for="save03">How much is from the sale of a home?</label>
+                            £
+                            <input type="text" class="form-control" id="save03">
+                        </div>
+                        <label for="savings-from-4" data-target="from-save04" class="block-label">
+                            <input id="savings-from-4" type="checkbox" name="savings" value="Part 4"> Money you're saving for repairs to your home
+                        </label>
+                        <div class="form-group panel panel-border-narrow js-hidden" id="from-save04">
+                            <label class="form-label" for="save04">How much is for repairs to your home?</label>
+                            £
+                            <input type="text" class="form-control" id="save04">
+                        </div>
+                        <label for="savings-from-5" data-target="from-save05" class="block-label">
+                            <input id="savings-from-5" type="checkbox" name="savings" value="Part 4"> World War II compensation payment
+                        </label>
+                        <div class="form-group panel panel-border-narrow js-hidden" id="from-save05">
+                            <label class="form-label" for="save05">How much is from a compensation payment?</label>
+                            £
+                            <input type="text" class="form-control" id="save05">
+                        </div>
+                        <label for="savings-from-6" data-target="from-save06" class="block-label">
+                            <input id="savings-from-6" type="checkbox" name="savings" value="Part 4"> Far Eastern Prisoner of War compensation payment
+                        </label>
+                        <div class="form-group panel panel-border-narrow js-hidden" id="from-save06">
+                            <label class="form-label" for="save06">How much is from a Far Eastern Prisoner of War compensation payment?</label>
+                            £
+                            <input type="text" class="form-control" id="save06">
+                        </div>
+                        <label for="savings-from-7" data-target="from-save07" class="block-label">
+                            <input id="savings-from-7" type="checkbox" name="savings" value="Part 4"> Money from a trust fund
+                        </label>
+                        <div class="form-group panel panel-border-narrow js-hidden" id="from-save07">
+                            <label class="form-label" for="save07">How much is from a trust fund?</label>
+                            £
+                            <input type="text" class="form-control" id="save07">
+                        </div>
+                        <label for="savings-from-77" class="block-label">
+                            <input id="savings-from-77" type="checkbox" name="savings" value="Part 4"> None of these
+                        </label>
+                    </fieldset>
+                </div>
+                <!-- Primary buttons, secondary links -->
+                <div class="form-group">
+                    <input type="submit" class="button" value="Continue">
+                </div>
+            </div>
+            <div class="column-one-third">
+                {% include "../includes/help.html" %}
+            </div>
+        </div>
+    </form>
+</main>
+{% endblock %}

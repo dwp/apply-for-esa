@@ -1,0 +1,82 @@
+{% extends "layout.html" %} {% block page_title %} Coping with social situations {% endblock %} {% block content %}
+<main id="content" role="main">
+    {% include "../includes/phase_banner_beta.html" %}
+    <form action="health-information" method="#" class="form">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <a class="link-back" href="behaviour">Back</a>
+                <header>
+                    <h1 class="form-title heading-large">Does your condition affect your ability to eat or drink?</h1>
+                </header>
+                <fieldset id="speech" class="">
+                    <legend for="speech">
+                        <span class="visually-hidden">Does your condition affect your ability to eat or drink?</span>
+                    </legend>
+                    
+                    <div class="form-group">
+                        <label class="block-label" for="speech-Yes" data-target="speechDetails">
+                            <input id="speech-Yes" type="radio" name="speech" value="Yes" aria-controls="speechDetails">Yes
+                        </label>
+                        <label class="block-label" for="speech-No">
+                            <input id="speech-No" type="radio" name="speech" value="No" aria-controls="">No
+                        </label>
+                        <label class="block-label" for="speech-Sometimes" data-target="speechDetails">
+                            <input id="speech-Sometimes" type="radio" name="speech" value="Sometimes" aria-controls="speechDetails">Sometimes
+                        </label>
+                    </div>
+                </fieldset>
+
+                <div class="panel panel-border-narrow js-hidden" id="speechDetails">
+                    <fieldset id="safe" class="form-group">
+                        <legend for="safe" class="form-label-bold">
+                            Can you get food or drink to your mouth without help or being prompted by someone else?
+                        </legend>
+                        <div class="form-group">
+                            <label class="block-label" for="safe-Yes">
+                                <input id="safe-Yes" type="radio" name="safe" value="Yes">Yes
+                            </label>
+                            <label class="block-label" for="safe-No">
+                                <input id="safe-No" type="radio" name="safe" value="No">No
+                            </label>
+                            <label class="block-label" for="safe-Sometimes">
+                                <input id="safe-Sometimes" type="radio" name="safe" value="No">Sometimes
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset id="meet" class="form-group">
+                        <legend for="meet" class="form-label-bold">
+                            Can you chew and swallow food or drink without help or being prompted by someone else?
+                        </legend>
+                        <div class="form-group">
+                            <label class="block-label" for="meet-Yes">
+                                <input id="meet-Yes" type="radio" name="meet" value="Yes">Yes
+                            </label>
+                            <label class="block-label" for="meet-No">
+                                <input id="meet-No" type="radio" name="meet" value="No">No
+                            </label>
+                            <label class="block-label" for="meet-Sometimes">
+                                <input id="meet-Sometimes" type="radio" name="meet" value="No">Sometimes
+                            </label>
+                        </div>
+                    </fieldset>
+                    <div class="form-group">
+                        <label for="howDoes">
+                            <span class="form-label-bold">Describe how you eat and drink and why you might need help or prompting by someone else.
+                            </span>
+                        </label>
+                        <textarea maxlength="1500" class="form-control form-control-3-4" id="howDoes" name="howDoes"></textarea>
+                        <span class="font-xsmall form-control-3-4 character-count"><span class="char-count">1500</span> characters left</span>
+                    </div>
+                </div>
+                    <!-- Primary buttons, secondary links -->
+                <div class="form-group">
+                    <input type="submit" class="button" value="Continue">
+                </div>
+            </div>
+            <div class="column-one-third">
+				{% include "../includes/help.html" %}
+			</div>
+        </div>
+    </form>
+</main>
+{% endblock %}

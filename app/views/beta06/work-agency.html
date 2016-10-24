@@ -1,0 +1,73 @@
+{% extends "layout.html" %} 
+
+{% block page_title %}
+ Agency work details 
+{% endblock %} 
+
+{% block content %}
+
+<main id="content" role="main">
+    {% include "../includes/phase_banner_beta.html" %}
+    <form action="statutory-payments" method="#" class="form">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <a class="link-back" href="work-type">Back</a> 
+
+                {% include "../includes/error-summary.html" %}
+                
+                <header>
+                    <h1 class="form-title heading-large">
+						<!-- <span class="heading-secondary">Section 5 of 23</span> -->
+						Agency work details
+					</h1>
+                </header>
+                <!--agency worker-->
+                <div class="form-group" data-required data-error="Enter how many hours a week you worked before your illness or condition">
+                    <label class="form-label-bold" for="agency-usual-hours">
+                        How many hours a week did you work before you stopped due to your illness or condition?
+                    </label>
+                    <p>If your hours varied, enter an average.</p>
+                    <input type="text" class="form-control form-control-1-8" id="agency-usual-hours" name="agency-usual-hours">
+                </div>
+                <div class="form-group" data-required data-error="Enter your job title">
+                    <label class="form-label-bold" for="agency-job-title">Job title</label>
+                    <input type="text" class="form-control" id="agency-job-title">
+                </div>
+                <div class="form-group" data-required data-error="Enter your agency name">
+                    <label class="form-label-bold" for="agency-company-name">Agency name</label>
+                    <input type="text" class="form-control" id="agency-company-name">
+                </div>
+                <div class="form-group">
+                    <legend class="form-label-bold" for="address4">Agency address</legend>
+                    <div class="form-group">
+                        <label class="form-label" for="address4-a">House or flat number and street</label>
+                        <input type="text" name="address4" id="address4-a" class="form-control" value="">
+                        <input type="text" name="address4" id="address4-b" class="form-control" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="town4" class="form-label">Town or city</label>
+                        <input type="text" name="town4" id="town4" class="form-control" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="county4" class="form-label">County (optional)</label>
+                        <input type="text" name="county4" id="county4" class="form-control" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="postCode4" class="form-label">Postcode</label>
+                        <input type="text" name="postCode4" id="postCode4" class="form-control form-control-1-4" value="">
+                    </div>
+                </div>
+                <!--end agency worker-->
+                <!-- Primary buttons, secondary links -->
+                <div class="form-group">
+                    <input type="submit" class="button" value="Continue">
+                    <!--a href="overview">I do not agree - leave now</a-->
+                </div>
+            </div>
+            <div class="column-one-third">
+                {% include "../includes/help.html" %}
+            </div>
+        </div>
+    </form>
+</main>
+{% endblock %}

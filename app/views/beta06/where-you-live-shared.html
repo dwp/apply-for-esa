@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	Where you live
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "../includes/phase_banner_beta.html" %}
+
+	<form action="service-charges" method="#" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<a class="link-back" href="where-you-live">Back</a>
+				<header>
+					<h1 class="form-title heading-large">
+						<!-- <span class="heading-secondary">Section 8 of 23</span> -->
+						Shared ownership
+					</h1>
+				</header>
+
+				
+				<div class="form-group">
+					<fieldset class="inline">
+						<legend class="form-label-bold" for="pay-mortgage">Does anyone else pay towards your property?</legend>
+						<label class="block-label" data-target="who-pay-mortgage" for="radio-inline-10">
+							<input id="radio-inline-10" type="radio" name="pay-mortgage" value="Yes">
+							Yes
+						</label>
+						<label class="block-label" for="radio-inline-11">
+							<input id="radio-inline-11" type="radio" name="pay-mortgage" value="No">
+							No
+						</label>
+					</fieldset>
+					<div class="panel panel-border-narrow js-hidden" id="who-pay-mortgage">
+						<fieldset class="form-group">
+							<legend class="form-label-bold" for="pay-help">What do they pay towards?</legend>
+							<label class="block-label" for="radio-inline-1">
+								<input id="radio-inline-1" type="radio" name="pay-help" value="Yes">
+								Mortgage
+							</label>
+							<label class="block-label" for="radio-inline-2">
+								<input id="radio-inline-2" type="radio" name="pay-help" value="No">
+								Rent
+							</label>
+							<label class="block-label" for="radio-inline-3">
+								<input id="radio-inline-3" type="radio" name="pay-help" value="No">
+								Both
+							</label>
+						</fieldset>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<fieldset class="inline">
+						<legend class="form-label-bold" for="have-loan">Do you have any loans secured against your property for home improvements or repairs?</legend>
+						<label class="block-label" data-target="have-loan" for="radio-inline-30">
+							<input id="radio-inline-30" type="radio" name="have-loan" value="Yes">
+							Yes
+						</label>
+						<label class="block-label" for="radio-inline-31">
+							<input id="radio-inline-31" type="radio" name="have-loan" value="No">
+							No
+						</label>
+					</fieldset>
+				</div>
+
+				<!-- Primary buttons, secondary links -->
+				<div class="form-group">
+					<input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
+				</div>
+
+			</div>
+			<div class="column-one-third">
+				{% include "../includes/help.html" %}
+			</div>
+		</div>
+
+	</form>
+</main>
+
+{% endblock %}
