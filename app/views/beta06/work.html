@@ -21,15 +21,18 @@
 						Work
 					</h1>
                 </header>
+                
                 <div class="form-group" data-required data-error="Select an option">
-                    <fieldset class="inline">
-                        <legend class="form-label-bold" for="partner">Are you currently doing any work?</legend>
-                        <p>If you've stopped working due to your illness or condition select 'No'.</p>
+                    <fieldset>
+                        <legend class="form-label-bold" for="partner">Are you working?</legend>
                         <label class="block-label" for="radio-inline-1">
-                            <input id="radio-inline-1" type="radio" name="partner" value="yes"> Yes
+                            <input id="radio-inline-1" type="radio" name="partner" value="yes"> Yes, I'm currently doing some work
+                        </label>
+                        <label class="block-label" for="radio-inline-2">
+                            <input id="radio-inline-2" type="radio" name="partner" value="sick"> I'm off sick but still employed
                         </label>
                         <label class="block-label" for="radio-inline-3">
-                            <input id="radio-inline-3" type="radio" name="partner" value="no"> No
+                            <input id="radio-inline-3" type="radio" name="partner" value="no"> No, I'm unemployed
                         </label>
                     </fieldset>
                 </div>
@@ -54,7 +57,11 @@
         
         switch($('input[name="partner"]:checked').val()){
             case 'yes':
-                window.location = 'work-income';
+                window.location = 'work-hours';
+            break;
+
+            case 'sick':
+                window.location = 'work-sick';
             break;
 
             default:
