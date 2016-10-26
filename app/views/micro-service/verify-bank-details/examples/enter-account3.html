@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        Enter account details
+      </h1>
+
+      <form action="enter-account4" method="">
+
+<pre><code><span class="bold-medium">
+  12-34-56
+  Nationwide Savings Account
+</span>
+</code>
+</pre>
+
+        <legend class="visuallyhidden">Enter account details</legend>
+
+            <!-- Account number -->
+            <div class="form-group">
+              <fieldset>
+                <label class="form-label-bold" for="ba-account-number">
+                  Account number (8 digits)
+                </label>
+                <input type="text" class="form-control form-control-1-3" id="ba-account-number" name="ba-account-number" value="" maxlength="7">
+              </fieldset>
+            </div>
+
+            <!-- Building society optional -->
+            <div class="form-group">
+              <fieldset>
+                <label class="form-label-bold" for="bs-society-roll">
+                  Roll/reference number
+                  <span class="form-hint">Your full account number<br>For example 1234/123456789</span>
+                </label>
+                <input type="text" class="form-control" id="bs-society-roll" name="bs-society-roll" value="" data-required="true">
+              </fieldset>
+            </div>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+      </form>
+
+      <div class="form-group">
+        <details>
+          <summary><span class="summary">This is not my bank</span></summary>
+          <div class="panel panel-border-narrow">
+            <p>
+              This bank has been identified as the branch holding the sort code you provided. Please check the details are correct and edit if not.
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="summary">I don't know my account number</span></summary>
+          <div class="panel panel-border-narrow">
+            <p>
+              You can find your 8-digit account number on your debit card, cheque or bank statement. Contact your bank or check via online banking if you can't find it.
+            </p>
+          </div>
+        </details>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

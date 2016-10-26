@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        Enter bank account details
+      </h1>
+
+      <div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+
+        <p class="heading-medium error-summary-heading" id="error-summary-heading-example-1">
+          We were unable to process this request at this time
+        </p>
+
+        <p>
+          <a href="complete">Skip this section and we will contact you later.</a>
+        </p>
+
+      </div>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

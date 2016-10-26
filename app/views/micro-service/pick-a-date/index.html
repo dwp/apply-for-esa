@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1>
+        Pick a date
+      </h1>
+
+      <h2>Pattern principals</h2>
+
+      <ul class="list list-bullet">
+        <li>use when the date is not a memorable one, e.g. Date of Birth</li>
+        <li>use quick pick if the date is likely to be a common time before/from e.g. Two week fit notes</li>
+        <li>don't replace manual input</li>
+      </ul>
+
+      <p>
+        <a class="button button-start" href="pick-date" role="button">Start now</a>
+      </p>
+
+      <div class="form-group">
+        <details>
+          <summary><span class="summary">Assumptions</span></summary>
+          <div class="panel panel-border-narrow">
+            <ul>
+              <li>The user will not always know a specific date</li>
+              <li>The user will have a relative mental model on when the date is, eg next friday, or the first month of next month</li>
+              <li>The interaction can be made simplier with a picker</li>
+              <li>Manual input allows for too many errors</li>
+            </ul>
+          </div>
+        </details>
+        <details>
+          <summary><span class="summary">Existing patterns in the wild</span></summary>
+          <div class="panel panel-border-narrow">
+            <!-- Date -->
+            <div class="form-group">
+              <fieldset>
+
+                <div class="form-date">
+
+                  <p class="form-hint">For example, 31 3 1980</p>
+
+                  <div class="form-group form-group-day">
+                    <label for="dob-day">Day</label>
+                    <input class="form-control" id="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+                  </div>
+
+                  <div class="form-group form-group-month">
+                    <label for="dob-month">Month</label>
+                    <input class="form-control" id="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                  </div>
+
+                  <div class="form-group form-group-year">
+                    <label for="dob-year">Year</label>
+                    <input class="form-control" id="dob-year" type="number" pattern="[0-9]*" min="0" max="2014">
+                  </div>
+                </div>
+
+              </fieldset>
+            </div>
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

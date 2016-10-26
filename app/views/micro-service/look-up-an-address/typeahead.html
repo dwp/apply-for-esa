@@ -1,0 +1,137 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        Search address
+      </h1>
+
+      <form action="complete" method="post">
+
+        <div id="typeahead" class="form-group" data-required data-error="Enter your postcode">
+          <label for="postcode" class="form-label">Postcode or first line of address</label>
+          <input type="text" name="postcode" id="postcode" class="form-control typeahead" value="">
+        </div>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+      </form>
+
+      <p>
+        <a href="manual-address">I can't find the address</a>
+      </p>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+{% block body_end %}
+
+{{ super() }}
+
+<script src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
+
+<script>
+var dataTown = new Bloodhound({
+  datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
+  queryTokenizer: Bloodhound.tokenizers.whitespace,
+  remote: {
+    url: 'https://alpha.openaddressesuk.org/addresses.json?town=%QUERY',
+    wildcard: '%QUERY',
+    filter: function (data) {
+              return data.addresses
+            }
+    }
+});
+var dataPostcode = new Bloodhound({
+  datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
+  queryTokenizer: Bloodhound.tokenizers.whitespace,
+  remote: {
+    url: 'https://alpha.openaddressesuk.org/addresses.json?postcode=%QUERY',
+    wildcard: '%QUERY',
+    filter: function (data) {
+              return data.addresses
+            }
+    }
+});
+var dataStreet = new Bloodhound({
+  datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
+  queryTokenizer: Bloodhound.tokenizers.whitespace,
+  remote: {
+    url: 'https://alpha.openaddressesuk.org/addresses.json?street=%QUERY',
+    wildcard: '%QUERY',
+    filter: function (data) {
+              return data.addresses
+            }
+    }
+});
+
+dataStreet.initialize();
+dataTown.initialize();
+dataPostcode.initialize();
+
+$('.typeahead').typeahead({
+  hint: true,
+  highlight: true,
+  minLength: 3
+},
+{
+  name: 'dataStreet',
+  display: function (item) { return item.street.name.en + ' - ' + item.postcode.name },
+  limit: 10,
+  source: dataStreet.ttAdapter(),
+  templates: {
+        // empty: [
+        //     '<p class="tt-suggestion">No matches found - <a href="manual-address">enter address manually</a></p>'].join('\n'),
+        suggestion: function (data) {
+          return '<p><strong>' + data.pao + '&nbsp;' + data.street.name.en + '</strong><br>' + data.town.name.en + ', ' + data.postcode.name + '</p>';
+        }
+    }
+},
+{
+  name: 'dataTown',
+  display: function (item) { return item.street.name.en + ' - ' + item.postcode.name },
+  limit: 10,
+  source: dataTown.ttAdapter(),
+  templates: {
+        // empty: [
+        //     '<p class="tt-suggestion">No matches found - <a href="manual-address">enter address manually</a></p>'].join('\n'),
+        suggestion: function (data) {
+          return '<p><strong>' + data.pao + '&nbsp;' + data.street.name.en + '</strong><br>' + data.town.name.en + ', ' + data.postcode.name + '</p>';
+        }
+    }
+},
+{
+  name: 'dataPostcode',
+  display: function (item) { return item.street.name.en + ' - ' + item.postcode.name },
+  limit: 10,
+  source: dataPostcode.ttAdapter(),
+  templates: {
+        // empty: [
+        //     '<p class="tt-suggestion">No matches found - <a href="manual-address">enter address manually</a></p>'].join('\n'),
+        suggestion: function (data) {
+          return '<p><strong>' + data.pao + '&nbsp;' + data.street.name.en + '</strong><br>' + data.town.name.en + ', ' + data.postcode.name + '</p>';
+        }
+    }
+}
+);
+$('.typeahead').bind('typeahead:select', function(ev, suggestion) {
+  $('#typeahead').after('<div class="call-to-action"><p><strong>' + suggestion.pao + '&nbsp;' + suggestion.street.name.en + '</strong><br>' + suggestion.town.name.en + ', ' + suggestion.postcode.name + '</p>');
+  $(this).typeahead("val", "");
+});
+
+</script>
+
+{% endblock %}

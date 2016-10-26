@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        Select your GP
+      </h1>
+
+      <p><span class="bold-small">{{ session.gpPractice }}</span><br>
+      Union Road, New Mills, High Peak, SK22 4QP</p>
+
+      <form action="confirm-gp" method="post">
+
+        <div class="form-group">
+          <fieldset>
+
+            <legend class="visuallyhidden">Select your GP</legend>
+
+            <label for="radio-part-1" class="block-label">
+              <input id="radio-part-1" type="radio" name="gpName" value="Dr John">
+              <span class="font-small">Dr John</span>
+            </label>
+
+            <label for="radio-part-2" class="block-label">
+              <input id="radio-part-2" type="radio" name="gpName" value="Dr Smith">
+              <span class="font-small">Dr Smith</span>
+            </label>
+
+            <label for="radio-part-3" class="block-label">
+              <input id="radio-part-3" type="radio" name="gpName" value="">
+              <span class="font-small">I don't know my GP</span>
+            </label>
+
+            <div class="form-group">
+              <input type="submit" class="button" value="Continue">
+            </div>
+
+          </fieldset>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

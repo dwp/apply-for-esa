@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        Find your GP
+      </h1>
+
+      <h2 class="heading-medium">Pattern principals</h2>
+
+      <ul class="list list-bullet">
+        <li>allow users to search by name or location</li>
+        <li>do not assume the GP location will be in proximiy to a users home address</li>
+        <li>confirm the practice is correct before listing GPs</li>
+        <li>allow people to complete the transaction even if they don't know their GP</li>
+      </ul>
+
+      <p>
+        <a class="button button-start" href="find-practice" role="button">Start now</a>
+      </p>
+
+      <div class="form-group">
+        <details>
+          <summary><span class="summary">Assumptions</span></summary>
+          <div class="panel panel-border-narrow">
+            <ul>
+              <li>The GP surgery will need to be selected before a GP can be searched</li>
+              <li>An address will be needed to search for the right GP surgery</li>
+              <li>The address to search on will not necessarily be the users home address</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

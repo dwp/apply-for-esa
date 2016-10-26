@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        Confirm your GP details
+      </h1>
+
+      <form action="complete" method="post">
+
+<pre><code><span class="bold-medium">
+  {{ session.gpName }}
+  {{ session.gpPractice }}</span><span class="font-small">
+  Address: Union Road, New Mills, High Peak, SK22 4QP
+  Telephone: 0123 456 789
+</span>
+</code>
+</pre>
+
+        <div class="form-group">
+          <details>
+            <summary><span class="summary">Something is not right</span></summary>
+            <div class="panel panel-border-narrow">
+
+              <div class="form-group">
+                <fieldset>
+
+                  <legend class="visuallyhidden">Confirm GP details</legend>
+
+                  <div class="form-group">
+                    <label class="form-label-bold" for="gpName">
+                    GP's name or surgery name
+                    </label>
+                    <input type="text" class="form-control" id="gpName" name="gpName" value="{{ session.gpName }}, {{ session.gpPractice }}">
+                  </div>
+
+                  <div class="form-group">
+                    <legend class="form-label-bold" for="address">GP's address</legend>
+
+                      <div class="form-group">
+                        <label class="form-label" for="address">House or flat number and street</label>
+                        <input type="text" name="address" id="address-1" class="form-control" value="Union Road">
+                        <input type="text" name="address" id="address-2" class="form-control" value="New Mills">
+                        <input type="text" name="address" id="address-3" class="form-control" value="">
+                      </div>
+
+                      <div class="form-group" data-required data-error="Enter your town or city">
+                        <label for="town" class="form-label">Town or city</label>
+                        <input type="text" name="town" id="town" class="form-control" value="High Peak">
+                      </div>
+
+                      <div class="form-group" data-required data-error="Enter your postcode">
+                        <label for="postcode" class="form-label">Postcode</label>
+                        <input type="text" name="postcode" id="postcode" class="form-control" value="SK22 4QP">
+                      </div>
+
+                  <div class="form-group">
+                    <label class="form-label-bold" for="telephone">
+                    GP's phone number
+                    </label>
+                    <input type="text" class="form-control" id="telephone" name="telephone" value="0123 456 789">
+                  </div>
+
+                </fieldset>
+              </div>
+
+            </div>
+          </details>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Confirm">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

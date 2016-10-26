@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        Confirm address
+      </h1>
+
+      <form action="complete" method="post">
+
+<pre><code><span class="bold-medium">
+  {{ session.number }} Union Road
+  New Mills
+  High Peak
+  SK22 4QP
+</span>
+</code>
+</pre>
+
+        <div class="form-group">
+          <details>
+            <summary><span class="summary">I need to manually edit this address</span></summary>
+            <div class="panel panel-border-narrow">
+
+              <div class="form-group">
+                <fieldset>
+
+                  <legend class="visuallyhidden">Confirm address</legend>
+
+                  <div class="form-group">
+                    <label class="form-label" for="address">House or flat number and street</label>
+                    <input type="text" name="address" id="address-1" class="form-control" value="{{ session.number }} Union Road">
+                    <input type="text" name="address" id="address-2" class="form-control" value="New Mills">
+                    <input type="text" name="address" id="address-3" class="form-control" value="">
+
+                  </div>
+
+                  <div class="form-group" data-required data-error="Enter your town or city">
+                    <label for="town" class="form-label">Town or city</label>
+                    <input type="text" name="town" id="town" class="form-control" value="High Peak">
+                  </div>
+
+                  <div class="form-group" data-required data-error="Enter your postcode">
+                    <label for="postCode" class="form-label">Postcode</label>
+                    <input type="text" name="postCode" id="postCode" class="form-control" value="SK22 4QP">
+                  </div>
+
+                </fieldset>
+              </div>
+
+            </div>
+          </details>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Confirm">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

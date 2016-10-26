@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        Find your GP surgery
+      </h1>
+
+      <form action="complete" method="post">
+
+        <div id="typeahead" class="form-group" data-required data-error="Enter the name of your GP practice">
+          <label for="practiceSearch" class="form-label">Your GP surgery</label>
+          <input type="text" placeholder="Search name, address or phone number" name="practiceSearch" id="practiceSearch" class="form-control form-control-2-3 typeahead" value="">
+        </div>
+
+        <!-- <div class="form-group" data-required data-error="Enter a location or postcode">
+          <label for="locationSearch" class="form-label">Nearby location, or postcode</label>
+          <input type="text" name="locationSearch" id="locationSearch" class="form-control form-control-1-2" value="">
+        </div> -->
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+      </form>
+
+      <p>
+        <a href="manual-gp">I can't find my GP surgery</a>
+      </p>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+{% block body_end %}
+
+{{ super() }}
+
+<script src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
+
+<script>
+var dataGP = new Bloodhound({
+  datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name', 'location.address', 'location.postcode', 'contact_telephone_number'),
+  queryTokenizer: Bloodhound.tokenizers.whitespace,
+  prefetch: '/public/javascripts/gp2.json'
+});
+
+dataGP.initialize();
+
+$('.typeahead').typeahead({
+  hint: true,
+  highlight: true,
+  minLength: 3
+},
+{
+  name: 'dataGP',
+  displayKey: 'name',
+  limit: 10,
+  source: dataGP.ttAdapter(),
+  templates: {
+        empty: [
+            '<p class="tt-suggestion">No matches found - <a href="manual-gp">enter details manually</a></p>'].join('\n'),
+        suggestion: function (data) {
+          return '<p><span class="bold-medium">' + data.name + '</span><br>' + data.location.address + ', ' + data.location.postcode + '<br>' + data.contact_telephone_number + '</p>';
+        }
+    }
+});
+$('.typeahead').bind('typeahead:select', function(ev, suggestion) {
+  $('#typeahead').after('<div class="call-to-action"><p><span class="bold-medium">' + suggestion.name + '</span><br>' + suggestion.location.address + ', ' + suggestion.location.postcode + '<br>' + suggestion.contact_telephone_number + '</p>');
+  $(this).typeahead("val", "");
+  window.location.hash = '#content';
+});
+
+</script>
+
+{% endblock %}

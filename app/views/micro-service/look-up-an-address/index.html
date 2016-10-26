@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        Look up an address
+      </h1>
+
+      <h2 class="heading-medium">Pattern principals</h2>
+
+      <ul class="list list-bullet">
+        <li>search for addresses from a data register that is maintained by a third party</li>
+        <li>collect addresses in approved formats that can be used for straight-through backend processing</a>
+        <li>allow address to be search by postcode or the first line</li>
+        <li>allow manual edit/entry if the address is not held in the way the user expects</li>
+        <li>manually edited/entered addresses cannot be processed automatically</li>
+        <li>manually edited/entered address should trigger a request a verify and update data register if required.</li>
+      </ul>
+
+      <p>
+        <a class="button button-start" href="enter-postcode" role="button">Start now</a>
+      </p>
+
+      <div class="form-group">
+        <details>
+          <summary><span class="summary">Existing patterns in the wild</span></summary>
+          <div class="panel panel-border-narrow">
+            <form>
+
+              <p class="heading-medium">
+                Example one
+              </p>
+
+              <!-- Address -->
+              <div class="form-group">
+                <label class="form-label-bold" for="address">Address</label>
+                <input type="text" class="form-control" id="address">
+                <input type="text" class="form-control" id="address">
+                <input type="text" class="form-control" id="address">
+              </div>
+
+              <!-- Postcode -->
+              <div class="form-group">
+                <label class="form-label-bold" for="postcode">Postcode</label>
+                <input type="text" class="form-control" id="postcode">
+              </div>
+
+              <div class="form-group">
+                <input type="submit" class="button" value="Continue">
+              </div>
+
+            </form>
+          </div>
+          <div class="panel panel-border-narrow">
+            <form>
+
+              <p class="heading-medium">
+                Example two
+              </p>
+
+              <div class="form-group">
+                <label class="form-label" for="address-a">House or flat number and street</label>
+                <input type="text" name="address" id="address-a" class="form-control" value="">
+                <input type="text" name="address" id="address-a" class="form-control" value="">
+              </div>
+
+              <div class="form-group" data-required data-error="Enter your town or city">
+                <label for="town" class="form-label">Town or city</label>
+                <input type="text" name="town" id="town" class="form-control" value="">
+              </div>
+
+              <div class="form-group" data-required data-error="Enter your postcode">
+                <label for="postCode" class="form-label">Postcode</label>
+                <input type="text" name="postCode" id="postCode" class="form-control" value="">
+              </div>
+
+              <!-- Primary buttons, secondary links -->
+              <div class="form-group">
+                <input type="submit" class="button" value="Continue">
+                <!--a href="overview">I do not agree - leave now</a-->
+              </div>
+
+            </form>
+          </div>
+
+        </details>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
