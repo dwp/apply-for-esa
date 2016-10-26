@@ -56,22 +56,24 @@
                         </fieldset>
                     </div>
                     <div class="form-group">
-                        <fieldset class="inline">
-                            <legend class="form-label-bold" for="leaks">Have you had to change your clothes in the last month because of leaks?</legend>
+                        <fieldset>
+                            <legend class="form-label-bold" for="leaks">How often do you have trouble controlling your bladder or bowels?</legend>
                             <label class="block-label" data-target="leak-freq" for="radio-inline-120">
-                                <input id="radio-inline-120" type="checkbox" name="leaks" value="Daily"> Yes
+                                <input id="radio-inline-120" type="radio" name="leaks" value="often"> All the time
                             </label>
                             <label class="block-label" for="radio-inline-128">
-                                <input id="radio-inline-128" type="checkbox" name="leaks" value="Daily"> No
+                                <input id="radio-inline-128" type="radio" name="leaks" value="week"> At least once a week
                             </label>
-                            <div class="panel panel-border-narrow js-hidden" id="leak-freq">
-                                <label class="form-label inline" for="time">You have had to change my clothes roughly
-                                    <input type="text" class="form-control form-control-1-8" id="why"> times in the last month because of leaks</label>
-                            </div>
+                            <label class="block-label" for="radio-inline-129">
+                                <input id="radio-inline-129" type="radio" name="leaks" value="month"> At least once a month
+                            </label>
+                            <label class="block-label" for="radio-inline-130">
+                                <input id="radio-inline-130" type="radio" name="leaks" value="less"> Less than once a month
+                            </label>
                         </fieldset>
                     </div>
                     <div class="form-group">
-                        <label class="form-label" for="tell-more">Explain more about the difficulty you have controlling your bladder or bowels.</label>
+                        <label class="form-label-bold" for="tell-more">Explain more about the difficulty you have controlling your bladder or bowels.</label>
                         <textarea id="tell-more" class="form-control" rows="5"></textarea>
                     </div>
                 </div>
