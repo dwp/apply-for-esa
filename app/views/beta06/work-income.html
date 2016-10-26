@@ -35,19 +35,26 @@
                                 <input id="weekly1b" type="radio" name="howoften1b" value="weekly"> Weekly
                             </label>
 
-                            
-
                             <label class="block-label" data-target="fortnightly-pay" for="fortnight">
                                 <input id="fortnight" type="radio" name="howoften1b" value="fortnight"> Fortnightly
                             </label>
-                            
+
+                            <label class="block-label" data-target="fourweek-pay" for="fourweek">
+                                <input id="fourweek" type="radio" name="howoften1b" value="fourweek"> Every 4 weeks
+                            </label>
 
                             <label class="block-label" data-target="monthly-pay" for="monthly1b">
                                 <input id="monthly1b" type="radio" name="howoften1b" value="monthly"> Monthly
                             </label>
+
                             <label class="block-label" data-target="yearly-pay" for="yearly1b">
                                 <input id="yearly1b" type="radio" name="howoften1b" value="yearly"> Yearly
                             </label>
+
+                            <label class="block-label" for="other1b" class="form-group">
+                                <input id="other1b" type="radio" name="howoften1b" value="other"> Other
+                            </label>
+
                             <div class="js-hidden panel panel-border-narrow" id="daily-pay" data-required data-error="Enter how much you are getting paid">
                                 
                                 <div class="form-group">
@@ -146,6 +153,45 @@
                                     </table>
                                 </div>
                             </div>
+
+                            <div class="form-group js-hidden panel panel-border-narrow" id="fourweek-pay" data-required data-error="Enter how much you are getting paid">
+
+                                <fieldset class="inline form-group" data-required data-error="Select whether you get paid the same">
+                                    <legend class="form-label-bold" for="fourweek-regular">Do you get paid the same amount every 4 weeks?</legend>
+                                    <label class="block-label" data-target="yes-fourweek" for="fourweek-regular-1">
+                                        <input id="fourweek-regular-1" type="radio" name="fourweek-regular" value="Yes"> Yes
+                                    </label>
+                                    <label class="block-label" data-target="no-fourweek" for="fourweek-regular-2">
+                                        <input id="fourweek-regular-2" type="radio" name="fourweek-regular" value="No"> No
+                                    </label>
+                                </fieldset>
+                                <div class="js-hidden" id="yes-fourweek"> 
+                                    <label class="form-label-bold" for="how-much-fourweek">
+                                        How much do you get paid every 4 weeks?
+                                    </label>
+                                    &pound;
+                                    <input type="text" class="form-control form-control-1-4" id="how-much-fourweek" name="how-much-fourweek">
+                                </div>
+                                <div class="js-hidden form-group" id="no-fourweek">
+                                    <h3 class="heading-small">Enter your last 2 payments</h3>
+
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th class="numeric" scope="col" width="50%" align="right">1st 4 weeks</th>
+                                                <th class="numeric" scope="col" width="50%" align="right">2nd 4 weeks</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="numeric">£ <input class="form-control full" id="mz0" type="text" name="mz1" width="100%"></td>
+                                                <td class="numeric">£ <input class="form-control full" id="m1z" type="text" name="fnz1" width="100%"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
                             <div class="form-group js-hidden panel panel-border-narrow" id="monthly-pay" data-required data-error="Enter how much you are getting paid">
 
                                 <fieldset class="inline form-group" data-required data-error="Select whether you get paid the same">
