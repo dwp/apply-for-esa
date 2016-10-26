@@ -14,10 +14,10 @@
         Select your GP
       </h1>
 
-      <p><span class="bold-small">{{ session.gpPractice }}</span><br>
+      <p><span class="bold-small">{{ practice }}</span><br>
       Union Road, New Mills, High Peak, SK22 4QP</p>
 
-      <form action="confirm-gp" method="post">
+      <form action="confirm-gp" method="">
 
         <div class="form-group">
           <fieldset>
@@ -39,11 +39,13 @@
               <span class="font-small">I don't know my GP</span>
             </label>
 
-            <div class="form-group">
-              <input type="submit" class="button" value="Continue">
-            </div>
-
           </fieldset>
+        </div>
+
+        <input type="hidden" name="gpPractice" value="{{ practice }}" />
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
         </div>
 
       </form>

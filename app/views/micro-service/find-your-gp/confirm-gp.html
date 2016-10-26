@@ -14,11 +14,11 @@
         Confirm your GP details
       </h1>
 
-      <form action="complete" method="post">
+      <form action="complete" method="get">
 
 <pre><code><span class="bold-medium">
-  {{ session.gpName }}
-  {{ session.gpPractice }}</span><span class="font-small">
+  {{ gp }}
+  {{ practice }}</span><span class="font-small">
   Address: Union Road, New Mills, High Peak, SK22 4QP
   Telephone: 0123 456 789
 </span>
@@ -39,7 +39,7 @@
                     <label class="form-label-bold" for="gpName">
                     GP's name or surgery name
                     </label>
-                    <input type="text" class="form-control" id="gpName" name="gpName" value="{{ session.gpName }}, {{ session.gpPractice }}">
+                    <input type="text" class="form-control" id="gpName" name="gpName" value="{{ gp }}, {{ practice }}">
                   </div>
 
                   <div class="form-group">

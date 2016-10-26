@@ -46,7 +46,6 @@ router.post(/address-confirm$/, function (req, res) {
 router.get('/micro-service/look-up-an-address/confirm-address', function (req, res) {
 
    var number = req.query.number;
-   console.log(number);
 
    if (number == "false"){
      res.redirect("/micro-service/look-up-an-address/manual-address");
@@ -55,5 +54,31 @@ router.get('/micro-service/look-up-an-address/confirm-address', function (req, r
    }
 
  });
+ router.get('/micro-service/find-your-gp/select-gp', function (req, res) {
+
+  var gpPractice = req.query.gpPractice;
+
+  if (gpPractice == "false"){
+    res.redirect("/micro-service/find-your-gp/manual-gp");
+  } else {
+    res.render('micro-service/find-your-gp/select-gp', { 'practice' : gpPractice });
+  }
+
+});
+router.get('/micro-service/find-your-gp/confirm-gp', function (req, res) {
+
+  var gpName = req.query.gpName;
+      gpPractice = req.query.gpPractice;
+
+  if (gpName == "false"){
+    res.redirect("/micro-service/find-your-gp/manual-gp");
+  } else {
+    res.render('micro-service/find-your-gp/confirm-gp', {
+      'practice' : gpPractice,
+      'gp' : gpName
+    });
+  }
+
+});
 
 module.exports = router;
