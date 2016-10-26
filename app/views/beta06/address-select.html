@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+    {% include "../includes/phase_banner_beta.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="address-postcode">Back</a>
+
+      <h1 class="heading-large">Select your address</h1>
+
+      <form action="address-confirm" method="post" class="form">
+  
+          <fieldset class="form-group" data-required data-error="Select an option from the list">
+
+            <legend class="visuallyhidden">Select your address</legend>
+            
+            {% for i in results %}
+
+              <label for="radio-part-{{loop.index}}" class="block-label">
+                <input id="radio-part-{{loop.index}}" type="radio" name="number" value="{{ i.buildingNumber }}, {{ i.thoroughfareName }},{{ i.posttown }},{{ i.postcode }}">
+                <span class="font-small">{{ i.organisationName }} {{ i.subBuildingName }} {{ i.buildingName }} {{ i.buildingNumber }}, {{ i.thoroughfareName }}, {{ i.posttown }}, {{ i.postcode }}</span>
+              </label>
+
+            {% endfor %}
+
+            <label for="radio-part-0" class="block-label">
+              <input id="radio-part-0" type="radio" name="number" value="none">
+              <span class="font-small">None of these are my address</span>
+            </label>
+            
+
+          </fieldset>
+
+          <div class="form-group">
+            <input type="submit" class="button" value="Continue">
+          </div>
+    
+
+      </form>
+
+    </div>
+    <div class="column-third">
+      {% include "../includes/help.html" %}
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+
+{% block body_end %}
+  {% include "includes/scripts.html" %}
+  <script>
+  
+    $('form').on('submit', function(e){
+      if($('input[name="number"]:checked').val() == 'none'){
+        e.preventDefault();
+        window.location = 'contact-details'; 
+      }
+    })
+  </script>
+{% endblock %}

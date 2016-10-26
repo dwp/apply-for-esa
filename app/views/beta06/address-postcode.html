@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Search for your address
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main"> 
+  {% include "../includes/phase_banner_beta.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="personal-details">Back</a>
+
+      <h1 class="heading-large">Search for your address</h1>
+      
+      <form action="address-postcode" method="POST" autocomplete="off">
+
+        <div class="form-group{{ ' error' if addressError }}" data-required data-error="Enter your postcode">
+          <label for="postcode" class="form-label-bold">
+            Your postcode
+            {% if addressError %} <span class="error-message">{{ addressError }}</span>{% endif %}
+          </label>
+          <input type="text" name="postcode" id="postcode" class="form-control form-control-1-4" value="{{ postcode }}">
+        </div>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+      </form>
+
+      <p>
+        <a href="contact-details">Enter address manually</a>
+      </p>
+
+    </div>
+    <div class="column-third">
+      {% include "../includes/help.html" %}
+    </div>
+  </div>
+</main>
+
+{% endblock %}

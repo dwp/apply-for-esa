@@ -11,7 +11,7 @@
     <form action="contact-pref" method="#" class="form">
         <div class="grid-row">
             <div class="column-two-thirds">
-                <a class="link-back" href="personal-details">Back</a>
+                <a class="link-back" href="address-postcode">Back</a>
 
                 {% include "../includes/error-summary.html" %}
 
@@ -19,30 +19,32 @@
                     <h1 class="form-title heading-large">Address</h1>
                 </header>
                 <p>Enter an address where you want letters about your claim to be posted.</p>
-                <div class="form-group">
-                    <div class="form-group">
-                        <label class="form-label" for="address-a">House or flat number and street</label>
-                        <input type="text" name="address" id="address-a" class="form-control" value="">
-                        <input type="text" name="address" id="address-a" class="form-control" value="">
-                    </div>
-                    <div class="form-group" data-required data-error="Enter your town or city">
-                        <label for="town" class="form-label">Town or city</label>
-                        <input type="text" name="town" id="town" class="form-control" value="">
-                    </div>
-                    <div class="form-group">
-                        <label for="county" class="form-label">County (optional)</label>
-                        <input type="text" name="county" id="county" class="form-control" value="">
-                    </div>
-                    <div class="form-group" data-required data-error="Enter your postcode">
-                        <label for="postCode" class="form-label">Postcode</label>
-                        <input type="text" name="postCode" id="postCode" class="form-control" value="">
-                    </div>
+                
+                <div class="form-group-compound">
+                    <label class="form-label" for="address-a">House or flat number and street</label>
+                    <input type="text" name="address" id="address-a" class="form-control" value="">
                 </div>
+                <div class="form-group-compound">
+                    <input type="text" name="address" id="address-a" class="form-control" value="">
+                </div>
+                <div class="form-group-compound" data-required data-error="Enter your town or city">
+                    <label for="town" class="form-label">Town or city</label>
+                    <input type="text" name="town" id="town" class="form-control" value="">
+                </div>
+                <div class="form-group-compound">
+                    <label for="county" class="form-label">County</label>
+                    <input type="text" name="county" id="county" class="form-control" value="">
+                </div>
+                <div class="form-group" data-required data-error="Enter your postcode">
+                    <label for="postCode" class="form-label">Postcode</label>
+                    <input type="text" name="postCode" id="postCode" class="form-control form-control-1-4" value="">
+                </div>
+                
                 <div class="form-group" data-required data-error="Select an option">
                     <fieldset class="inline">
-                        <p class="form-label-bold">
+                        <legend class="form-label-bold">
                             Do you need letters in a different format, for example, braille, large print or audio CD?
-                        </p>
+                        </legend>
                         <label for="radio-part-2" data-target="format" class="block-label">
                             <input id="radio-part-2" type="radio" name="housing-act" value="Yes"> Yes
                         </label>
