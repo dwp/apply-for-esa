@@ -14,6 +14,20 @@
         Look up an address
       </h1>
 
+      <h2 class="heading-medium">Prototypes</h2>
+
+      <p>
+        <a href="enter-postcode">Simple search (one-thing-per-page)</a>
+        <br>
+        Use when it's highly likely that postcode will be known and as a no-javascript solution.
+      </p>
+
+      <p>
+        <a href="typeahead">Enhanced search (javascript typeahead)</a>
+        <br>
+        Use when the user might not know a specific item of info and wants to search on multiple terms. This works contextually alongside other elements on the page. This requires javascript.
+      </p>
+
       <h2 class="heading-medium">Pattern principals</h2>
 
       <ul class="list list-bullet">
@@ -24,75 +38,6 @@
         <li>manually edited/entered addresses cannot be processed automatically</li>
         <li>manually edited/entered address should trigger a request a verify and update data register if required.</li>
       </ul>
-
-      <p>
-        <a class="button button-start" href="enter-postcode" role="button">Start now</a>
-      </p>
-
-      <div class="form-group">
-        <details>
-          <summary><span class="summary">Existing patterns in the wild</span></summary>
-          <div class="panel panel-border-narrow">
-            <form>
-
-              <p class="heading-medium">
-                Example one
-              </p>
-
-              <!-- Address -->
-              <div class="form-group">
-                <label class="form-label-bold" for="address">Address</label>
-                <input type="text" class="form-control" id="address">
-                <input type="text" class="form-control" id="address">
-                <input type="text" class="form-control" id="address">
-              </div>
-
-              <!-- Postcode -->
-              <div class="form-group">
-                <label class="form-label-bold" for="postcode">Postcode</label>
-                <input type="text" class="form-control" id="postcode">
-              </div>
-
-              <div class="form-group">
-                <input type="submit" class="button" value="Continue">
-              </div>
-
-            </form>
-          </div>
-          <div class="panel panel-border-narrow">
-            <form>
-
-              <p class="heading-medium">
-                Example two
-              </p>
-
-              <div class="form-group">
-                <label class="form-label" for="address-a">House or flat number and street</label>
-                <input type="text" name="address" id="address-a" class="form-control" value="">
-                <input type="text" name="address" id="address-a" class="form-control" value="">
-              </div>
-
-              <div class="form-group" data-required data-error="Enter your town or city">
-                <label for="town" class="form-label">Town or city</label>
-                <input type="text" name="town" id="town" class="form-control" value="">
-              </div>
-
-              <div class="form-group" data-required data-error="Enter your postcode">
-                <label for="postCode" class="form-label">Postcode</label>
-                <input type="text" name="postCode" id="postCode" class="form-control" value="">
-              </div>
-
-              <!-- Primary buttons, secondary links -->
-              <div class="form-group">
-                <input type="submit" class="button" value="Continue">
-                <!--a href="overview">I do not agree - leave now</a-->
-              </div>
-
-            </form>
-          </div>
-
-        </details>
-      </div>
 
     </div>
   </div>
