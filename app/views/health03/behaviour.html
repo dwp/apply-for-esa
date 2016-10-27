@@ -6,11 +6,12 @@
             <div class="column-two-thirds">
                 <a class="link-back" href="social-situations">Back</a>
                 <header>
-                    <h1 class="form-title heading-large">Does your condition cause you to behave in a way that can upset or scare other people?</h1>
+                    <h1 class="form-title heading-large">Does your condition cause you to behave in a way that makes others uncomfortable?</h1>
                 </header>
+                <p>We want to know if you have made other people feel uncomfortable, scared, upset or threatened.</p>
                 <fieldset id="speech" class="inline">
                     <legend for="speech">
-                        <span class="visually-hidden">Does your condition cause you to behave in a way that can upset or scare other people?</span>
+                        <span class="visually-hidden">Does your condition cause you to behave in a way that makes others uncomfortable?</span>
                     </legend>
                     <div class="form-group">
                         <label class="block-label" for="speech-Yes" data-target="speechDetails">
@@ -19,12 +20,15 @@
                         <label class="block-label" for="speech-No">
                             <input id="speech-No" type="radio" name="speech" value="No" aria-controls="">No
                         </label>
+                        <label class="block-label" for="speech-Sometimes" data-target="speechDetails">
+                            <input id="speech-Sometimes" type="radio" name="speech" value="Yes" aria-controls="speechDetails">Sometimes
+                        </label>
                     </div>
                 </fieldset>
                 <div class="panel panel-border-narrow js-hidden" id="speechDetails">
                     <fieldset id="allTime" class="form-group">
                         <legend for="allTime">
-                            <span class="form-label-bold">How often do you behave in a way that upsets or scares other people?</span>
+                            <span class="form-label-bold">How often do you behave in a way that makes other people uncomfortable?</span>
                         </legend>
                         <div class="form-group">
                             <label class="block-label" for="allTime-Yes">
@@ -40,7 +44,7 @@
                     </fieldset>
                     <div class="form-group">
                         <label for="howDoes">
-                            <span class="form-label-bold">Describe how your behaviour can upset or scare people and how often this happens. Explain what happens and give examples if you can.
+                            <span class="form-label-bold">Describe how your behaviour can upset or threaten people and how often this happens. Explain what happens and give examples if you can.
                             </span>
                         </label>
                         <textarea maxlength="1500" class="form-control form-control-3-4" id="howDoes" name="howDoes"></textarea>
