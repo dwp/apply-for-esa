@@ -6,11 +6,12 @@
             <div class="column-two-thirds">
                 <a class="link-back" href="learning-tasks">Back</a>
                 <header>
-                    <h1 class="form-title heading-large">When you're alone, can you stay safe when doing tasks like boiling water or using sharp objects?</h1>
+                    <h1 class="form-title heading-large">Are you aware of basic hazards and danger?</h1>
                 </header>
-                <fieldset id="speech" class="inline">
+                <p>Basic hazards are things such as boiling water, sharp objects and moving cars.</p>
+                <fieldset id="speech">
                     <legend for="speech">
-                        <span class="visually-hidden">When you're alone, can you stay safe when doing tasks like boiling water or using sharp objects?</span>
+                        <span class="visually-hidden">Are you aware of basic hazards and danger?</span>
                     </legend>
                     <div class="form-group">
                         <label class="block-label" for="speech-Yes">
@@ -19,11 +20,12 @@
                         <label class="block-label" for="speech-No" data-target="speechDetails">
                             <input id="speech-No" type="radio" name="speech" value="No" aria-controls="speechDetails">No
                         </label>
+                        <label class="block-label" for="speech-Sometimes" data-target="speechDetails">
+                            <input id="speech-Sometimes" type="radio" name="speech" value="No" aria-controls="speechDetails">Not always
+                        </label>
                     </div>
                 </fieldset>
-
                 <div class="panel panel-border-narrow js-hidden" id="speechDetails">
-
                     <fieldset id="safe" class="form-group">
                         <legend for="safe" class="form-label-bold">
                             How often do you need someone to help you stay safe?
@@ -40,22 +42,21 @@
                             </label>
                         </div>
                     </fieldset>
-
                     <label for="howDoes">
-                        <span class="form-label-bold">What problems do you have satying safe?
+                        <span class="form-label-bold">What problems do you have staying safe?
                         </span>
                     </label>
                     <textarea maxlength="1500" class="form-control form-control-3-4" id="howDoes" name="howDoes"></textarea>
                     <span class="font-xsmall form-control-3-4 character-count"><span class="char-count">1500</span> characters left</span>
                 </div>
-                    <!-- Primary buttons, secondary links -->
+                <!-- Primary buttons, secondary links -->
                 <div class="form-group">
                     <input type="submit" class="button" value="Continue">
                 </div>
             </div>
             <div class="column-one-third">
-				{% include "../includes/help.html" %}
-			</div>
+                {% include "../includes/help.html" %}
+            </div>
         </div>
     </form>
 </main>
