@@ -52,20 +52,25 @@
 
 <script>
 var dataGPName = new Bloodhound({
-  datumTokenizer: Bloodhound.tokenizers.whitespace('orgName', 'orgPostcode','orgAdd','orgTelephone'),
+  datumTokenizer: Bloodhound.tokenizers.whitespace('gpName','gpAddress1','gpAddress2',
+                                                    'gpAddress3','gpAddress4','gpPostcode',
+                                                    'gpTelephone'),
   queryTokenizer: Bloodhound.tokenizers.whitespace,
   remote: {
-    url: 'https://gp-look-up.herokuapp.com/findGpByName?name=%QUERY',
+    url: 'https://gp-look-up.herokuapp.com/getGp?query=%QUERY',
     wildcard: '%QUERY',
-    filter: function (response) {
+    filter: function (data) {
             // Map the remote source JSON array to a JavaScript object array
-            return $.map(response.entry, function (org) {
-              console.log(response);
+
+            return $.map(data.entries, function (gp) {
                 return {
-                    orgName: org.content.organisationSummary.name,
-                    orgAdd: org.content.organisationSummary.address.addressLine,
-                    orgPostcode: org.content.organisationSummary.address.postcode,
-                    orgTelephone: org.content.organisationSummary.contact.telephone
+                    gpName: gp.Name,
+                    gpAddress1: gp.Address.Line1 || "",
+                    gpAddress2: gp.Address.Line2 || "",
+                    gpAddress3: gp.Address.Line3 || "",
+                    gpAddress4: gp.Address.Line4 || "",
+                    gpPostcode: gp.Address.Postcode || "",
+                    gpTelephone: gp.Telephone || ""
                 };
             });
         }
@@ -78,7 +83,7 @@ dataGPName.initialize();
 $('#name .typeahead').typeahead({
   hint: true,
   highlight: true,
-  minLength: 2
+  minLength: 3
 }, {
   display: function (item) { return item.orgName  },
   source: dataGPName.ttAdapter(),
@@ -87,14 +92,15 @@ $('#name .typeahead').typeahead({
         empty: [
             '<p class="tt-suggestion">No matches found - <a href="manual-gp">enter details manually</a></p>'].join('\n'),
         suggestion: function (data) {
-          return '<p><span class="bold-medium">' + data.orgName + '</span><br>' + data.orgAdd + ', ' + data.orgPostcode  + '<br>' + data.orgTelephone +'</p>';
+        return '<p><span class="bold-medium">' + data.gpName + '</span><br>' + data.gpAddress1 + "-" 
+           + data.gpAddress2 +"-" + data.gpAddress3 + "-" + data.gpAddress4 + "-" + data.gpPostcode +'<br>' + data.gpTelephone + '</p>';
         }
     }
 });
 
 
 $('#name .typeahead').bind('typeahead:select', function(ev, suggestion) {
-  $('#name').after('<div class="call-to-action"><p><strong>' + suggestion.orgName + '</strong><br>' + suggestion.orgAdd + ', ' + suggestion.orgPostcode  + '<br>' + suggestion.orgTelephone + '</p>');
+  $('#name').after('<div class="call-to-action"><p><strong>' + suggestion.gpName + '</strong><br>' + suggestion.gpAddress1 + "-" + suggestion.gpAddress2 +"-" + suggestion.gpAddress3 + "-" + suggestion.gpAddress4 + "-" + suggestion.gpPostcode + '<br>' + suggestion.gpTelephone +  '</p>');
   $(this).typeahead("val", "");
 
   //enable the continue button
