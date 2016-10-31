@@ -81,4 +81,35 @@ router.get('/micro-service/find-your-gp/confirm-gp', function (req, res) {
 
 });
 
+router.post(/bank-details$/, function (req, res) {
+  console.log('Making request');
+  rp({
+    uri: 'https://bank-details-validator.herokuapp.com/esa/validateBankDetails',
+    qs: { accountNum: req.body['ba-account-number'], sortCode: req.body['ba-sort1'] + req.body['ba-sort2'] + req.body['ba-sort3'] },
+   json: true
+  })
+  .then(function (body) {
+    if(body.status === "INVALID") {
+       res.render(req.url.substring(1), {bankError: "Sorry, Your Account Number is invalid for the sort code you have entered",
+                                          holder: req.body['ba-account-holder'], 
+                                          sortCode1: req.body['ba-sort1'],
+                                          sortCode2: req.body['ba-sort2'],
+                                          sortCode3: req.body['ba-sort3'],
+                                          accountNum: req.body['ba-account-number'],
+                                          bankName: req.body['ba-bank-holder'],
+                                          buildingRef: req.body['bs-society-roll']},
+       function(err, html) { res.send(html); });
+      
+    } else {
+      var url = req.url.substring(1, req.url.lastIndexOf('/')) + '/declaration';
+      res.render(url, function(err, html) { res.send(html); });
+    }
+  })
+  .catch(function (error) {
+      console.log(error);
+  });
+
+});
+
+
 module.exports = router;

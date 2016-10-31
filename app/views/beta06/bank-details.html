@@ -15,7 +15,7 @@
 
       {% include "../includes/error-summary.html" %}
 
-      <form action="declaration" method="#" class="form">
+      <form action="bank-details" method="POST" class="form">
 
         <h1 class="heading-large">Bank details</h1>
 
@@ -24,7 +24,7 @@
         <div class="form-group">
           <fieldset>
             <label class="form-label-bold label-no-hint" for="ba-account-holder">Name of account holder</label>
-            <input type="text" class="form-control" id="ba-account-holder" name="ba-account-holder" value="">
+            <input type="text" class="form-control" id="ba-account-holder" name="ba-account-holder" value="{{ holder }}">
           </fieldset>
         </div>
 
@@ -33,34 +33,35 @@
           <fieldset>
             <div class="form-group form-group-day">
               <label for="ba-sort1"></label>
-              <input class="form-control" id="ba-sort1" maxlength="2" name="ba-sort1" value="" type="text">
+              <input class="form-control" id="ba-sort1" maxlength="2" name="ba-sort1" value="{{ sortCode1 }}" type="text">
             </div>
 
             <div class="form-group form-group-month">
               <label for="ba-sort2"></label>
-              <input class="form-control" id="ba-sort2" maxlength="2" name="ba-sort2" value="" type="text">
+              <input class="form-control" id="ba-sort2" maxlength="2" name="ba-sort2" value="{{ sortCode2 }}" type="text">
             </div>
 
             <div class="form-group form-group-month">
               <label for="ba-sort3"></label>
-              <input class="form-control" id="ba-sort3" maxlength="2" name="ba-sort3" value="" type="text">
+              <input class="form-control" id="ba-sort3" maxlength="2" name="ba-sort3" value="{{ sortCode3 }}" type="text">
             </div>
           </fieldset>
         </div>
 
-        <div class="form-group">
+        <div class="form-group{{ ' error' if bankError }}">
           <fieldset>
             <label class="form-label-bold" for="ba-account-number">
               Account number
+               {% if bankError %} <span class="error-message">{{ bankError }}</span>{% endif %}
             </label>
-            <input type="text" class="form-control" id="ba-account-number" name="ba-account-number" value="" maxlength="10">
+            <input type="text" class="form-control" id="ba-account-number" name="ba-account-number" value="{{ accountNum }}" maxlength="10">
           </fieldset>
         </div>
 
         <div class="form-group">
           <fieldset>
             <label class="form-label-bold label-no-hint" for="ba-bank-holder">Name of bank or building society</label>
-            <input type="text" class="form-control" id="ba-bank-holder" name="ba-bank-holder" value="">
+            <input type="text" class="form-control" id="ba-bank-holder" name="ba-bank-holder" value="{{ bankName }}">
           </fieldset>
         </div>
 
@@ -70,7 +71,7 @@
               Building society roll or reference number (optional)
               <span class="form-hint">If your building society uses a roll or reference number, you will find it on your passbook</span>
             </label>
-            <input type="text" class="form-control" id="bs-society-roll" name="bs-society-roll" value="" data-required="true">
+            <input type="text" class="form-control" id="bs-society-roll" name="bs-society-roll" value="{{ buildingRef }}" data-required="true">
           </fieldset>
         </div>
     
