@@ -11,7 +11,7 @@
     <div class="column-two-thirds">
 
       <h1 class="heading-large">
-        Enter bank account details
+        Verify bank details
       </h1>
 
       <div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
@@ -26,25 +26,31 @@
 
       </div>
 
-      <form action="enter-sortcode-final" method="post">
+      <form action="enter-sortcode-final" method="">
+
+        <!-- Account name -->
+        <div class="form-group">
+          <label class="form-label-bold label-no-hint" for="ba-account-holder">Account holder name</label>
+          <input type="text" class="form-control" id="ba-account-holder" name="ba-account-holder" value="">
+        </div>
 
         <!-- Sort code -->
-        <legend class="form-label-bold">Sort code (6 digits)</legend>
+        <legend class="form-label-bold">Sort code</legend>
         <div class="form-date form-group">
           <fieldset>
             <div class="form-group form-group-day">
-              <label for="baSort1"></label>
-              <input class="form-control" id="baSort1" maxlength="2" name="baSort1" value="" type="text">
+              <label for="ba-sort1"></label>
+              <input class="form-control" id="ba-sort1" maxlength="2" name="ba-sort1" value="" type="text">
             </div>
 
             <div class="form-group form-group-month">
-              <label for="baSort2"></label>
-              <input class="form-control" id="baSort2" maxlength="2" name="baSort2" value="" type="text">
+              <label for="ba-sort2"></label>
+              <input class="form-control" id="ba-sort2" maxlength="2" name="ba-sort2" value="" type="text">
             </div>
 
             <div class="form-group form-group-month">
-              <label for="baSort3"></label>
-              <input class="form-control" id="baSort3" maxlength="2" name="baSort3" value="" type="text">
+              <label for="ba-sort3"></label>
+              <input class="form-control" id="ba-sort3" maxlength="2" name="ba-sort3" value="" type="text">
             </div>
           </fieldset>
         </div>
@@ -52,10 +58,21 @@
         <!-- Account number -->
         <div class="form-group">
           <fieldset>
-            <label class="form-label-bold" for="baAccountNumber">
-              Account number (8 digits)
+            <label class="form-label-bold" for="ba-account-number">
+              Account number
             </label>
-            <input type="text" class="form-control form-control-1-3" id="baAccountNumber" name="baAccountNumber" value="" maxlength="8">
+            <input type="text" class="form-control" id="ba-account-number" name="ba-account-number" value="" maxlength="10">
+          </fieldset>
+        </div>
+
+        <!-- Building society optional -->
+        <div class="form-group">
+          <fieldset>
+            <label class="form-label-bold" for="bs-society-roll">
+              Building society roll or reference number (optional)
+              <span class="form-hint">If your building society uses a roll or reference number, you will find it on your passbook</span>
+            </label>
+            <input type="text" class="form-control" id="bs-society-roll" name="bs-society-roll" value="" data-required="true">
           </fieldset>
         </div>
 
@@ -74,6 +91,8 @@
             </p>
           </div>
         </details>
+      </div>
+      <div class="form-group">
         <details>
           <summary><span class="summary">I don't have a bank account</span></summary>
           <form action="" method="">
