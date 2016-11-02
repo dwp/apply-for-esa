@@ -10,66 +10,67 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <h1>
+      <h1 class="heading-large">
         Pick a date
       </h1>
 
-      <h2>Pattern principals</h2>
+      <p class="lede">We have not seen/validated a user need for this.</p>
+
+      <h2 class="heading-medium">Outstanding questions</h2>
 
       <ul class="list list-bullet">
-        <li>use when the date is not a memorable one, e.g. Date of Birth</li>
-        <li>use quick pick if the date is likely to be a common time before/from e.g. Two week fit notes</li>
-        <li>don't replace manual input</li>
+        <li>Have we seen/validated a user need (not a want) for this?</li>
+        <li>Are there instances where the user will not always know a specific date?</li>
+        <li>Will the user will have a relative mental model on when the date is, eg next friday, or the first day of next month?</li>
+        <li>Can the interaction can be made simplier/quicker with a picker?</li>
+        <li>Does manual input create errors?</li>
       </ul>
 
+      <h2 class="heading-medium">A word from GDS</h2>
+
       <p>
-        <a class="button button-start" href="pick-date" role="button">Start now</a>
+        Calendar controls are only appropriate for near past or future dates, where the day of the week is relevant. Their main use case is for appointment booking.
       </p>
 
-      <div class="form-group">
-        <details>
-          <summary><span class="summary">Assumptions</span></summary>
-          <div class="panel panel-border-narrow">
-            <ul>
-              <li>The user will not always know a specific date</li>
-              <li>The user will have a relative mental model on when the date is, eg next friday, or the first month of next month</li>
-              <li>The interaction can be made simplier with a picker</li>
-              <li>Manual input allows for too many errors</li>
-            </ul>
-          </div>
-        </details>
-        <details>
-          <summary><span class="summary">Existing patterns in the wild</span></summary>
-          <div class="panel panel-border-narrow">
-            <!-- Date -->
-            <div class="form-group">
-              <fieldset>
+      <p>
+        If you also need to show information like availability, embed the calendar in the page and make it large enough for the information to be readable.
+      </p>
 
-                <div class="form-date">
+      <p>
+        A calendar control that depends on JavaScript should never be the only input option.
+      </p>
 
-                  <p class="form-hint">For example, 31 3 1980</p>
+      <a href="https://www.gov.uk/service-manual/user-centred-design/resources/patterns/dates.html">https://www.gov.uk/service-manual/user-centred-design/resources/patterns/dates.html</a>
 
-                  <div class="form-group form-group-day">
-                    <label for="dob-day">Day</label>
-                    <input class="form-control" id="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
-                  </div>
+      <h2 class="heading-medium">Recommended pattern example</h2>
 
-                  <div class="form-group form-group-month">
-                    <label for="dob-month">Month</label>
-                    <input class="form-control" id="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
-                  </div>
+        <!-- Date -->
+        <div class="form-group">
+          <fieldset>
+            <legend class="form-label-bold">Date of birth</legend>
 
-                  <div class="form-group form-group-year">
-                    <label for="dob-year">Year</label>
-                    <input class="form-control" id="dob-year" type="number" pattern="[0-9]*" min="0" max="2014">
-                  </div>
-                </div>
+            <div class="form-date">
 
-              </fieldset>
+              <p class="form-hint">For example, 31 3 1980</p>
+
+              <div class="form-group form-group-day">
+                <label for="dob-day">Day</label>
+                <input class="form-control" id="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+              </div>
+
+              <div class="form-group form-group-month">
+                <label for="dob-month">Month</label>
+                <input class="form-control" id="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+              </div>
+
+              <div class="form-group form-group-year">
+                <label for="dob-year">Year</label>
+                <input class="form-control" id="dob-year" type="number" pattern="[0-9]*" min="0" max="2014">
+              </div>
             </div>
-          </div>
-        </details>
-      </div>
+
+          </fieldset>
+        </div>
 
     </div>
   </div>
