@@ -1,63 +1,47 @@
-{% extends "layout.html" %}
-
-{% block page_title %}
-  Consent
-{% endblock %}
-
-{% block content %}
-
+{% extends "layout.html" %} {% block page_title %} Consent {% endblock %} {% block content %}
 <main id="content" role="main">
-  {% include "../includes/phase_banner_beta.html" %}
-
-	<form action="review" method="#" class="form">
-		<div class="grid-row">
-			<div class="column-two-thirds">
-        <a class="link-back" href="expected-return-date">Back</a>
-    		<header>
-    	    <h1 class="form-title heading-large">
-    	    	<!-- <span class="heading-secondary">Section 1 of 23</span> -->
-    	      People who might be contacted
-    	    </h1>
-    	  </header>
-    	  <p class="lede">The Department for Work and Pensions (DWP) might need to ask other people or organisations for information about you to decide how much Employment and Support Allowance you should get.</p>
-
-        <p>Is it okay for DWP to ask other people or organisations for information about you?
-
-    	  <div class="">
-          <fieldset id="consent" class="inline">
-            <legend for="consent">
-              <span class="frequency-question"></span>
-            </legend>
-            <div class="form-group">
-              <label class="block-label" for="consent-Yes">
-                <input id="consent-Yes" type="radio" name="consent" value="Yes" aria-controls="">Yes
-              </label>
-    
-              <label class="block-label" for="consent-No" data-target="notContactDetails" >
-                <input id="consent-No" type="radio" name="consent" value="No" aria-controls="notContactDetails">No
-              </label>
+    {% include "../includes/phase_banner_beta.html" %}
+    <form action="review" method="#" class="form">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <a class="link-back" href="expected-return-date">Back</a>
+                <header>
+                    <h1 class="form-title heading-large">
+                    People who might be contacted
+                    </h1>
+                </header>
+                <p class="lede">The Department for Work and Pensions (DWP) might need to ask other people or organisations for information about you to decide how much Employment and Support Allowance you should get.</p>
+                <p>Is it okay for DWP to ask other people or organisations for information about you?</p>
+                <div class="">
+                    <fieldset id="consent" class="inline">
+                        <legend for="consent">
+                            <span class="frequency-question"></span>
+                        </legend>
+                        <div class="form-group">
+                            <label class="block-label" for="consent-Yes">
+                                <input id="consent-Yes" type="radio" name="consent" value="Yes" aria-controls="">Yes
+                            </label>
+                            <label class="block-label" for="consent-No" data-target="notContactDetails">
+                                <input id="consent-No" type="radio" name="consent" value="No" aria-controls="notContactDetails">No
+                            </label>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="form-group panel panel-border-narrow js-hidden alert-warning" id="notContactDetails">
+                    <p>You might have to wait longer to get the full amount of Employment and Support Allowance.</p>
+                </div>
+                <!-- Primary buttons, secondary links -->
+                <div class="form-group">
+                    <input type="submit" class="button" value="Save and continue">
+                </div>
+                <div class="form-group">
+                    <p><a href="exit">Save and come back later</a></p>
+                </div>
             </div>
-          </fieldset>
+            <div class="column-one-third">
+                {% include "../includes/help.html" %}
+            </div>
         </div>
-
-        <div class="form-group panel panel-border-narrow js-hidden alert-warning" id="notContactDetails">
-
-          <p>You might have to wait longer to get the full amount of Employment and Support Allowance.</p>
-
-        </div>
-
-        <!-- Primary buttons, secondary links -->
-        <div class="form-group">
-          <input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
-        </div>
-
-      </div>
-      <div class="column-one-third">
-      	{% include "../includes/help.html" %}
-      </div>
-    </div>
-
-  </form>
+    </form>
 </main>
-
 {% endblock %}

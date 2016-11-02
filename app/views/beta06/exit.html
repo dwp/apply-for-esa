@@ -1,112 +1,18 @@
-{% extends "layout.html" %} 
-
-{% block page_title %} 
-Children 
-{% endblock %} 
-
-{% block content %}
+{% extends "layout.html" %} {% block page_title %} Your details are saved {% endblock %} {% block content %}
 <main id="content" role="main">
     {% include "../includes/phase_banner_beta.html" %}
     <form action="where-you-live" method="#" class="form">
         <div class="grid-row">
             <div class="column-two-thirds">
-                <a class="link-back" href="pregnancy">Back</a>
                 <header>
                     <h1 class="form-title heading-large">
-				    	<!-- <span class="heading-secondary">Section 6 of 23</span> -->
-				      Children
-				    </h1>
+                        We have saved your answers
+                    </h1>
                 </header>
-                <div class="form-group">
-                    <fieldset class="inline">
-                        <legend><span class="form-label-bold">Do you have any children aged 18 or under that are dependent on you?</span></legend>
-                        <label class="block-label" data-target="children" for="radio-inline-10">
-                            <input id="radio-inline-10" type="radio" name="pay-mortgage" value="Yes"> Yes
-                        </label>
-                        <label class="block-label" for="radio-inline-11">
-                            <input id="radio-inline-11" type="radio" name="pay-mortgage" value="No"> No
-                        </label>
-                    </fieldset>
-                </div>
-                <div class="js-hidden panel panel-border-narrow" id="children" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px; margin-bottom: 0">
-                    <h2 class="heading-small">Child 1</h2>
-                    <div class="form-group">
-                        <label class="form-label" for="condition01">Name of child</label>
-                        <input class="form-control" id="who01" type="text" name="condition01">
-                    </div>
-                    <div class="form-date form-group">
-	                    <legend class="form-label-bold">Child's date of birth</legend>
-	                    <p class="form-hint">DD MM YYYY</p>
-	                    <div class="form-group form-group-day">
-	                        <label for="dob-day">Day</label>
-	                        <input type="text" class="form-control" id="dob-day" maxlength="2" name="dob-day">
-	                    </div>
-	                    <div class="form-group form-group-month">
-	                        <label for="dob-month">Month</label>
-	                        <input type="text" class="form-control" id="dob-month" maxlength="2" name="dob-month">
-	                    </div>
-	                    <div class="form-group form-group-year">
-	                        <label for="dob-year">Year</label>
-	                        <input type="text" class="form-control" id="dob-year" maxlength="4" name="dob-year">
-	                    </div>
-	                </div>
-	                <p><a href="#" id="show-payment2" class="add-another secondary-button">Add another</a></p>
-	            </div>    
-                <div class="js-hidden panel panel-border-narrow" id="payment2" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px; margin-bottom: 0">
-                    <h2 class="heading-small">Child 2</h2>
-                    <div class="form-group">
-                        <label class="form-label" for="condition02">Name of child</label>
-                        <input class="form-control" id="who02" type="text" name="condition02">
-                    </div>
-                    <div class="form-date form-group">
-	                    <legend class="form-label-bold">Child's date of birth</legend>
-	                    <p class="form-hint">DD MM YYYY</p>
-	                    <div class="form-group form-group-day">
-	                        <label for="dob-day2">Day</label>
-	                        <input type="text" class="form-control" id="dob-day2" maxlength="2" name="dob-day2">
-	                    </div>
-	                    <div class="form-group form-group-month">
-	                        <label for="dob-month2">Month</label>
-	                        <input type="text" class="form-control" id="dob-month2" maxlength="2" name="dob-month2">
-	                    </div>
-	                    <div class="form-group form-group-year">
-	                        <label for="dob-year2">Year</label>
-	                        <input type="text" class="form-control" id="dob-year2" maxlength="4" name="dob-year2">
-	                    </div>
-	                </div>
-                    <p><a href="#" id="show-payment3" class="add-another secondary-button">Add another</a></p>
-                </div>
-                <div class="js-hidden panel panel-border-narrow" id="payment3" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px; margin-bottom: 0">
-                    <h2 class="heading-small">Child 3</h2>
-                    <div class="form-group">
-                        <label class="form-label" for="condition03">Name of child</label>
-                        <input class="form-control" id="who01" type="text" name="condition03">
-                    </div>
-                    <div class="form-date form-group">
-	                    <legend class="form-label-bold">Child's date of birth</legend>
-	                    <p class="form-hint">DD MM YYYY</p>
-	                    <div class="form-group form-group-day">
-	                        <label for="dob-day3">Day</label>
-	                        <input type="text" class="form-control" id="dob-day3" maxlength="2" name="dob-day3">
-	                    </div>
-	                    <div class="form-group form-group-month">
-	                        <label for="dob-month3">Month</label>
-	                        <input type="text" class="form-control" id="dob-month3" maxlength="2" name="dob-month3">
-	                    </div>
-	                    <div class="form-group form-group-year">
-	                        <label for="dob-year3">Year</label>
-	                        <input type="text" class="form-control" id="dob-year3" maxlength="4" name="dob-year3">
-	                    </div>
-	                </div>
-                    <p><a href="#" id="show-payment4" class="add-another secondary-button">Add another</a></p>
-                </div>
-                
-                <!-- Primary buttons, secondary links -->
-                <div class="form-group" style="margin-top: 20px;">
-                    <input type="submit" class="button" value="Save and continue">
-                </div>
-                <div class="form-group">
-                    <p><a href="exit">Save and come back later</a></p>
+                <p>When you are ready to carry on with your application, <a href="login">request a new link</a></p>
+                <div style="width:97%; background:#eaf4f9; padding:10px; margin:0 0 20px; text-align:center;">
+                    <p>You need to complete the rest of the application by:</p>
+                    <p><span class="heading-large">25 November 2016</span></p>
                 </div>
             </div>
             <div class="column-one-third">
@@ -115,24 +21,4 @@ Children
         </div>
     </form>
 </main>
-{% endblock %}
-
-{% block body_end %}
-  {% include "includes/scripts.html" %}
-  <script>
-    $(document).ready(function() {
-
-      $("#show-payment2").click(function() {
-        $("#payment2").removeClass("js-hidden");
-        $("#show-payment2").addClass("js-hidden");
-         return false;
-      });
-      $("#show-payment3").click(function() {
-        $("#payment3").removeClass("js-hidden");
-        $("#show-payment3").addClass("js-hidden");
-         return false;
-      });
-
-    });
-  </script>
 {% endblock %}

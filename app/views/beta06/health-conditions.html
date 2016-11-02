@@ -1,156 +1,120 @@
-{% extends "layout.html" %}
-
-{% block page_title %}
-  Health conditions
-{% endblock %}
-
-{% block content %}
-
+{% extends "layout.html" %} {% block page_title %} Health conditions {% endblock %} {% block content %}
 <main id="content" role="main">
-	{% include "../includes/phase_banner_beta.html" %}
-
-	<form action="fit-note" method="#" class="form">
-		<div class="grid-row">
-			<div class="column-two-thirds">
-        <a class="link-back" href="hospital">Back</a>
-				<header>
-			    <h1 class="form-title heading-large">
-			    	<!-- <span class="heading-secondary">Section 11 of 23</span> -->
-			      Your conditions and disabilities
-			    </h1>
-			  </header>
-
-			  <p>List all the conditions or disabilities you currently have that affect you. If you're unsure, put what's on your sick note.</p>
-
-        <p>You'll get a form in the post later to give more information about how your condition affects you.<p>
-
-        <div class="" id="partner-yes">
-          <h2 class="heading-small">Condition 1</h2>
-          <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
-            <label class="form-label" for="condition01">Name of condition</label>
-            <input class="form-control" id="who01" type="text" name="condition01">
-          </div>
-          <h2 class="heading-small">Condition 2</h2>
-          <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
-            <label class="form-label" for="condition01b">Name of condition</label>
-            <input class="form-control" id="condition01b" type="text" name="condition01b">
-          </div>
-          <h2 class="heading-small">Condition 3</h2>
-          <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
-            <label class="form-label" for="condition01c">Name of condition</label>
-            <input class="form-control" id="condition01c" type="text" name="condition01c">
-          </div>
-
-          <p><a href="#" id="show-payment2" class="add-another secondary-button">Add another</a></p>
-
+    {% include "../includes/phase_banner_beta.html" %}
+    <form action="fit-note" method="#" class="form">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <a class="link-back" href="hospital">Back</a>
+                <header>
+                    <h1 class="form-title heading-large">
+                    <!-- <span class="heading-secondary">Section 11 of 23</span> -->
+                  Your conditions and disabilities
+                </h1>
+                </header>
+                <p>List all the conditions or disabilities you currently have that affect you. If you're unsure, put what's on your sick note.</p>
+                <p>You'll get a form in the post later to give more information about how your condition affects you.</p>
+                <div class="" id="partner-yes">
+                    <h2 class="heading-small">Condition 1</h2>
+                    <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
+                        <label class="form-label" for="condition01">Name of condition</label>
+                        <input class="form-control" id="who01" type="text" name="condition01">
+                    </div>
+                    <h2 class="heading-small">Condition 2</h2>
+                    <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
+                        <label class="form-label" for="condition01b">Name of condition</label>
+                        <input class="form-control" id="condition01b" type="text" name="condition01b">
+                    </div>
+                    <h2 class="heading-small">Condition 3</h2>
+                    <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
+                        <label class="form-label" for="condition01c">Name of condition</label>
+                        <input class="form-control" id="condition01c" type="text" name="condition01c">
+                    </div>
+                    <p><a href="#" id="show-payment2" class="add-another secondary-button">Add another</a></p>
+                </div>
+                <div class="js-hidden" id="payment2">
+                    <h2 class="heading-small">Condition 4</h2>
+                    <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
+                        <label class="form-label" for="condition04">Name of condition</label>
+                        <input class="form-control" id="condition04" type="text" name="condition04"> &nbsp; <a href="#">Remove</a>
+                    </div>
+                    <p><a href="#" id="show-payment3" class="add-another secondary-button">Add another</a></p>
+                </div>
+                <div class="js-hidden" id="payment3">
+                    <h2 class="heading-small">Condition 5</h2>
+                    <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
+                        <label class="form-label" for="condition05">Name of condition</label>
+                        <input class="form-control" id="condition05" type="text" name="condition05"> &nbsp; <a href="#">Remove</a>
+                    </div>
+                    <p><a href="#" id="show-payment4" class="add-another secondary-button">Add another</a></p>
+                </div>
+                <div class="js-hidden" id="payment4">
+                    <h2 class="heading-small">Condition 6</h2>
+                    <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
+                        <label class="form-label" for="condition06">Name of condition</label>
+                        <input class="form-control" id="condition06" type="text" name="condition06"> &nbsp; <a href="#">Remove</a>
+                    </div>
+                    <p><a href="#" id="show-payment5" class="add-another secondary-button">Add another</a></p>
+                </div>
+                <div class="js-hidden" id="payment5">
+                    <h2 class="heading-small">Condition 7</h2>
+                    <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
+                        <label class="form-label" for="condition07">Name of condition</label>
+                        <input class="form-control" id="condition07" type="text" name="condition07"> &nbsp; <a href="#">Remove</a>
+                    </div>
+                    <p><a href="#" id="show-payment6" class="add-another secondary-button">Add another</a></p>
+                </div>
+                <div class="js-hidden" id="payment6">
+                    <h2 class="heading-small">Condition 8</h2>
+                    <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
+                        <label class="form-label" for="condition08">Name of condition</label>
+                        <input class="form-control" id="condition08" type="text" name="condition08"> &nbsp; <a href="#">Remove</a>
+                    </div>
+                    <p><a href="#" id="show-payment7" class="add-another secondary-button">Add another</a></p>
+                </div>
+                <!-- Primary buttons, secondary links -->
+                <div class="form-group">
+                    <input type="submit" class="button" value="Save and continue">
+                </div>
+                <div class="form-group">
+                    <p><a href="exit">Save and come back later</a></p>
+                </div>
+            </div>
+            <div class="column-one-third">
+                {% include "../includes/help.html" %}
+            </div>
         </div>
-
-        <div class="js-hidden" id="payment2">
-
-          <h2 class="heading-small">Condition 4</h2>
-          <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
-            <label class="form-label" for="condition04">Name of condition</label>
-            <input class="form-control" id="condition04" type="text" name="condition04"> &nbsp; <a href="#">Remove</a>
-          </div>
-
-          <p><a href="#" id="show-payment3" class="add-another secondary-button">Add another</a></p>
-
-        </div>
-
-        <div class="js-hidden" id="payment3">
-
-          <h2 class="heading-small">Condition 5</h2>
-          <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
-            <label class="form-label" for="condition05">Name of condition</label>
-            <input class="form-control" id="condition05" type="text" name="condition05"> &nbsp; <a href="#">Remove</a>
-          </div>
-
-          <p><a href="#" id="show-payment4" class="add-another secondary-button">Add another</a></p>
-
-        </div>
-
-        <div class="js-hidden" id="payment4">
-
-          <h2 class="heading-small">Condition 6</h2>
-          <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
-            <label class="form-label" for="condition06">Name of condition</label>
-            <input class="form-control" id="condition06" type="text" name="condition06"> &nbsp; <a href="#">Remove</a>
-          </div>
-
-          <p><a href="#" id="show-payment5" class="add-another secondary-button">Add another</a></p>
-
-        </div>
-
-        <div class="js-hidden" id="payment5">
-
-          <h2 class="heading-small">Condition 7</h2>
-          <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
-            <label class="form-label" for="condition07">Name of condition</label>
-            <input class="form-control" id="condition07" type="text" name="condition07"> &nbsp; <a href="#">Remove</a>
-          </div>
-
-          <p><a href="#" id="show-payment6" class="add-another secondary-button">Add another</a></p>
-
-        </div>
-
-        <div class="js-hidden" id="payment6">
-
-          <h2 class="heading-small">Condition 8</h2>
-          <div class="form-group" style="border-bottom: 1px solid #bfc1c3; padding-bottom: 30px;">
-            <label class="form-label" for="condition08">Name of condition</label>
-            <input class="form-control" id="condition08" type="text" name="condition08"> &nbsp; <a href="#">Remove</a>
-          </div>
-
-          <p><a href="#" id="show-payment7" class="add-another secondary-button">Add another</a></p>
-
-        </div>
-
-		    <!-- Primary buttons, secondary links -->
-		    <div class="form-group">
-		      <input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
-		    </div>
-
-		  </div>
-		  <div class="column-one-third">
-		  	{% include "../includes/help.html" %}
-		  </div>
-		</div>
-
-  </form>
+    </form>
 </main>
-{% endblock %}
+{% endblock %} {% block body_end %} {% include "includes/scripts.html" %}
+<script>
+$(document).ready(function() {
 
-{% block body_end %}
-  {% include "includes/scripts.html" %}
-  <script>
-    $(document).ready(function() {
-
-      $("#show-payment2").click(function() {
+    $("#show-payment2").click(function() {
         $("#payment2").removeClass("js-hidden");
         $("#show-payment2").addClass("js-hidden");
-         return false;
-      });
-      $("#show-payment3").click(function() {
+        return false;
+    });
+    $("#show-payment3").click(function() {
         $("#payment3").removeClass("js-hidden");
         $("#show-payment3").addClass("js-hidden");
-         return false;
-      });
-      $("#show-payment4").click(function() {
+        return false;
+    });
+    $("#show-payment4").click(function() {
         $("#payment4").removeClass("js-hidden");
         $("#show-payment4").addClass("js-hidden");
-         return false;
-      });
-      $("#show-payment5").click(function() {
+        return false;
+    });
+    $("#show-payment5").click(function() {
         $("#payment5").removeClass("js-hidden");
         $("#show-payment5").addClass("js-hidden");
-         return false;
-      });
-      $("#show-payment6").click(function() {
+        return false;
+    });
+    $("#show-payment6").click(function() {
         $("#payment6").removeClass("js-hidden");
         $("#show-payment6").addClass("js-hidden");
-         return false;
-      });
-
+        return false;
     });
-  </script>
+
+});
+</script>
 {% endblock %}

@@ -1,104 +1,78 @@
-{% extends "layout.html" %}
-
-{% block page_title %}
-  Savings
-{% endblock %}
-
-{% block content %}
-
+{% extends "layout.html" %} {% block page_title %} Savings {% endblock %} {% block content %}
 <main id="content" role="main">
-	{% include "../includes/phase_banner_beta.html" %}
-
-	<form action="savings-over" method="#" class="form">
-		<div class="grid-row">
-			<div class="column-two-thirds">
-        <a class="link-back" href="pensions">Back</a>
-				<header>
-			    <h1 class="form-title heading-large">
-			    	<!-- <span class="heading-secondary">Section 7 of 23</span> -->
-			      Savings
-			    </h1>
-			  </header>
-
-			  <div class="form-group">
-          <fieldset>
-
-            <legend class="form-label-bold">
-              How much money do you have saved?
-            </legend>
-
-            <p>Savings can include bank accounts, investments, shares and Individual Savings Accounts (ISAs).</p>
-
-            <label for="radio-part" class="block-label">
-              <input id="radio-part" type="radio" name="housing-act" value="no-savings">
-              No savings
-            </label>
-            <label for="radio-part-2" class="block-label">
-              <input id="radio-part-2" type="radio" name="housing-act" value="less-than">
-              Less than £5,500
-            </label>
-
-            <label for="radio-part-3" data-target="saved" class="block-label">
-              <input id="radio-part-3" type="radio" name="housing-act" value="between">
-              Between £5,500 and £16,000
-            </label>
-
-            <label for="radio-part-4" data-target="saved" class="block-label">
-              <input id="radio-part-4" type="radio" name="housing-act" value="over">
-              Over £16,000
-            </label>
-
-          </fieldset>
-          
+    {% include "../includes/phase_banner_beta.html" %}
+    <form action="savings-over" method="#" class="form">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <a class="link-back" href="pensions">Back</a>
+                <header>
+                    <h1 class="form-title heading-large">
+                    <!-- <span class="heading-secondary">Section 7 of 23</span> -->
+                  Savings
+                </h1>
+                </header>
+                <div class="form-group">
+                    <fieldset>
+                        <legend class="form-label-bold">
+                            How much money do you have saved?
+                        </legend>
+                        <p>Savings can include bank accounts, investments, shares and Individual Savings Accounts (ISAs).</p>
+                        <label for="radio-part" class="block-label">
+                            <input id="radio-part" type="radio" name="housing-act" value="no-savings"> No savings
+                        </label>
+                        <label for="radio-part-2" class="block-label">
+                            <input id="radio-part-2" type="radio" name="housing-act" value="less-than"> Less than £5,500
+                        </label>
+                        <label for="radio-part-3" data-target="saved" class="block-label">
+                            <input id="radio-part-3" type="radio" name="housing-act" value="between"> Between £5,500 and £16,000
+                        </label>
+                        <label for="radio-part-4" data-target="saved" class="block-label">
+                            <input id="radio-part-4" type="radio" name="housing-act" value="over"> Over £16,000
+                        </label>
+                    </fieldset>
+                </div>
+                <div class="form-group js-hidden panel panel-border-narrow" id="saved">
+                    <label class="form-label-bold" for="account-holder">Exactly how much do you have saved?</label>
+                    £
+                    <input type="text" class="form-control" id="account-holder">
+                </div>
+                <!-- Primary buttons, secondary links -->
+                <div class="form-group">
+                    <input type="submit" class="button" value="Save and continue">
+                </div>
+                <div class="form-group">
+                    <p><a href="exit">Save and come back later</a></p>
+                </div>
+            </div>
+            <div class="column-one-third">
+                {% include "../includes/help.html" %}
+            </div>
         </div>
-        <div class="form-group js-hidden panel panel-border-narrow" id="saved">
-          <label class="form-label-bold" for="account-holder">Exactly how much do you have saved?</label>
-          £
-          <input type="text" class="form-control" id="account-holder">
-        </div>
-
-
-
-		    <!-- Primary buttons, secondary links -->
-		    <div class="form-group">
-		      <input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
-		    </div>
-
-		  </div>
-		  <div class="column-one-third">
-        {% include "../includes/help.html" %}
-		  </div>
-		</div>
-
-  </form>
+    </form>
 </main>
+{% endblock %} {% block body_end %} {% include "includes/scripts.html" %}
+<script>
+$('form').on('submit', function(e) {
 
-{% endblock %}
-
-{% block body_end %}
-  {% include "includes/scripts.html" %}
-  <script>
-    $('form').on('submit', function(e) {
-      
-      switch($('input[name="housing-act"]:checked').val()){
+    switch ($('input[name="housing-act"]:checked').val()) {
         case 'no-savings':
-          window.location = 'savings-over';
-        break;
+            window.location = 'savings-over';
+            break;
 
         case 'less-than':
-          window.location = 'savings-over';
-        break;
+            window.location = 'savings-over';
+            break;
 
         case 'between':
-          window.location = 'savings-where-from';
-        break;
+            window.location = 'savings-where-from';
+            break;
 
         default:
-          window.location = 'savings-where-from';
-        break;
-      }
-      
-      e.preventDefault();
-    });
-  </script>
+            window.location = 'savings-where-from';
+            break;
+    }
+
+    e.preventDefault();
+});
+</script>
 {% endblock %}
