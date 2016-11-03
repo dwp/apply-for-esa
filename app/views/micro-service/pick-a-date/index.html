@@ -14,19 +14,49 @@
         Pick a date
       </h1>
 
+      <h2 class="heading-medium">A case worth exploring</h2>
+
+      <p><a href="http://esa-digital.herokuapp.com/health03/health-conditions">http://esa-digital.herokuapp.com/health03/health-conditions</a>
+
+      <p>
+        Research has shown that people have variable mental models of when certain conditions first began, e.g. Three years ago, 2011, etc.
+      </p>
+
+      <p>
+        We should allow people to continue to describe these dates in the manner that is most natural to their mental model.
+      </p>
+
+      <p>
+        However &mdash; we know that legacy systems require the dates in a specific DD&nbsp;MM&nbsp;YY format. Whilst there may be temptation to include a date picker as a solution to a system problem, we should instead look to do the hard work to keep it simple for the user.
+      </p>
+
+      <p>
+        We could attempt to identify key words or phrases that are entered and automatically convert those to a suitable date format in the backend
+      </p>
+
+      <p>
+        Example, three years ago would become 01 11 2013.
+      </p>
+
+      <p>
+        Part of this will be challenging the specificity of the dates required, so that we can automatically default day to the first of the month when required.
+      </p>
+
+      <h2 class="heading-large">Date pickers (calendar controls)</h2>
+
       <p class="lede">We have not seen/validated a user need for this.</p>
 
-      <h2 class="heading-medium">Outstanding questions</h2>
+      <h3 class="heading-medium">Outstanding questions</h3>
 
       <ul class="list list-bullet">
         <li>Have we seen/validated a user need (not a want) for this?</li>
         <li>Are there instances where the user will not always know a specific date?</li>
-        <li>Will the user will have a relative mental model on when the date is, eg next friday, or the first day of next month?</li>
+        <li>Will the user have a relative mental model on when the date is, eg next friday, or the first day of next month?</li>
         <li>Can the interaction can be made simplier/quicker with a picker?</li>
         <li>Does manual input create errors?</li>
       </ul>
 
-      <h2 class="heading-medium">A word from GDS</h2>
+      <h3 class="heading-medium">A word from GDS</h3>
 
       <p>
         Calendar controls are only appropriate for near past or future dates, where the day of the week is relevant. Their main use case is for appointment booking.
@@ -42,7 +72,7 @@
 
       <a href="https://www.gov.uk/service-manual/user-centred-design/resources/patterns/dates.html">https://www.gov.uk/service-manual/user-centred-design/resources/patterns/dates.html</a>
 
-      <h2 class="heading-medium">Recommended pattern example</h2>
+      <h3 class="heading-medium">Recommended pattern from GDS</h3>
 
         <!-- Date -->
         <div class="form-group">
