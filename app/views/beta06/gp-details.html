@@ -1,8 +1,8 @@
-{% extends "layout.html" %} 
+{% extends "layout.html" %}
 
 {% block page_title %}
- GP Details 
-{% endblock %} 
+ GP Details
+{% endblock %}
 
 {% block content %}
 
@@ -17,10 +17,10 @@
         				Find your GP surgery
     				</h1>
                 </header>
-           
+
                 <div id="name" class="form-group" data-error="Enter the name of your GP practice">
                     <label for="practiceSearch" class="form-label">Your GP surgery</label>
-                    <input type="text" name="practiceSearch" id="practiceSearch" class="form-control form-control-2-3 typeahead" placeholder="Search by Gp Surgery, City or Postcode" value="">
+                    <input type="text" name="practiceSearch" id="practiceSearch" class="form-control form-control-2-3 typeahead" placeholder="Search by GP surgery, city or postcode" value="">
                 </div>
 
                 <p>
@@ -34,7 +34,7 @@
                 <div class="form-group">
                     <p><a href="exit">Save and come back later</a></p>
                 </div>
-                
+
             </div>
             <div class="column-one-third">
                 {% include "../includes/help.html" %}
@@ -92,7 +92,7 @@ $('#name .typeahead').typeahead({
         empty: [
             '<p class="tt-suggestion">No matches found - <a href="manual-gp">enter details manually</a></p>'].join('\n'),
         suggestion: function (data) {
-        return '<p><span class="bold-medium">' + data.gpName + '</span><br>' + data.gpAddress1 + "-" 
+        return '<p><span class="bold-medium">' + data.gpName + '</span><br>' + data.gpAddress1 + "-"
            + data.gpAddress2 +"-" + data.gpAddress3 + "-" + data.gpAddress4 + "-" + data.gpPostcode +'<br>' + data.gpTelephone + '</p>';
         }
     }
