@@ -1,0 +1,170 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	Getting around
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "../includes/phase_banner_alpha.html" %}
+
+	<form action="standing-sitting" method="#" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<a class="link-back" href="physical-condition">Back</a>
+
+				<h1 class="form-title heading-large">
+				<!-- <span class="heading-secondary">Section 16 of 16</span> -->
+				Getting around
+				</h1>
+
+				<div class="form-group">
+					<fieldset class="">
+						<h1 class="form-label-bold"><legend for="partner">How far can you get around, on flat ground, without stopping?</legend></h1>
+						<p>If you usually use something to help you get around (like crutches, a walking stick or a wheelchair), base your answer on when you're using it.</p>
+						<label class="block-label" data-target="more" for="radio-inline-1">
+							<input id="radio-inline-1" type="radio" name="partner" value="Yes">
+							Less than 50 metres (roughly the length of 5 double decker buses)
+						</label>
+						<label class="block-label" data-target="more" for="radio-inline-2">
+							<input id="radio-inline-2" type="radio" name="partner" value="No">
+							Between 50 to 100 metres 
+						</label>
+						<label class="block-label" data-target="more" for="radio-inline-7">
+							<input id="radio-inline-7" type="radio" name="partner" value="No">
+							Between 100 and 200 metres 
+						</label>
+						<label class="block-label" for="radio-inline-3">
+							<input id="radio-inline-3" type="radio" name="partner" value="No">
+							Over 200 metres 						</label>
+						<label class="block-label" data-target="other" for="radio-inline-6">
+							<input id="radio-inline-6" type="radio" name="partner" value="No">
+							It depends on the type of day you're having
+						</label>
+
+						<div class="panel panel-border-narrow js-hidden" id="other">
+							<label class="form-label" for="why">Why does it depend?</label>
+							<input type="text" class="form-control" id="why">
+						</div>
+					</fieldset>
+				</div>
+
+
+				<div class="panel panel-border-narrow js-hidden" id="more">
+					<div class="form-group">
+						<label class="form-label inline" for="time">It would take you roughly <input type="text" class="form-control form-control-1-8" id="why"> minutes to walk 50 metres</label>
+					</div>
+
+					<div class="form-group">
+						<fieldset class="">
+							<legend class="form-label-bold" for="stop">Why would you need to stop?</legend>
+							<label class="block-label" for="radio-inline-20">
+								<input id="radio-inline-20" type="checkbox" name="stop" value="Daily">
+								Tiredness
+							</label>
+							<label class="block-label" for="radio-inline-21">
+								<input id="radio-inline-21" type="checkbox" name="stop" value="Weekly">
+								Pain
+							</label>
+							<label class="block-label" for="radio-inline-22">
+								<input id="radio-inline-22" type="checkbox" name="stop" value="Monthly">
+								Breathlessness
+							</label>
+							<label class="block-label" for="radio-inline-224">
+								<input id="radio-inline-224" type="checkbox" name="stop" value="Monthly">
+								Lack of balance
+							</label>
+							<label class="block-label" data-target="d-other" for="radio-inline-23">
+								<input id="radio-inline-23" type="checkbox" name="stop" value="Less than monthly">
+								Something else
+							</label>
+							<div class="panel panel-narrow-border js-hidden" id="d-other">
+								<div class="form-group">
+									<label class="form-label" ><input type="text" class="form-control" id="address-line2"></label>
+								</div>
+							</div>
+						</fieldset>
+					</div>
+
+					<div class="form-group">
+						<fieldset class="">
+							<legend class="form-label-bold" for="have-mortgage">What helps you get around?</legend>
+							<label class="block-label" data-target="helps" for="radio-inline-320">
+								<input id="radio-inline-320" type="checkbox" name="have-mortgage" value="Daily">
+								A wheelchair
+							</label>
+							<label class="block-label" for="radio-inline-321">
+								<input id="radio-inline-321" type="checkbox" name="helps" value="Weekly">
+								Crutches
+							</label>
+							<label class="block-label" for="radio-inline-322">
+								<input id="radio-inline-322" type="checkbox" name="helps" value="Monthly">
+								A walking stick
+							</label>
+							<label class="block-label" for="radio-inline-324">
+								<input id="radio-inline-324" type="checkbox" name="helps" value="Monthly">
+								Someone helps you
+							</label>
+							<label class="block-label" data-target="e-other" for="radio-inline-323">
+								<input id="radio-inline323" type="checkbox" name="helps" value="Less than monthly">
+								Something else
+							</label>
+							<div class="panel panel-narrow-border js-hidden" id="e-other">
+								<div class="form-group">
+									<label class="form-label" ><input type="text" class="form-control" id="address-line2"></label>
+								</div>
+							</div>
+							<label class="block-label" for="radio-inline-327">
+								<input id="radio-inline-327" type="radio" name="helps" value="Monthly">
+								You manage without help, but with difficulty
+							</label>
+						</fieldset>
+					</div>
+
+					<div class="form-group">
+						<fieldset class="">
+							<legend class="form-label-bold" for="stairs">Can you go up or down stairs at least once if there’s a rail to hold on to?</legend>
+							<label class="block-label" for="radio-inline-420">
+								<input id="radio-inline-420" type="radio" name="stairs" value="Daily">
+								Yes
+							</label>
+							<label class="block-label" data-target="f-other" for="radio-inline-421">
+								<input id="radio-inline-421" type="radio" name="stairs" value="Weekly">
+								Yes, but you’d need help
+							</label>
+							<div class="panel panel-narrow-border js-hidden" id="f-other">
+								<div class="form-group">
+									<label class="form-label" ><input type="text" class="form-control" id="address-line2"></label>
+								</div>
+							</div>
+							<label class="block-label" for="radio-inline-422">
+								<input id="radio-inline-422" type="radio" name="stairs" value="Monthly">
+								No
+							</label>
+
+
+						</fieldset>
+					</div>
+
+					<div class="form-group">
+						<label class="form-label-bold" for="tell-more">Explain more about the difficulty you have getting around</label>
+						<textarea id="tell-more" class="form-control" rows="5"></textarea>
+					</div>
+				</div>
+
+				<!-- Primary buttons, secondary links -->
+				<div class="form-group">
+					<input type="submit" class="button" value="Continue"> <!--a href="overview">I do not agree - leave now</a-->
+				</div>
+
+			</div>
+			<div class="column-one-third">
+				{% include "../includes/help.html" %}
+			</div>
+		</div>
+
+	</form>
+</main>
+
+{% endblock %}

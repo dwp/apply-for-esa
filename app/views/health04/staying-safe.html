@@ -1,0 +1,63 @@
+{% extends "layout.html" %} {% block page_title %} Staying safe {% endblock %} {% block content %}
+<main id="content" role="main">
+    {% include "../includes/phase_banner_beta.html" %}
+    <form action="starting-finishing" method="#" class="form">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <a class="link-back" href="learning-tasks">Back</a>
+                <header>
+                    <h1 class="form-title heading-large">Are you aware of basic hazards and danger?</h1>
+                </header>
+                <p>Basic hazards are things such as boiling water, sharp objects and moving cars.</p>
+                <fieldset id="speech">
+                    <legend for="speech">
+                        <span class="visually-hidden">Are you aware of basic hazards and danger?</span>
+                    </legend>
+                    <div class="form-group">
+                        <label class="block-label" for="speech-Yes">
+                            <input id="speech-Yes" type="radio" name="speech" value="Yes" aria-controls="">Yes
+                        </label>
+                        <label class="block-label" for="speech-No" data-target="speechDetails">
+                            <input id="speech-No" type="radio" name="speech" value="No" aria-controls="speechDetails">No
+                        </label>
+                        <label class="block-label" for="speech-Sometimes" data-target="speechDetails">
+                            <input id="speech-Sometimes" type="radio" name="speech" value="No" aria-controls="speechDetails">Not always
+                        </label>
+                    </div>
+                </fieldset>
+                <div class="panel panel-border-narrow js-hidden" id="speechDetails">
+                    <fieldset id="safe" class="form-group">
+                        <legend for="safe" class="form-label-bold">
+                            How often do you need someone to help you stay safe?
+                        </legend>
+                        <div class="form-group">
+                            <label class="block-label" for="safe-Yes">
+                                <input id="safe-Yes" type="radio" name="safe" value="Yes">All the time
+                            </label>
+                            <label class="block-label" for="safe-No">
+                                <input id="safe-No" type="radio" name="safe" value="No">Most of the time
+                            </label>
+                            <label class="block-label" for="safe-Sometimes">
+                                <input id="safe-Sometimes" type="radio" name="safe" value="No">Sometimes
+                            </label>
+                        </div>
+                    </fieldset>
+                    <label for="howDoes">
+                        <span class="form-label-bold">What problems do you have staying safe?
+                        </span>
+                    </label>
+                    <textarea maxlength="1500" class="form-control form-control-3-4" id="howDoes" name="howDoes"></textarea>
+                    <span class="font-xsmall form-control-3-4 character-count"><span class="char-count">1500</span> characters left</span>
+                </div>
+                <!-- Primary buttons, secondary links -->
+                <div class="form-group">
+                    <input type="submit" class="button" value="Continue">
+                </div>
+            </div>
+            <div class="column-one-third">
+                {% include "../includes/help.html" %}
+            </div>
+        </div>
+    </form>
+</main>
+{% endblock %}

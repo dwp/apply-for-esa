@@ -1,0 +1,75 @@
+{% extends "layout.html" %} {% block page_title %} Learning tasks {% endblock %} {% block content %}
+<main id="content" role="main">
+    {% include "../includes/phase_banner_beta.html" %}
+    <form action="staying-safe" method="#" class="form">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <a class="link-back" href="consciousness">Back</a>
+                <header>
+                    <h1 class="form-title heading-large">Are you able to learn basic everyday tasks?</h1>
+                </header>
+                <fieldset id="speech" class="">
+                    <legend for="speech">
+                        <span class="visually-hidden">Are you able to learn basic everyday tasks?</span>
+                    </legend>
+                    <p>This can include:</p>
+                    <ul class="list-bullet form-group">
+                        <li>learning how to switch the lights on or off</li>
+                        <li>learning how to turn the tv on or switch channels</li>
+                        <li>learning how to brush your teeth</li>
+                    </ul>
+                    
+                    <div class="form-group">
+                        <label class="block-label" for="speech-Yes">
+                            <input id="speech-Yes" type="radio" name="speech" value="Yes" aria-controls="">Yes
+                        </label>
+                        <label class="block-label" for="speech-No" data-target="speechDetails">
+                            <input id="speech-No" type="radio" name="speech" value="No" aria-controls="speechDetails">No
+                        </label>
+                        <label class="block-label" for="speech-Sometimes" data-target="speechDetails">
+                            <input id="speech-Sometimes" type="radio" name="speech" value="Sometimes" aria-controls="speechDetails">Sometimes
+                        </label>
+                    </div>
+                </fieldset>
+
+                <div class="panel panel-border-narrow js-hidden" id="speechDetails">
+                    <label for="howDoes">
+                        <span class="form-label-bold">Why do you find it hard to do basic tasks?
+                        </span>
+                    </label>
+                    <textarea maxlength="1500" class="form-control form-control-3-4" id="howDoes" name="howDoes"></textarea>
+                    <span class="font-xsmall form-control-3-4 character-count"><span class="char-count">1500</span> characters left</span>
+                </div>
+                    <!-- Primary buttons, secondary links -->
+                <div class="form-group">
+                    <input type="submit" class="button" value="Continue">
+                    <!--a href="overview">I do not agree - leave now</a-->
+                </div>
+            </div>
+            <div class="column-one-third">
+				{% include "../includes/help.html" %}
+			</div>
+        </div>
+    </form>
+</main>
+{% endblock %}
+
+{% block body_end %}
+  {% include "includes/scripts.html" %}
+  <script>
+    $('form').on('submit', function(e) {
+      
+      switch($('input[name="speech"]:checked').val()){
+        case 'No':
+          window.location = 'staying-safe';
+        break;
+
+        default:
+          window.location = 'learning-tasks-02';
+        break;
+      }
+      
+      e.preventDefault();
+    });
+  </script>
+{% endblock %}

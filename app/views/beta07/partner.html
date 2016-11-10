@@ -1,0 +1,50 @@
+{% extends "layout.html" %} {% block page_title %} Partner {% endblock %} {% block content %}
+<main id="content" role="main">
+    {% include "../includes/phase_banner_beta.html" %}
+    <form action="volunteering" method="#" class="form">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <a class="link-back" href="contact-pref">Back</a>
+                <header>
+                    <h1 class="form-title heading-large">Your partner</h1>
+                </header>
+                <div class="form-group">
+                    <fieldset class="inline">
+                        <legend class="form-label-bold">
+                            Do you have a partner?
+                        </legend>
+                        <p>A partner is a person you are married to or a person you live with as if you are married to them.</p>
+                        <label for="radio-part-2" data-target="partners-hours" class="block-label">
+                            <input id="radio-part-2" type="radio" name="housing-act" value="Yes"> Yes
+                        </label>
+                        <label for="radio-part-3" data-target="no-partner" class="block-label">
+                            <input id="radio-part-3" type="radio" name="housing-act" value="No"> No
+                        </label>
+                    </fieldset>
+                    <div class="js-hidden panel panel-border-narrow" id="partners-hours">
+                        <fieldset class="inline">
+                            <legend class="form-label-bold" for="third">Does your partner work 24 hours or more a week?</legend>
+                            <label for="third-party-yes" class="block-label">
+                                <input type="radio" id="third-party-yes" name="third" value="Yes"> Yes
+                            </label>
+                            <label for="third-party-no" class="block-label">
+                                <input type="radio" id="third-party-no" name="third" value="No"> No
+                            </label>
+                        </fieldset>
+                    </div>
+                </div>
+                <!-- Primary buttons, secondary links -->
+                <div class="form-group">
+                    <input type="submit" class="button" value="Save and continue">
+                </div>
+                <div class="form-group">
+                    <p><a href="exit">Save and come back later</a></p>
+                </div>
+            </div>
+            <div class="column-one-third">
+                <p>&nbsp;</p>
+            </div>
+        </div>
+    </form>
+</main>
+{% endblock %} 

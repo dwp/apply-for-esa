@@ -1,0 +1,87 @@
+{% extends "layout.html" %} {% block page_title %} Coping with change {% endblock %} {% block content %}
+<main id="content" role="main">
+    {% include "../includes/phase_banner_beta.html" %}
+    <form action="going-out" method="#" class="form">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <a class="link-back" href="starting-finishing">Back</a>
+                <header>
+                    <h1 class="form-title heading-large">Can you cope with changes to your daily routine?</h1>
+                </header>
+                <fieldset id="speech" class="">
+                    <legend for="speech">
+                        <span class="visually-hidden">Can you cope with changes to your daily routine?</span>
+                    </legend>
+                    
+                    <div class="form-group">
+                        <label class="block-label" for="speech-Yes">
+                            <input id="speech-Yes" type="radio" name="speech" value="Yes" aria-controls="">Yes
+                        </label>
+                        <label class="block-label" for="speech-No" data-target="speechDetails">
+                            <input id="speech-No" type="radio" name="speech" value="No" aria-controls="speechDetails">No
+                        </label>
+                        <label class="block-label" for="speech-Sometimes" data-target="speechDetails">
+                            <input id="speech-Sometimes" type="radio" name="speech" value="Sometimes" aria-controls="speechDetails">Sometimes
+                        </label>
+                    </div>
+                </fieldset>
+
+                <div class="panel panel-border-narrow js-hidden" id="speechDetails">
+                    <fieldset id="safe" class="form-group">
+                        <legend for="safe" class="form-label-bold">
+                            Can you cope with small changes to your daily routine if you know about them before they happen?
+                        </legend>
+                        <p>For example, things like having a meal earlier or later than usual, or an appointment time being changed.</p>
+                        <div class="form-group">
+                            <label class="block-label" for="safe-Yes">
+                                <input id="safe-Yes" type="radio" name="safe" value="Yes">Yes
+                            </label>
+                            <label class="block-label" for="safe-No">
+                                <input id="safe-No" type="radio" name="safe" value="No">No
+                            </label>
+                            <label class="block-label" for="safe-Sometimes">
+                                <input id="safe-Sometimes" type="radio" name="safe" value="No">Sometimes
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset id="cope" class="form-group">
+                        <legend for="cope" class="form-label-bold">
+                            Can you cope with small changes to your daily routine if they are unexpected?
+                        </legend>
+                        <p>For example, things like your bus or train not running on time, or an unexpected visitor coming to your house.</p>
+                        <div class="form-group">
+                            <label class="block-label" for="cope-Yes">
+                                <input id="cope-Yes" type="radio" name="cope" value="Yes">Yes
+                            </label>
+                            <label class="block-label" for="cope-No">
+                                <input id="cope-No" type="radio" name="cope" value="No">No
+                            </label>
+                            <label class="block-label" for="cope-Sometimes">
+                                <input id="cope-Sometimes" type="radio" name="cope" value="No">Sometimes
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group">
+                        <label for="howOften">
+                            <span class="form-label-bold">Describe how you cope with change. Explain what problems you have and give examples if you can. If it varies tell us how.
+                            </span>
+                        </label>
+                        <textarea maxlength="1500" class="form-control form-control-3-4" id="howOften" name="howOften"></textarea>
+                        <span class="font-xsmall form-control-3-4 character-count"><span class="char-count">1500</span> characters left</span>
+                    </div>
+                </div>
+                    <!-- Primary buttons, secondary links -->
+                <div class="form-group">
+                    <input type="submit" class="button" value="Continue">
+                    <!--a href="overview">I do not agree - leave now</a-->
+                </div>
+            </div>
+            <div class="column-one-third">
+				{% include "../includes/help.html" %}
+			</div>
+        </div>
+    </form>
+</main>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "layout.html" %} {% block page_title %} Your details are saved {% endblock %} {% block content %}
+<main id="content" role="main">
+    {% include "../includes/phase_banner_beta.html" %}
+    <form action="where-you-live" method="#" class="form">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <header>
+                    <h1 class="form-title heading-large">
+                        We have saved your answers
+                    </h1>
+                </header>
+                <p>When you are ready to carry on with your application, <a href="login">request a new link</a></p>
+                <div style="width:97%; background:#eaf4f9; padding:10px; margin:0 0 20px; text-align:center;">
+                    <p>You need to complete the rest of the application by:</p>
+                    <p><span class="heading-large">25 November 2016</span></p>
+                </div>
+            </div>
+            <div class="column-one-third">
+                {% include "../includes/help.html" %}
+            </div>
+        </div>
+    </form>
+</main>
+{% endblock %}

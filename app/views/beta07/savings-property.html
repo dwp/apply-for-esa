@@ -1,0 +1,37 @@
+{% extends "layout.html" %} {% block page_title %} Savings {% endblock %} {% block content %}
+<main id="content" role="main">
+    {% include "../includes/phase_banner_beta.html" %}
+    <form action="savings-shares" method="#" class="form">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <a class="link-back" href="savings">Back</a>
+                <header>
+                    <h1 class="form-title heading-large">
+            <!-- <span class="heading-secondary">Section 7 of 23</span> -->
+            Other property
+          </h1>
+                </header>
+                <fieldset class="inline form-group">
+                    <legend class="form-label-bold" for="property">Do you own any property in the UK or abroad apart from where you live?</legend>
+                    <label class="block-label" for="property-1">
+                        <input id="property-1" type="radio" name="property" value="Yes"> Yes
+                    </label>
+                    <label class="block-label" for="property-2">
+                        <input id="property-2" type="radio" name="property" value="No"> No
+                    </label>
+                </fieldset>
+                <!-- Primary buttons, secondary links -->
+                <div class="form-group">
+                    <input type="submit" class="button" value="Save and continue">
+                </div>
+                <div class="form-group">
+                    <p><a href="exit">Save and come back later</a></p>
+                </div>
+            </div>
+            <div class="column-one-third">
+                {% include "../includes/help.html" %}
+            </div>
+        </div>
+    </form>
+</main>
+{% endblock %} 

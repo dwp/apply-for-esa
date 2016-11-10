@@ -1,0 +1,91 @@
+{% extends "layout.html" %} 
+
+{% block page_title %} 
+    Address
+{% endblock %} 
+
+{% block content %}
+
+<main id="content" role="main">
+    {% include "../includes/phase_banner_beta.html" %}
+    <form action="contact-pref" method="#" class="form">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <a class="link-back" href="address-postcode">Back</a>
+
+                {% include "../includes/error-summary.html" %}
+
+                <header>
+                    <h1 class="form-title heading-large">Address</h1>
+                </header>
+                <p>Enter an address where you want letters about your claim to be posted.</p>
+                
+                <div class="form-group-compound">
+                    <label class="form-label" for="address-a">House or flat number and street</label>
+                    <input type="text" name="address" id="address-a" class="form-control" value="">
+                </div>
+                <div class="form-group-compound">
+                    <input type="text" name="address" id="address-a" class="form-control" value="">
+                </div>
+                <div class="form-group-compound" data-required data-error="Enter your town or city">
+                    <label for="town" class="form-label">Town or city</label>
+                    <input type="text" name="town" id="town" class="form-control" value="">
+                </div>
+                <div class="form-group-compound">
+                    <label for="county" class="form-label">County</label>
+                    <input type="text" name="county" id="county" class="form-control" value="">
+                </div>
+                <div class="form-group" data-required data-error="Enter your postcode">
+                    <label for="postCode" class="form-label">Postcode</label>
+                    <input type="text" name="postCode" id="postCode" class="form-control form-control-1-4" value="">
+                </div>
+                
+                <div class="form-group" data-required data-error="Select an option">
+                    <fieldset class="inline">
+                        <legend class="form-label-bold">
+                            Do you need letters in a different format, for example, braille, large print or audio CD?
+                        </legend>
+                        <label for="radio-part-2" data-target="format" class="block-label">
+                            <input id="radio-part-2" type="radio" name="housing-act" value="Yes"> Yes
+                        </label>
+                        <label for="radio-part-3" class="block-label">
+                            <input id="radio-part-3" type="radio" name="housing-act" value="No"> No
+                        </label>
+                    </fieldset>
+                </div>
+                <div class="panel panel-border-narrow form-group js-hidden" id="format" data-required data-error="Select which format you need">
+                    <fieldset class="">
+                        <legend class="form-labl-bold">What format do you need?</legend>
+                        <label class="block-label" for="radio-inline-1">
+                            <input id="radio-inline-1" type="radio" name="partner" value="Yes"> Large print
+                        </label>
+                        <label class="block-label" for="radio-inline-2">
+                            <input id="radio-inline-2" type="radio" name="partner" value="No"> Braille
+                        </label>
+                        <label class="block-label" for="radio-inline-7">
+                            <input id="radio-inline-7" type="radio" name="partner" value="No"> Audio CD
+                        </label>
+                        <label class="block-label" data-target="other-sc2" for="radio-inline-17">
+                            <input id="radio-inline-17" type="radio" name="partner" value="other">
+                            Other
+                        </label>
+                        <div class="form-group js-hidden" id="other-sc2">
+                            <label class="form-label" for="freq">What format?</label><input type="text" class="form-control" id="freq">
+                        </div>
+                    </fieldset>
+                </div>
+                <!-- Primary buttons, secondary links -->
+                <div class="form-group">
+                    <input type="submit" class="button" value="Save and continue">
+                </div>
+                <div class="form-group">
+                    <p><a href="exit">Save and come back later</a></p>
+                </div>
+            </div>
+            <div class="column-one-third">
+                {% include "../includes/help.html" %}
+            </div>
+        </div>
+    </form>
+</main>
+{% endblock %}

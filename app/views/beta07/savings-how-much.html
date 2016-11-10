@@ -1,0 +1,34 @@
+{% extends "layout.html" %} {% block page_title %} Savings {% endblock %} {% block content %}
+<main id="content" role="main">
+    {% include "../includes/phase_banner_beta.html" %}
+    <form action="savings-where-from" method="#" class="form">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <a class="link-back" href="savings">Back</a>
+                <header>
+                    <h1 class="form-title heading-large">
+                    Your savings
+                    </h1>
+                </header>
+                <div class="form-group" id="no-savings">
+                    <div class="form-group">
+                        <label class="form-label-bold" for="account-holder">How much do you have saved?</label>
+                        £
+                        <input type="text" class="form-control" id="account-holder">
+                    </div>
+                    <!-- Primary buttons, secondary links -->
+                    <div class="form-group">
+                        <input type="submit" class="button" value="Save and continue">
+                    </div>
+                    <div class="form-group">
+                        <p><a href="exit">Save and come back later</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="column-one-third">
+                {% include "../includes/help.html" %}
+            </div>
+        </div>
+    </form>
+</main>
+{% endblock %}

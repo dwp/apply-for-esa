@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	Where you live
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "../includes/phase_banner_beta.html" %}
+
+	<form action="gp-details" method="#" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<a class="link-back" href="where-you-live">Back</a>
+				<header>
+					<h1 class="form-title heading-large">
+						Care home
+					</h1>
+				</header>
+
+				<div class="form-group">
+					<fieldset class="inline">
+						<legend class="form-label-bold" for="temp">Are you in the care home temporarily?</legend>
+						<label class="block-label" for="radio-inline-9">
+							<input id="radio-inline-9" type="radio" name="temp" value="Yes">
+							Yes
+						</label>
+						<label class="block-label" for="radio-inline-8">
+							<input id="radio-inline-8" type="radio" name="temp" value="No">
+							No
+						</label>
+					</fieldset>
+				</div>
+
+				<!-- Primary buttons, secondary links -->
+				<div class="form-group">
+                    <input type="submit" class="button" value="Save and continue">
+                </div>
+                <div class="form-group">
+                    <p><a href="exit">Save and come back later</a></p>
+                </div>
+
+			</div>
+			<div class="column-one-third">
+				{% include "../includes/help.html" %}
+			</div>
+		</div>
+
+	</form>
+</main>
+
+{% endblock %}
+
+{% block body_end %}
+  	{% include "includes/scripts.html" %}
+  	<script>
+	    $('form').on('submit', function(e) {
+		      if($('#radio-inline-9').is(':checked')) {
+		        	window.location = 'household';
+		      } else {
+		        	window.location = 'gp-details';
+		      }
+
+		      e.preventDefault();
+	    });
+  	</script>
+{% endblock %}

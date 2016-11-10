@@ -1,0 +1,47 @@
+{% extends "layout.html" %} 
+
+{% block page_title %} 
+    Contact details
+{% endblock %} 
+
+{% block content %}
+
+<main id="content" role="main">
+    {% include "../includes/phase_banner_beta.html" %}
+    <form action="partner" method="#" class="form">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <a class="link-back" href="address-postcode">Back</a>
+
+                {% include "../includes/error-summary.html" %}
+
+                <header>
+                    <h1 class="form-title heading-large">Contact details</h1>
+                </header>
+                <div class="form-group">
+                    <label class="form-label-bold" for="phone">Phone number</label>
+                    <input type="text" class="form-control" id="phone">
+                </div>
+                <div class="form-group">
+                    <label class="form-label-bold" for="phone2">Other number</label>
+                    <input type="text" class="form-control" id="phone2">
+                </div>
+                <div class="form-group">
+                    <label class="form-label-bold" for="email">Email</label>
+                    <input type="text" class="form-control" id="email">
+                </div>
+                <!-- Primary buttons, secondary links -->
+                <div class="form-group">
+                    <input type="submit" class="button" value="Save and continue">
+                </div>
+                <div class="form-group">
+                    <p><a href="exit">Save and come back later</a></p>
+                </div>
+            </div>
+            <div class="column-one-third">
+                {% include "../includes/help.html" %}
+            </div>
+        </div>
+    </form>
+</main>
+{% endblock %}

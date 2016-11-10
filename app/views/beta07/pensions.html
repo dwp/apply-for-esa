@@ -1,0 +1,427 @@
+{% extends "layout.html" %} {% block page_title %} Pensions {% endblock %} {% block content %}
+<main id="content" role="main">
+    {% include "../includes/phase_banner_beta.html" %}
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <a class="link-back" href="statutory-payments">Back</a>
+            <form action="savings" method="#" class="form">
+                <h1 class="form-title heading-large">Pensions</h1>
+                <div class="form-group">
+                    <fieldset class="inline">
+                        <legend class="form-label-bold" for="partner">Are you getting money from a pension?</legend>
+                        <label class="block-label" data-target="pension" for="radio-inline-1">
+                            <input id="radio-inline-1" type="radio" name="partner" value="Yes"> Yes
+                        </label>
+                        <label class="block-label" data-target="no-pension" for="radio-inline-2">
+                            <input id="radio-inline-2" type="radio" name="partner" value="No"> No
+                        </label>
+                    </fieldset>
+                </div>
+                <div class="panel panel-border-narrow js-hidden" id="no-pension">
+                    <fieldset class="inline">
+                        <legend class="form-label-bold" for="part">Will you be getting money from a private or occupational pension in the next 6 months?</legend>
+                        <label class="block-label" data-target="pension" for="radio-inline-3">
+                            <input id="radio-inline-3" type="radio" name="part" value="Yes"> Yes
+                        </label>
+                        <label class="block-label" for="radio-inline-4">
+                            <input id="radio-inline-4" type="radio" name="part" value="No"> No
+                        </label>
+                    </fieldset>
+                </div>
+                <div class="panel panel-border-narrow js-hidden" id="pension" style="margin-top: 15px;">
+                    <h2 class="heading-small">Pension 1</h2>
+                    <div class="form-group" style="margin-top: 15px;">
+                        <label class="form-label-bold" for="surgery-name">Who is your pension provider?</label>
+                        <input type="text" class="form-control" id="surgery-name">
+                    </div>
+                    <div class="form-group">
+                        <legend class="form-label-bold" for="address">Pension provider address</legend>
+                        <div class="form-group">
+                            <label class="form-label" for="address-a">Building and street</label>
+                            <input type="text" name="address" id="address-a" class="form-control" value="">
+                            <input type="text" name="address" id="address-a" class="form-control" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="town" class="form-label">Town or city</label>
+                            <input type="text" name="town" id="town" class="form-control" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="postCode" class="form-label">Postcode</label>
+                            <input type="text" name="postCode" id="postCode" class="form-control" value="">
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-top: 15px;">
+                        <label class="form-label-bold" for="phone-no">Your pension provider's phone number</label>
+                        <input type="text" class="form-control" id="phone-no">
+                    </div>
+                    <div class="form-group" style="margin-top: 15px;">
+                        <label class="form-label-bold" for="ref-no">Policy reference number</label>
+                        <input type="text" class="form-control" id="ref-no">
+                    </div>
+                    <div class="form-group">
+                        <fieldset>
+                            <legend class="form-label" for="howoften1">How often do you get your pension?</legend>
+                            <label class="block-label" for="weekly1">
+                                <input id="weekly1" type="radio" name="howoften1" value="weekly"> Weekly
+                            </label>
+                            <label class="block-label" for="4weekly">
+                                <input id="4weekly" type="radio" name="howoften1" value="4 weekly"> Every 4 weeks
+                            </label>
+                            <label class="block-label" for="monthly1">
+                                <input id="monthly1" type="radio" name="howoften1" value="monthly"> Monthly
+                            </label>
+                            <label class="block-label" for="yearly1">
+                                <input id="yearly1" type="radio" name="howoften1" value="quarterly"> Quarterly
+                            </label>
+                        </fieldset>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label-bold" for="how-much">How much is the pension before tax?</label>
+                        &pound;
+                        <input type="text" class="form-control form-control-1-4" id="how-much" name="how-much">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label-bold" for="how-much-after">How much is the pension after tax?</label>
+                        &pound;
+                        <input type="text" class="form-control form-control-1-4" id="how-much-after" name="how-much">
+                    </div>
+                    <div class="form-group">
+                        <fieldset>
+                            <legend><span class="heading-small">Date of first payment</span></legend>
+                            <div class="form-date">
+                                <p class="form-hint">DD MM YYYY</p>
+                                <div class="form-group form-group-day">
+                                    <label for="start-day">Day</label>
+                                    <input type="text" class="form-control" id="start-day" maxlength="2" name="start-day">
+                                </div>
+                                <div class="form-group form-group-month">
+                                    <label for="start-month">Month</label>
+                                    <input type="text" class="form-control" id="start-month" maxlength="2" name="start-month">
+                                </div>
+                                <div class="form-group form-group-year">
+                                    <label for="start-year">Year</label>
+                                    <input type="text" class="form-control" id="start-year" maxlength="4" name="start-year">
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="form-group">
+                        <fieldset class="inline">
+                            <legend class="form-label-bold heading-large" for="increase">Will your pension increase?</legend>
+                            <label class="block-label" data-target="pension-inc" for="radio-inline-5">
+                                <input id="radio-inline-5" type="radio" name="increase" value="Yes"> Yes
+                            </label>
+                            <label class="block-label" for="radio-inline-6">
+                                <input id="radio-inline-6" type="radio" name="increase" value="No"> No
+                            </label>
+                        </fieldset>
+                    </div>
+                    <div class="form-group js-hidden" id="pension-inc">
+                        <fieldset>
+                            <legend><span class="heading-small">When will your pension increase?</span></legend>
+                            <div class="form-date">
+                                <p class="form-hint">DD MM YYYY</p>
+                                <div class="form-group form-group-day">
+                                    <label for="inc-day">Day</label>
+                                    <input type="text" class="form-control" id="inc-day" maxlength="2" name="inc-day">
+                                </div>
+                                <div class="form-group form-group-month">
+                                    <label for="inc-month">Month</label>
+                                    <input type="text" class="form-control" id="inc-month" maxlength="2" name="inc-month">
+                                </div>
+                                <div class="form-group form-group-year">
+                                    <label for="inc-year">Year</label>
+                                    <input type="text" class="form-control" id="inc-year" maxlength="4" name="inc-year">
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="form-group">
+                        <fieldset class="inline">
+                            <legend class="form-label-bold heading-large" for="inherit-b">Was this pension left to you by someone who has died?</legend>
+                            <p>This is also known as inherited pension.</p>
+                            <label class="block-label" for="radio-inline-7">
+                                <input id="radio-inline-7" type="radio" name="inherit" value="Yes"> Yes
+                            </label>
+                            <label class="block-label" for="radio-inline-8">
+                                <input id="radio-inline-8" type="radio" name="inherit" value="No"> No
+                            </label>
+                        </fieldset>
+                    </div>
+                    <p><a href="#" id="show-payment2" class="add-another secondary-button">Add another</a></p>
+                </div>
+                <div class="panel panel-border-narrow js-hidden" id="payment2">
+                    <h2 class="heading-small">Pension 2</h2>
+                    <div class="form-group" style="margin-top: 15px;">
+                        <label class="form-label-bold" for="surgery-name-b">Who is your pension provider?</label>
+                        <input type="text" class="form-control" id="surgery-name-b">
+                    </div>
+                    <div class="form-group">
+                        <legend class="form-label-bold" for="address1">Pension provider address</legend>
+                        <div class="form-group">
+                            <label class="form-label" for="address1-a">Building and street</label>
+                            <input type="text" name="address1" id="address1-a" class="form-control" value="">
+                            <input type="text" name="address1" id="address1-b" class="form-control" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="town1" class="form-label">Town or city</label>
+                            <input type="text" name="town1" id="town1" class="form-control" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="postCode1" class="form-label">Postcode</label>
+                            <input type="text" name="postCode1" id="postCode1" class="form-control" value="">
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-top: 15px;">
+                        <label class="form-label-bold" for="phone-no-b">Your pension provider's phone number</label>
+                        <input type="text" class="form-control" id="phone-no-b">
+                    </div>
+                    <div class="form-group" style="margin-top: 15px;">
+                        <label class="form-label-bold" for="ref-no-b">Policy reference number</label>
+                        <input type="text" class="form-control" id="ref-no-b">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label-bold" for="how-much-b">How much is the pension before tax?</label>
+                        &pound;
+                        <input type="text" class="form-control form-control-1-4" id="how-much-b" name="how-much">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label-bold" for="how-much-after-b">How much is the pension after tax?</label>
+                        &pound;
+                        <input type="text" class="form-control form-control-1-4" id="how-much-after-b" name="how-much">
+                    </div>
+                    <div class="form-group">
+                        <fieldset>
+                            <legend class="form-label" for="howoften1-b">How often do you get your pension?</legend>
+                            <label class="block-label" for="weekly1-b">
+                                <input id="weekly1-b" type="radio" name="howoften1-b" value="weekly-b"> Weekly
+                            </label>
+                            <label class="block-label" for="4weekly-b">
+                                <input id="4weekly-b" type="radio" name="howoften1-b" value="4 weekly"> Every 4 weeks
+                            </label>
+                            <label class="block-label" for="monthly1-b">
+                                <input id="monthly1-b" type="radio" name="howoften1-b" value="monthly"> Monthly
+                            </label>
+                            <label class="block-label" for="yearly1-b">
+                                <input id="yearly1-b" type="radio" name="howoften1-b" value="quarterly"> Quarterly
+                            </label>
+                        </fieldset>
+                    </div>
+                    <div class="form-group">
+                        <fieldset>
+                            <legend><span class="heading-small">Date of first payment</span></legend>
+                            <div class="form-date">
+                                <p class="form-hint">DD MM YYYY</p>
+                                <div class="form-group form-group-day">
+                                    <label for="start-day-b">Day</label>
+                                    <input type="text" class="form-control" id="start-day-b" maxlength="2" name="start-day">
+                                </div>
+                                <div class="form-group form-group-month">
+                                    <label for="start-month-b">Month</label>
+                                    <input type="text" class="form-control" id="start-month-b" maxlength="2" name="start-month">
+                                </div>
+                                <div class="form-group form-group-year">
+                                    <label for="start-year-b">Year</label>
+                                    <input type="text" class="form-control" id="start-year-b" maxlength="4" name="start-year">
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="form-group">
+                        <fieldset class="inline">
+                            <legend class="form-label-bold heading-large" for="increase-b">Will your pension increase?</legend>
+                            <label class="block-label" data-target="pension-inc-b" for="radio-inline-5-b">
+                                <input id="radio-inline-5-b" type="radio" name="increase-b" value="Yes"> Yes
+                            </label>
+                            <label class="block-label" for="radio-inline-6-b">
+                                <input id="radio-inline-6-b" type="radio" name="increase-b" value="No"> No
+                            </label>
+                        </fieldset>
+                    </div>
+                    <div class="form-group js-hidden" id="pension-inc-b">
+                        <fieldset>
+                            <legend><span class="heading-small">When will your pension increase?</span></legend>
+                            <div class="form-date">
+                                <p class="form-hint">DD MM YYYY</p>
+                                <div class="form-group form-group-day">
+                                    <label for="inc-day-b">Day</label>
+                                    <input type="text" class="form-control" id="inc-day-b" maxlength="2" name="inc-day">
+                                </div>
+                                <div class="form-group form-group-month">
+                                    <label for="inc-month-b">Month</label>
+                                    <input type="text" class="form-control" id="inc-month-b" maxlength="2" name="inc-month">
+                                </div>
+                                <div class="form-group form-group-year">
+                                    <label for="inc-year-b">Year</label>
+                                    <input type="text" class="form-control" id="inc-year-b" maxlength="4" name="inc-year">
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="form-group">
+                        <fieldset class="inline">
+                            <legend class="form-label-bold heading-large" for="inherit-b">Was this pension left to you by someone who has died?</legend>
+                            <p>This is also known as inherited pension.</p>
+                            <label class="block-label" for="radio-inline-7-b">
+                                <input id="radio-inline-7-b" type="radio" name="inherit-b" value="Yes"> Yes
+                            </label>
+                            <label class="block-label" for="radio-inline-8-b">
+                                <input id="radio-inline-8-b" type="radio" name="inherit-b" value="No"> No
+                            </label>
+                        </fieldset>
+                    </div>
+                    <p><a href="#" id="show-payment3" class="add-another secondary-button">Add another</a></p>
+                </div>
+                <div class="panel panel-border-narrow js-hidden" id="payment3">
+                    <h2 class="heading-small">Pension 3</h2>
+                    <div class="form-group" style="margin-top: 15px;">
+                        <label class="form-label-bold" for="surgery-name-c">Who is your pension provider?</label>
+                        <input type="text" class="form-control" id="surgery-name-c">
+                    </div>
+                    <div class="form-group">
+                        <legend class="form-label-bold" for="address2">Pension provider address</legend>
+                        <div class="form-group">
+                            <label class="form-label" for="address2-a">Building and street</label>
+                            <input type="text" name="address2" id="address2-a" class="form-control" value="">
+                            <input type="text" name="address2" id="address2-b" class="form-control" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="town2" class="form-label">Town or city</label>
+                            <input type="text" name="town2" id="town2" class="form-control" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="postCode2" class="form-label">Postcode</label>
+                            <input type="text" name="postCode2" id="postCode2" class="form-control" value="">
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-top: 15px;">
+                        <label class="form-label-bold" for="phone-no-c">Your pension provider's phone number</label>
+                        <input type="text" class="form-control" id="phone-no-c">
+                    </div>
+                    <div class="form-group" style="margin-top: 15px;">
+                        <label class="form-label-bold" for="ref-no-c">Policy reference number</label>
+                        <input type="text" class="form-control" id="ref-no-c">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label-bold" for="how-much-c">How much is the pension before tax?</label>
+                        &pound;
+                        <input type="text" class="form-control form-control-1-4" id="how-much-c" name="how-much">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label-bold" for="how-much-after-c">How much is the pension after tax?</label>
+                        &pound;
+                        <input type="text" class="form-control form-control-1-4" id="how-much-after-c" name="how-much">
+                    </div>
+                    <div class="form-group">
+                        <fieldset>
+                            <legend class="form-label" for="howoften1-c">How often do you get your pension?</legend>
+                            <label class="block-label" for="weekly1-c">
+                                <input id="weekly1-c" type="radio" name="howoften1-c" value="weekly"> Weekly
+                            </label>
+                            <label class="block-label" for="4weekly-c">
+                                <input id="4weekly-c" type="radio" name="howoften1-c" value="4 weekly"> Every 4 weeks
+                            </label>
+                            <label class="block-label" for="monthly1-c">
+                                <input id="monthly1-c" type="radio" name="howoften1-c" value="monthly"> Monthly
+                            </label>
+                            <label class="block-label" for="yearly1-c">
+                                <input id="yearly1-c" type="radio" name="howoften1-c" value="quarterly"> Quarterly
+                            </label>
+                        </fieldset>
+                    </div>
+                    <div class="form-group">
+                        <fieldset>
+                            <legend><span class="heading-small">Date of first payment</span></legend>
+                            <div class="form-date">
+                                <p class="form-hint">DD MM YYYY</p>
+                                <div class="form-group form-group-day">
+                                    <label for="start-day-c">Day</label>
+                                    <input type="text" class="form-control" id="start-day-c" maxlength="2" name="start-day">
+                                </div>
+                                <div class="form-group form-group-month">
+                                    <label for="start-month-c">Month</label>
+                                    <input type="text" class="form-control" id="start-month-c" maxlength="2" name="start-month">
+                                </div>
+                                <div class="form-group form-group-year">
+                                    <label for="start-year-c">Year</label>
+                                    <input type="text" class="form-control" id="start-year-c" maxlength="4" name="start-year">
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="form-group">
+                        <fieldset class="inline">
+                            <legend class="form-label-bold heading-large" for="increase-c">Will your pension increase?</legend>
+                            <label class="block-label" data-target="pension-inc-c" for="radio-inline-5-c">
+                                <input id="radio-inline-5-c" type="radio" name="increase-c" value="Yes"> Yes
+                            </label>
+                            <label class="block-label" for="radio-inline-6-c">
+                                <input id="radio-inline-6-c" type="radio" name="increase-c" value="No"> No
+                            </label>
+                        </fieldset>
+                    </div>
+                    <div class="form-group js-hidden" id="pension-inc-c">
+                        <fieldset>
+                            <legend><span class="heading-small">When will your pension increase?</span></legend>
+                            <div class="form-date">
+                                <p class="form-hint">DD MM YYYY</p>
+                                <div class="form-group form-group-day">
+                                    <label for="inc-day-c">Day</label>
+                                    <input type="text" class="form-control" id="inc-day-c" maxlength="2" name="inc-day">
+                                </div>
+                                <div class="form-group form-group-month">
+                                    <label for="inc-month-c">Month</label>
+                                    <input type="text" class="form-control" id="inc-month-c" maxlength="2" name="inc-month">
+                                </div>
+                                <div class="form-group form-group-year">
+                                    <label for="inc-year-c">Year</label>
+                                    <input type="text" class="form-control" id="inc-year-c" maxlength="4" name="inc-year">
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="form-group">
+                        <fieldset class="inline">
+                            <legend class="form-label-bold heading-large" for="inherit-b">Was this pension left to you by someone who has died?</legend>
+                            <p>This is also known as inherited pension.</p>
+                            <label class="block-label" for="radio-inline-7-c">
+                                <input id="radio-inline-7-c" type="radio" name="inherit-c" value="Yes"> Yes
+                            </label>
+                            <label class="block-label" for="radio-inline-8-c">
+                                <input id="radio-inline-8-c" type="radio" name="inherit-c" value="No"> No
+                            </label>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="button" value="Save and continue">
+                </div>
+                <div class="form-group">
+                    <p><a href="exit">Save and come back later</a></p>
+                </div>
+            </form>
+        </div>
+        <div class="column-third">
+            {% include "../includes/help.html" %}
+        </div>
+    </div>
+</main>
+<!-- / #page-container -->
+{% endblock %} {% block body_end %} {% include "includes/scripts.html" %}
+<script>
+$(document).ready(function() {
+
+    $("#show-payment2").click(function() {
+        $("#payment2").removeClass("js-hidden");
+        $("#show-payment2").addClass("js-hidden");
+        return false;
+    });
+    $("#show-payment3").click(function() {
+        $("#payment3").removeClass("js-hidden");
+        $("#show-payment3").addClass("js-hidden");
+        return false;
+    });
+
+});
+</script>
+{% endblock %}

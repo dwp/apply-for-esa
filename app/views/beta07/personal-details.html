@@ -1,0 +1,103 @@
+{% extends "layout.html" %} {% block page_title %} Personal details {% endblock %} {% block content %}
+<main id="content" role="main">
+    {% include "../includes/phase_banner_beta.html" %}
+    <form action="address-postcode" method="#" class="form">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <a class="link-back" href="help-appointee">Back</a> 
+
+                {% include "../includes/error-summary.html" %}
+                
+                <header>
+                    <h1 class="form-title heading-large">Personal details</h1>
+                </header>
+                <div class="form-group" data-required data-error="Enter your title">
+                    <label class="form-label-bold" for="title">Title</label>
+                    <input type="text" class="form-control form-control-1-4" id="title" name="title">
+                </div>
+                <div class="form-group" data-required data-error="Enter your first name">
+                    <label class="form-label-bold" for="full-name">First name</label>
+                    <input type="text" class="form-control" id="full-name" name="full-name">
+                </div>
+                <div class="form-group">
+                    <label class="form-label-bold" for="other-name">Middle name(s)</label>
+                    <input type="text" class="form-control" id="other-name" name="other-name">
+                </div>
+                <div class="form-group" data-required data-error="Enter your last name">
+                    <label class="form-label-bold" for="surname">Last name</label>
+                    <input type="text" class="form-control" id="surname" name="surname">
+                </div>
+                <div class="form-group" data-required data-error="Enter your date of birth">
+                    <fieldset>
+                        <legend><span class="form-label-bold">Date of birth</span></legend>
+                        <div class="form-date">
+                            <p class="form-hint">DD MM YYYY</p>
+                            <div class="form-group form-group-day">
+                                <label for="dob-day-pa">Day</label>
+                                <input class="form-control" type="number" name="dobDay" value="" id="dob-day-pa" pattern="[0-9]*" min="1" max="31">
+                            </div>
+                            <div class="form-group form-group-month">
+                                <label for="dob-month-pa">Month</label>
+                                <input class="form-control" type="number" name="dobMonth" value="" id="dob-month-pa" pattern="[0-9]*" min="1" max="12">
+                            </div>
+                            <div class="form-group form-group-year">
+                                <label for="dob-year-pa">Year</label>
+                                <input class="form-control" type="number" name="dobYear" value="" id="dob-year-pa" pattern="[0-9]*">
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="panel panel-border-narrow js-hidden" id="state-age">
+                    <fieldset class="inline form-group">
+                        <legend class="form-label-bold">
+                            Are you male or female?
+                        </legend>
+                        <label for="radio-part-4" data-target="yesHeal" class="block-label">
+                            <input id="radio-part-4" type="radio" name="esaHeal" value="Male"> Male
+                        </label>
+                        <label for="radio-part-5" data-target="noHeal" class="block-label">
+                            <input id="radio-part-5" type="radio" name="esaHeal" value="Female"> Female
+                        </label>
+                    </fieldset>
+                </div>
+                <div class="form-group" data-required data-error="Enter your National Insurance number">
+                    <label class="form-label-bold" for="nino">
+                        National Insurance number
+                    </label>
+                    <input type="text" class="form-control" id="nino" name="nino">
+                </div>
+                <!-- Primary buttons, secondary links -->
+                <div class="form-group">
+                    <input type="submit" class="button" value="Save and continue">
+                </div>
+                <div class="form-group">
+                    <p><a href="exit">Save and come back later</a></p>
+                </div>
+            </div>
+            <div class="column-one-third">
+                {% include "../includes/help.html" %}
+            </div>
+        </div>
+    </form>
+</main>
+{% endblock %} {% block body_end %} {% include "includes/scripts.html" %}
+<script src="/public/javascripts/moment.js"></script>
+<script>
+$("#dob-year").change(function(e) {
+    var $this = $(this);
+    var maxAge = 60;
+
+    var dob = $("#dob-day").val();
+    dob += $("#dob-month").val();
+    dob += $("#dob-year").val();
+
+    var years = moment(dob, 'DDMMYYYY').fromNow();
+    years = years.split(' ');
+    years = parseInt(years[0]);
+
+    if (years >= maxAge) {
+        $("#state-age").removeClass('js-hidden').addClass('js-show');
+    }
+});
+</script>
+{% endblock %}

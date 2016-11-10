@@ -1,0 +1,120 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Declaration
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% include "../includes/phase_banner_beta.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <ul class="completed">
+        <li>
+          Your application has been sent
+        </li>
+      </ul>
+
+      <h1 class="form-title heading-large">
+        Save a copy
+      </h1>
+
+      <p>
+        You can save a copy of your completed application
+      </p>
+
+
+      <form action="what-happens-next" method="#" class="form">
+
+        <div class="form-group" data-required data-error="An answer is required">
+          <fieldset class="">
+            <legend>
+            </legend>
+           <label class="block-label" for="radio-inline-1a" data-target="download">
+             <input id="radio-inline-1a" type="radio" name="radio-inline-group" value="download">
+              Download (not recommended on public computers)
+            </label>
+           <label class="block-label" for="radio-inline-2a" data-target="email">
+              <input id="radio-inline-2a" type="radio" name="radio-inline-group" value="email">
+              Email
+            </label>
+            <label class="block-label" for="radio-inline-3a" data-target="print">
+               <input id="radio-inline-3a" type="radio" name="radio-inline-group" value="print">
+               Print
+             </label>
+             <label class="block-label" for="radio-inline-4a" data-target="no">
+                <input id="radio-inline-4a" type="radio" name="radio-inline-group" value="No">
+                I do not want a copy
+              </label>
+          </fieldset>
+        </div>
+
+         <div class="panel panel-border-narrow js-hidden" id="download">
+
+           <p>
+             <a class="" href="/public/pdf/dummy-pdf.pdf" target="_blank" download="esa-application.pdf">Download a copy of your ESA application</a>
+           </p>
+
+           <p>
+             The download is in a PDF format. To read it you'll need Adobe Reader 4.0™ or above installed. You can download <a href="https://get.adobe.com/reader/" target="_blank">Adobe Reader</a> if you need to.
+          </p>
+
+         </div>
+
+         <div class="panel panel-border-narrow js-hidden" id="email">
+
+           <div class="form-group">
+               <label class="form-label-bold" for="email">Email</label>
+               <input type="text" class="form-control" id="email">
+           </div>
+
+         </div>
+
+         <div class="panel panel-border-narrow js-hidden" id="print">
+
+           <p>
+             <a class="" href="" target="_blank" download="esa-application.pdf">Print a copy of your ESA application</a>
+           </p>
+
+         </div>
+
+         <div class="panel panel-border-narrow js-hidden" id="no">
+
+           <p>
+             You will not get another chance to save a copy of your application.
+           </p>
+
+         </div>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Complete application">
+        </div>
+
+
+      </form>
+
+    </div>
+    <div class="column-third">
+    </div>
+  </div>
+
+
+</main><!-- / #page-container -->
+
+{% endblock %}
+
+
+{% block body_end %}
+  {% include "includes/scripts.html" %}
+  <script>
+  $("#circs-button").click(function(e) {
+    $("#change-circs").toggle();
+
+    e.preventDefault;
+  });
+  </script>
+
+{% endblock %}

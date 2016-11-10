@@ -1,0 +1,81 @@
+{% extends "layout.html" %} 
+
+{% block page_title %}
+ Work 
+{% endblock %} 
+
+{% block content %}
+
+<main id="content" role="main">
+    {% include "../includes/phase_banner_beta.html" %}
+    <form action="work-employed" method="#" class="form">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <a class="link-back" href="work">Back</a> 
+
+                {% include "../includes/error-summary.html" %}
+                
+                <header>
+                    <h1 class="form-title heading-large">
+						Type of employment
+					</h1>
+                </header>
+                
+                <div class="form-group" data-required data-error="Select the type of employment you do">
+                    <fieldset class="form-group">
+                        <legend class="form-label-bold" for="are">What is your employment status?</legend>
+                        <label class="block-label" data-target="employed" for="are-1">
+                            <input id="are-1" type="checkbox" name="are" value="employed">Employed
+                        </label>
+                        <label class="block-label" data-target="self-employed" for="are-2">
+                            <input id="are-2" type="checkbox" name="are" value="self-employed">Self-employed
+                        </label>
+                        <label class="block-label" data-target="sub-contractor" for="are-3">
+                            <input id="are-3" type="checkbox" name="are" value="sub-contractor">Sub-contractor
+                        </label>
+                        <label class="block-label" data-target="are-other" for="are-5">
+                            <input id="are-5" type="checkbox" name="are" value="other">Other
+                        </label>
+                        <div class="form-group js-hidden panel panel-border-narrow" id="are-other">
+                            <label class="form-label" for="surgery-name2">What is your type of employment?</label>
+                            <input type="text" class="form-control" id="surgery-name2">
+                        </div>
+                    </fieldset>
+                </div>
+ 
+                <!-- Primary buttons, secondary links -->
+                <div class="form-group">
+                    <input type="submit" class="button" value="Save and continue">
+                </div>
+                <div class="form-group">
+                    <p><a href="exit">Save and come back later</a></p>
+                </div>
+            </div>
+            <div class="column-one-third">
+                {% include "../includes/help.html" %}
+            </div>
+        </div>
+    </form>
+</main>
+{% endblock %}
+
+{% block body_end %}
+  {% include "includes/scripts.html" %}
+  <script>
+    $('form').on('submit', function(e) {
+        
+        switch($('input[name="are"]:checked').val()){
+
+            case 'self-employed':
+                window.location = 'work-self-employed';
+            break;
+
+            default:
+                window.location = 'statutory-payments';
+            break;
+        }
+      
+      e.preventDefault();
+    });
+  </script>
+{% endblock %}

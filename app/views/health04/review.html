@@ -1,0 +1,348 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Check your answers
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% include "../includes/phase_banner_beta.html" %}
+
+  <h1 class="heading-large">
+    Check your answers
+  </h1>
+  <div class="form-group">
+    <table class="check-your-answers">
+
+      <thead>
+        <tr>
+          <th colspan="2">
+            <h2 class="heading-medium">
+              Your conditions
+            </h2>
+          </th>
+
+          <th class="change-answer">
+            <a href="health-conditions">
+              Change <span class="visuallyhidden">conditions</span>
+            </a>
+          </th>
+        </tr>
+      </thead>  
+      <tbody>
+
+        <tr>
+          <td>
+            Depression
+          </td>
+          <td colspan="2">
+            December 2006
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Anxiety
+          </td>
+          <td colspan="2">
+            December 2006
+          </td>
+        </tr>
+        <tr>
+          <td>
+            MS
+          </td>
+          <td colspan="2">
+            August 2013
+          </td>
+        </tr>
+      </tbody>    
+      
+
+      <thead>
+        <tr>
+          <th colspan="2">
+            <h2 class="heading-medium">
+              Medication
+            </h2>
+          </th>
+
+          <th class="change-answer">
+            <a href="medication">
+              Change <span class="visuallyhidden">medication</span>
+            </a>
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td width="40%">
+            <b>Are you taking any medication?</b>
+          </td>
+          <td colspan="2">
+            Yes
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Escitalopram
+          </td>
+          <td>40mg</td>
+          <td>once a day</td>
+        </tr>
+        <tr>
+          <td>
+            Teriflunomide
+          </td>
+          <td>15mg</td>
+          <td>twice a day</td>
+        </tr>
+      </tbody>
+
+
+      <thead>
+        <tr>
+          <th colspan="2">
+            <h2 class="heading-medium">
+              Treatments and therapy
+            </h2>
+          </th>
+
+          <th class="change-answer">
+            <a href="treatment">
+              Change <span class="visuallyhidden">treatments and therapy</span>
+            </a>
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>
+            <b>Are you having, or do you have planned, any treatments or therapy?</b>
+          </td>
+          <td colspan="2">
+            Yes
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Physiotherapy
+          </td>
+          <td colspan="2">
+            Once a week
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b>Reflexology</b>
+          </td>
+          <td colspan="2">
+            Every month
+          </td>
+        </tr>
+      </tbody>
+
+
+      <thead>
+        <tr>
+          <th colspan="2">
+            <h2 class="heading-medium">
+              Healthcare professionals
+            </h2>
+          </th>
+
+          <th class="change-answer">
+            <a href="health-care-professionals">
+              Change <span class="visuallyhidden">healthcare professionals</span>
+            </a>
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>
+            <b>Are there any professionals who can tell us about your condition?</b>
+          </td>
+          <td colspan="2">
+            No
+          </td>
+        </tr>
+      </tbody>
+
+
+      <thead>
+        <tr>
+          <th colspan="2">
+            <h2 class="heading-medium">
+              Physical condition
+            </h2>
+          </th>
+
+          <th class="change-answer">
+            <a href="physical-condition">
+              Change <span class="visuallyhidden">physical condition</span>
+            </a>
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>
+            <b>Is your condition a physical condition?</b>
+          </td>
+          <td colspan="2">
+            Yes
+          </td>
+        </tr>
+      </tbody>
+
+
+      <thead>
+        <tr>
+          <th colspan="2">
+            <h2 class="heading-medium">
+              Getting around
+            </h2>
+          </th>
+
+          <th class="change-answer">
+            <a href="getting-around">
+              Change <span class="visuallyhidden">getting around</span>
+            </a>
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>
+            <b>How far can you get around, on flat ground, without stopping?</b>
+          </td>
+          <td colspan="2">
+            Over 200 metres
+          </td>
+        </tr>
+      </tbody>
+
+
+      <thead>
+        <tr>
+          <th colspan="2">
+            <h2 class="heading-medium">
+              Standing and sitting
+            </h2>
+          </th>
+
+          <th class="change-answer">
+            <a href="standing-sitting">
+              Change <span class="visuallyhidden">standing and sitting</span>
+            </a>
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>
+            <b>Do you need help to stand or sit comfortably?</b>
+          </td>
+          <td colspan="2">
+            Yes
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b>Explain what help you need</b>
+          </td>
+          <td colspan="2">
+            I can't get up from a chair without someone helping me
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b>Can you sit comfortably for more than an hour at a time?</b>
+          </td>
+          <td colspan="2">
+            Yes
+          </td>
+        </tr>
+      </tbody>
+
+
+      <thead>
+        <tr>
+          <th colspan="2">
+            <h2 class="heading-medium">
+              Speech
+            </h2>
+          </th>
+
+          <th class="change-answer">
+            <a href="speaking">
+              Change <span class="visuallyhidden">speech</span>
+            </a>
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>
+            <b>Does your condition affect your speech?</b>
+          </td>
+          <td colspan="2">
+            No
+          </td>
+        </tr>
+      </tbody>
+
+
+      <thead>
+        <tr>
+          <th colspan="2">
+            <h2 class="heading-medium">
+              Eating and drinking
+            </h2>
+          </th>
+
+          <th class="change-answer">
+            <a href="eating-drinking">
+              Change <span class="visuallyhidden">eating and drinking</span>
+            </a>
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>
+            <b>Does your condition affect your ability to eat or drink?</b>
+          </td>
+          <td colspan="2">
+            No
+          </td>
+        </tr>
+      </tbody>
+
+    </table>
+  </div>
+
+  <div class="form-group">
+    <a href="#" class="button">Print summary</a>
+  </div>
+
+  <div class="panel panel-border-narrow">
+    <p>Printing won't send your application - you must press next to continue.</p>
+  </div>
+
+  <div class="form-group">
+    <a href="declaration" class="button">Next</a>
+  </div>
+
+</main>
+
+{% endblock %}

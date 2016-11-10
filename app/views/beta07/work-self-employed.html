@@ -1,0 +1,49 @@
+{% extends "layout.html" %} 
+
+{% block page_title %}
+ Self-employment details 
+{% endblock %} 
+
+{% block content %}
+
+<main id="content" role="main">
+    {% include "../includes/phase_banner_beta.html" %}
+    <form action="work-director" method="#" class="form">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <a class="link-back" href="work-type">Back</a> 
+
+                {% include "../includes/error-summary.html" %}
+                
+                <header>
+                    <h1 class="form-title heading-large">
+						Self-employment details
+					</h1>
+                </header>
+                
+                <!--self-employed-->
+                <fieldset class="inline form-group" data-required data-error="Select if someone else is running the company">
+                    <legend class="form-label-bold" for="partnerrc">Is someone else running the company while you are not working?</legend>
+                    <label class="block-label" for="radio-inline-1rc">
+                        <input id="radio-inline-1rc" type="radio" name="partnerrc" value="Yes"> Yes
+                    </label>
+                    <label class="block-label" for="radio-inline-2rc">
+                        <input id="radio-inline-2rc" type="radio" name="partnerrc" value="No"> No
+                    </label>
+                </fieldset>
+                <!--end self-employed-->
+                <!-- Primary buttons, secondary links -->
+                <div class="form-group">
+                    <input type="submit" class="button" value="Save and continue">
+                </div>
+                <div class="form-group">
+                    <p><a href="exit">Save and come back later</a></p>
+                </div>
+            </div>
+            <div class="column-one-third">
+                {% include "../includes/help.html" %}
+            </div>
+        </div>
+    </form>
+</main>
+{% endblock %}

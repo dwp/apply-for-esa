@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+	Where you live
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "../includes/phase_banner_beta.html" %}
+
+	<form action="gp-details" method="#" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<a class="link-back" href="where-you-live">Back</a>
+				<header>
+					<h1 class="form-title heading-large">
+						Where you live
+					</h1>
+				</header>
+
+				<div class="form-group">
+					<fieldset>
+						<legend class="form-label-bold visibly-hidden" for="live-parents">Who owns the property that you live in?</legend>
+						<label class="block-label" for="radio-inline-148">
+							<input id="radio-inline-148" type="radio" name="live-parents" value="Every week">
+							Parents
+						</label>
+						<label class="block-label" data-target="other-rel" for="radio-inline-178">
+							<input id="radio-inline-178" type="radio" name="live-parents" value="Every year">
+							Relative
+						</label>
+						<div class="form-group js-hidden" id="other-rel">
+							<label class="form-label" for="rel-them">Your relationship to them</label>
+							<input type="text" class="form-control" id="rel-them">
+						</div>
+						<label class="block-label" for="radio-inline-158">
+							<input id="radio-inline-158" type="radio" name="live-parents" value="Every month">
+							Ex-partner
+						</label>
+						<label class="block-label" for="radio-inline-158g">
+							<input id="radio-inline-158g" type="radio" name="live-parents" value="Every month">
+							Friend
+						</label>
+					</fieldset>
+				</div>
+				<div class="form-group">
+					<fieldset class="inline">
+						<legend class="form-label-bold" for="live-rel">Do they live in the property as well?</legend>
+						<label class="block-label" for="live-rel-9">
+							<input id="live-rel-9" type="radio" name="live-rel" value="Yes">
+							Yes
+						</label>
+						<label class="block-label" for="live-rel-8">
+							<input id="live-rel-8" type="radio" name="live-rel" value="No">
+							No
+						</label>
+					</fieldset>
+				</div>
+
+				<!-- Primary buttons, secondary links -->
+				<div class="form-group">
+                    <input type="submit" class="button" value="Save and continue">
+                </div>
+                <div class="form-group">
+                    <p><a href="exit">Save and come back later</a></p>
+                </div>
+
+			</div>
+			<div class="column-one-third">
+				{% include "../includes/help.html" %}
+			</div>
+		</div>
+
+	</form>
+</main>
+
+{% endblock %}

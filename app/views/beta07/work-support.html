@@ -1,0 +1,80 @@
+{% extends "layout.html" %} 
+
+{% block page_title %}
+ Support 
+{% endblock %} 
+
+{% block content %}
+
+<main id="content" role="main">
+    {% include "../includes/phase_banner_beta.html" %}
+    <form action="work-address" method="#" class="form">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <a class="link-back" href="work-income">Back</a> 
+
+                {% include "../includes/error-summary.html" %}
+                
+                <header>
+                    <h1 class="form-title heading-large">
+                        <!-- <span class="heading-secondary">Section 5 of 23</span> -->
+                        Do you get help at work from a professional support worker?
+                    </h1>
+                </header>
+                    
+                <fieldset class="inline form-group">
+                    <p>A professional support worker is someone whose job is to give you ongoing support to help you stay in work.<p>
+                    <label class="block-label" data-target="yes-support" for="radio--3">
+                        <input id="radio--3" type="radio" name="part" value="Yes">
+                        Yes
+                    </label>
+                    <label class="block-label" for="radio--4">
+                        <input id="radio--4" type="radio" name="part" value="No">
+                        No
+                    </label>
+                </fieldset>
+
+                <div class="panel panel-border-narrow js-hidden" id="yes-support">
+                    <div class="form-group">
+                        <label class="form-label-bold" for="worker-name">Support worker name</label>
+                        <input type="text" class="form-control" id="worker-name">
+                    </div>
+
+                    <div class="form-group">
+                        <p class="form-label-bold">Support worker address</p>
+                        <div class="form-group" data-required data-error="Enter your company name">
+                            <label for="company" class="form-label">Organisation or company name</label>
+                            <input type="text" name="company" id="company" class="form-control" value="">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="address-a">Building number and street</label>
+                            <input type="text" name="address" id="address-a" class="form-control" value="">
+                            <input type="text" name="address" id="address-a" class="form-control" value="">
+                        </div>
+                        <div class="form-group" data-required data-error="Enter your town or city">
+                            <label for="town" class="form-label">Town or city</label>
+                            <input type="text" name="town" id="town" class="form-control" value="">
+                        </div>
+                        <div class="form-group" data-required data-error="Enter your postcode">
+                            <label for="postCode" class="form-label">Postcode</label>
+                            <input type="text" name="postCode" id="postCode" class="form-control" value="">
+                        </div>
+                    </div>
+
+                </div>
+                    
+                <!-- Primary buttons, secondary links -->
+                <div class="form-group">
+                    <input type="submit" class="button" value="Save and continue">
+                </div>
+                <div class="form-group">
+                    <p><a href="exit">Save and come back later</a></p>
+                </div>
+            </div>
+            <div class="column-one-third">
+                {% include "../includes/help.html" %}
+            </div>
+        </div>
+    </form>
+</main>
+{% endblock %}

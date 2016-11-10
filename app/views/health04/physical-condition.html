@@ -1,0 +1,56 @@
+{% extends "layout.html" %} {% block page_title %} Behaviour {% endblock %} {% block content %}
+<main id="content" role="main">
+    {% include "../includes/phase_banner_beta.html" %}
+    <form action="health-care-professionals" method="#" class="form">
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <a class="link-back" href="health-care-professionals">Back</a>
+                <header>
+                    <h1 class="form-title heading-large">Is your condition a physical condition?</h1>
+                </header>
+                <fieldset id="speech" class="inline">
+                    <legend for="speech">
+                        <span class="visually-hidden">Is your condition a physical condition?</span>
+                    </legend>
+                    <div class="form-group">
+                        <label class="block-label" for="speech-Yes">
+                            <input id="speech-Yes" type="radio" name="speech" value="Yes">Yes
+                        </label>
+                        <label class="block-label" for="speech-No">
+                            <input id="speech-No" type="radio" name="speech" value="No">No
+                        </label>
+                    </div>
+                </fieldset>
+                    <!-- Primary buttons, secondary links -->
+                <div class="form-group">
+                    <input type="submit" class="button" value="Continue">
+                    <!--a href="overview">I do not agree - leave now</a-->
+                </div>
+            </div>
+            <div class="column-one-third">
+                {% include "../includes/help.html" %}
+            </div>
+        </div>
+    </form>
+</main>
+{% endblock %}
+
+{% block body_end %}
+  {% include "includes/scripts.html" %}
+  <script>
+    $('form').on('submit', function(e) {
+        
+        switch($('input[name="speech"]:checked').val()){
+            case 'No':
+                window.location = 'toilet-needs';
+            break;
+
+            default:
+                window.location = 'getting-around';
+            break;
+        }
+      
+      e.preventDefault();
+    });
+  </script>
+{% endblock %}

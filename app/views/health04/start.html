@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Apply for Employment and Support Allowance
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% include "../includes/phase_banner_beta.html" %}
+
+	<form action="health-conditions" method="#" class="form">
+		<div class="grid-row">
+			<div class="column-two-thirds">
+				<header>
+			    <h1 class="form-title heading-large">
+			    	<!-- <span class="heading-secondary">Section 3 of 23</span> -->
+			      Employment and Support Allowance: give details of your health conditions
+			    </h1>
+			  </header>
+
+        <p class="lede">This service is just a prototype for testing. No information is stored.</p>
+        <p class="lede">Use this service tell the Department for Work and Pensions how your health conditions affect you.</p>
+
+        <p>You can ask a friend, family member or <a rel="external" href="https://www.gov.uk//find-a-community-support-group-or-organisation">support organisation</a> to help you.</p>
+
+        <p>You can save your answers and return to them as often as you need in the next 28 days.</p>
+
+        <p>Before you start make sure you have details of:</p>
+        <ul class="list list-bullet">
+          <li>medications you are taking</li>
+          <li>treatments or therapies you're getting or have planned</li>
+          <li>any healthcare professionals who know about your conditions</li>
+        </ul>
+
+        <!-- <div class="panel panel-border-narrow alert-default">
+          <p>You’ll be asked to give consent for the Department for Work and Pensions to ask other people or organisations for information about you that's needed to process your application.<p> 
+          <p>If you give consent you can withdraw it at any time by calling 0345 608 8545.</p>
+        </div> -->
+
+        <!-- Primary buttons, secondary links -->
+        <p>
+          <a class="button button-start" href="health-conditions" role="button">Start now</a>
+        </p>
+
+      </div>
+      <div class="column-one-third">
+      	{% include "../includes/help.html" %}
+      </div>
+    </div>
+
+  </form>
+</main>
+
+{% endblock %}
