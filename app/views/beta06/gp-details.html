@@ -18,7 +18,7 @@
     				</h1>
                 </header>
 
-                <div id="name" class="form-group" data-error="Enter the name of your GP practice">
+                <div id="typeahead" class="form-group" data-error="Enter the name of your GP practice">
                     <label for="practiceSearch" class="form-label">Your GP surgery</label>
                     <input type="text" name="practiceSearch" id="practiceSearch" class="form-control form-control-2-3 typeahead" placeholder="Search by GP surgery, city or postcode" value="">
                 </div>
@@ -51,70 +51,37 @@
 <script src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
 
 <script>
-var dataGPName = new Bloodhound({
-  datumTokenizer: Bloodhound.tokenizers.whitespace('gpName','gpAddress1','gpAddress2',
-                                                    'gpAddress3','gpAddress4','gpPostcode',
-                                                    'gpTelephone'),
+var dataGP = new Bloodhound({
+  datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name', 'location.address', 'location.postcode', 'contact_telephone_number'),
   queryTokenizer: Bloodhound.tokenizers.whitespace,
-  remote: {
-    url: 'https://gp-look-up.herokuapp.com/getGp?query=%QUERY',
-    wildcard: '%QUERY',
-    filter: function (data) {
-            // Map the remote source JSON array to a JavaScript object array
-
-            return $.map(data.entries, function (gp) {
-                return {
-                    gpName: gp.Name,
-                    gpAddress1: gp.Address.Line1 || "",
-                    gpAddress2: gp.Address.Line2 || "",
-                    gpAddress3: gp.Address.Line3 || "",
-                    gpAddress4: gp.Address.Line4 || "",
-                    gpPostcode: gp.Address.Postcode || "",
-                    gpTelephone: gp.Telephone || ""
-                };
-            });
-        }
-  }
+  prefetch: '/public/javascripts/gp2.json'
 });
 
-dataGPName.initialize();
+dataGP.initialize();
 
-
-$('#name .typeahead').typeahead({
+$('.typeahead').typeahead({
   hint: true,
   highlight: true,
   minLength: 3
 }, {
-  display: function (item) { return item.orgName  },
-  source: dataGPName.ttAdapter(),
-  limit: 50,
+  name: 'dataGP',
+  displayKey: 'name',
+  limit: 10,
+  source: dataGP.ttAdapter(),
   templates: {
-        empty: [
-            '<p class="tt-suggestion">No matches found - <a href="manual-gp">enter details manually</a></p>'].join('\n'),
-        suggestion: function (data) {
-        return '<p><span class="bold-medium">' + data.gpName + '</span><br>' + data.gpAddress1 + "-"
-           + data.gpAddress2 +"-" + data.gpAddress3 + "-" + data.gpAddress4 + "-" + data.gpPostcode +'<br>' + data.gpTelephone + '</p>';
-        }
+    empty: [
+      '<p class="tt-suggestion">No matches found - <a href="manual-gp">enter details manually</a></p>'
+    ].join('\n'),
+    suggestion: function(data) {
+      return '<p><span class="bold-medium">' + data.name + '</span><br>' + data.location.address + ', ' + data.location.postcode + '<br>' + data.contact_telephone_number + '</p>';
     }
+  }
 });
-
-
-$('#name .typeahead').bind('typeahead:select', function(ev, suggestion) {
-  $('#name').after('<div class="call-to-action"><p><strong>' + suggestion.gpName + '</strong><br>' + suggestion.gpAddress1 + "-" + suggestion.gpAddress2 +"-" + suggestion.gpAddress3 + "-" + suggestion.gpAddress4 + "-" + suggestion.gpPostcode + '<br>' + suggestion.gpTelephone +  '</p>');
+$('.typeahead').bind('typeahead:select', function(ev, suggestion) {
+  $('#typeahead').after('<div class="call-to-action"><p><span class="bold-medium">' + suggestion.name + '</span><br>' + suggestion.location.address + ', ' + suggestion.location.postcode + '<br>' + suggestion.contact_telephone_number + '</p>');
   $(this).typeahead("val", "");
-
-  //enable the continue button
-  $('#continueButton').prop('disabled', false).removeClass('disabled');
+  window.location.hash = '#content';
 });
-
-
 </script>
-
-<style media="screen" type="text/css">
-#name .tt-menu {
-  max-height: 500px;
-  overflow-y: auto;
-}
-</style>
 
 {% endblock %}
